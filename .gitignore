@@ -36,7 +36,8 @@ dist/
 .env*.local
 !.env.example
 
-# Python Caches & Environments
+# Python Scripts, Caches & Environments
+*.py
 __pycache__/
 *.py[cod]
 *$py.class
