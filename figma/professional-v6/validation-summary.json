@@ -1,0 +1,20 @@
+{
+  "views": 520,
+  "pages": 13,
+  "desktopJourneyActions": 51,
+  "mobileJourneyActions": 29,
+  "contextPreservingTabLinks": 1037,
+  "conceptNavigationActions": 6,
+  "edgeStates": 42,
+  "mobileEdgeStates": 8,
+  "unexpectedBounds": 0,
+  "textContrastFailures": 0,
+  "missingDestinations": 0,
+  "priorVersionsPreserved": true,
+  "fullViewportPreviews": 520,
+  "artifactSha256": "a68d126d092b79bc4f6302ba283a0f7919ac3427edb077167887340a1c508e39",
+  "presenterPlayback": "passed",
+  "presenterTraceEntries": 93,
+  "revision": "2026-10-21 product refinement",
+  "originalV6Preserved": true
+}

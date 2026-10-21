@@ -1,0 +1,765 @@
+{
+  "artifact": "/run/media/thefoolishcrow/New Volume/Obsidian/TheFallenCrow/projects/BugBountyTrack/figma/BugBountyTrack-Professional-v6.figcraft",
+  "sha256": "a68d126d092b79bc4f6302ba283a0f7919ac3427edb077167887340a1c508e39",
+  "views": 520,
+  "nodes": 58246,
+  "components": 14,
+  "desktopJourney": [
+    {
+      "source": "Start",
+      "action": "Start full journey",
+      "destination": "Program",
+      "state": "NEW",
+      "attempt": 1
+    },
+    {
+      "source": "Program",
+      "action": "Submit a report",
+      "destination": "Access",
+      "state": "NEW",
+      "attempt": 1
+    },
+    {
+      "source": "Access",
+      "action": "Use guest access",
+      "destination": "GuestAccess",
+      "state": "NEW",
+      "attempt": 1
+    },
+    {
+      "source": "GuestAccess",
+      "action": "Create local key & continue",
+      "destination": "ReportForm",
+      "state": "NEW",
+      "attempt": 1
+    },
+    {
+      "source": "ReportForm",
+      "action": "Review & encrypt",
+      "destination": "Review",
+      "state": "NEW",
+      "attempt": 1
+    },
+    {
+      "source": "Review",
+      "action": "Encrypt & submit",
+      "destination": "Receipt",
+      "state": "NEW",
+      "attempt": 1
+    },
+    {
+      "source": "Receipt",
+      "action": "Open my report",
+      "destination": "RecoveryGate",
+      "state": "NEW",
+      "attempt": 1
+    },
+    {
+      "source": "RecoveryGate",
+      "action": "Return to recovery confirmation",
+      "destination": "Receipt",
+      "state": "NEW",
+      "attempt": 1
+    },
+    {
+      "source": "Receipt",
+      "action": "Save recovery file",
+      "destination": "RecoveryFile",
+      "state": "NEW",
+      "attempt": 1
+    },
+    {
+      "source": "RecoveryFile",
+      "action": "Return to recovery confirmation",
+      "destination": "Receipt",
+      "state": "NEW",
+      "attempt": 1
+    },
+    {
+      "source": "Receipt",
+      "action": "I saved the recovery file securely.",
+      "destination": "Receipt",
+      "state": "NEW",
+      "attempt": 1
+    },
+    {
+      "source": "Receipt",
+      "action": "Open my report",
+      "destination": "ResearcherNew",
+      "state": "NEW",
+      "attempt": 1
+    },
+    {
+      "source": "ResearcherNew",
+      "action": "Demo: defender view",
+      "destination": "RoleDefenderNew",
+      "state": "NEW",
+      "attempt": 1
+    },
+    {
+      "source": "RoleDefenderNew",
+      "action": "Continue as defender",
+      "destination": "CaseLocked",
+      "state": "NEW",
+      "attempt": 1
+    },
+    {
+      "source": "CaseLocked",
+      "action": "Unlock on this device",
+      "destination": "Unlock",
+      "state": "NEW",
+      "attempt": 1
+    },
+    {
+      "source": "Unlock",
+      "action": "Unlock on this device",
+      "destination": "CaseNew",
+      "state": "NEW",
+      "attempt": 1
+    },
+    {
+      "source": "CaseNew",
+      "action": "Begin triage",
+      "destination": "BeginTriage",
+      "state": "NEW",
+      "attempt": 1
+    },
+    {
+      "source": "BeginTriage",
+      "action": "Begin triage",
+      "destination": "CaseTriage",
+      "state": "TRIAGING",
+      "attempt": 1
+    },
+    {
+      "source": "CaseTriage",
+      "action": "Assess & accept",
+      "destination": "Assessment",
+      "state": "TRIAGING",
+      "attempt": 1
+    },
+    {
+      "source": "Assessment",
+      "action": "Accept with this assessment",
+      "destination": "CaseAccepted",
+      "state": "ACCEPTED",
+      "attempt": 1
+    },
+    {
+      "source": "CaseAccepted",
+      "action": "Propose a fix",
+      "destination": "Fix1",
+      "state": "ACCEPTED",
+      "attempt": 1
+    },
+    {
+      "source": "Fix1",
+      "action": "Check commit & branch",
+      "destination": "CommitChecked1",
+      "state": "ACCEPTED",
+      "attempt": 1
+    },
+    {
+      "source": "CommitChecked1",
+      "action": "Record proposal",
+      "destination": "CaseProposed",
+      "state": "FIX_PROPOSED",
+      "attempt": 1
+    },
+    {
+      "source": "CaseProposed",
+      "action": "Record deployment",
+      "destination": "Deploy1",
+      "state": "FIX_PROPOSED",
+      "attempt": 1
+    },
+    {
+      "source": "Deploy1",
+      "action": "Save deployment",
+      "destination": "CaseDeployed",
+      "state": "FIX_PROPOSED",
+      "attempt": 1
+    },
+    {
+      "source": "CaseDeployed",
+      "action": "Request retest",
+      "destination": "Invite1",
+      "state": "FIX_PROPOSED",
+      "attempt": 1
+    },
+    {
+      "source": "Invite1",
+      "action": "Send retest invitation",
+      "destination": "CasePending",
+      "state": "RETEST_PENDING",
+      "attempt": 1
+    },
+    {
+      "source": "CasePending",
+      "action": "Demo: researcher view",
+      "destination": "RoleResearcher",
+      "state": "RETEST_PENDING",
+      "attempt": 1
+    },
+    {
+      "source": "RoleResearcher",
+      "action": "Continue as researcher",
+      "destination": "ResearcherPending",
+      "state": "RETEST_PENDING",
+      "attempt": 1
+    },
+    {
+      "source": "ResearcherPending",
+      "action": "Retest deployment",
+      "destination": "RetestForm",
+      "state": "RETEST_PENDING",
+      "attempt": 1
+    },
+    {
+      "source": "RetestForm",
+      "action": "Still reproducible",
+      "destination": "FailedAttestation",
+      "state": "RETEST_PENDING",
+      "attempt": 1
+    },
+    {
+      "source": "FailedAttestation",
+      "action": "Sign failed retest",
+      "destination": "ResearcherFailed",
+      "state": "ACCEPTED",
+      "attempt": 1
+    },
+    {
+      "source": "ResearcherFailed",
+      "action": "Demo: defender view",
+      "destination": "RoleDefenderFailed",
+      "state": "ACCEPTED",
+      "attempt": 1
+    },
+    {
+      "source": "RoleDefenderFailed",
+      "action": "Continue as defender",
+      "destination": "CaseFailed",
+      "state": "ACCEPTED",
+      "attempt": 1
+    },
+    {
+      "source": "CaseFailed",
+      "action": "Propose attempt 2",
+      "destination": "Fix2",
+      "state": "ACCEPTED",
+      "attempt": 1
+    },
+    {
+      "source": "Fix2",
+      "action": "Check commit & branch",
+      "destination": "CommitChecked2",
+      "state": "ACCEPTED",
+      "attempt": 1
+    },
+    {
+      "source": "CommitChecked2",
+      "action": "Record proposal",
+      "destination": "CaseProposed2",
+      "state": "FIX_PROPOSED",
+      "attempt": 2
+    },
+    {
+      "source": "CaseProposed2",
+      "action": "Record deployment",
+      "destination": "Deploy2",
+      "state": "FIX_PROPOSED",
+      "attempt": 2
+    },
+    {
+      "source": "Deploy2",
+      "action": "Save deployment",
+      "destination": "CaseDeployed2",
+      "state": "FIX_PROPOSED",
+      "attempt": 2
+    },
+    {
+      "source": "CaseDeployed2",
+      "action": "Request retest",
+      "destination": "Invite2",
+      "state": "FIX_PROPOSED",
+      "attempt": 2
+    },
+    {
+      "source": "Invite2",
+      "action": "Send retest invitation",
+      "destination": "CasePending2",
+      "state": "RETEST_PENDING",
+      "attempt": 2
+    },
+    {
+      "source": "CasePending2",
+      "action": "Demo: researcher view",
+      "destination": "RoleResearcher2",
+      "state": "RETEST_PENDING",
+      "attempt": 2
+    },
+    {
+      "source": "RoleResearcher2",
+      "action": "Continue as researcher",
+      "destination": "ResearcherPending2",
+      "state": "RETEST_PENDING",
+      "attempt": 2
+    },
+    {
+      "source": "ResearcherPending2",
+      "action": "Retest deployment",
+      "destination": "RetestForm2",
+      "state": "RETEST_PENDING",
+      "attempt": 2
+    },
+    {
+      "source": "RetestForm2",
+      "action": "Confirm fixed",
+      "destination": "ResearcherVerified2",
+      "state": "VERIFIED_RESEARCHER",
+      "attempt": 2
+    },
+    {
+      "source": "ResearcherVerified2",
+      "action": "Overview",
+      "destination": "ResearcherVerified2__report",
+      "state": "VERIFIED_RESEARCHER",
+      "attempt": 2
+    },
+    {
+      "source": "ResearcherVerified2__report",
+      "action": "Evidence",
+      "destination": "ResearcherVerified2__evidence",
+      "state": "VERIFIED_RESEARCHER",
+      "attempt": 2
+    },
+    {
+      "source": "ResearcherVerified2__evidence",
+      "action": "Remediation",
+      "destination": "ResearcherVerified2",
+      "state": "VERIFIED_RESEARCHER",
+      "attempt": 2
+    },
+    {
+      "source": "ResearcherVerified2",
+      "action": "My reports",
+      "destination": "ResearchDesk",
+      "state": "VERIFIED_RESEARCHER",
+      "attempt": 2
+    },
+    {
+      "source": "ResearchDesk",
+      "action": "Open current report",
+      "destination": "ResearcherVerified2",
+      "state": "VERIFIED_RESEARCHER",
+      "attempt": 2
+    },
+    {
+      "source": "Queue",
+      "action": "Open & unlock",
+      "destination": "CaseVerified2",
+      "state": "VERIFIED_RESEARCHER",
+      "attempt": 2
+    }
+  ],
+  "mobileJourney": [
+    {
+      "source": "MobileProgram",
+      "action": "Submit a report",
+      "destination": "MobileGuest",
+      "state": "TRIAGING",
+      "attempt": 1.0
+    },
+    {
+      "source": "MobileGuest",
+      "action": "Create key & continue",
+      "destination": "MobileReportForm",
+      "state": "TRIAGING",
+      "attempt": 1.0
+    },
+    {
+      "source": "MobileReportForm",
+      "action": "Review before encrypting",
+      "destination": "MobileReview",
+      "state": "TRIAGING",
+      "attempt": 1.0
+    },
+    {
+      "source": "MobileReview",
+      "action": "Encrypt & submit",
+      "destination": "MobileReceipt",
+      "state": "NEW",
+      "attempt": 1
+    },
+    {
+      "source": "MobileReceipt",
+      "action": "Open my report",
+      "destination": "MobileRecoveryGate",
+      "state": "NEW",
+      "attempt": 1
+    },
+    {
+      "source": "MobileRecoveryGate",
+      "action": "Return to receipt",
+      "destination": "MobileReceipt",
+      "state": "NEW",
+      "attempt": 1
+    },
+    {
+      "source": "MobileReceipt",
+      "action": "Save .bbt-recovery.json",
+      "destination": "MobileRecoveryFile",
+      "state": "NEW",
+      "attempt": 1
+    },
+    {
+      "source": "MobileRecoveryFile",
+      "action": "Return to receipt",
+      "destination": "MobileReceipt",
+      "state": "NEW",
+      "attempt": 1
+    },
+    {
+      "source": "MobileReceipt",
+      "action": "I saved the recovery file securely.",
+      "destination": "MobileReceipt",
+      "state": "NEW",
+      "attempt": 1
+    },
+    {
+      "source": "MobileReceipt",
+      "action": "Open my report",
+      "destination": "MobileNew",
+      "state": "NEW",
+      "attempt": 1
+    },
+    {
+      "source": "MobileActive",
+      "action": "Original",
+      "destination": "MobileOriginal",
+      "state": "RETEST_PENDING",
+      "attempt": 1
+    },
+    {
+      "source": "MobileOriginal",
+      "action": "Evidence",
+      "destination": "MobileEvidence",
+      "state": "RETEST_PENDING",
+      "attempt": 1
+    },
+    {
+      "source": "MobileEvidence",
+      "action": "Case",
+      "destination": "MobileActive",
+      "state": "RETEST_PENDING",
+      "attempt": 1
+    },
+    {
+      "source": "MobileActive",
+      "action": "Retest attempt 1",
+      "destination": "MobileRetest1",
+      "state": "RETEST_PENDING",
+      "attempt": 1
+    },
+    {
+      "source": "MobileRetest1",
+      "action": "Still reproducible",
+      "destination": "MobileFailure1",
+      "state": "RETEST_PENDING",
+      "attempt": 1
+    },
+    {
+      "source": "MobileFailure1",
+      "action": "Sign failed retest",
+      "destination": "MobileFailed",
+      "state": "ACCEPTED",
+      "attempt": 1
+    },
+    {
+      "source": "MobileFailed",
+      "action": "Demo: switch to defender",
+      "destination": "MobileRoleDefender",
+      "state": "ACCEPTED",
+      "attempt": 1
+    },
+    {
+      "source": "MobileRoleDefender",
+      "action": "Continue as defender",
+      "destination": "MobileDefenderFailed",
+      "state": "ACCEPTED",
+      "attempt": 1
+    },
+    {
+      "source": "MobileDefenderFailed",
+      "action": "Propose attempt 2",
+      "destination": "MobileFix2",
+      "state": "ACCEPTED",
+      "attempt": 1
+    },
+    {
+      "source": "MobileFix2",
+      "action": "Check & record proposal",
+      "destination": "MobileDeploy2",
+      "state": "FIX_PROPOSED",
+      "attempt": 2
+    },
+    {
+      "source": "MobileDeploy2",
+      "action": "Save deployment",
+      "destination": "MobileInvite2",
+      "state": "FIX_PROPOSED",
+      "attempt": 2
+    },
+    {
+      "source": "MobileInvite2",
+      "action": "Send retest invitation",
+      "destination": "MobileDefenderPending2",
+      "state": "RETEST_PENDING",
+      "attempt": 2
+    },
+    {
+      "source": "MobileDefenderPending2",
+      "action": "Demo: switch to researcher",
+      "destination": "MobileRoleResearcher2",
+      "state": "RETEST_PENDING",
+      "attempt": 2
+    },
+    {
+      "source": "MobileRoleResearcher2",
+      "action": "Continue as researcher",
+      "destination": "MobileActive2",
+      "state": "RETEST_PENDING",
+      "attempt": 2
+    },
+    {
+      "source": "MobileActive2",
+      "action": "Retest attempt 2",
+      "destination": "MobileRetest2",
+      "state": "RETEST_PENDING",
+      "attempt": 2
+    },
+    {
+      "source": "MobileRetest2",
+      "action": "Sign & confirm fixed",
+      "destination": "MobileComplete",
+      "state": "VERIFIED_RESEARCHER",
+      "attempt": 2
+    },
+    {
+      "source": "MobileComplete",
+      "action": "Original",
+      "destination": "MobileComplete__report",
+      "state": "VERIFIED_RESEARCHER",
+      "attempt": 2
+    },
+    {
+      "source": "MobileComplete__report",
+      "action": "Evidence",
+      "destination": "MobileComplete__evidence",
+      "state": "VERIFIED_RESEARCHER",
+      "attempt": 2
+    },
+    {
+      "source": "MobileComplete__evidence",
+      "action": "Case",
+      "destination": "MobileComplete",
+      "state": "VERIFIED_RESEARCHER",
+      "attempt": 2
+    }
+  ],
+  "conceptNavigation": [
+    {
+      "source": "CasePending",
+      "action": "View remediation & retest",
+      "destination": "CasePending__remediation",
+      "state": "RETEST_PENDING",
+      "attempt": 1
+    },
+    {
+      "source": "CasePending__remediation",
+      "action": "Overview",
+      "destination": "CasePending",
+      "state": "RETEST_PENDING",
+      "attempt": 1
+    },
+    {
+      "source": "CasePending",
+      "action": "Record internal verification",
+      "destination": "InternalVerification1",
+      "state": "RETEST_PENDING",
+      "attempt": 1
+    },
+    {
+      "source": "CasePending2",
+      "action": "View remediation & retest",
+      "destination": "CasePending2__remediation",
+      "state": "RETEST_PENDING",
+      "attempt": 2
+    },
+    {
+      "source": "CasePending2__remediation",
+      "action": "Overview",
+      "destination": "CasePending2",
+      "state": "RETEST_PENDING",
+      "attempt": 2
+    },
+    {
+      "source": "CasePending2",
+      "action": "Record internal verification",
+      "destination": "InternalVerification2",
+      "state": "RETEST_PENDING",
+      "attempt": 2
+    }
+  ],
+  "edgeStates": 42,
+  "mobileEdgeStates": 8,
+  "alternateClosures": [
+    {
+      "source": "CasePending",
+      "action": "Verification options",
+      "destination": "ClosureOptions1",
+      "state": "RETEST_PENDING",
+      "attempt": 1
+    },
+    {
+      "source": "ClosureOptions1",
+      "action": "Verify internally",
+      "destination": "InternalVerification1",
+      "state": "RETEST_PENDING",
+      "attempt": 1
+    },
+    {
+      "source": "InternalVerification1",
+      "action": "Certify internal result",
+      "destination": "AuthorshipRequired",
+      "state": "RETEST_PENDING",
+      "attempt": 1
+    },
+    {
+      "source": "AuthorshipRequired",
+      "action": "Return to verification",
+      "destination": "InternalVerification1",
+      "state": "RETEST_PENDING",
+      "attempt": 1
+    },
+    {
+      "source": "InternalVerification1",
+      "action": "No",
+      "destination": "InternalVerification1",
+      "state": "RETEST_PENDING",
+      "attempt": 1
+    },
+    {
+      "source": "InternalVerification1",
+      "action": "Certify internal result",
+      "destination": "CaseInternal",
+      "state": "VERIFIED_INTERNAL",
+      "attempt": 1
+    },
+    {
+      "source": "CasePending",
+      "action": "Verification options",
+      "destination": "ClosureOptions1",
+      "state": "RETEST_PENDING",
+      "attempt": 1
+    },
+    {
+      "source": "ClosureOptions1",
+      "action": "Check timeout eligibility",
+      "destination": "TimeoutGate1",
+      "state": "RETEST_PENDING",
+      "attempt": 1
+    },
+    {
+      "source": "TimeoutGate1",
+      "action": "Demo: inspect an eligible timeout",
+      "destination": "TimeoutEligible1",
+      "state": "RETEST_PENDING",
+      "attempt": 1
+    },
+    {
+      "source": "TimeoutEligible1",
+      "action": "Close as unverified",
+      "destination": "CaseTimeout",
+      "state": "CLOSED_UNVERIFIED_TIMEOUT",
+      "attempt": 1
+    },
+    {
+      "source": "CasePending2",
+      "action": "Verification options",
+      "destination": "ClosureOptions2",
+      "state": "RETEST_PENDING",
+      "attempt": 2
+    },
+    {
+      "source": "ClosureOptions2",
+      "action": "Verify internally",
+      "destination": "InternalVerification2",
+      "state": "RETEST_PENDING",
+      "attempt": 2
+    },
+    {
+      "source": "InternalVerification2",
+      "action": "Certify internal result",
+      "destination": "AuthorshipRequired",
+      "state": "RETEST_PENDING",
+      "attempt": 2
+    },
+    {
+      "source": "AuthorshipRequired",
+      "action": "Return to verification",
+      "destination": "InternalVerification2",
+      "state": "RETEST_PENDING",
+      "attempt": 2
+    },
+    {
+      "source": "InternalVerification2",
+      "action": "No",
+      "destination": "InternalVerification2",
+      "state": "RETEST_PENDING",
+      "attempt": 2
+    },
+    {
+      "source": "InternalVerification2",
+      "action": "Certify internal result",
+      "destination": "CaseInternal2",
+      "state": "VERIFIED_INTERNAL",
+      "attempt": 2
+    },
+    {
+      "source": "CasePending2",
+      "action": "Verification options",
+      "destination": "ClosureOptions2",
+      "state": "RETEST_PENDING",
+      "attempt": 2
+    },
+    {
+      "source": "ClosureOptions2",
+      "action": "Check timeout eligibility",
+      "destination": "TimeoutGate2",
+      "state": "RETEST_PENDING",
+      "attempt": 2
+    },
+    {
+      "source": "TimeoutGate2",
+      "action": "Demo: inspect an eligible timeout",
+      "destination": "TimeoutEligible2",
+      "state": "RETEST_PENDING",
+      "attempt": 2
+    },
+    {
+      "source": "TimeoutEligible2",
+      "action": "Close as unverified",
+      "destination": "CaseTimeout2",
+      "state": "CLOSED_UNVERIFIED_TIMEOUT",
+      "attempt": 2
+    }
+  ],
+  "tabChecks": 1037,
+  "unexpectedBounds": [],
+  "textContrastFailures": [],
+  "invalidDestinations": [],
+  "preservedPriorVersions": true,
+  "scope": "Saved native interaction AST, geometry and text contrast; role-facing design controls. Presenter playback is recorded separately. No backend security or cryptographic execution claimed."
+}

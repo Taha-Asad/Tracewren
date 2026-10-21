@@ -1,0 +1,36 @@
+{
+  "evidence": "Fresh native file exports; static visual review, not app playback.",
+  "beforeScreens": [
+    "MyReports",
+    "ReportTriage",
+    "Queue",
+    "OwnerOverview",
+    "Program"
+  ],
+  "afterFullResolutionReviewed": [
+    "StartHere",
+    "MyReports",
+    "Queue",
+    "ReportTriage",
+    "OwnerOverview",
+    "Program",
+    "QueueCompact",
+    "MobileReport",
+    "ReportInternal",
+    "ReportEvidence",
+    "Report1366",
+    "SubmitDetails"
+  ],
+  "allViewsRendered": 342,
+  "fullResolutionExports": 22,
+  "comparisonPairs": 5,
+  "findingsResolved": [
+    "Heading copy grew to fit all text.",
+    "Selected-row contrast was corrected.",
+    "Compact rows now fit all metadata without overflow.",
+    "Research and owner ledgers group separators without repeated section gaps.",
+    "Internal conversation retains its own recipient lane and has a native selected state.",
+    "Submission routing fields now share a top baseline."
+  ],
+  "remaining": "Manual Present-mode playback, scroll gestures, keyboard focus, screen reader semantics and real inputs/services are not verified by this CLI review."
+}

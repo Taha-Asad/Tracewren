@@ -1,0 +1,238 @@
+{
+  "approvedSource": "figma/design-tokens.json \u00b7 v1",
+  "baseColorsCompared": 32,
+  "mismatches": [],
+  "nativePalette": [
+    {
+      "v1Role": "canvas",
+      "v3Role": "canvas",
+      "approved": "#F2F0E9",
+      "savedNativeValue": "#F2F0E9",
+      "matches": true
+    },
+    {
+      "v1Role": "surface",
+      "v3Role": "surface",
+      "approved": "#FFFEF9",
+      "savedNativeValue": "#FFFEF9",
+      "matches": true
+    },
+    {
+      "v1Role": "subtle",
+      "v3Role": "subtle",
+      "approved": "#E9E7DE",
+      "savedNativeValue": "#E9E7DE",
+      "matches": true
+    },
+    {
+      "v1Role": "selected",
+      "v3Role": "selected",
+      "approved": "#E0EFEB",
+      "savedNativeValue": "#E0EFEB",
+      "matches": true
+    },
+    {
+      "v1Role": "ink",
+      "v3Role": "ink",
+      "approved": "#242E30",
+      "savedNativeValue": "#242E30",
+      "matches": true
+    },
+    {
+      "v1Role": "muted",
+      "v3Role": "muted",
+      "approved": "#586668",
+      "savedNativeValue": "#586668",
+      "matches": true
+    },
+    {
+      "v1Role": "faint",
+      "v3Role": "faint",
+      "approved": "#606D6D",
+      "savedNativeValue": "#606D6D",
+      "matches": true
+    },
+    {
+      "v1Role": "line",
+      "v3Role": "line",
+      "approved": "#D6DCD6",
+      "savedNativeValue": "#D6DCD6",
+      "matches": true
+    },
+    {
+      "v1Role": "control",
+      "v3Role": "control",
+      "approved": "#718984",
+      "savedNativeValue": "#718984",
+      "matches": true
+    },
+    {
+      "v1Role": "nav",
+      "v3Role": "nav",
+      "approved": "#263638",
+      "savedNativeValue": "#263638",
+      "matches": true
+    },
+    {
+      "v1Role": "navRaised",
+      "v3Role": "navRaised",
+      "approved": "#34494B",
+      "savedNativeValue": "#34494B",
+      "matches": true
+    },
+    {
+      "v1Role": "navText",
+      "v3Role": "navText",
+      "approved": "#F5F1E6",
+      "savedNativeValue": "#F5F1E6",
+      "matches": true
+    },
+    {
+      "v1Role": "navMuted",
+      "v3Role": "navMuted",
+      "approved": "#B6C5BF",
+      "savedNativeValue": "#B6C5BF",
+      "matches": true
+    },
+    {
+      "v1Role": "teal",
+      "v3Role": "action",
+      "approved": "#17645D",
+      "savedNativeValue": "#17645D",
+      "matches": true
+    },
+    {
+      "v1Role": "tealHover",
+      "v3Role": "actionHover",
+      "approved": "#10534E",
+      "savedNativeValue": "#10534E",
+      "matches": true
+    },
+    {
+      "v1Role": "onAction",
+      "v3Role": "onAction",
+      "approved": "#FFFDF7",
+      "savedNativeValue": "#FFFDF7",
+      "matches": true
+    },
+    {
+      "v1Role": "mint",
+      "v3Role": "mint",
+      "approved": "#C2D8CC",
+      "savedNativeValue": "#C2D8CC",
+      "matches": true
+    },
+    {
+      "v1Role": "brass",
+      "v3Role": "brass",
+      "approved": "#8A5F22",
+      "savedNativeValue": "#8A5F22",
+      "matches": true
+    },
+    {
+      "v1Role": "brassSurface",
+      "v3Role": "brassSurface",
+      "approved": "#F4E7CB",
+      "savedNativeValue": "#F4E7CB",
+      "matches": true
+    },
+    {
+      "v1Role": "onDarkBrass",
+      "v3Role": "onDarkBrass",
+      "approved": "#E9C37E",
+      "savedNativeValue": "#E9C37E",
+      "matches": true
+    },
+    {
+      "v1Role": "danger",
+      "v3Role": "danger",
+      "approved": "#A03F35",
+      "savedNativeValue": "#A03F35",
+      "matches": true
+    },
+    {
+      "v1Role": "dangerSurface",
+      "v3Role": "dangerSurface",
+      "approved": "#FAE9E2",
+      "savedNativeValue": "#FAE9E2",
+      "matches": true
+    },
+    {
+      "v1Role": "warning",
+      "v3Role": "warning",
+      "approved": "#8A571E",
+      "savedNativeValue": "#8A571E",
+      "matches": true
+    },
+    {
+      "v1Role": "warningSurface",
+      "v3Role": "warningSurface",
+      "approved": "#FBEDCC",
+      "savedNativeValue": "#FBEDCC",
+      "matches": true
+    },
+    {
+      "v1Role": "info",
+      "v3Role": "info",
+      "approved": "#305B88",
+      "savedNativeValue": "#305B88",
+      "matches": true
+    },
+    {
+      "v1Role": "infoSurface",
+      "v3Role": "infoSurface",
+      "approved": "#E6EDF5",
+      "savedNativeValue": "#E6EDF5",
+      "matches": true
+    },
+    {
+      "v1Role": "success",
+      "v3Role": "success",
+      "approved": "#21654E",
+      "savedNativeValue": "#21654E",
+      "matches": true
+    },
+    {
+      "v1Role": "successSurface",
+      "v3Role": "successSurface",
+      "approved": "#E3F0E5",
+      "savedNativeValue": "#E3F0E5",
+      "matches": true
+    },
+    {
+      "v1Role": "internal",
+      "v3Role": "internal",
+      "approved": "#65527D",
+      "savedNativeValue": "#65527D",
+      "matches": true
+    },
+    {
+      "v1Role": "internalSurface",
+      "v3Role": "internalSurface",
+      "approved": "#EEE8F4",
+      "savedNativeValue": "#EEE8F4",
+      "matches": true
+    },
+    {
+      "v1Role": "white",
+      "v3Role": "white",
+      "approved": "#FFFFFF",
+      "savedNativeValue": "#FFFFFF",
+      "matches": true
+    },
+    {
+      "v1Role": "black",
+      "v3Role": "black",
+      "approved": "#000000",
+      "savedNativeValue": "#000000",
+      "matches": true
+    }
+  ],
+  "additionalRoleAliases": {
+    "well": "nav",
+    "wellInk": "navText",
+    "wellMuted": "navMuted",
+    "accent": "action"
+  },
+  "scope": "Saved native variable values match the original palette. Contrast and actual layer geometry are checked separately."
+}

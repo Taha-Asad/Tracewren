@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="190" viewBox="0 0 280 190">
+<title>Failed / conceptual research illustration</title>
+<g><title>Soft ink field</title><ellipse cx="137.0" cy="96.0" rx="113.0" ry="79.0" fill="#E0EFEB" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Contour / research field</title><path d="M 23 125 C 11 81 44 28 85 20 M 240 43 C 273 73 269 129 235 156" fill="none" stroke="#718984" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Deployment record / paper</title><rect x="61" y="30" width="112" height="133" rx="6" fill="#FFFEF9" stroke="#242E30" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Deployment record / title</title><rect x="73" y="46" width="59.36" height="5" rx="1.5" fill="#17645D" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Deployment record / evidence line 0</title><rect x="73" y="64" width="76.16000000000001" height="2" rx="1.5" fill="#718984" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Deployment record / evidence line 1</title><rect x="73" y="74" width="88.48" height="2" rx="1.5" fill="#718984" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Deployment record / evidence line 2</title><rect x="73" y="84" width="62.720000000000006" height="2" rx="1.5" fill="#718984" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Clipboard / clip</title><rect x="95" y="22" width="44" height="17" rx="4" fill="#C2D8CC" stroke="#242E30" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Code / opening bracket</title><path d="M 89 88 L 78 99 L 89 110" fill="none" stroke="#17645D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Code / closing bracket</title><path d="M 139 88 L 150 99 L 139 110" fill="none" stroke="#17645D" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Code / slash</title><path d="M 123 82 L 109 116" fill="none" stroke="#718984" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Retest / return loop</title><path d="M 203 54 C 243 70 247 118 218 143 M 203 54 L 205 69 M 203 54 L 218 52" fill="none" stroke="#A03F35" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Inspection / rim</title><ellipse cx="178.0" cy="119.0" rx="38.0" ry="38.0" fill="#242E30" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Inspection / rim inset</title><ellipse cx="178.0" cy="119.0" rx="33.0" ry="33.0" fill="#FFFEF9" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Inspection / glass</title><ellipse cx="178.0" cy="119.0" rx="28.0" ry="28.0" fill="#FAE9E2" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Inspection / handle</title><path d="M 205 145 L 231 170 C 236 175 228 182 224 178 L 198 153 Z" fill="#17645D" stroke="#242E30" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Unresolved finding</title><path d="M 168 108 L 187 127 M 187 108 L 168 127" fill="none" stroke="#A03F35" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Evidence / saved slip</title><rect x="33" y="125" width="50" height="36" rx="4" fill="#FFFEF9" stroke="#242E30" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Evidence / slip line</title><rect x="42" y="136" width="28" height="2" rx="1.5" fill="#718984" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Evidence / slip line</title><rect x="42" y="144" width="20" height="2" rx="1.5" fill="#718984" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+</svg>

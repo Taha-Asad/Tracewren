@@ -1,0 +1,343 @@
+key,name,page,kind,width,height,nativeNode,screenFamily,requirements,priority,preview
+Queue,Triage queue,defender,screen,1440,900,117,SCR-03 / SCR-12,"FR-3.3; FR-4.1–4.4; FR-5.1–5.5; FR-7.1, 7.5; UC-02",P1,previews/Queue.png
+QueueAssigned,Triage queue,defender,screen,1440,900,310,SCR-03 / SCR-12,"FR-3.3; FR-4.1–4.4; FR-5.1–5.5; FR-7.1, 7.5; UC-02",P1,previews/QueueAssigned.png
+QueueAttention,Triage queue,defender,screen,1440,900,467,SCR-03 / SCR-12,"FR-3.3; FR-4.1–4.4; FR-5.1–5.5; FR-7.1, 7.5; UC-02",P1,previews/QueueAttention.png
+Program,Northstar Labs,public,screen,1440,1000,624,SCR-01 / SCR-02,"FR-1.5a, FR-1.6, FR-2, FR-3.1–3.5, FR-8.3; UC-01",P1,previews/Program.png
+ReportLocked,BBT-0241,defender,screen,1440,900,707,SCR-03 / SCR-12,"FR-3.3; FR-4.1–4.4; FR-5.1–5.5; FR-7.1, 7.5; UC-02",P1,previews/ReportLocked.png
+ReportTriage,BBT-0241,defender,screen,1440,900,844,SCR-03 / SCR-12,"FR-3.3; FR-4.1–4.4; FR-5.1–5.5; FR-7.1, 7.5; UC-02",P1,previews/ReportTriage.png
+ReportInternal,BBT-0241,defender,screen,1440,900,1014,SCR-03 / SCR-12,"FR-3.3; FR-4.1–4.4; FR-5.1–5.5; FR-7.1, 7.5; UC-02",P1,previews/ReportInternal.png
+Directory,Find a disclosure program,public,screen,1440,1000,1161,SCR-01 / SCR-02,"FR-1.5a, FR-1.6, FR-2, FR-3.1–3.5, FR-8.3; UC-01",P1,previews/Directory.png
+DirectoryFiltered,Program results,public,screen,1440,1000,1219,SCR-01 / SCR-02,"FR-1.5a, FR-1.6, FR-2, FR-3.1–3.5, FR-8.3; UC-01",P1,previews/DirectoryFiltered.png
+Policy,"Scope, safe harbor & rules",public,screen,1440,1000,1244,SCR-01 / SCR-02,"FR-1.5a, FR-1.6, FR-2, FR-3.1–3.5, FR-8.3; UC-01",P1,previews/Policy.png
+SecurityTxtPreview,Signed discovery file,public,overlay,730,620,1282,SCR-01 / SCR-02,"FR-1.5a, FR-1.6, FR-2, FR-3.1–3.5, FR-8.3; UC-01",P1,previews/SecurityTxtPreview.png
+SubmitIdentity,How would you like to report?,public,screen,1440,1050,1295,SCR-01 / SCR-02,"FR-1.5a, FR-1.6, FR-2, FR-3.1–3.5, FR-8.3; UC-01",P1,previews/SubmitIdentity.png
+GuestKey,Protect your guest access,public,screen,1440,1050,1355,SCR-01 / SCR-02,"FR-1.5a, FR-1.6, FR-2, FR-3.1–3.5, FR-8.3; UC-01",P1,previews/GuestKey.png
+SubmitDetails,Describe the finding,public,screen,1440,1050,1420,SCR-01 / SCR-02,"FR-1.5a, FR-1.6, FR-2, FR-3.1–3.5, FR-8.3; UC-01",P1,previews/SubmitDetails.png
+SubmitReview,Review before encrypting,public,screen,1440,1050,1505,SCR-01 / SCR-02,"FR-1.5a, FR-1.6, FR-2, FR-3.1–3.5, FR-8.3; UC-01",P1,previews/SubmitReview.png
+SubmitEncrypting,Encrypting on this device,public,screen,1440,1050,1566,SCR-01 / SCR-02,"FR-1.5a, FR-1.6, FR-2, FR-3.1–3.5, FR-8.3; UC-01",P1,previews/SubmitEncrypting.png
+SubmissionReceipt,Report received. Save your access.,public,screen,1440,1050,1618,SCR-01 / SCR-02,"FR-1.5a, FR-1.6, FR-2, FR-3.1–3.5, FR-8.3; UC-01",P1,previews/SubmissionReceipt.png
+RegisteredReady,Your researcher key is ready,public,screen,1440,1050,1677,SCR-01 / SCR-02,"FR-1.5a, FR-1.6, FR-2, FR-3.1–3.5, FR-8.3; UC-01",P1,previews/RegisteredReady.png
+RegisteredDetails,Describe the finding,public,screen,1440,1050,1731,SCR-01 / SCR-02,"FR-1.5a, FR-1.6, FR-2, FR-3.1–3.5, FR-8.3; UC-01",P1,previews/RegisteredDetails.png
+RegisteredReview,Review your registered report,public,screen,1440,1050,1801,SCR-01 / SCR-02,"FR-1.5a, FR-1.6, FR-2, FR-3.1–3.5, FR-8.3; UC-01",P1,previews/RegisteredReview.png
+RegisteredReceipt,Your report is in,public,screen,1440,1050,1853,SCR-01 / SCR-02,"FR-1.5a, FR-1.6, FR-2, FR-3.1–3.5, FR-8.3; UC-01",P1,previews/RegisteredReceipt.png
+SubmitRecipientsChanged,The program keyring changed,public,screen,1440,1050,1907,SCR-01 / SCR-02,"FR-1.5a, FR-1.6, FR-2, FR-3.1–3.5, FR-8.3; UC-01",P1,previews/SubmitRecipientsChanged.png
+SubmitExpired,Your submission session expired,public,screen,1440,1050,1969,SCR-01 / SCR-02,"FR-1.5a, FR-1.6, FR-2, FR-3.1–3.5, FR-8.3; UC-01",P1,previews/SubmitExpired.png
+SubmitRateLimited,Please wait before trying again,public,screen,1440,1050,2031,SCR-01 / SCR-02,"FR-1.5a, FR-1.6, FR-2, FR-3.1–3.5, FR-8.3; UC-01",P1,previews/SubmitRateLimited.png
+SubmitCapacity,The program cannot take a new report right now,public,screen,1440,1050,2093,SCR-01 / SCR-02,"FR-1.5a, FR-1.6, FR-2, FR-3.1–3.5, FR-8.3; UC-01",P1,previews/SubmitCapacity.png
+SubmitRetry,The receipt didn’t reach this device,public,screen,1440,1050,2155,SCR-01 / SCR-02,"FR-1.5a, FR-1.6, FR-2, FR-3.1–3.5, FR-8.3; UC-01",P1,previews/SubmitRetry.png
+ProgramUnavailable,This program is unavailable,public,screen,1440,1000,2217,SCR-01 / SCR-02,"FR-1.5a, FR-1.6, FR-2, FR-3.1–3.5, FR-8.3; UC-01",P1,previews/ProgramUnavailable.png
+ConflictOfInterest,Use an external program,public,screen,1440,1000,2237,SCR-01 / SCR-02,"FR-1.5a, FR-1.6, FR-2, FR-3.1–3.5, FR-8.3; UC-01",P1,previews/ConflictOfInterest.png
+MyReports,Research workspace,researcher,screen,1440,900,2257,SCR-02 / SCR-03 / SCR-05 / SCR-10,"FR-1.6; FR-3.3; FR-4.4; FR-5.2; FR-7.2–7.4; UC-01, UC-04, UC-05",P1,previews/MyReports.png
+ResearcherReport,BBT-0241,researcher,screen,1440,900,2397,SCR-02 / SCR-03 / SCR-05 / SCR-10,"FR-1.6; FR-3.3; FR-4.4; FR-5.2; FR-7.2–7.4; UC-01, UC-04, UC-05",P1,previews/ResearcherReport.png
+ResearcherNeedInfo,BBT-0241,researcher,screen,1440,900,2539,SCR-02 / SCR-03 / SCR-05 / SCR-10,"FR-1.6; FR-3.3; FR-4.4; FR-5.2; FR-7.2–7.4; UC-01, UC-04, UC-05",P1,previews/ResearcherNeedInfo.png
+ResearcherRetestPending,BBT-0241,researcher,screen,1440,900,2684,SCR-02 / SCR-03 / SCR-05 / SCR-10,"FR-1.6; FR-3.3; FR-4.4; FR-5.2; FR-7.2–7.4; UC-01, UC-04, UC-05",P1,previews/ResearcherRetestPending.png
+ResearcherVerified,BBT-0241,researcher,screen,1440,900,2830,SCR-02 / SCR-03 / SCR-05 / SCR-10,"FR-1.6; FR-3.3; FR-4.4; FR-5.2; FR-7.2–7.4; UC-01, UC-04, UC-05",P1,previews/ResearcherVerified.png
+ResearcherRetestFailed,BBT-0241,researcher,screen,1440,900,2973,SCR-02 / SCR-03 / SCR-05 / SCR-10,"FR-1.6; FR-3.3; FR-4.4; FR-5.2; FR-7.2–7.4; UC-01, UC-04, UC-05",P1,previews/ResearcherRetestFailed.png
+ResearcherReply,Send clarification,researcher,overlay,660,575,3116,SCR-02 / SCR-03 / SCR-05 / SCR-10,"FR-1.6; FR-3.3; FR-4.4; FR-5.2; FR-7.2–7.4; UC-01, UC-04, UC-05",P1,previews/ResearcherReply.png
+ResearcherReplySent,Clarification sent,researcher,screen,1440,900,3133,SCR-02 / SCR-03 / SCR-05 / SCR-10,"FR-1.6; FR-3.3; FR-4.4; FR-5.2; FR-7.2–7.4; UC-01, UC-04, UC-05",P1,previews/ResearcherReplySent.png
+Withdraw,Withdraw this report?,researcher,overlay,600,450,3193,SCR-02 / SCR-03 / SCR-05 / SCR-10,"FR-1.6; FR-3.3; FR-4.4; FR-5.2; FR-7.2–7.4; UC-01, UC-04, UC-05",P1,previews/Withdraw.png
+Withdrawn,BBT-0241 · Withdrawn,researcher,screen,1440,900,3212,SCR-02 / SCR-03 / SCR-05 / SCR-10,"FR-1.6; FR-3.3; FR-4.4; FR-5.2; FR-7.2–7.4; UC-01, UC-04, UC-05",P1,previews/Withdrawn.png
+ResearcherScoreHistory,Why this score?,researcher,overlay,720,600,3272,SCR-02 / SCR-03 / SCR-05 / SCR-10,"FR-1.6; FR-3.3; FR-4.4; FR-5.2; FR-7.2–7.4; UC-01, UC-04, UC-05",P1,previews/ResearcherScoreHistory.png
+GuestRestore,Restore a guest report,researcher,screen,1440,900,3288,SCR-02 / SCR-03 / SCR-05 / SCR-10,"FR-1.6; FR-3.3; FR-4.4; FR-5.2; FR-7.2–7.4; UC-01, UC-04, UC-05",P1,previews/GuestRestore.png
+GuestRestoreSelected,Restore a guest report,researcher,screen,1440,900,3313,SCR-02 / SCR-03 / SCR-05 / SCR-10,"FR-1.6; FR-3.3; FR-4.4; FR-5.2; FR-7.2–7.4; UC-01, UC-04, UC-05",P1,previews/GuestRestoreSelected.png
+GuestRestoreWrong,Restore a guest report,researcher,screen,1440,900,3346,SCR-02 / SCR-03 / SCR-05 / SCR-10,"FR-1.6; FR-3.3; FR-4.4; FR-5.2; FR-7.2–7.4; UC-01, UC-04, UC-05",P1,previews/GuestRestoreWrong.png
+GuestRestoreTampered,Restore a guest report,researcher,screen,1440,900,3380,SCR-02 / SCR-03 / SCR-05 / SCR-10,"FR-1.6; FR-3.3; FR-4.4; FR-5.2; FR-7.2–7.4; UC-01, UC-04, UC-05",P1,previews/GuestRestoreTampered.png
+GuestRestored,Guest access restored,researcher,screen,1440,900,3416,SCR-02 / SCR-03 / SCR-05 / SCR-10,"FR-1.6; FR-3.3; FR-4.4; FR-5.2; FR-7.2–7.4; UC-01, UC-04, UC-05",P1,previews/GuestRestored.png
+GuestRotate,Rotate guest access token,researcher,overlay,620,500,3442,SCR-02 / SCR-03 / SCR-05 / SCR-10,"FR-1.6; FR-3.3; FR-4.4; FR-5.2; FR-7.2–7.4; UC-01, UC-04, UC-05",P1,previews/GuestRotate.png
+GuestRotated,Access token rotated,researcher,screen,1440,900,3457,SCR-02 / SCR-03 / SCR-05 / SCR-10,"FR-1.6; FR-3.3; FR-4.4; FR-5.2; FR-7.2–7.4; UC-01, UC-04, UC-05",P1,previews/GuestRotated.png
+UpdatedRecoverySaved,Updated recovery package,researcher,overlay,620,450,3483,SCR-02 / SCR-03 / SCR-05 / SCR-10,"FR-1.6; FR-3.3; FR-4.4; FR-5.2; FR-7.2–7.4; UC-01, UC-04, UC-05",P1,previews/UpdatedRecoverySaved.png
+BindGuest,Link this report to your account,researcher,overlay,600,450,3496,SCR-02 / SCR-03 / SCR-05 / SCR-10,"FR-1.6; FR-3.3; FR-4.4; FR-5.2; FR-7.2–7.4; UC-01, UC-04, UC-05",P1,previews/BindGuest.png
+Attachments,Encrypted evidence files,public,overlay,650,570,3509,SCR-01 / SCR-02,"FR-1.5a, FR-1.6, FR-2, FR-3.1–3.5, FR-8.3; UC-01",P1,previews/Attachments.png
+AttachmentTooLarge,This attachment is too large,public,overlay,620,480,3528,SCR-01 / SCR-02,"FR-1.5a, FR-1.6, FR-2, FR-3.1–3.5, FR-8.3; UC-01",P1,previews/AttachmentTooLarge.png
+PrivacyDetails,Who can see what?,public,overlay,740,640,3543,SCR-01 / SCR-02,"FR-1.5a, FR-1.6, FR-2, FR-3.1–3.5, FR-8.3; UC-01",P1,previews/PrivacyDetails.png
+RecoveryDownloaded,Your recovery file is ready,researcher,overlay,600,430,3558,SCR-02 / SCR-03 / SCR-05 / SCR-10,"FR-1.6; FR-3.3; FR-4.4; FR-5.2; FR-7.2–7.4; UC-01, UC-04, UC-05",P1,previews/RecoveryDownloaded.png
+BackupNeeded,Save your recovery access first,researcher,overlay,600,400,3571,SCR-02 / SCR-03 / SCR-05 / SCR-10,"FR-1.6; FR-3.3; FR-4.4; FR-5.2; FR-7.2–7.4; UC-01, UC-04, UC-05",P1,previews/BackupNeeded.png
+LostKeys,Recovery depends on your backup,account,overlay,650,590,3581,SCR-09 / SCR-10,"FR-1.1–1.4; FR-3.1–3.2, 3.7–3.8; UC-05",P1,previews/LostKeys.png
+AttachmentInfo,Download encrypted evidence,defender,overlay,620,500,3598,SCR-03 / SCR-12,"FR-3.3; FR-4.1–4.4; FR-5.1–5.5; FR-7.1, 7.5; UC-02",P1,previews/AttachmentInfo.png
+QueueLoading,Triage queue,defender,screen,1440,900,3611,SCR-03 / SCR-12,"FR-3.3; FR-4.1–4.4; FR-5.1–5.5; FR-7.1, 7.5; UC-02",P1,previews/QueueLoading.png
+QueueEmpty,Triage queue,defender,screen,1440,900,3708,SCR-03 / SCR-12,"FR-3.3; FR-4.1–4.4; FR-5.1–5.5; FR-7.1, 7.5; UC-02",P1,previews/QueueEmpty.png
+QueueError,Triage queue,defender,screen,1440,900,3807,SCR-03 / SCR-12,"FR-3.3; FR-4.1–4.4; FR-5.1–5.5; FR-7.1, 7.5; UC-02",P1,previews/QueueError.png
+Unlock,Unlock this report,defender,overlay,600,480,3904,SCR-03 / SCR-12,"FR-3.3; FR-4.1–4.4; FR-5.1–5.5; FR-7.1, 7.5; UC-02",P1,previews/Unlock.png
+UnlockWrong,Key is still locked,defender,overlay,600,430,3925,SCR-03 / SCR-12,"FR-3.3; FR-4.1–4.4; FR-5.1–5.5; FR-7.1, 7.5; UC-02",P1,previews/UnlockWrong.png
+Filters,Filter the report queue,defender,overlay,600,570,3942,SCR-03 / SCR-12,"FR-3.3; FR-4.1–4.4; FR-5.1–5.5; FR-7.1, 7.5; UC-02",P1,previews/Filters.png
+Search,Search & actions,defender,overlay,700,570,3970,SCR-03 / SCR-12,"FR-3.3; FR-4.1–4.4; FR-5.1–5.5; FR-7.1, 7.5; UC-02",P1,previews/Search.png
+Notifications,Updates,defender,overlay,620,510,3990,SCR-03 / SCR-12,"FR-3.3; FR-4.1–4.4; FR-5.1–5.5; FR-7.1, 7.5; UC-02",P1,previews/Notifications.png
+SwitchWorkspace,Choose a workspace,account,overlay,620,540,4012,SCR-09 / SCR-10,"FR-1.1–1.4; FR-3.1–3.2, 3.7–3.8; UC-05",P1,previews/SwitchWorkspace.png
+Score,Official CVSS 3.1 assessment,defender,overlay,780,780,4039,SCR-03 / SCR-12,"FR-3.3; FR-4.1–4.4; FR-5.1–5.5; FR-7.1, 7.5; UC-02",P1,previews/Score.png
+ScoreInvalid,Check the CVSS vector,defender,overlay,680,540,4103,SCR-03 / SCR-12,"FR-3.3; FR-4.1–4.4; FR-5.1–5.5; FR-7.1, 7.5; UC-02",P1,previews/ScoreInvalid.png
+ScoreHistory,Assessment history,defender,overlay,700,640,4120,SCR-03 / SCR-12,"FR-3.3; FR-4.1–4.4; FR-5.1–5.5; FR-7.1, 7.5; UC-02",P1,previews/ScoreHistory.png
+Accept,Accept this report,defender,overlay,600,460,4137,SCR-03 / SCR-12,"FR-3.3; FR-4.1–4.4; FR-5.1–5.5; FR-7.1, 7.5; UC-02",P1,previews/Accept.png
+Accepted,BBT-0241,defender,screen,1440,900,4154,SCR-03 / SCR-12,"FR-3.3; FR-4.1–4.4; FR-5.1–5.5; FR-7.1, 7.5; UC-02",P1,previews/Accepted.png
+RequestInfo,Request more information,defender,overlay,650,540,4323,SCR-03 / SCR-12,"FR-3.3; FR-4.1–4.4; FR-5.1–5.5; FR-7.1, 7.5; UC-02",P1,previews/RequestInfo.png
+DefenderNeedInfo,BBT-0241,defender,screen,1440,900,4340,SCR-03 / SCR-12,"FR-3.3; FR-4.1–4.4; FR-5.1–5.5; FR-7.1, 7.5; UC-02",P1,previews/DefenderNeedInfo.png
+TriageOutcomes,Other triage outcomes,defender,overlay,680,660,4509,SCR-03 / SCR-12,"FR-3.3; FR-4.1–4.4; FR-5.1–5.5; FR-7.1, 7.5; UC-02",P1,previews/TriageOutcomes.png
+Duplicate,Mark as duplicate,defender,overlay,650,600,4536,SCR-03 / SCR-12,"FR-3.3; FR-4.1–4.4; FR-5.1–5.5; FR-7.1, 7.5; UC-02",P1,previews/Duplicate.png
+RejectInvalid,Reject as invalid,defender,overlay,650,600,4556,SCR-03 / SCR-12,"FR-3.3; FR-4.1–4.4; FR-5.1–5.5; FR-7.1, 7.5; UC-02",P1,previews/RejectInvalid.png
+Spam,Mark report as spam,defender,overlay,650,600,4576,SCR-03 / SCR-12,"FR-3.3; FR-4.1–4.4; FR-5.1–5.5; FR-7.1, 7.5; UC-02",P1,previews/Spam.png
+DuplicateClosed,BBT-0241 · Duplicate,defender,screen,1440,900,4592,SCR-03 / SCR-12,"FR-3.3; FR-4.1–4.4; FR-5.1–5.5; FR-7.1, 7.5; UC-02",P1,previews/DuplicateClosed.png
+InvalidClosed,BBT-0241 · Rejected · invalid,defender,screen,1440,900,4676,SCR-03 / SCR-12,"FR-3.3; FR-4.1–4.4; FR-5.1–5.5; FR-7.1, 7.5; UC-02",P1,previews/InvalidClosed.png
+SpamClosed,BBT-0241 · Rejected · spam,defender,screen,1440,900,4760,SCR-03 / SCR-12,"FR-3.3; FR-4.1–4.4; FR-5.1–5.5; FR-7.1, 7.5; UC-02",P1,previews/SpamClosed.png
+IncompleteClosed,BBT-0241 · Closed · incomplete,defender,screen,1440,900,4844,SCR-03 / SCR-12,"FR-3.3; FR-4.1–4.4; FR-5.1–5.5; FR-7.1, 7.5; UC-02",P1,previews/IncompleteClosed.png
+OwnerRiskGate,Owner approval is required,defender,overlay,620,460,4928,SCR-03 / SCR-12,"FR-3.3; FR-4.1–4.4; FR-5.1–5.5; FR-7.1, 7.5; UC-02",P1,previews/OwnerRiskGate.png
+SharedSent,Reply recorded,defender,overlay,600,400,4941,SCR-03 / SCR-12,"FR-3.3; FR-4.1–4.4; FR-5.1–5.5; FR-7.1, 7.5; UC-02",P1,previews/SharedSent.png
+InternalSent,Internal note saved,defender,overlay,600,400,4953,SCR-03 / SCR-12,"FR-3.3; FR-4.1–4.4; FR-5.1–5.5; FR-7.1, 7.5; UC-02",P1,previews/InternalSent.png
+ScoreSaved,Assessment recorded,defender,overlay,600,400,4965,SCR-03 / SCR-12,"FR-3.3; FR-4.1–4.4; FR-5.1–5.5; FR-7.1, 7.5; UC-02",P1,previews/ScoreSaved.png
+ReadOnly,Organization report overview,audit,screen,1440,900,4977,SCR-12,FR-5.4; FR-8.4–8.5; SRS Table 2.2; UC-07,P1,previews/ReadOnly.png
+OwnerNoGrant,Report access is separate from ownership,audit,screen,1440,900,5061,SCR-12,FR-5.4; FR-8.4–8.5; SRS Table 2.2; UC-07,P1,previews/OwnerNoGrant.png
+DefenderUnassigned,You are not a recipient for this report,audit,screen,1440,900,5145,SCR-12,FR-5.4; FR-8.4–8.5; SRS Table 2.2; UC-07,P1,previews/DefenderUnassigned.png
+FixCommit,1 · Propose remediation,fix,overlay,740,760,5229,SCR-04 / SCR-05,"FR-6.1–6.4; FR-7.1–7.7; UC-03, UC-04",P1,previews/FixCommit.png
+FixConfig,1 · Propose remediation,fix,overlay,740,760,5261,SCR-04 / SCR-05,"FR-6.1–6.4; FR-7.1–7.7; UC-03, UC-04",P1,previews/FixConfig.png
+CommitChecked,Commit found on target branch,fix,overlay,740,650,5290,SCR-04 / SCR-05,"FR-6.1–6.4; FR-7.1–7.7; UC-03, UC-04",P1,previews/CommitChecked.png
+CommitMissing,Commit not found or not merged,fix,overlay,660,520,5309,SCR-04 / SCR-05,"FR-6.1–6.4; FR-7.1–7.7; UC-03, UC-04",P1,previews/CommitMissing.png
+GitHubPermission,GitHub credential needs attention,fix,overlay,660,520,5328,SCR-04 / SCR-05,"FR-6.1–6.4; FR-7.1–7.7; UC-03, UC-04",P1,previews/GitHubPermission.png
+GitHubOutage,GitHub verification is temporarily unavailable,fix,overlay,660,520,5347,SCR-04 / SCR-05,"FR-6.1–6.4; FR-7.1–7.7; UC-03, UC-04",P1,previews/GitHubOutage.png
+FixProposed,BBT-0241,fix,screen,1440,900,5366,SCR-04 / SCR-05,"FR-6.1–6.4; FR-7.1–7.7; UC-03, UC-04",P1,previews/FixProposed.png
+ConfigProposed,BBT-0241 · Configuration proposed,fix,screen,1440,900,5538,SCR-04 / SCR-05,"FR-6.1–6.4; FR-7.1–7.7; UC-03, UC-04",P1,previews/ConfigProposed.png
+ConfigSnapshot,Configuration evidence,fix,overlay,680,540,5622,SCR-04 / SCR-05,"FR-6.1–6.4; FR-7.1–7.7; UC-03, UC-04",P1,previews/ConfigSnapshot.png
+CancelFix,Cancel the proposed fix,fix,overlay,620,500,5636,SCR-04 / SCR-05,"FR-6.1–6.4; FR-7.1–7.7; UC-03, UC-04",P1,previews/CancelFix.png
+AttemptSuperseded,BBT-0241 · Accepted,fix,screen,1440,900,5653,SCR-04 / SCR-05,"FR-6.1–6.4; FR-7.1–7.7; UC-03, UC-04",P1,previews/AttemptSuperseded.png
+FixAttemptTwo,Propose remediation · attempt 2,fix,overlay,680,620,5737,SCR-04 / SCR-05,"FR-6.1–6.4; FR-7.1–7.7; UC-03, UC-04",P1,previews/FixAttemptTwo.png
+CommitCheckedTwo,Replacement commit checked,fix,overlay,700,580,5761,SCR-04 / SCR-05,"FR-6.1–6.4; FR-7.1–7.7; UC-03, UC-04",P1,previews/CommitCheckedTwo.png
+FixProposedTwo,BBT-0241 · Fix proposed · attempt 2,fix,screen,1440,900,5780,SCR-04 / SCR-05,"FR-6.1–6.4; FR-7.1–7.7; UC-03, UC-04",P1,previews/FixProposedTwo.png
+DeploymentTwo,Record deployment · attempt 2,fix,overlay,680,610,5864,SCR-04 / SCR-05,"FR-6.1–6.4; FR-7.1–7.7; UC-03, UC-04",P1,previews/DeploymentTwo.png
+FixDeployedTwo,BBT-0241 · Attempt 2 deployed,fix,screen,1440,900,5888,SCR-04 / SCR-05,"FR-6.1–6.4; FR-7.1–7.7; UC-03, UC-04",P1,previews/FixDeployedTwo.png
+RequestRetestTwo,Request retest · attempt 2,fix,overlay,680,540,5969,SCR-04 / SCR-05,"FR-6.1–6.4; FR-7.1–7.7; UC-03, UC-04",P1,previews/RequestRetestTwo.png
+RetestPendingTwo,BBT-0241 · Retest pending · attempt 2,fix,screen,1440,900,5985,SCR-04 / SCR-05,"FR-6.1–6.4; FR-7.1–7.7; UC-03, UC-04",P1,previews/RetestPendingTwo.png
+ResearcherRetestTwo,Retest replacement attempt,fix,overlay,700,680,6069,SCR-04 / SCR-05,"FR-6.1–6.4; FR-7.1–7.7; UC-03, UC-04",P1,previews/ResearcherRetestTwo.png
+ResearcherVerifiedTwo,BBT-0241 · Verified · attempt 2,researcher,screen,1440,900,6097,SCR-02 / SCR-03 / SCR-05 / SCR-10,"FR-1.6; FR-3.3; FR-4.4; FR-5.2; FR-7.2–7.4; UC-01, UC-04, UC-05",P1,previews/ResearcherVerifiedTwo.png
+VerifiedResearcherTwo,BBT-0241 · Verified · attempt 2,fix,screen,1440,900,6160,SCR-04 / SCR-05,"FR-6.1–6.4; FR-7.1–7.7; UC-03, UC-04",P1,previews/VerifiedResearcherTwo.png
+Deployment,2 · Record actual deployment,fix,overlay,680,650,6244,SCR-04 / SCR-05,"FR-6.1–6.4; FR-7.1–7.7; UC-03, UC-04",P1,previews/Deployment.png
+FixDeployed,BBT-0241,fix,screen,1440,900,6269,SCR-04 / SCR-05,"FR-6.1–6.4; FR-7.1–7.7; UC-03, UC-04",P1,previews/FixDeployed.png
+RequestRetest,3 · Invite the researcher to retest,fix,overlay,680,600,6439,SCR-04 / SCR-05,"FR-6.1–6.4; FR-7.1–7.7; UC-03, UC-04",P1,previews/RequestRetest.png
+RetestPending,BBT-0241,fix,screen,1440,900,6459,SCR-04 / SCR-05,"FR-6.1–6.4; FR-7.1–7.7; UC-03, UC-04",P1,previews/RetestPending.png
+VerificationOptions,Choose a verification route,fix,overlay,700,700,6630,SCR-04 / SCR-05,"FR-6.1–6.4; FR-7.1–7.7; UC-03, UC-04",P1,previews/VerificationOptions.png
+ResearcherRetest,Attest to this retest,fix,overlay,740,780,6652,SCR-04 / SCR-05,"FR-6.1–6.4; FR-7.1–7.7; UC-03, UC-04",P1,previews/ResearcherRetest.png
+InternalRetest,Attest to this retest,fix,overlay,740,780,6682,SCR-04 / SCR-05,"FR-6.1–6.4; FR-7.1–7.7; UC-03, UC-04",P1,previews/InternalRetest.png
+VerifiedResearcher,BBT-0241,fix,screen,1440,900,6716,SCR-04 / SCR-05,"FR-6.1–6.4; FR-7.1–7.7; UC-03, UC-04",P1,previews/VerifiedResearcher.png
+VerifiedInternal,BBT-0241,fix,screen,1440,900,6887,SCR-04 / SCR-05,"FR-6.1–6.4; FR-7.1–7.7; UC-03, UC-04",P1,previews/VerifiedInternal.png
+RetestFailedForm,The issue still reproduces,fix,overlay,680,620,7058,SCR-04 / SCR-05,"FR-6.1–6.4; FR-7.1–7.7; UC-03, UC-04",P1,previews/RetestFailedForm.png
+InternalRetestFailedForm,Internal retest failed,fix,overlay,680,600,7082,SCR-04 / SCR-05,"FR-6.1–6.4; FR-7.1–7.7; UC-03, UC-04",P1,previews/InternalRetestFailedForm.png
+RetestFailed,BBT-0241 · Accepted again,fix,screen,1440,900,7102,SCR-04 / SCR-05,"FR-6.1–6.4; FR-7.1–7.7; UC-03, UC-04",P1,previews/RetestFailed.png
+TimeoutGate,Timeout closure is not eligible yet,fix,overlay,650,520,7186,SCR-04 / SCR-05,"FR-6.1–6.4; FR-7.1–7.7; UC-03, UC-04",P1,previews/TimeoutGate.png
+TimeoutEligible,Close without verification,fix,overlay,680,600,7201,SCR-04 / SCR-05,"FR-6.1–6.4; FR-7.1–7.7; UC-03, UC-04",P1,previews/TimeoutEligible.png
+UnverifiedClosed,BBT-0241,fix,screen,1440,900,7220,SCR-04 / SCR-05,"FR-6.1–6.4; FR-7.1–7.7; UC-03, UC-04",P1,previews/UnverifiedClosed.png
+Reopen,Reopen for investigation,fix,overlay,650,520,7391,SCR-04 / SCR-05,"FR-6.1–6.4; FR-7.1–7.7; UC-03, UC-04",P1,previews/Reopen.png
+ReportReopened,BBT-0241,fix,screen,1440,900,7408,SCR-04 / SCR-05,"FR-6.1–6.4; FR-7.1–7.7; UC-03, UC-04",P1,previews/ReportReopened.png
+StateConflict,The report changed while you worked,fix,overlay,680,580,7578,SCR-04 / SCR-05,"FR-6.1–6.4; FR-7.1–7.7; UC-03, UC-04",P1,previews/StateConflict.png
+RecipientsConflict,Report recipients changed,fix,overlay,680,580,7597,SCR-04 / SCR-05,"FR-6.1–6.4; FR-7.1–7.7; UC-03, UC-04",P1,previews/RecipientsConflict.png
+ReplyCapacityPaused,Reply not saved · deadline paused,fix,overlay,680,580,7616,SCR-04 / SCR-05,"FR-6.1–6.4; FR-7.1–7.7; UC-03, UC-04",P1,previews/ReplyCapacityPaused.png
+ReplyStorageUnavailable,Reply not saved · pause not confirmed,fix,overlay,680,580,7635,SCR-04 / SCR-05,"FR-6.1–6.4; FR-7.1–7.7; UC-03, UC-04",P1,previews/ReplyStorageUnavailable.png
+SignIn,Welcome back,account,screen,1440,900,7654,SCR-09 / SCR-10,"FR-1.1–1.4; FR-3.1–3.2, 3.7–3.8; UC-05",P1,previews/SignIn.png
+SignInResearcher,Welcome back,account,screen,1440,900,7699,SCR-09 / SCR-10,"FR-1.1–1.4; FR-3.1–3.2, 3.7–3.8; UC-05",P1,previews/SignInResearcher.png
+Register,Create an account,account,screen,1440,900,7744,SCR-09 / SCR-10,"FR-1.1–1.4; FR-3.1–3.2, 3.7–3.8; UC-05",P1,previews/Register.png
+VerifyEmail,Check your email,account,screen,1440,900,7791,SCR-09 / SCR-10,"FR-1.1–1.4; FR-3.1–3.2, 3.7–3.8; UC-05",P1,previews/VerifyEmail.png
+SignInMFA,Verify your sign-in,account,screen,1440,900,7824,SCR-09 / SCR-10,"FR-1.1–1.4; FR-3.1–3.2, 3.7–3.8; UC-05",P1,previews/SignInMFA.png
+MFAInvalid,That code did not verify,account,screen,1440,900,7861,SCR-09 / SCR-10,"FR-1.1–1.4; FR-3.1–3.2, 3.7–3.8; UC-05",P1,previews/MFAInvalid.png
+ForgotPassword,Reset your account password,account,screen,1440,900,7896,SCR-09 / SCR-10,"FR-1.1–1.4; FR-3.1–3.2, 3.7–3.8; UC-05",P1,previews/ForgotPassword.png
+ResetRequested,Check your inbox,account,screen,1440,900,7930,SCR-09 / SCR-10,"FR-1.1–1.4; FR-3.1–3.2, 3.7–3.8; UC-05",P1,previews/ResetRequested.png
+ResetPassword,Choose a new account password,account,screen,1440,900,7964,SCR-09 / SCR-10,"FR-1.1–1.4; FR-3.1–3.2, 3.7–3.8; UC-05",P1,previews/ResetPassword.png
+ResetExpired,This reset link has expired,account,screen,1440,900,8005,SCR-09 / SCR-10,"FR-1.1–1.4; FR-3.1–3.2, 3.7–3.8; UC-05",P1,previews/ResetExpired.png
+ResetComplete,Account password updated,account,screen,1440,900,8035,SCR-09 / SCR-10,"FR-1.1–1.4; FR-3.1–3.2, 3.7–3.8; UC-05",P1,previews/ResetComplete.png
+Profile,Your profile,account,screen,1440,900,8065,SCR-09 / SCR-10,"FR-1.1–1.4; FR-3.1–3.2, 3.7–3.8; UC-05",P1,previews/Profile.png
+ProfileSaved,Profile saved,account,overlay,560,330,8173,SCR-09 / SCR-10,"FR-1.1–1.4; FR-3.1–3.2, 3.7–3.8; UC-05",P1,previews/ProfileSaved.png
+Security,Account security,account,screen,1440,900,8182,SCR-09 / SCR-10,"FR-1.1–1.4; FR-3.1–3.2, 3.7–3.8; UC-05",P1,previews/Security.png
+ChangePassword,Change account password,account,overlay,620,600,8279,SCR-09 / SCR-10,"FR-1.1–1.4; FR-3.1–3.2, 3.7–3.8; UC-05",P1,previews/ChangePassword.png
+Sessions,Active sessions,account,screen,1440,900,8303,SCR-09 / SCR-10,"FR-1.1–1.4; FR-3.1–3.2, 3.7–3.8; UC-05",P1,previews/Sessions.png
+RevokeSessions,End all signed-in sessions?,account,overlay,600,430,8392,SCR-09 / SCR-10,"FR-1.1–1.4; FR-3.1–3.2, 3.7–3.8; UC-05",P1,previews/RevokeSessions.png
+SessionRevoked,Session ended,account,overlay,560,330,8405,SCR-09 / SCR-10,"FR-1.1–1.4; FR-3.1–3.2, 3.7–3.8; UC-05",P1,previews/SessionRevoked.png
+MFASettings,Authenticator protection,account,screen,1440,900,8414,SCR-09 / SCR-10,"FR-1.1–1.4; FR-3.1–3.2, 3.7–3.8; UC-05",P1,previews/MFASettings.png
+Keys,Your local encryption keys,account,screen,1440,900,8499,SCR-09 / SCR-10,"FR-1.1–1.4; FR-3.1–3.2, 3.7–3.8; UC-05",P1,previews/Keys.png
+PersonalKeySetup,Create your local report key,account,overlay,660,650,8605,SCR-09 / SCR-10,"FR-1.1–1.4; FR-3.1–3.2, 3.7–3.8; UC-05",P1,previews/PersonalKeySetup.png
+PersonalBackup,Export personal key backup,account,overlay,650,570,8629,SCR-09 / SCR-10,"FR-1.1–1.4; FR-3.1–3.2, 3.7–3.8; UC-05",P1,previews/PersonalBackup.png
+PersonalRestore,Restore personal keys,account,overlay,660,600,8649,SCR-09 / SCR-10,"FR-1.1–1.4; FR-3.1–3.2, 3.7–3.8; UC-05",P1,previews/PersonalRestore.png
+PersonalRestoreReady,Restore personal keys,account,overlay,660,600,8661,SCR-09 / SCR-10,"FR-1.1–1.4; FR-3.1–3.2, 3.7–3.8; UC-05",P1,previews/PersonalRestoreReady.png
+PersonalRestoreError,Restore personal keys,account,overlay,660,600,8681,SCR-09 / SCR-10,"FR-1.1–1.4; FR-3.1–3.2, 3.7–3.8; UC-05",P1,previews/PersonalRestoreError.png
+PersonalRestored,Personal keys restored locally,account,overlay,640,500,8702,SCR-09 / SCR-10,"FR-1.1–1.4; FR-3.1–3.2, 3.7–3.8; UC-05",P1,previews/PersonalRestored.png
+RevokeKey,Revoke a compromised personal key,account,overlay,700,650,8718,SCR-09 / SCR-10,"FR-1.1–1.4; FR-3.1–3.2, 3.7–3.8; UC-05",P1,previews/RevokeKey.png
+KeyRevoked,Key revoked,account,screen,1440,900,8741,SCR-09 / SCR-10,"FR-1.1–1.4; FR-3.1–3.2, 3.7–3.8; UC-05",P1,previews/KeyRevoked.png
+OnboardWorkspace,Create your organization,onboard,screen,1440,900,8825,SCR-07,FR-1.1–1.4; FR-2; FR-3.6; UC-06,P1,previews/OnboardWorkspace.png
+OnboardMFA,Set up your authenticator,onboard,screen,1440,900,8947,SCR-07,FR-1.1–1.4; FR-2; FR-3.6; UC-06,P1,previews/OnboardMFA.png
+OnboardDomain,Prove the program domain,onboard,screen,1440,900,9065,SCR-07,FR-1.1–1.4; FR-2; FR-3.6; UC-06,P1,previews/OnboardDomain.png
+OnboardDomainVerified,Domain proof confirmed,onboard,screen,1440,900,9179,SCR-07,FR-1.1–1.4; FR-2; FR-3.6; UC-06,P1,previews/OnboardDomainVerified.png
+OnboardPersonalKey,Create your local owner key,onboard,screen,1440,900,9288,SCR-07,FR-1.1–1.4; FR-2; FR-3.6; UC-06,P1,previews/OnboardPersonalKey.png
+OnboardRecovery,Save an offline recovery key,onboard,screen,1440,900,9403,SCR-07,FR-1.1–1.4; FR-2; FR-3.6; UC-06,P1,previews/OnboardRecovery.png
+OnboardRecoveryTest,Prove the offline backup works,onboard,screen,1440,900,9517,SCR-07,FR-1.1–1.4; FR-2; FR-3.6; UC-06,P1,previews/OnboardRecoveryTest.png
+OnboardRecoveryPassed,Offline recovery challenge passed,onboard,screen,1440,900,9632,SCR-07,FR-1.1–1.4; FR-2; FR-3.6; UC-06,P1,previews/OnboardRecoveryPassed.png
+OnboardDefenders,Choose who receives reports,onboard,screen,1440,900,9741,SCR-07,FR-1.1–1.4; FR-2; FR-3.6; UC-06,P1,previews/OnboardDefenders.png
+OnboardActivate,Sign the policy & open intake,onboard,screen,1440,900,9860,SCR-07,FR-1.1–1.4; FR-2; FR-3.6; UC-06,P1,previews/OnboardActivate.png
+RecoveryChallengeFailed,Offline key challenge failed,onboard,overlay,620,500,9977,SCR-07,FR-1.1–1.4; FR-2; FR-3.6; UC-06,P1,previews/RecoveryChallengeFailed.png
+DNSPending,DNS proof is not visible yet,onboard,overlay,620,510,9992,SCR-07,FR-1.1–1.4; FR-2; FR-3.6; UC-06,P1,previews/DNSPending.png
+ProgramRead,Disclosure programs,owner,screen,1440,900,10009,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/ProgramRead.png
+OwnerActionGate,An Organization Owner is required,owner,overlay,620,440,10094,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/OwnerActionGate.png
+OwnerOverview,Program operations,owner,screen,1440,900,10107,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/OwnerOverview.png
+Programs,Disclosure programs,owner,screen,1440,900,10277,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/Programs.png
+ProgramCreate,Create a disclosure program,owner,screen,1440,900,10372,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/ProgramCreate.png
+ProgramSettings,Portal disclosure settings,owner,screen,1440,900,10476,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/ProgramSettings.png
+ProgramSaved,Program settings saved,owner,overlay,600,400,10580,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/ProgramSaved.png
+ScopeSettings,Scope & engagement rules,owner,screen,1440,900,10592,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/ScopeSettings.png
+PolicySettings,Policy & signed security.txt,owner,screen,1440,900,10685,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/PolicySettings.png
+PolicyReview,Review policy publication,owner,overlay,720,630,10793,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/PolicyReview.png
+PolicySigned,Signed file ready to publish,owner,screen,1440,900,10812,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/PolicySigned.png
+DomainSettings,Domain verification,owner,screen,1440,900,10896,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/DomainSettings.png
+DomainVerified,Domain proof confirmed,owner,overlay,560,350,10988,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/DomainVerified.png
+GitHubSettings,GitHub verification connection,owner,screen,1440,900,10997,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/GitHubSettings.png
+GitHubCredential,Replace GitHub credential,owner,overlay,660,540,11089,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/GitHubCredential.png
+GitHubSaved,GitHub credential saved,owner,overlay,580,380,11110,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/GitHubSaved.png
+DisconnectGitHub,Disconnect verification access?,owner,overlay,620,460,11119,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/DisconnectGitHub.png
+GitHubDisconnected,GitHub connection removed,owner,overlay,580,370,11131,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/GitHubDisconnected.png
+Members,People & access,owner,screen,1440,900,11140,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/Members.png
+PeopleRead,Program contacts,owner,screen,1440,900,11269,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/PeopleRead.png
+InviteMember,Invite an organization member,owner,overlay,660,600,11354,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/InviteMember.png
+MemberInviteSent,Invitation prepared,owner,overlay,610,400,11377,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/MemberInviteSent.png
+MemberInvitations,Member invitations,owner,screen,1440,900,11389,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/MemberInvitations.png
+MemberInvitePreview,Join Northstar Labs,owner,screen,1440,900,11474,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/MemberInvitePreview.png
+MemberInviteAccepted,Invitation accepted,owner,screen,1440,900,11500,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/MemberInviteAccepted.png
+RevokeMemberInvite,Revoke this invitation?,owner,overlay,580,400,11585,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/RevokeMemberInvite.png
+InviteRevoked,Invitation revoked,owner,overlay,560,330,11597,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/InviteRevoked.png
+MemberDetail,Jonah Brooks · access details,owner,screen,1440,900,11606,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/MemberDetail.png
+RoleChange,Change organization role,owner,overlay,640,500,11701,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/RoleChange.png
+RoleChanged,Role updated,owner,overlay,600,390,11720,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/RoleChanged.png
+ProgramDefenders,Portal · defender roster,owner,screen,1440,900,11729,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/ProgramDefenders.png
+ProgramRosterRead,Portal · defender roster,owner,screen,1440,900,11832,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/ProgramRosterRead.png
+AddProgramDefender,Add a future report recipient,owner,overlay,640,550,11918,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/AddProgramDefender.png
+DefenderAdded,Program assignment recorded,owner,overlay,600,400,11941,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/DefenderAdded.png
+RemovalScope,Choose the removal scope,owner,overlay,700,680,11953,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/RemovalScope.png
+RemoveReport,Remove report access,owner,overlay,650,540,11975,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/RemoveReport.png
+RemoveProgram,Remove program access,owner,overlay,650,540,11994,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/RemoveProgram.png
+RemoveOrg,Remove organization access,owner,overlay,650,540,12013,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/RemoveOrg.png
+AccessRemoved,Selected access removed,owner,overlay,620,430,12032,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/AccessRemoved.png
+OrgRecovery,Organization emergency recovery,owner,screen,1440,900,12044,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/OrgRecovery.png
+RecoveryFetch,Begin audited recovery fetch,owner,overlay,680,580,12142,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/RecoveryFetch.png
+RecoveryLocalUnlock,Unlock with the offline key,owner,overlay,680,580,12161,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/RecoveryLocalUnlock.png
+RecoveryRead,BBT-0241 · recovery session,owner,screen,1440,900,12182,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/RecoveryRead.png
+HistoricalGrant,Grant historical defender access,owner,overlay,720,700,12269,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/HistoricalGrant.png
+ResearcherRewrap,Replace researcher key,owner,overlay,720,700,12294,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/ResearcherRewrap.png
+GrantReviewDefender,Confirm historical key grant,owner,overlay,700,620,12320,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/GrantReviewDefender.png
+GrantReviewResearcher,Confirm historical key grant,owner,overlay,700,620,12337,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/GrantReviewResearcher.png
+GrantCompleted,Historical grant recorded,owner,overlay,630,460,12354,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/GrantCompleted.png
+GrantConflict,Grant stopped · manifest changed,owner,overlay,650,500,12369,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/GrantConflict.png
+RecoveryRotate,Rotate the offline recovery key,owner,overlay,700,640,12384,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/RecoveryRotate.png
+RecoveryRotated,Future recovery key updated,owner,overlay,630,420,12407,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/RecoveryRotated.png
+OwnerMFAInvite,Verify this owner action,owner,overlay,620,490,12417,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/OwnerMFAInvite.png
+OwnerMFAInviteRevoke,Verify this owner action,owner,overlay,620,490,12436,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/OwnerMFAInviteRevoke.png
+OwnerMFARole,Verify this owner action,owner,overlay,620,490,12455,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/OwnerMFARole.png
+OwnerMFAAddDefender,Verify this owner action,owner,overlay,620,490,12474,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/OwnerMFAAddDefender.png
+OwnerMFARemoveReport,Verify this owner action,owner,overlay,620,490,12493,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/OwnerMFARemoveReport.png
+OwnerMFARemoveProgram,Verify this owner action,owner,overlay,620,490,12512,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/OwnerMFARemoveProgram.png
+OwnerMFARemoveOrg,Verify this owner action,owner,overlay,620,490,12531,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/OwnerMFARemoveOrg.png
+OwnerMFAGitHub,Verify this owner action,owner,overlay,620,490,12550,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/OwnerMFAGitHub.png
+OwnerMFAGitHubDisconnect,Verify this owner action,owner,overlay,620,490,12569,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/OwnerMFAGitHubDisconnect.png
+OwnerMFARecovery,Verify this owner action,owner,overlay,620,490,12588,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/OwnerMFARecovery.png
+OwnerMFADefenderGrant,Verify this owner action,owner,overlay,620,490,12607,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/OwnerMFADefenderGrant.png
+OwnerMFAResearcherGrant,Verify this owner action,owner,overlay,620,490,12626,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/OwnerMFAResearcherGrant.png
+OwnerMFARecoveryRotate,Verify this owner action,owner,overlay,620,490,12645,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/OwnerMFARecoveryRotate.png
+OwnerMFARisk,Verify this owner action,owner,overlay,620,490,12664,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/OwnerMFARisk.png
+OwnerMFASpam,Verify this owner action,owner,overlay,620,490,12683,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/OwnerMFASpam.png
+OwnerMFACapacity,Verify this owner action,owner,overlay,620,490,12702,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/OwnerMFACapacity.png
+RiskAccept,Accept organization risk,owner,overlay,700,650,12721,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/RiskAccept.png
+RiskAccepted,BBT-0241 · Risk accepted,owner,screen,1440,900,12744,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/RiskAccepted.png
+SpamRecovery,Recover a spam false positive,owner,overlay,650,540,12828,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/SpamRecovery.png
+SpamRecovered,Spam decision recovered,owner,overlay,620,400,12844,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/SpamRecovered.png
+Audit,Audit ledger,audit,screen,1440,900,12853,SCR-12,FR-5.4; FR-8.4–8.5; SRS Table 2.2; UC-07,P1,previews/Audit.png
+AuditFilters,Filter audit events,audit,overlay,640,560,13005,SCR-12,FR-5.4; FR-8.4–8.5; SRS Table 2.2; UC-07,P1,previews/AuditFilters.png
+ReportActivity,BBT-0241 · activity,audit,screen,1440,900,13029,SCR-12,FR-5.4; FR-8.4–8.5; SRS Table 2.2; UC-07,P1,previews/ReportActivity.png
+RecoveryAudit,Recovery access audit,audit,screen,1440,900,13133,SCR-12,FR-5.4; FR-8.4–8.5; SRS Table 2.2; UC-07,P1,previews/RecoveryAudit.png
+AuditEvent,Event 184 · retest requested,audit,overlay,760,740,13237,SCR-12,FR-5.4; FR-8.4–8.5; SRS Table 2.2; UC-07,P1,previews/AuditEvent.png
+AuditVerify,Verify ledger continuity,audit,overlay,700,590,13261,SCR-12,FR-5.4; FR-8.4–8.5; SRS Table 2.2; UC-07,P1,previews/AuditVerify.png
+AuditVerified,Continuity matches the retained receipt,audit,overlay,680,500,13282,SCR-12,FR-5.4; FR-8.4–8.5; SRS Table 2.2; UC-07,P1,previews/AuditVerified.png
+AuditMismatch,Checkpoint mismatch detected,audit,overlay,680,500,13297,SCR-12,FR-5.4; FR-8.4–8.5; SRS Table 2.2; UC-07,P1,previews/AuditMismatch.png
+Capacity,Organization capacity,audit,screen,1440,900,13312,SCR-12,FR-5.4; FR-8.4–8.5; SRS Table 2.2; UC-07,P1,previews/Capacity.png
+CapacityLocked,Organization capacity,audit,screen,1440,900,13425,SCR-12,FR-5.4; FR-8.4–8.5; SRS Table 2.2; UC-07,P1,previews/CapacityLocked.png
+EmergencyGrant,Increase emergency reserve,audit,overlay,680,590,13541,SCR-12,FR-5.4; FR-8.4–8.5; SRS Table 2.2; UC-07,P1,previews/EmergencyGrant.png
+CapacityRecovered,Capacity restored for coordination,audit,screen,1440,900,13564,SCR-12,FR-5.4; FR-8.4–8.5; SRS Table 2.2; UC-07,P1,previews/CapacityRecovered.png
+EmergencyUnavailable,No emergency headroom available,audit,overlay,630,470,13648,SCR-12,FR-5.4; FR-8.4–8.5; SRS Table 2.2; UC-07,P1,previews/EmergencyUnavailable.png
+UploadReservations,Expired evidence reservations,audit,screen,1440,900,13663,SCR-12,FR-5.4; FR-8.4–8.5; SRS Table 2.2; UC-07,P1,previews/UploadReservations.png
+PlannedIndex,Planned commercial extensions,planned,screen,1440,900,13754,Commercial extension,"FR-1.5b / FR-7.7 (P2); DEC-018, DEC-022; WBS WP-7.11",P2 / commercial concept,previews/PlannedIndex.png
+PrivateInvitation,Private program invitation,planned,screen,1440,900,13851,SCR-01 / SCR-02,"FR-1.5b / FR-7.7 (P2); DEC-018, DEC-022; WBS WP-7.11",P2 / commercial concept,previews/PrivateInvitation.png
+PrivateInviteExpired,This invitation is unavailable,planned,screen,1440,900,13878,SCR-01 / SCR-02,"FR-1.5b / FR-7.7 (P2); DEC-018, DEC-022; WBS WP-7.11",P2 / commercial concept,previews/PrivateInviteExpired.png
+PrivateJoined,Private program access granted,planned,screen,1440,900,13902,SCR-01 / SCR-02,"FR-1.5b / FR-7.7 (P2); DEC-018, DEC-022; WBS WP-7.11",P2 / commercial concept,previews/PrivateJoined.png
+Export,Export closure evidence,planned,overlay,760,740,13927,SCR-08,"FR-1.5b / FR-7.7 (P2); DEC-018, DEC-022; WBS WP-7.11",P2 / commercial concept,previews/Export.png
+ExportPreview,Redacted closure summary,planned,overlay,740,700,13953,SCR-08,"FR-1.5b / FR-7.7 (P2); DEC-018, DEC-022; WBS WP-7.11",P2 / commercial concept,previews/ExportPreview.png
+OfflineVerifier,Verify a closure export,planned,screen,1440,1000,13977,SCR-08,"FR-1.5b / FR-7.7 (P2); DEC-018, DEC-022; WBS WP-7.11",P2 / commercial concept,previews/OfflineVerifier.png
+ExportVerified,Export matches retained evidence,planned,screen,1440,900,14007,SCR-08,"FR-1.5b / FR-7.7 (P2); DEC-018, DEC-022; WBS WP-7.11",P2 / commercial concept,previews/ExportVerified.png
+ExportTampered,Do not rely on this export,planned,screen,1440,900,14031,SCR-08,"FR-1.5b / FR-7.7 (P2); DEC-018, DEC-022; WBS WP-7.11",P2 / commercial concept,previews/ExportTampered.png
+Billing,Plans & billing,planned,screen,1440,900,14055,Commercial extension,"FR-1.5b / FR-7.7 (P2); DEC-018, DEC-022; WBS WP-7.11",P2 / commercial concept,previews/Billing.png
+CheckoutConcept,Hosted billing handoff,planned,overlay,640,450,14150,Commercial extension,"FR-1.5b / FR-7.7 (P2); DEC-018, DEC-022; WBS WP-7.11",P2 / commercial concept,previews/CheckoutConcept.png
+Operator,Platform operations,planned,screen,1440,900,14160,Commercial extension,"FR-1.5b / FR-7.7 (P2); DEC-018, DEC-022; WBS WP-7.11",P2 / commercial concept,previews/Operator.png
+OperatorTenant,Northstar Labs · tenant health,planned,screen,1440,900,14236,Commercial extension,"FR-1.5b / FR-7.7 (P2); DEC-018, DEC-022; WBS WP-7.11",P2 / commercial concept,previews/OperatorTenant.png
+AbuseReview,Abuse review,planned,screen,1440,900,14300,Commercial extension,"FR-1.5b / FR-7.7 (P2); DEC-018, DEC-022; WBS WP-7.11",P2 / commercial concept,previews/AbuseReview.png
+SuspendTenant,Review tenant suspension,planned,overlay,700,620,14370,Commercial extension,"FR-1.5b / FR-7.7 (P2); DEC-018, DEC-022; WBS WP-7.11",P2 / commercial concept,previews/SuspendTenant.png
+OperatorAudit,Operator action history,planned,screen,1440,900,14383,Commercial extension,"FR-1.5b / FR-7.7 (P2); DEC-018, DEC-022; WBS WP-7.11",P2 / commercial concept,previews/OperatorAudit.png
+ResponsiveIndex,Responsive studies,responsive,screen,1440,1000,14447,SCR-01 / SCR-02 / SCR-03 / SCR-05 / SCR-09 / SCR-10 / SCR-12,NFR-04; responsive counterparts of source screen families,P1 responsive study,previews/ResponsiveIndex.png
+Queue1366,Triage queue,responsive,screen,1366,768,14488,SCR-01 / SCR-02 / SCR-03 / SCR-05 / SCR-09 / SCR-10 / SCR-12,NFR-04; responsive counterparts of source screen families,P1 responsive study,previews/Queue1366.png
+Report1366,BBT-0241,responsive,screen,1366,768,14681,SCR-01 / SCR-02 / SCR-03 / SCR-05 / SCR-09 / SCR-10 / SCR-12,NFR-04; responsive counterparts of source screen families,P1 responsive study,previews/Report1366.png
+QueueCompact,Triage queue,responsive,screen,1024,768,14851,SCR-01 / SCR-02 / SCR-03 / SCR-05 / SCR-09 / SCR-10 / SCR-12,NFR-04; responsive counterparts of source screen families,P1 responsive study,previews/QueueCompact.png
+MobileProgram,Northstar Labs,responsive,screen,390,844,14971,SCR-01 / SCR-02 / SCR-03 / SCR-05 / SCR-09 / SCR-10 / SCR-12,NFR-04; responsive counterparts of source screen families,P1 responsive study,previews/MobileProgram.png
+MobileIdentity,Your report access,responsive,screen,390,844,15000,SCR-01 / SCR-02 / SCR-03 / SCR-05 / SCR-09 / SCR-10 / SCR-12,NFR-04; responsive counterparts of source screen families,P1 responsive study,previews/MobileIdentity.png
+MobileGuestKey,Protect your access,responsive,screen,390,844,15021,SCR-01 / SCR-02 / SCR-03 / SCR-05 / SCR-09 / SCR-10 / SCR-12,NFR-04; responsive counterparts of source screen families,P1 responsive study,previews/MobileGuestKey.png
+MobileSubmit,Describe the finding,responsive,screen,390,844,15045,SCR-01 / SCR-02 / SCR-03 / SCR-05 / SCR-09 / SCR-10 / SCR-12,NFR-04; responsive counterparts of source screen families,P1 responsive study,previews/MobileSubmit.png
+MobileReview,Review & encrypt,responsive,screen,390,844,15077,SCR-01 / SCR-02 / SCR-03 / SCR-05 / SCR-09 / SCR-10 / SCR-12,NFR-04; responsive counterparts of source screen families,P1 responsive study,previews/MobileReview.png
+MobileReceipt,Save your guest access,responsive,screen,390,844,15096,SCR-01 / SCR-02 / SCR-03 / SCR-05 / SCR-09 / SCR-10 / SCR-12,NFR-04; responsive counterparts of source screen families,P1 responsive study,previews/MobileReceipt.png
+MobileReport,BBT-0241,responsive,screen,390,844,15114,SCR-01 / SCR-02 / SCR-03 / SCR-05 / SCR-09 / SCR-10 / SCR-12,NFR-04; responsive counterparts of source screen families,P1 responsive study,previews/MobileReport.png
+MobileRetest,Retest attempt 1,responsive,screen,390,844,15157,SCR-01 / SCR-02 / SCR-03 / SCR-05 / SCR-09 / SCR-10 / SCR-12,NFR-04; responsive counterparts of source screen families,P1 responsive study,previews/MobileRetest.png
+MobileVerified,Verified by researcher,responsive,screen,390,844,15187,SCR-01 / SCR-02 / SCR-03 / SCR-05 / SCR-09 / SCR-10 / SCR-12,NFR-04; responsive counterparts of source screen families,P1 responsive study,previews/MobileVerified.png
+MobileRestore,Restore guest access,responsive,screen,390,844,15203,SCR-01 / SCR-02 / SCR-03 / SCR-05 / SCR-09 / SCR-10 / SCR-12,NFR-04; responsive counterparts of source screen families,P1 responsive study,previews/MobileRestore.png
+MobileRestoreSelected,Unlock your recovery file,responsive,screen,390,844,15219,SCR-01 / SCR-02 / SCR-03 / SCR-05 / SCR-09 / SCR-10 / SCR-12,NFR-04; responsive counterparts of source screen families,P1 responsive study,previews/MobileRestoreSelected.png
+MobileSignIn,Welcome back,responsive,screen,390,844,15240,SCR-01 / SCR-02 / SCR-03 / SCR-05 / SCR-09 / SCR-10 / SCR-12,NFR-04; responsive counterparts of source screen families,P1 responsive study,previews/MobileSignIn.png
+MobileForgot,Reset account password,responsive,screen,390,844,15265,SCR-01 / SCR-02 / SCR-03 / SCR-05 / SCR-09 / SCR-10 / SCR-12,NFR-04; responsive counterparts of source screen families,P1 responsive study,previews/MobileForgot.png
+MobileResetRequested,Check your inbox,responsive,screen,390,844,15285,SCR-01 / SCR-02 / SCR-03 / SCR-05 / SCR-09 / SCR-10 / SCR-12,NFR-04; responsive counterparts of source screen families,P1 responsive study,previews/MobileResetRequested.png
+MobileReset,Choose a new password,responsive,screen,390,844,15299,SCR-01 / SCR-02 / SCR-03 / SCR-05 / SCR-09 / SCR-10 / SCR-12,NFR-04; responsive counterparts of source screen families,P1 responsive study,previews/MobileReset.png
+MobileMenu,Workspace,responsive,overlay,350,540,15323,SCR-01 / SCR-02 / SCR-03 / SCR-05 / SCR-09 / SCR-10 / SCR-12,NFR-04; responsive counterparts of source screen families,P1 responsive study,previews/MobileMenu.png
+MobileRecoveryInfo,Recovery file demonstration,responsive,overlay,350,510,15339,SCR-01 / SCR-02 / SCR-03 / SCR-05 / SCR-09 / SCR-10 / SCR-12,NFR-04; responsive counterparts of source screen families,P1 responsive study,previews/MobileRecoveryInfo.png
+MobileReplySent,Encrypted reply saved,responsive,overlay,350,380,15349,SCR-01 / SCR-02 / SCR-03 / SCR-05 / SCR-09 / SCR-10 / SCR-12,NFR-04; responsive counterparts of source screen families,P1 responsive study,previews/MobileReplySent.png
+MobilePolicy,Scope & safe harbor,responsive,screen,390,844,15360,SCR-01 / SCR-02 / SCR-03 / SCR-05 / SCR-09 / SCR-10 / SCR-12,NFR-04; responsive counterparts of source screen families,P1 responsive study,previews/MobilePolicy.png
+MobileScore,Official assessment,responsive,overlay,350,690,15385,SCR-01 / SCR-02 / SCR-03 / SCR-05 / SCR-09 / SCR-10 / SCR-12,NFR-04; responsive counterparts of source screen families,P1 responsive study,previews/MobileScore.png
+MobileLostKeys,Guest access needs a backup,responsive,overlay,350,600,15400,SCR-01 / SCR-02 / SCR-03 / SCR-05 / SCR-09 / SCR-10 / SCR-12,NFR-04; responsive counterparts of source screen families,P1 responsive study,previews/MobileLostKeys.png
+MobileBackupNeeded,Save your guest recovery,responsive,overlay,350,470,15411,SCR-01 / SCR-02 / SCR-03 / SCR-05 / SCR-09 / SCR-10 / SCR-12,NFR-04; responsive counterparts of source screen families,P1 responsive study,previews/MobileBackupNeeded.png
+MobileRetestFailed,The issue still reproduces,responsive,overlay,350,710,15420,SCR-01 / SCR-02 / SCR-03 / SCR-05 / SCR-09 / SCR-10 / SCR-12,NFR-04; responsive counterparts of source screen families,P1 responsive study,previews/MobileRetestFailed.png
+MobileFailedRecorded,Retest result recorded,responsive,screen,390,844,15437,SCR-01 / SCR-02 / SCR-03 / SCR-05 / SCR-09 / SCR-10 / SCR-12,NFR-04; responsive counterparts of source screen families,P1 responsive study,previews/MobileFailedRecorded.png
+MobileResetComplete,Account password updated,responsive,screen,390,844,15453,SCR-01 / SCR-02 / SCR-03 / SCR-05 / SCR-09 / SCR-10 / SCR-12,NFR-04; responsive counterparts of source screen families,P1 responsive study,previews/MobileResetComplete.png
+ResearchNeedsMe,Research workspace,researcher,screen,1440,900,15469,SCR-02 / SCR-03 / SCR-05 / SCR-10,"FR-1.6; FR-3.3; FR-4.4; FR-5.2; FR-7.2–7.4; UC-01, UC-04, UC-05",P1,previews/ResearchNeedsMe.png
+ResearchWaiting,Research workspace,researcher,screen,1440,900,15602,SCR-02 / SCR-03 / SCR-05 / SCR-10,"FR-1.6; FR-3.3; FR-4.4; FR-5.2; FR-7.2–7.4; UC-01, UC-04, UC-05",P1,previews/ResearchWaiting.png
+ResearchVerified,Research workspace,researcher,screen,1440,900,15707,SCR-02 / SCR-03 / SCR-05 / SCR-10,"FR-1.6; FR-3.3; FR-4.4; FR-5.2; FR-7.2–7.4; UC-01, UC-04, UC-05",P1,previews/ResearchVerified.png
+ReportConversation,BBT-0241,defender,screen,1440,900,15812,SCR-03 / SCR-12,"FR-3.3; FR-4.1–4.4; FR-5.1–5.5; FR-7.1, 7.5; UC-02",P1,previews/ReportConversation.png
+ReportEvidence,BBT-0241,defender,screen,1440,900,15966,SCR-03 / SCR-12,"FR-3.3; FR-4.1–4.4; FR-5.1–5.5; FR-7.1, 7.5; UC-02",P1,previews/ReportEvidence.png
+ResearcherConversation,BBT-0241,researcher,screen,1440,900,16124,SCR-02 / SCR-03 / SCR-05 / SCR-10,"FR-1.6; FR-3.3; FR-4.4; FR-5.2; FR-7.2–7.4; UC-01, UC-04, UC-05",P1,previews/ResearcherConversation.png
+ResearcherEvidence,BBT-0241,researcher,screen,1440,900,16248,SCR-02 / SCR-03 / SCR-05 / SCR-10,"FR-1.6; FR-3.3; FR-4.4; FR-5.2; FR-7.2–7.4; UC-01, UC-04, UC-05",P1,previews/ResearcherEvidence.png
+ResearchDeskLocked,Research workspace,researcher,screen,1440,900,16378,SCR-02 / SCR-03 / SCR-05 / SCR-10,"FR-1.6; FR-3.3; FR-4.4; FR-5.2; FR-7.2–7.4; UC-01, UC-04, UC-05",P1,previews/ResearchDeskLocked.png
+DraftEditor,Local working draft,researcher,overlay,780,780,16462,SCR-02 / SCR-03 / SCR-05 / SCR-10,"FR-1.6; FR-3.3; FR-4.4; FR-5.2; FR-7.2–7.4; UC-01, UC-04, UC-05",P1,previews/DraftEditor.png
+OwnerDecisions,Owner decisions,owner,screen,1440,900,16491,SCR-06 / SCR-10 / SCR-11,"FR-1.1, 1.4; FR-2; FR-3.6–3.8; FR-6.4; FR-7.6–7.7; UC-05, UC-06",P1,previews/OwnerDecisions.png
+ReportFocus,BBT-0241 · focused reading,defender,screen,1440,900,16587,SCR-03 / SCR-12,"FR-3.3; FR-4.1–4.4; FR-5.1–5.5; FR-7.1, 7.5; UC-02",P1,previews/ReportFocus.png
+WF01,Program discovery,ux,screen,1440,900,16633,Design documentation,"SRS §2.2, §4.2, §5.1; NFR-04",Documentation,previews/WF01.png
+WF02,Intake,ux,screen,1440,900,16657,Design documentation,"SRS §2.2, §4.2, §5.1; NFR-04",Documentation,previews/WF02.png
+WF03,Triage inbox,ux,screen,1440,900,16681,Design documentation,"SRS §2.2, §4.2, §5.1; NFR-04",Documentation,previews/WF03.png
+WF04,Confidential report,ux,screen,1440,900,16705,Design documentation,"SRS §2.2, §4.2, §5.1; NFR-04",Documentation,previews/WF04.png
+WF05,Fix & deploy,ux,screen,1440,900,16731,Design documentation,"SRS §2.2, §4.2, §5.1; NFR-04",Documentation,previews/WF05.png
+WF06,Retest,ux,screen,1440,900,16755,Design documentation,"SRS §2.2, §4.2, §5.1; NFR-04",Documentation,previews/WF06.png
+WF07,Owner activation,ux,screen,1440,900,16779,Design documentation,"SRS §2.2, §4.2, §5.1; NFR-04",Documentation,previews/WF07.png
+WF08,People & recovery,ux,screen,1440,900,16803,Design documentation,"SRS §2.2, §4.2, §5.1; NFR-04",Documentation,previews/WF08.png
+WF09,Account & key recovery,ux,screen,1440,900,16829,Design documentation,"SRS §2.2, §4.2, §5.1; NFR-04",Documentation,previews/WF09.png
+WF10,Audit & capacity,ux,screen,1440,900,16853,Design documentation,"SRS §2.2, §4.2, §5.1; NFR-04",Documentation,previews/WF10.png
+FlowUC01,UC01 · Guest report,ux,screen,1440,1000,16879,Design documentation,"SRS §2.2, §4.2, §5.1; NFR-04",Documentation,previews/FlowUC01.png
+FlowUC02,UC02 · Triage & assessment,ux,screen,1440,1000,16924,Design documentation,"SRS §2.2, §4.2, §5.1; NFR-04",Documentation,previews/FlowUC02.png
+FlowUC03,UC03 · Evidence & deployment,ux,screen,1440,1000,16969,Design documentation,"SRS §2.2, §4.2, §5.1; NFR-04",Documentation,previews/FlowUC03.png
+FlowUC04,UC04 · Retest & closure,ux,screen,1440,1000,17017,Design documentation,"SRS §2.2, §4.2, §5.1; NFR-04",Documentation,previews/FlowUC04.png
+FlowUC05,UC05 · Restore & revoke,ux,screen,1440,1000,17060,Design documentation,"SRS §2.2, §4.2, §5.1; NFR-04",Documentation,previews/FlowUC05.png
+FlowUC06,UC06 · Owner activation,ux,screen,1440,1000,17106,Design documentation,"SRS §2.2, §4.2, §5.1; NFR-04",Documentation,previews/FlowUC06.png
+FlowUC07,UC07 · Audit & capacity,ux,screen,1440,1000,17154,Design documentation,"SRS §2.2, §4.2, §5.1; NFR-04",Documentation,previews/FlowUC07.png
+WorkflowIndex,Workflow index,ux,screen,1440,1000,17206,Design documentation,"SRS §2.2, §4.2, §5.1; NFR-04",Documentation,previews/WorkflowIndex.png
+WireframeIndex,Wireframe screen index,ux,screen,1440,1100,17270,Design documentation,"SRS §2.2, §4.2, §5.1; NFR-04",Documentation,previews/WireframeIndex.png
+Foundations,"Color, type & composition",system,screen,1440,1000,17316,Design documentation,"SRS §2.2, §4.2, §5.1; NFR-04",Documentation,previews/Foundations.png
+ComponentGuide,Reusable components & states,system,screen,1440,1050,17384,Design documentation,"SRS §2.2, §4.2, §5.1; NFR-04",Documentation,previews/ComponentGuide.png
+RoleMatrix,Role and data visibility,handoff,screen,1440,1000,17458,Design documentation,"SRS §2.2, §4.2, §5.1; NFR-04",Documentation,previews/RoleMatrix.png
+HandoffLayout,Layout & responsive rules,handoff,screen,1440,1100,17494,Design documentation,"SRS §2.2, §4.2, §5.1; NFR-04",Documentation,previews/HandoffLayout.png
+HandoffSecurity,"Privacy, keys & trust boundaries",handoff,screen,1440,1100,17516,Design documentation,"SRS §2.2, §4.2, §5.1; NFR-04",Documentation,previews/HandoffSecurity.png
+HandoffLifecycle,"Lifecycle, evidence & exact feedback",handoff,screen,1440,1100,17538,Design documentation,"SRS §2.2, §4.2, §5.1; NFR-04",Documentation,previews/HandoffLifecycle.png
+HandoffStates,Contextual states & validation,handoff,screen,1440,1100,17560,Design documentation,"SRS §2.2, §4.2, §5.1; NFR-04",Documentation,previews/HandoffStates.png
+HandoffMotion,Interaction & motion contract,handoff,screen,1440,1100,17582,Design documentation,"SRS §2.2, §4.2, §5.1; NFR-04",Documentation,previews/HandoffMotion.png
+HandoffSources,Source authority & open decisions,handoff,screen,1440,1100,17604,Design documentation,"SRS §2.2, §4.2, §5.1; NFR-04",Documentation,previews/HandoffSources.png
+HandoffIndex,Developer handoff index,handoff,screen,1440,1000,17626,Design documentation,"SRS §2.2, §4.2, §5.1; NFR-04",Documentation,previews/HandoffIndex.png
+StateReview,"Failure, first use & recovery states",start,screen,1440,1050,17664,Design documentation,"SRS §2.2, §4.2, §5.1; NFR-04",Documentation,previews/StateReview.png
+StartHere,Professional v3 · start here,start,screen,1440,1000,17748,Design documentation,"SRS §2.2, §4.2, §5.1; NFR-04",Documentation,previews/StartHere.png
+RefinementChanges,Professional v3 · changes & acceptance,handoff,screen,1440,1100,17803,Design documentation,"SRS §2.2, §4.2, §5.1; NFR-04",Documentation,previews/RefinementChanges.png
+ScreenIndex,All pages & screen families,start,screen,1440,1100,17834,Design documentation,"SRS §2.2, §4.2, §5.1; NFR-04",Documentation,previews/ScreenIndex.png

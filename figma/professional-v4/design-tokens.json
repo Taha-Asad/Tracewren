@@ -1,0 +1,64 @@
+{
+  "colors": {
+    "canvas": "#F2F0E9",
+    "surface": "#FFFEF9",
+    "subtle": "#E9E7DE",
+    "selected": "#E0EFEB",
+    "ink": "#242E30",
+    "muted": "#586668",
+    "faint": "#606D6D",
+    "line": "#D6DCD6",
+    "control": "#718984",
+    "nav": "#263638",
+    "navRaised": "#34494B",
+    "navText": "#F5F1E6",
+    "navMuted": "#B6C5BF",
+    "onAction": "#FFFDF7",
+    "mint": "#C2D8CC",
+    "brass": "#17645D",
+    "brassSurface": "#E0EFEB",
+    "onDarkBrass": "#C2D8CC",
+    "danger": "#A03F35",
+    "dangerSurface": "#FAE9E2",
+    "warning": "#8A571E",
+    "warningSurface": "#FBEDCC",
+    "info": "#305B88",
+    "infoSurface": "#E6EDF5",
+    "success": "#21654E",
+    "successSurface": "#E3F0E5",
+    "internal": "#65527D",
+    "internalSurface": "#EEE8F4",
+    "white": "#FFFFFF",
+    "black": "#000000",
+    "action": "#17645D",
+    "actionHover": "#10534E",
+    "well": "#263638",
+    "wellInk": "#F5F1E6",
+    "wellMuted": "#B6C5BF",
+    "accent": "#17645D"
+  },
+  "type": {
+    "body": [
+      14,
+      15,
+      16
+    ],
+    "title": [
+      22,
+      26
+    ],
+    "metadata": [
+      11,
+      12,
+      13
+    ]
+  },
+  "layout": {
+    "desktopSidebar": 216,
+    "topbar": 64,
+    "inset": 32,
+    "narrowInset": 20,
+    "controlHeight": 44,
+    "radius": 4
+  }
+}

@@ -1,0 +1,20 @@
+{
+  "nativeFile": "figma/BugBountyTrack-Coffee-v2.figcraft",
+  "sha256": "4576c90321fd82e1f13b448b05b33b68c789a64d66f7e9e822fa0aa3822cb33d",
+  "views": 342,
+  "originalViewsRetained": 330,
+  "newViews": 12,
+  "fonts": [
+    "Inter",
+    "JetBrains Mono",
+    "Nunito Sans"
+  ],
+  "textStyles": 48,
+  "variables": 135,
+  "flowStarts": 33,
+  "interactions": 2675,
+  "nativeActionChecks": 22,
+  "previews": 342,
+  "comparisons": 5,
+  "verificationScope": "Saved-file structure, geometry, contrast, references and parsed native action traces. Not a GUI playback test, runtime security test, live input test or accessibility certification."
+}

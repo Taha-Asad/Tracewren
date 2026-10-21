@@ -1,0 +1,11 @@
+{
+  "priorViews": 467,
+  "currentViews": 520,
+  "overviewAliases": {
+    "CasePending__report": "CasePending",
+    "ResearcherPending__report": "ResearcherPending",
+    "CasePending2__report": "CasePending2",
+    "ResearcherPending2__report": "ResearcherPending2"
+  },
+  "allPriorWorkflowViewsCovered": true
+}

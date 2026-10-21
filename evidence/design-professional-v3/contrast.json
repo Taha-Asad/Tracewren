@@ -1,0 +1,97 @@
+{
+  "semanticPairs": [
+    {
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 13.79,
+      "normalTextPass": true
+    },
+    {
+      "foreground": "muted",
+      "background": "canvas",
+      "ratio": 5.24,
+      "normalTextPass": true
+    },
+    {
+      "foreground": "faint",
+      "background": "canvas",
+      "ratio": 4.72,
+      "normalTextPass": true
+    },
+    {
+      "foreground": "action",
+      "background": "selected",
+      "ratio": 5.87,
+      "normalTextPass": true
+    },
+    {
+      "foreground": "onAction",
+      "background": "action",
+      "ratio": 6.84,
+      "normalTextPass": true
+    },
+    {
+      "foreground": "navMuted",
+      "background": "nav",
+      "ratio": 7.03,
+      "normalTextPass": true
+    },
+    {
+      "foreground": "onDarkBrass",
+      "background": "nav",
+      "ratio": 7.54,
+      "normalTextPass": true
+    },
+    {
+      "foreground": "brass",
+      "background": "brassSurface",
+      "ratio": 4.58,
+      "normalTextPass": true
+    },
+    {
+      "foreground": "warning",
+      "background": "warningSurface",
+      "ratio": 5.22,
+      "normalTextPass": true
+    },
+    {
+      "foreground": "danger",
+      "background": "dangerSurface",
+      "ratio": 5.47,
+      "normalTextPass": true
+    },
+    {
+      "foreground": "success",
+      "background": "successSurface",
+      "ratio": 5.88,
+      "normalTextPass": true
+    },
+    {
+      "foreground": "info",
+      "background": "infoSurface",
+      "ratio": 5.98,
+      "normalTextPass": true
+    },
+    {
+      "foreground": "internal",
+      "background": "internalSurface",
+      "ratio": 5.72,
+      "normalTextPass": true
+    }
+  ],
+  "controls": [
+    {
+      "foreground": "control",
+      "background": "surface",
+      "ratio": 3.7,
+      "boundaryPass": true
+    },
+    {
+      "foreground": "control",
+      "background": "canvas",
+      "ratio": 3.28,
+      "boundaryPass": true
+    }
+  ],
+  "textFailures": []
+}

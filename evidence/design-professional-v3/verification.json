@@ -1,0 +1,1493 @@
+{
+  "artifact": "figma/BugBountyTrack-Professional-v3.figcraft",
+  "sha256": "a2362272d20e4e17b99c3beb8a65935eb524003ff66d094dd0b93b360eebfa50",
+  "pageCount": 14,
+  "views": 342,
+  "screens": 167,
+  "overlays": 142,
+  "wireframes": 10,
+  "workflowMaps": 7,
+  "flowStarts": 33,
+  "interactions": 2674,
+  "nodeCounts": {
+    "page": 14,
+    "text": 7270,
+    "instance": 2479,
+    "frame": 5498,
+    "vector": 1782,
+    "rectangle": 826,
+    "component": 34,
+    "componentSet": 2
+  },
+  "fonts": [
+    "Inter",
+    "JetBrains Mono"
+  ],
+  "unexpectedBounds": [],
+  "intentionalScrollChildren": [
+    {
+      "screen": "OwnerOverview",
+      "parent": 10180,
+      "child": 10199,
+      "parentName": "Scrollable main",
+      "childName": "Owner working spread",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        185.0,
+        1160.0,
+        837.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "ReportInternal",
+      "parent": 1087,
+      "child": 1099,
+      "parentName": "Scrollable main",
+      "childName": "Report document and decision margin",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        86.0,
+        1160.0,
+        772.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "ReportActivity",
+      "parent": 13102,
+      "child": 13123,
+      "parentName": "Scrollable main",
+      "childName": "Master recovery fetch initiated \u00b7 report event 9",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        720.0,
+        1160.0,
+        164.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "ReportActivity",
+      "parent": 13102,
+      "child": 13128,
+      "parentName": "Scrollable main",
+      "childName": "Actions",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        902.0,
+        1160.0,
+        44.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "RecoveryAudit",
+      "parent": 13206,
+      "child": 13227,
+      "parentName": "Scrollable main",
+      "childName": "Master recovery fetch initiated \u00b7 report event 9",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        720.0,
+        1160.0,
+        164.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "RecoveryAudit",
+      "parent": 13206,
+      "child": 13232,
+      "parentName": "Scrollable main",
+      "childName": "Actions",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        902.0,
+        1160.0,
+        44.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "AuditEvent",
+      "parent": 13238,
+      "child": 13259,
+      "parentName": "Dialog content",
+      "childName": "BBT/Button",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        28.0,
+        676.0,
+        193.0,
+        44.0
+      ],
+      "parentSize": [
+        760.0,
+        740.0
+      ]
+    },
+    {
+      "screen": "PlannedIndex",
+      "parent": 13827,
+      "child": 13846,
+      "parentName": "Scrollable main",
+      "childName": "Platform operations \u00b7 WBS commercial",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        647.0,
+        1160.0,
+        164.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "SubmitDetails",
+      "parent": 1433,
+      "child": 1450,
+      "parentName": "Public scroll region",
+      "childName": "Submission form and context",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        72.0,
+        197.0,
+        1296.0,
+        876.0
+      ],
+      "parentSize": [
+        1440.0,
+        974.0
+      ]
+    },
+    {
+      "screen": "ResponsiveIndex",
+      "parent": 14448,
+      "child": 14473,
+      "parentName": "Responsive index",
+      "childName": "390 \u00d7 844 \u00b7 reporting",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        40.0,
+        836.0,
+        1360.0,
+        152.0
+      ],
+      "parentSize": [
+        1440.0,
+        1000.0
+      ]
+    },
+    {
+      "screen": "ResponsiveIndex",
+      "parent": 14448,
+      "child": 14478,
+      "parentName": "Responsive index",
+      "childName": "390 \u00d7 844 \u00b7 recovery",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        40.0,
+        1008.0,
+        1360.0,
+        152.0
+      ],
+      "parentSize": [
+        1440.0,
+        1000.0
+      ]
+    },
+    {
+      "screen": "ResponsiveIndex",
+      "parent": 14448,
+      "child": 14483,
+      "parentName": "Responsive index",
+      "childName": "390 \u00d7 844 \u00b7 retest",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        40.0,
+        1180.0,
+        1360.0,
+        152.0
+      ],
+      "parentSize": [
+        1440.0,
+        1000.0
+      ]
+    },
+    {
+      "screen": "Queue1366",
+      "parent": 14561,
+      "child": 14579,
+      "parentName": "Scrollable main",
+      "childName": "Case queue and working context",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        185.0,
+        1086.0,
+        561.0
+      ],
+      "parentSize": [
+        1150.0,
+        704.0
+      ]
+    },
+    {
+      "screen": "Report1366",
+      "parent": 14754,
+      "child": 14766,
+      "parentName": "Scrollable main",
+      "childName": "Report document and decision margin",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        86.0,
+        1086.0,
+        910.0
+      ],
+      "parentSize": [
+        1150.0,
+        704.0
+      ]
+    },
+    {
+      "screen": "MobileReport",
+      "parent": 15122,
+      "child": 15148,
+      "parentName": "Mobile scroll region",
+      "childName": "Thanks for the controlled reproduction. We will record the actual de",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        20.0,
+        768.0,
+        350.0,
+        66.0
+      ],
+      "parentSize": [
+        390.0,
+        780.0
+      ]
+    },
+    {
+      "screen": "MobileReport",
+      "parent": 15122,
+      "child": 15149,
+      "parentName": "Mobile scroll region",
+      "childName": "Encrypted reply",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        20.0,
+        854.0,
+        350.0,
+        116.0
+      ],
+      "parentSize": [
+        390.0,
+        780.0
+      ]
+    },
+    {
+      "screen": "MobileReport",
+      "parent": 15122,
+      "child": 15153,
+      "parentName": "Mobile scroll region",
+      "childName": "BBT/Button",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        20.0,
+        990.0,
+        350.0,
+        44.0
+      ],
+      "parentSize": [
+        390.0,
+        780.0
+      ]
+    },
+    {
+      "screen": "MobileReport",
+      "parent": 15122,
+      "child": 15155,
+      "parentName": "Mobile scroll region",
+      "childName": "Open retest request example \u00b7 link",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        20.0,
+        1054.0,
+        350.0,
+        44.0
+      ],
+      "parentSize": [
+        390.0,
+        780.0
+      ]
+    },
+    {
+      "screen": "ResearchNeedsMe",
+      "parent": 15521,
+      "child": 15540,
+      "parentName": "Scrollable main",
+      "childName": "Research reports and work margin",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        185.0,
+        1160.0,
+        675.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "ResearchWaiting",
+      "parent": 15654,
+      "child": 15673,
+      "parentName": "Scrollable main",
+      "childName": "Research reports and work margin",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        185.0,
+        1160.0,
+        675.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "ResearchVerified",
+      "parent": 15759,
+      "child": 15778,
+      "parentName": "Scrollable main",
+      "childName": "Research reports and work margin",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        185.0,
+        1160.0,
+        675.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "ReportConversation",
+      "parent": 15885,
+      "child": 15897,
+      "parentName": "Scrollable main",
+      "childName": "Report document and decision margin",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        86.0,
+        1160.0,
+        813.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "ReportEvidence",
+      "parent": 16039,
+      "child": 16051,
+      "parentName": "Scrollable main",
+      "childName": "Report document and decision margin",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        86.0,
+        1160.0,
+        772.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "ResearcherConversation",
+      "parent": 16176,
+      "child": 16186,
+      "parentName": "Scrollable main",
+      "childName": "Report document and decision margin",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        86.0,
+        1160.0,
+        813.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "ResearcherEvidence",
+      "parent": 16300,
+      "child": 16310,
+      "parentName": "Scrollable main",
+      "childName": "Report document and decision margin",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        86.0,
+        1160.0,
+        723.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "ReportFocus",
+      "parent": 16595,
+      "child": 16623,
+      "parentName": "Focused report",
+      "childName": "response-comparison.txt",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        56.0,
+        765.0,
+        888.0,
+        58.0
+      ],
+      "parentSize": [
+        1000.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "ReportFocus",
+      "parent": 16595,
+      "child": 16632,
+      "parentName": "Focused report",
+      "childName": "Rule",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        56.0,
+        847.0,
+        888.0,
+        1.0
+      ],
+      "parentSize": [
+        1000.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "FlowUC05",
+      "parent": 17061,
+      "child": 17104,
+      "parentName": "Workflow diagram",
+      "childName": "Back to workflow index \u00b7 link",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        40.0,
+        943.0,
+        220.0,
+        44.0
+      ],
+      "parentSize": [
+        1440.0,
+        1000.0
+      ]
+    },
+    {
+      "screen": "FlowUC07",
+      "parent": 17155,
+      "child": 17204,
+      "parentName": "Workflow diagram",
+      "childName": "Back to workflow index \u00b7 link",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        40.0,
+        943.0,
+        220.0,
+        44.0
+      ],
+      "parentSize": [
+        1440.0,
+        1000.0
+      ]
+    },
+    {
+      "screen": "WorkflowIndex",
+      "parent": 17207,
+      "child": 17260,
+      "parentName": "Workflow catalog",
+      "childName": "UC07 \u00b7 Audit & capacity",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        40.0,
+        868.0,
+        1360.0,
+        100.0
+      ],
+      "parentSize": [
+        1440.0,
+        1000.0
+      ]
+    },
+    {
+      "screen": "WorkflowIndex",
+      "parent": 17207,
+      "child": 17268,
+      "parentName": "Workflow catalog",
+      "childName": "BBT/Button",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        40.0,
+        988.0,
+        310.0,
+        44.0
+      ],
+      "parentSize": [
+        1440.0,
+        1000.0
+      ]
+    },
+    {
+      "screen": "WireframeIndex",
+      "parent": 17271,
+      "child": 17312,
+      "parentName": "Wireframe index content",
+      "childName": "Audit & capacity",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        40.0,
+        1044.0,
+        1360.0,
+        84.0
+      ],
+      "parentSize": [
+        1440.0,
+        1100.0
+      ]
+    },
+    {
+      "screen": "Foundations",
+      "parent": 17317,
+      "child": 17364,
+      "parentName": "Foundation documentation",
+      "childName": "Verified contrast pairs",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        40.0,
+        679.0,
+        1360.0,
+        492.0
+      ],
+      "parentSize": [
+        1440.0,
+        1000.0
+      ]
+    },
+    {
+      "screen": "Foundations",
+      "parent": 17317,
+      "child": 17379,
+      "parentName": "Foundation documentation",
+      "childName": "Actions",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        40.0,
+        1195.0,
+        1360.0,
+        44.0
+      ],
+      "parentSize": [
+        1440.0,
+        1000.0
+      ]
+    },
+    {
+      "screen": "RoleMatrix",
+      "parent": 17459,
+      "child": 17492,
+      "parentName": "Access matrix",
+      "childName": "BBT/Button",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        40.0,
+        964.0,
+        319.0,
+        44.0
+      ],
+      "parentSize": [
+        1440.0,
+        1000.0
+      ]
+    },
+    {
+      "screen": "HandoffIndex",
+      "parent": 17627,
+      "child": 17660,
+      "parentName": "Handoff index content",
+      "childName": "Source authority & open decisions",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        40.0,
+        904.0,
+        1360.0,
+        88.0
+      ],
+      "parentSize": [
+        1440.0,
+        1000.0
+      ]
+    },
+    {
+      "screen": "StateReview",
+      "parent": 17665,
+      "child": 17732,
+      "parentName": "State review index",
+      "childName": "Capacity & integrity",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        40.0,
+        996.0,
+        1360.0,
+        164.0
+      ],
+      "parentSize": [
+        1440.0,
+        1050.0
+      ]
+    },
+    {
+      "screen": "StartHere",
+      "parent": 17749,
+      "child": 17802,
+      "parentName": "Professional refinement overview",
+      "childName": "Open this file manually, select StartHere and use Present. Inputs an",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        48.0,
+        956.0,
+        1344.0,
+        42.0
+      ],
+      "parentSize": [
+        1440.0,
+        1000.0
+      ]
+    },
+    {
+      "screen": "ScreenIndex",
+      "parent": 17835,
+      "child": 17895,
+      "parentName": "Screen family index",
+      "childName": "12 \u00b7 Responsive studies",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        40.0,
+        1068.0,
+        1360.0,
+        68.0
+      ],
+      "parentSize": [
+        1440.0,
+        1100.0
+      ]
+    },
+    {
+      "screen": "ScreenIndex",
+      "parent": 17835,
+      "child": 17900,
+      "parentName": "Screen family index",
+      "childName": "13 \u00b7 Developer handoff",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        40.0,
+        1152.0,
+        1360.0,
+        68.0
+      ],
+      "parentSize": [
+        1440.0,
+        1100.0
+      ]
+    },
+    {
+      "screen": "ScreenIndex",
+      "parent": 17835,
+      "child": 17905,
+      "parentName": "Screen family index",
+      "childName": "A view can be a finished screen, contextual overlay, wireframe, work",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        40.0,
+        1236.0,
+        1360.0,
+        21.0
+      ],
+      "parentSize": [
+        1440.0,
+        1100.0
+      ]
+    },
+    {
+      "screen": "MyReports",
+      "parent": 2309,
+      "child": 2328,
+      "parentName": "Scrollable main",
+      "childName": "Research reports and work margin",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        185.0,
+        1160.0,
+        675.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "ResearcherReport",
+      "parent": 2449,
+      "child": 2459,
+      "parentName": "Scrollable main",
+      "childName": "Report document and decision margin",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        86.0,
+        1160.0,
+        910.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "ResearcherNeedInfo",
+      "parent": 2591,
+      "child": 2601,
+      "parentName": "Scrollable main",
+      "childName": "Report document and decision margin",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        86.0,
+        1160.0,
+        1074.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "ResearcherRetestPending",
+      "parent": 2736,
+      "child": 2746,
+      "parentName": "Scrollable main",
+      "childName": "Report document and decision margin",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        86.0,
+        1160.0,
+        1077.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "ResearcherVerified",
+      "parent": 2882,
+      "child": 2892,
+      "parentName": "Scrollable main",
+      "childName": "Report document and decision margin",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        86.0,
+        1160.0,
+        1010.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "ResearcherRetestFailed",
+      "parent": 3025,
+      "child": 3035,
+      "parentName": "Scrollable main",
+      "childName": "Report document and decision margin",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        86.0,
+        1160.0,
+        1010.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "Notifications",
+      "parent": 3991,
+      "child": 4007,
+      "parentName": "Dialog content",
+      "childName": "Program roster updated",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        28.0,
+        439.0,
+        564.0,
+        143.0
+      ],
+      "parentSize": [
+        620.0,
+        510.0
+      ]
+    },
+    {
+      "screen": "SwitchWorkspace",
+      "parent": 4013,
+      "child": 4029,
+      "parentName": "Dialog content",
+      "childName": "Researcher workspace",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        28.0,
+        431.0,
+        564.0,
+        139.0
+      ],
+      "parentSize": [
+        620.0,
+        540.0
+      ]
+    },
+    {
+      "screen": "SwitchWorkspace",
+      "parent": 4013,
+      "child": 4034,
+      "parentName": "Dialog content",
+      "childName": "Northstar Labs \u00b7 Read only",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        28.0,
+        586.0,
+        564.0,
+        139.0
+      ],
+      "parentSize": [
+        620.0,
+        540.0
+      ]
+    },
+    {
+      "screen": "Score",
+      "parent": 4040,
+      "child": 4092,
+      "parentName": "Dialog content",
+      "childName": "Internal reviewer note \u00b7 optional",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        28.0,
+        751.0,
+        724.0,
+        116.0
+      ],
+      "parentSize": [
+        780.0,
+        780.0
+      ]
+    },
+    {
+      "screen": "Score",
+      "parent": 4040,
+      "child": 4096,
+      "parentName": "Dialog content",
+      "childName": "Actions",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        28.0,
+        883.0,
+        724.0,
+        44.0
+      ],
+      "parentSize": [
+        780.0,
+        780.0
+      ]
+    },
+    {
+      "screen": "Score",
+      "parent": 4040,
+      "child": 4101,
+      "parentName": "Dialog content",
+      "childName": "Show invalid vector state \u00b7 link",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        28.0,
+        943.0,
+        724.0,
+        44.0
+      ],
+      "parentSize": [
+        780.0,
+        780.0
+      ]
+    },
+    {
+      "screen": "Accepted",
+      "parent": 4227,
+      "child": 4239,
+      "parentName": "Scrollable main",
+      "childName": "Report document and decision margin",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        86.0,
+        1160.0,
+        1010.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "DefenderNeedInfo",
+      "parent": 4413,
+      "child": 4425,
+      "parentName": "Scrollable main",
+      "childName": "Report document and decision margin",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        86.0,
+        1160.0,
+        1010.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "TriageOutcomes",
+      "parent": 4510,
+      "child": 4531,
+      "parentName": "Dialog content",
+      "childName": "Risk acceptance",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        28.0,
+        598.0,
+        624.0,
+        143.0
+      ],
+      "parentSize": [
+        680.0,
+        660.0
+      ]
+    },
+    {
+      "screen": "FixProposed",
+      "parent": 5439,
+      "child": 5451,
+      "parentName": "Scrollable main",
+      "childName": "Report document and decision margin",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        86.0,
+        1160.0,
+        1046.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "FixDeployed",
+      "parent": 6342,
+      "child": 6354,
+      "parentName": "Scrollable main",
+      "childName": "Report document and decision margin",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        86.0,
+        1160.0,
+        1046.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "Program",
+      "parent": 637,
+      "child": 656,
+      "parentName": "Public scroll region",
+      "childName": "Policy document and trust margin",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        64.0,
+        223.0,
+        1312.0,
+        713.0
+      ],
+      "parentSize": [
+        1440.0,
+        924.0
+      ]
+    },
+    {
+      "screen": "RetestPending",
+      "parent": 6532,
+      "child": 6544,
+      "parentName": "Scrollable main",
+      "childName": "Report document and decision margin",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        86.0,
+        1160.0,
+        1077.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "VerifiedResearcher",
+      "parent": 6789,
+      "child": 6801,
+      "parentName": "Scrollable main",
+      "childName": "Report document and decision margin",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        86.0,
+        1160.0,
+        1010.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "VerifiedInternal",
+      "parent": 6960,
+      "child": 6972,
+      "parentName": "Scrollable main",
+      "childName": "Report document and decision margin",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        86.0,
+        1160.0,
+        1010.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "UnverifiedClosed",
+      "parent": 7293,
+      "child": 7305,
+      "parentName": "Scrollable main",
+      "childName": "Report document and decision margin",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        86.0,
+        1160.0,
+        1010.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "ReportReopened",
+      "parent": 7481,
+      "child": 7493,
+      "parentName": "Scrollable main",
+      "childName": "Report document and decision margin",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        86.0,
+        1160.0,
+        910.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "ReportLocked",
+      "parent": 780,
+      "child": 788,
+      "parentName": "Scrollable main",
+      "childName": "Report document and decision margin",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        123.0,
+        1160.0,
+        803.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "Security",
+      "parent": 8255,
+      "child": 8274,
+      "parentName": "Scrollable main",
+      "childName": "Local report keys",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        647.0,
+        1160.0,
+        164.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "ReportTriage",
+      "parent": 917,
+      "child": 929,
+      "parentName": "Scrollable main",
+      "childName": "Report document and decision margin",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        86.0,
+        1160.0,
+        910.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    }
+  ],
+  "invalidDestinations": [],
+  "textContrastFailures": [],
+  "contrast": [
+    {
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 13.79,
+      "normalTextPass": true
+    },
+    {
+      "foreground": "muted",
+      "background": "canvas",
+      "ratio": 5.24,
+      "normalTextPass": true
+    },
+    {
+      "foreground": "faint",
+      "background": "canvas",
+      "ratio": 4.72,
+      "normalTextPass": true
+    },
+    {
+      "foreground": "action",
+      "background": "selected",
+      "ratio": 5.87,
+      "normalTextPass": true
+    },
+    {
+      "foreground": "onAction",
+      "background": "action",
+      "ratio": 6.84,
+      "normalTextPass": true
+    },
+    {
+      "foreground": "navMuted",
+      "background": "nav",
+      "ratio": 7.03,
+      "normalTextPass": true
+    },
+    {
+      "foreground": "onDarkBrass",
+      "background": "nav",
+      "ratio": 7.54,
+      "normalTextPass": true
+    },
+    {
+      "foreground": "brass",
+      "background": "brassSurface",
+      "ratio": 4.58,
+      "normalTextPass": true
+    },
+    {
+      "foreground": "warning",
+      "background": "warningSurface",
+      "ratio": 5.22,
+      "normalTextPass": true
+    },
+    {
+      "foreground": "danger",
+      "background": "dangerSurface",
+      "ratio": 5.47,
+      "normalTextPass": true
+    },
+    {
+      "foreground": "success",
+      "background": "successSurface",
+      "ratio": 5.88,
+      "normalTextPass": true
+    },
+    {
+      "foreground": "info",
+      "background": "infoSurface",
+      "ratio": 5.98,
+      "normalTextPass": true
+    },
+    {
+      "foreground": "internal",
+      "background": "internalSurface",
+      "ratio": 5.72,
+      "normalTextPass": true
+    }
+  ],
+  "controls": [
+    {
+      "foreground": "control",
+      "background": "surface",
+      "ratio": 3.7,
+      "boundaryPass": true
+    },
+    {
+      "foreground": "control",
+      "background": "canvas",
+      "ratio": 3.28,
+      "boundaryPass": true
+    }
+  ],
+  "nativeActionTraces": [
+    {
+      "case": "Guest receipt before saved acknowledgement",
+      "destination": "BackupNeeded"
+    },
+    {
+      "case": "Guest receipt after acknowledgement",
+      "destination": "ResearcherReport"
+    },
+    {
+      "case": "Asset export redaction toggle",
+      "includedValue": "api.northstar.example",
+      "secondClick": "[REDACTED]"
+    },
+    {
+      "case": "Evidence export redaction toggle",
+      "includedValue": "7cb43e9d2f \u00b7 main",
+      "secondClick": "[REDACTED]"
+    },
+    {
+      "case": "FixAttemptTwo native route",
+      "destination": "CommitCheckedTwo"
+    },
+    {
+      "case": "CommitCheckedTwo native route",
+      "destination": "FixProposedTwo"
+    },
+    {
+      "case": "DeploymentTwo native route",
+      "destination": "FixDeployedTwo"
+    },
+    {
+      "case": "RequestRetestTwo native route",
+      "destination": "RetestPendingTwo"
+    },
+    {
+      "case": "ResearcherRetestTwo native route",
+      "destination": "ResearcherVerifiedTwo"
+    },
+    {
+      "case": "TimeoutGate native route",
+      "destination": "RetestPending"
+    },
+    {
+      "case": "OwnerRiskGate native route",
+      "destination": "ReportTriage"
+    },
+    {
+      "case": "RecoveryFetch native route",
+      "destination": "RecoveryLocalUnlock"
+    },
+    {
+      "case": "bbtScope reversible checklist",
+      "checkedLabel": "Checked \u00b7 scope",
+      "secondClick": "Mark scope checked"
+    },
+    {
+      "case": "bbtEvidence reversible checklist",
+      "checkedLabel": "Ready \u00b7 controlled evidence",
+      "secondClick": "Mark evidence ready"
+    },
+    {
+      "case": "Native draft-save status variable",
+      "savedLabel": "Saved locally \u00b7 draft retained on this device"
+    },
+    {
+      "case": "MyReports / Needs you \u00b7 2",
+      "destination": "ResearchNeedsMe"
+    },
+    {
+      "case": "MyReports / Resume report draft",
+      "destination": "DraftEditor"
+    },
+    {
+      "case": "ReportTriage / Evidence",
+      "destination": "ReportEvidence"
+    },
+    {
+      "case": "ReportTriage / Conversation",
+      "destination": "ReportConversation"
+    },
+    {
+      "case": "ReportTriage / Focus reading",
+      "destination": "ReportFocus"
+    },
+    {
+      "case": "ReportFocus / Return to workbench",
+      "destination": "ReportTriage"
+    },
+    {
+      "case": "ReportInternal / With researcher",
+      "destination": "ReportConversation"
+    }
+  ],
+  "scope": "Saved-file structure, geometry, contrast, references and parsed native action traces. Not a GUI playback test, runtime security test, live input test or accessibility certification."
+}

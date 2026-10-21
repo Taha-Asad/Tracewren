@@ -1,0 +1,34 @@
+{
+  "artifact": "figma/BugBountyTrack-Professional-v4.figcraft",
+  "sha256": "05221cc95aabc299f15d54d15cf461b62a601aeb56814282a22c3e2b8393565d",
+  "savedLifecycleJourneySteps": 44,
+  "contextPreservingTabChecks": 3560,
+  "queueRoutesChecked": 33,
+  "disclosureLayoutsChecked": 582,
+  "geometryFailures": 0,
+  "textContrastFailures": 0,
+  "invalidDestinations": 0,
+  "v3Preserved": true,
+  "visualAdditions": [
+    "Request path diagram",
+    "CVSS score comparison",
+    "Connected event timeline",
+    "Code/deployment/retest milestones",
+    "Segmented icon tabs",
+    "Native open/closed disclosures",
+    "Right context drawer",
+    "Matching evidence inspectors",
+    "Five original editable vector illustration components across the finding, attempt, outcome, submission and queue contexts"
+  ],
+  "presenterScope": "See figma/professional-v4/runtime-hooks/verification.json for completed controls and interrupted final playback scope.",
+  "illustrationPass": {
+    "components": 5,
+    "placements": 482,
+    "renderedViews": 10,
+    "savedJourneySteps": 44,
+    "geometryFailures": 0,
+    "textContrastFailures": 0,
+    "invalidDestinations": 0,
+    "presenterScope": "Saved native interaction AST and rendered desktop/narrow views checked. No new full GUI replay."
+  }
+}

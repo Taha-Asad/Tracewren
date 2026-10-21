@@ -1,0 +1,13 @@
+{
+  "allTopLevelViewsRendered": 330,
+  "renderFailures": 0,
+  "defaultScale": 0.5,
+  "fullResolutionFeaturedViews": 9,
+  "contactSheetsInspected": 5,
+  "viewsInInspectedContactSheets": 40,
+  "fullSizeViewsInspected": [
+    "Queue",
+    "MobileReport"
+  ],
+  "scope": "Saved native renders and representative visual inspection; desktop GUI playback remains outstanding."
+}

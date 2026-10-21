@@ -36,8 +36,13 @@ dist/
 .env*.local
 !.env.example
 
-# Python Scripts, Caches & Environments
+# Python Scripts, Design Authoring Tooling & Caches
 *.py
+tools/
+**/design.json
+**/commands.json
+**/ledger.json
+*.log
 __pycache__/
 *.py[cod]
 *$py.class

@@ -1,0 +1,3499 @@
+{
+  "status": "passed",
+  "count": 582,
+  "scope": "Native toggle routes, opposite visibility, and expanded content contained in correctly sized parents.",
+  "states": [
+    {
+      "owner": "Queue",
+      "label": "Earlier events \u00b7 1",
+      "key": "Queue__disclosure_344",
+      "defaultOpen": false
+    },
+    {
+      "owner": "QueueAssigned",
+      "label": "Earlier events \u00b7 1",
+      "key": "QueueAssigned__disclosure_533",
+      "defaultOpen": false
+    },
+    {
+      "owner": "QueueAttention",
+      "label": "Earlier events \u00b7 1",
+      "key": "QueueAttention__disclosure_722",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportTriage",
+      "label": "Request details",
+      "key": "ReportTriage__disclosure_1108",
+      "defaultOpen": true
+    },
+    {
+      "owner": "ReportTriage",
+      "label": "Why the scores differ",
+      "key": "ReportTriage__disclosure_1161",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportTriage",
+      "label": "Earlier events \u00b7 1",
+      "key": "ReportTriage__disclosure_1188",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportTriage__drawer",
+      "label": "Why the scores differ",
+      "key": "ReportTriage__drawer__disclosure_1221",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportTriage__drawer",
+      "label": "Audience & encryption",
+      "key": "ReportTriage__drawer__disclosure_1226",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportTriage__evidence",
+      "label": "Why the scores differ",
+      "key": "ReportTriage__evidence__disclosure_1480",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportTriage__evidence",
+      "label": "Earlier events \u00b7 1",
+      "key": "ReportTriage__evidence__disclosure_1507",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportTriage__conversation",
+      "label": "Why the scores differ",
+      "key": "ReportTriage__conversation__disclosure_1704",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportTriage__conversation",
+      "label": "Earlier events \u00b7 1",
+      "key": "ReportTriage__conversation__disclosure_1731",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportTriage__remediation",
+      "label": "Why the scores differ",
+      "key": "ReportTriage__remediation__disclosure_1930",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportTriage__remediation",
+      "label": "Earlier events \u00b7 1",
+      "key": "ReportTriage__remediation__disclosure_1957",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportTriage__activity",
+      "label": "Why the scores differ",
+      "key": "ReportTriage__activity__disclosure_2155",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportTriage__internal",
+      "label": "Why the scores differ",
+      "key": "ReportTriage__internal__disclosure_2349",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportTriage__internal",
+      "label": "Earlier events \u00b7 1",
+      "key": "ReportTriage__internal__disclosure_2376",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportInternal",
+      "label": "Why the scores differ",
+      "key": "ReportInternal__disclosure_2566",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportInternal",
+      "label": "Earlier events \u00b7 1",
+      "key": "ReportInternal__disclosure_2593",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportInternal__drawer",
+      "label": "Why the scores differ",
+      "key": "ReportInternal__drawer__disclosure_2626",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportInternal__drawer",
+      "label": "Audience & encryption",
+      "key": "ReportInternal__drawer__disclosure_2631",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportInternal__conversation",
+      "label": "Why the scores differ",
+      "key": "ReportInternal__conversation__disclosure_2853",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportInternal__conversation",
+      "label": "Earlier events \u00b7 1",
+      "key": "ReportInternal__conversation__disclosure_2880",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportInternal__original",
+      "label": "Request details",
+      "key": "ReportInternal__original__disclosure_3094",
+      "defaultOpen": true
+    },
+    {
+      "owner": "ReportInternal__original",
+      "label": "Why the scores differ",
+      "key": "ReportInternal__original__disclosure_3139",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportInternal__original",
+      "label": "Earlier events \u00b7 1",
+      "key": "ReportInternal__original__disclosure_3166",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportInternal__evidence",
+      "label": "Why the scores differ",
+      "key": "ReportInternal__evidence__disclosure_3395",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportInternal__evidence",
+      "label": "Earlier events \u00b7 1",
+      "key": "ReportInternal__evidence__disclosure_3422",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportInternal__remediation",
+      "label": "Why the scores differ",
+      "key": "ReportInternal__remediation__disclosure_3621",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportInternal__remediation",
+      "label": "Earlier events \u00b7 1",
+      "key": "ReportInternal__remediation__disclosure_3648",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportInternal__activity",
+      "label": "Why the scores differ",
+      "key": "ReportInternal__activity__disclosure_3846",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportInternal__internal",
+      "label": "Why the scores differ",
+      "key": "ReportInternal__internal__disclosure_4040",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportInternal__internal",
+      "label": "Earlier events \u00b7 1",
+      "key": "ReportInternal__internal__disclosure_4067",
+      "defaultOpen": false
+    },
+    {
+      "owner": "SubmitReview",
+      "label": "Request details",
+      "key": "SubmitReview__disclosure_4500",
+      "defaultOpen": true
+    },
+    {
+      "owner": "RegisteredReview",
+      "label": "Request details",
+      "key": "RegisteredReview__disclosure_4845",
+      "defaultOpen": true
+    },
+    {
+      "owner": "ResearcherReport",
+      "label": "Request details",
+      "key": "ResearcherReport__disclosure_5564",
+      "defaultOpen": true
+    },
+    {
+      "owner": "ResearcherReport__drawer",
+      "label": "Audience & encryption",
+      "key": "ResearcherReport__drawer__disclosure_5640",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherNeedInfo",
+      "label": "Request details",
+      "key": "ResearcherNeedInfo__disclosure_6554",
+      "defaultOpen": true
+    },
+    {
+      "owner": "ResearcherNeedInfo",
+      "label": "Why the scores differ",
+      "key": "ResearcherNeedInfo__disclosure_6599",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherNeedInfo",
+      "label": "Earlier events \u00b7 1",
+      "key": "ResearcherNeedInfo__disclosure_6626",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherNeedInfo__drawer",
+      "label": "Why the scores differ",
+      "key": "ResearcherNeedInfo__drawer__disclosure_6655",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherNeedInfo__drawer",
+      "label": "Audience & encryption",
+      "key": "ResearcherNeedInfo__drawer__disclosure_6660",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherNeedInfo__evidence",
+      "label": "Why the scores differ",
+      "key": "ResearcherNeedInfo__evidence__disclosure_6893",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherNeedInfo__evidence",
+      "label": "Earlier events \u00b7 1",
+      "key": "ResearcherNeedInfo__evidence__disclosure_6920",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherNeedInfo__conversation",
+      "label": "Why the scores differ",
+      "key": "ResearcherNeedInfo__conversation__disclosure_7090",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherNeedInfo__conversation",
+      "label": "Earlier events \u00b7 1",
+      "key": "ResearcherNeedInfo__conversation__disclosure_7117",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherNeedInfo__remediation",
+      "label": "Why the scores differ",
+      "key": "ResearcherNeedInfo__remediation__disclosure_7291",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherNeedInfo__remediation",
+      "label": "Earlier events \u00b7 1",
+      "key": "ResearcherNeedInfo__remediation__disclosure_7318",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherNeedInfo__activity",
+      "label": "Why the scores differ",
+      "key": "ResearcherNeedInfo__activity__disclosure_7491",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherRetestPending",
+      "label": "Why the scores differ",
+      "key": "ResearcherRetestPending__disclosure_7689",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherRetestPending",
+      "label": "Earlier events \u00b7 5",
+      "key": "ResearcherRetestPending__disclosure_7716",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherRetestPending__drawer",
+      "label": "Why the scores differ",
+      "key": "ResearcherRetestPending__drawer__disclosure_7745",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherRetestPending__drawer",
+      "label": "Audience & encryption",
+      "key": "ResearcherRetestPending__drawer__disclosure_7750",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherRetestPending__original",
+      "label": "Request details",
+      "key": "ResearcherRetestPending__original__disclosure_8004",
+      "defaultOpen": true
+    },
+    {
+      "owner": "ResearcherRetestPending__original",
+      "label": "Why the scores differ",
+      "key": "ResearcherRetestPending__original__disclosure_8049",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherRetestPending__original",
+      "label": "Earlier events \u00b7 5",
+      "key": "ResearcherRetestPending__original__disclosure_8076",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherRetestPending__evidence",
+      "label": "Why the scores differ",
+      "key": "ResearcherRetestPending__evidence__disclosure_8280",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherRetestPending__evidence",
+      "label": "Earlier events \u00b7 5",
+      "key": "ResearcherRetestPending__evidence__disclosure_8307",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherRetestPending__conversation",
+      "label": "Why the scores differ",
+      "key": "ResearcherRetestPending__conversation__disclosure_8477",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherRetestPending__conversation",
+      "label": "Earlier events \u00b7 5",
+      "key": "ResearcherRetestPending__conversation__disclosure_8504",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherRetestPending__activity",
+      "label": "Why the scores differ",
+      "key": "ResearcherRetestPending__activity__disclosure_8713",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherVerified",
+      "label": "Verification criteria & tested environment",
+      "key": "ResearcherVerified__disclosure_8889",
+      "defaultOpen": true
+    },
+    {
+      "owner": "ResearcherVerified",
+      "label": "Why the scores differ",
+      "key": "ResearcherVerified__disclosure_8909",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherVerified",
+      "label": "Earlier events \u00b7 6",
+      "key": "ResearcherVerified__disclosure_8936",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherVerified__drawer",
+      "label": "Why the scores differ",
+      "key": "ResearcherVerified__drawer__disclosure_8965",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherVerified__drawer",
+      "label": "Audience & encryption",
+      "key": "ResearcherVerified__drawer__disclosure_8970",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherVerified__original",
+      "label": "Request details",
+      "key": "ResearcherVerified__original__disclosure_9233",
+      "defaultOpen": true
+    },
+    {
+      "owner": "ResearcherVerified__original",
+      "label": "Why the scores differ",
+      "key": "ResearcherVerified__original__disclosure_9278",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherVerified__original",
+      "label": "Earlier events \u00b7 6",
+      "key": "ResearcherVerified__original__disclosure_9305",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherVerified__evidence",
+      "label": "Why the scores differ",
+      "key": "ResearcherVerified__evidence__disclosure_9509",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherVerified__evidence",
+      "label": "Earlier events \u00b7 6",
+      "key": "ResearcherVerified__evidence__disclosure_9536",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherVerified__conversation",
+      "label": "Why the scores differ",
+      "key": "ResearcherVerified__conversation__disclosure_9706",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherVerified__conversation",
+      "label": "Earlier events \u00b7 6",
+      "key": "ResearcherVerified__conversation__disclosure_9733",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherVerified__activity",
+      "label": "Why the scores differ",
+      "key": "ResearcherVerified__activity__disclosure_9951",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherRetestFailed",
+      "label": "Why the scores differ",
+      "key": "ResearcherRetestFailed__disclosure_10136",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherRetestFailed",
+      "label": "Earlier events \u00b7 7",
+      "key": "ResearcherRetestFailed__disclosure_10163",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherRetestFailed__drawer",
+      "label": "Why the scores differ",
+      "key": "ResearcherRetestFailed__drawer__disclosure_10194",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherRetestFailed__drawer",
+      "label": "Audience & encryption",
+      "key": "ResearcherRetestFailed__drawer__disclosure_10199",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherRetestFailed__original",
+      "label": "Request details",
+      "key": "ResearcherRetestFailed__original__disclosure_10424",
+      "defaultOpen": true
+    },
+    {
+      "owner": "ResearcherRetestFailed__original",
+      "label": "Why the scores differ",
+      "key": "ResearcherRetestFailed__original__disclosure_10469",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherRetestFailed__original",
+      "label": "Earlier events \u00b7 7",
+      "key": "ResearcherRetestFailed__original__disclosure_10496",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherRetestFailed__evidence",
+      "label": "Why the scores differ",
+      "key": "ResearcherRetestFailed__evidence__disclosure_10700",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherRetestFailed__evidence",
+      "label": "Earlier events \u00b7 7",
+      "key": "ResearcherRetestFailed__evidence__disclosure_10727",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherRetestFailed__conversation",
+      "label": "Why the scores differ",
+      "key": "ResearcherRetestFailed__conversation__disclosure_10897",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherRetestFailed__conversation",
+      "label": "Earlier events \u00b7 7",
+      "key": "ResearcherRetestFailed__conversation__disclosure_10924",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherRetestFailed__activity",
+      "label": "Why the scores differ",
+      "key": "ResearcherRetestFailed__activity__disclosure_11151",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Accepted",
+      "label": "Why the scores differ",
+      "key": "Accepted__disclosure_12368",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Accepted",
+      "label": "Earlier events \u00b7 2",
+      "key": "Accepted__disclosure_12395",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Accepted__drawer",
+      "label": "Why the scores differ",
+      "key": "Accepted__drawer__disclosure_12424",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Accepted__drawer",
+      "label": "Audience & encryption",
+      "key": "Accepted__drawer__disclosure_12429",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Accepted__original",
+      "label": "Request details",
+      "key": "Accepted__original__disclosure_12677",
+      "defaultOpen": true
+    },
+    {
+      "owner": "Accepted__original",
+      "label": "Why the scores differ",
+      "key": "Accepted__original__disclosure_12722",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Accepted__original",
+      "label": "Earlier events \u00b7 2",
+      "key": "Accepted__original__disclosure_12749",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Accepted__evidence",
+      "label": "Why the scores differ",
+      "key": "Accepted__evidence__disclosure_12974",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Accepted__evidence",
+      "label": "Earlier events \u00b7 2",
+      "key": "Accepted__evidence__disclosure_13001",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Accepted__conversation",
+      "label": "Why the scores differ",
+      "key": "Accepted__conversation__disclosure_13194",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Accepted__conversation",
+      "label": "Earlier events \u00b7 2",
+      "key": "Accepted__conversation__disclosure_13221",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Accepted__activity",
+      "label": "Why the scores differ",
+      "key": "Accepted__activity__disclosure_13424",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Accepted__internal",
+      "label": "Why the scores differ",
+      "key": "Accepted__internal__disclosure_13614",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Accepted__internal",
+      "label": "Earlier events \u00b7 2",
+      "key": "Accepted__internal__disclosure_13641",
+      "defaultOpen": false
+    },
+    {
+      "owner": "DefenderNeedInfo",
+      "label": "Request details",
+      "key": "DefenderNeedInfo__disclosure_13866",
+      "defaultOpen": true
+    },
+    {
+      "owner": "DefenderNeedInfo",
+      "label": "Why the scores differ",
+      "key": "DefenderNeedInfo__disclosure_13911",
+      "defaultOpen": false
+    },
+    {
+      "owner": "DefenderNeedInfo",
+      "label": "Earlier events \u00b7 1",
+      "key": "DefenderNeedInfo__disclosure_13938",
+      "defaultOpen": false
+    },
+    {
+      "owner": "DefenderNeedInfo__drawer",
+      "label": "Why the scores differ",
+      "key": "DefenderNeedInfo__drawer__disclosure_13967",
+      "defaultOpen": false
+    },
+    {
+      "owner": "DefenderNeedInfo__drawer",
+      "label": "Audience & encryption",
+      "key": "DefenderNeedInfo__drawer__disclosure_13972",
+      "defaultOpen": false
+    },
+    {
+      "owner": "DefenderNeedInfo__evidence",
+      "label": "Why the scores differ",
+      "key": "DefenderNeedInfo__evidence__disclosure_14224",
+      "defaultOpen": false
+    },
+    {
+      "owner": "DefenderNeedInfo__evidence",
+      "label": "Earlier events \u00b7 1",
+      "key": "DefenderNeedInfo__evidence__disclosure_14251",
+      "defaultOpen": false
+    },
+    {
+      "owner": "DefenderNeedInfo__conversation",
+      "label": "Why the scores differ",
+      "key": "DefenderNeedInfo__conversation__disclosure_14442",
+      "defaultOpen": false
+    },
+    {
+      "owner": "DefenderNeedInfo__conversation",
+      "label": "Earlier events \u00b7 1",
+      "key": "DefenderNeedInfo__conversation__disclosure_14469",
+      "defaultOpen": false
+    },
+    {
+      "owner": "DefenderNeedInfo__remediation",
+      "label": "Why the scores differ",
+      "key": "DefenderNeedInfo__remediation__disclosure_14662",
+      "defaultOpen": false
+    },
+    {
+      "owner": "DefenderNeedInfo__remediation",
+      "label": "Earlier events \u00b7 1",
+      "key": "DefenderNeedInfo__remediation__disclosure_14689",
+      "defaultOpen": false
+    },
+    {
+      "owner": "DefenderNeedInfo__activity",
+      "label": "Why the scores differ",
+      "key": "DefenderNeedInfo__activity__disclosure_14881",
+      "defaultOpen": false
+    },
+    {
+      "owner": "DefenderNeedInfo__internal",
+      "label": "Why the scores differ",
+      "key": "DefenderNeedInfo__internal__disclosure_15069",
+      "defaultOpen": false
+    },
+    {
+      "owner": "DefenderNeedInfo__internal",
+      "label": "Earlier events \u00b7 1",
+      "key": "DefenderNeedInfo__internal__disclosure_15096",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixProposed",
+      "label": "Why the scores differ",
+      "key": "FixProposed__disclosure_16148",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixProposed",
+      "label": "Earlier events \u00b7 3",
+      "key": "FixProposed__disclosure_16175",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixProposed__drawer",
+      "label": "Why the scores differ",
+      "key": "FixProposed__drawer__disclosure_16204",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixProposed__drawer",
+      "label": "Audience & encryption",
+      "key": "FixProposed__drawer__disclosure_16209",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixProposed__original",
+      "label": "Request details",
+      "key": "FixProposed__original__disclosure_16466",
+      "defaultOpen": true
+    },
+    {
+      "owner": "FixProposed__original",
+      "label": "Why the scores differ",
+      "key": "FixProposed__original__disclosure_16511",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixProposed__original",
+      "label": "Earlier events \u00b7 3",
+      "key": "FixProposed__original__disclosure_16538",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixProposed__evidence",
+      "label": "Why the scores differ",
+      "key": "FixProposed__evidence__disclosure_16763",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixProposed__evidence",
+      "label": "Earlier events \u00b7 3",
+      "key": "FixProposed__evidence__disclosure_16790",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixProposed__conversation",
+      "label": "Why the scores differ",
+      "key": "FixProposed__conversation__disclosure_16983",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixProposed__conversation",
+      "label": "Earlier events \u00b7 3",
+      "key": "FixProposed__conversation__disclosure_17010",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixProposed__activity",
+      "label": "Why the scores differ",
+      "key": "FixProposed__activity__disclosure_17222",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixProposed__internal",
+      "label": "Why the scores differ",
+      "key": "FixProposed__internal__disclosure_17412",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixProposed__internal",
+      "label": "Earlier events \u00b7 3",
+      "key": "FixProposed__internal__disclosure_17439",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixProposedTwo",
+      "label": "Attempt 1 \u00b7 retained evidence and result",
+      "key": "FixProposedTwo__disclosure_17869",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixProposedTwo",
+      "label": "Why the scores differ",
+      "key": "FixProposedTwo__disclosure_17889",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixProposedTwo",
+      "label": "Earlier events \u00b7 8",
+      "key": "FixProposedTwo__disclosure_17916",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixProposedTwo__drawer",
+      "label": "Why the scores differ",
+      "key": "FixProposedTwo__drawer__disclosure_17945",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixProposedTwo__drawer",
+      "label": "Audience & encryption",
+      "key": "FixProposedTwo__drawer__disclosure_17950",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixProposedTwo__original",
+      "label": "Request details",
+      "key": "FixProposedTwo__original__disclosure_18252",
+      "defaultOpen": true
+    },
+    {
+      "owner": "FixProposedTwo__original",
+      "label": "Why the scores differ",
+      "key": "FixProposedTwo__original__disclosure_18297",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixProposedTwo__original",
+      "label": "Earlier events \u00b7 8",
+      "key": "FixProposedTwo__original__disclosure_18324",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixProposedTwo__evidence",
+      "label": "Why the scores differ",
+      "key": "FixProposedTwo__evidence__disclosure_18549",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixProposedTwo__evidence",
+      "label": "Earlier events \u00b7 8",
+      "key": "FixProposedTwo__evidence__disclosure_18576",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixProposedTwo__conversation",
+      "label": "Why the scores differ",
+      "key": "FixProposedTwo__conversation__disclosure_18769",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixProposedTwo__conversation",
+      "label": "Earlier events \u00b7 8",
+      "key": "FixProposedTwo__conversation__disclosure_18796",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixProposedTwo__activity",
+      "label": "Why the scores differ",
+      "key": "FixProposedTwo__activity__disclosure_19053",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixProposedTwo__internal",
+      "label": "Why the scores differ",
+      "key": "FixProposedTwo__internal__disclosure_19243",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixProposedTwo__internal",
+      "label": "Earlier events \u00b7 8",
+      "key": "FixProposedTwo__internal__disclosure_19270",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixDeployedTwo",
+      "label": "Attempt 1 \u00b7 retained evidence and result",
+      "key": "FixDeployedTwo__disclosure_19482",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixDeployedTwo",
+      "label": "Why the scores differ",
+      "key": "FixDeployedTwo__disclosure_19502",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixDeployedTwo",
+      "label": "Earlier events \u00b7 9",
+      "key": "FixDeployedTwo__disclosure_19529",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixDeployedTwo__drawer",
+      "label": "Why the scores differ",
+      "key": "FixDeployedTwo__drawer__disclosure_19558",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixDeployedTwo__drawer",
+      "label": "Audience & encryption",
+      "key": "FixDeployedTwo__drawer__disclosure_19563",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixDeployedTwo__original",
+      "label": "Request details",
+      "key": "FixDeployedTwo__original__disclosure_19874",
+      "defaultOpen": true
+    },
+    {
+      "owner": "FixDeployedTwo__original",
+      "label": "Why the scores differ",
+      "key": "FixDeployedTwo__original__disclosure_19919",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixDeployedTwo__original",
+      "label": "Earlier events \u00b7 9",
+      "key": "FixDeployedTwo__original__disclosure_19946",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixDeployedTwo__evidence",
+      "label": "Why the scores differ",
+      "key": "FixDeployedTwo__evidence__disclosure_20171",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixDeployedTwo__evidence",
+      "label": "Earlier events \u00b7 9",
+      "key": "FixDeployedTwo__evidence__disclosure_20198",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixDeployedTwo__conversation",
+      "label": "Why the scores differ",
+      "key": "FixDeployedTwo__conversation__disclosure_20391",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixDeployedTwo__conversation",
+      "label": "Earlier events \u00b7 9",
+      "key": "FixDeployedTwo__conversation__disclosure_20418",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixDeployedTwo__activity",
+      "label": "Why the scores differ",
+      "key": "FixDeployedTwo__activity__disclosure_20684",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixDeployedTwo__internal",
+      "label": "Why the scores differ",
+      "key": "FixDeployedTwo__internal__disclosure_20874",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixDeployedTwo__internal",
+      "label": "Earlier events \u00b7 9",
+      "key": "FixDeployedTwo__internal__disclosure_20901",
+      "defaultOpen": false
+    },
+    {
+      "owner": "RetestPendingTwo",
+      "label": "Attempt 1 \u00b7 retained evidence and result",
+      "key": "RetestPendingTwo__disclosure_21125",
+      "defaultOpen": false
+    },
+    {
+      "owner": "RetestPendingTwo",
+      "label": "Why the scores differ",
+      "key": "RetestPendingTwo__disclosure_21145",
+      "defaultOpen": false
+    },
+    {
+      "owner": "RetestPendingTwo",
+      "label": "Earlier events \u00b7 10",
+      "key": "RetestPendingTwo__disclosure_21172",
+      "defaultOpen": false
+    },
+    {
+      "owner": "RetestPendingTwo__drawer",
+      "label": "Why the scores differ",
+      "key": "RetestPendingTwo__drawer__disclosure_21203",
+      "defaultOpen": false
+    },
+    {
+      "owner": "RetestPendingTwo__drawer",
+      "label": "Audience & encryption",
+      "key": "RetestPendingTwo__drawer__disclosure_21208",
+      "defaultOpen": false
+    },
+    {
+      "owner": "RetestPendingTwo__original",
+      "label": "Request details",
+      "key": "RetestPendingTwo__original__disclosure_21528",
+      "defaultOpen": true
+    },
+    {
+      "owner": "RetestPendingTwo__original",
+      "label": "Why the scores differ",
+      "key": "RetestPendingTwo__original__disclosure_21573",
+      "defaultOpen": false
+    },
+    {
+      "owner": "RetestPendingTwo__original",
+      "label": "Earlier events \u00b7 10",
+      "key": "RetestPendingTwo__original__disclosure_21600",
+      "defaultOpen": false
+    },
+    {
+      "owner": "RetestPendingTwo__evidence",
+      "label": "Why the scores differ",
+      "key": "RetestPendingTwo__evidence__disclosure_21827",
+      "defaultOpen": false
+    },
+    {
+      "owner": "RetestPendingTwo__evidence",
+      "label": "Earlier events \u00b7 10",
+      "key": "RetestPendingTwo__evidence__disclosure_21854",
+      "defaultOpen": false
+    },
+    {
+      "owner": "RetestPendingTwo__conversation",
+      "label": "Why the scores differ",
+      "key": "RetestPendingTwo__conversation__disclosure_22049",
+      "defaultOpen": false
+    },
+    {
+      "owner": "RetestPendingTwo__conversation",
+      "label": "Earlier events \u00b7 10",
+      "key": "RetestPendingTwo__conversation__disclosure_22076",
+      "defaultOpen": false
+    },
+    {
+      "owner": "RetestPendingTwo__activity",
+      "label": "Why the scores differ",
+      "key": "RetestPendingTwo__activity__disclosure_22353",
+      "defaultOpen": false
+    },
+    {
+      "owner": "RetestPendingTwo__internal",
+      "label": "Why the scores differ",
+      "key": "RetestPendingTwo__internal__disclosure_22545",
+      "defaultOpen": false
+    },
+    {
+      "owner": "RetestPendingTwo__internal",
+      "label": "Earlier events \u00b7 10",
+      "key": "RetestPendingTwo__internal__disclosure_22572",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherPendingTwo",
+      "label": "Attempt 1 \u00b7 retained evidence and result",
+      "key": "ResearcherPendingTwo__disclosure_22761",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherPendingTwo",
+      "label": "Why the scores differ",
+      "key": "ResearcherPendingTwo__disclosure_22781",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherPendingTwo",
+      "label": "Earlier events \u00b7 10",
+      "key": "ResearcherPendingTwo__disclosure_22808",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherPendingTwo__drawer",
+      "label": "Why the scores differ",
+      "key": "ResearcherPendingTwo__drawer__disclosure_22837",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherPendingTwo__drawer",
+      "label": "Audience & encryption",
+      "key": "ResearcherPendingTwo__drawer__disclosure_22842",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherPendingTwo__original",
+      "label": "Request details",
+      "key": "ResearcherPendingTwo__original__disclosure_23141",
+      "defaultOpen": true
+    },
+    {
+      "owner": "ResearcherPendingTwo__original",
+      "label": "Why the scores differ",
+      "key": "ResearcherPendingTwo__original__disclosure_23186",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherPendingTwo__original",
+      "label": "Earlier events \u00b7 10",
+      "key": "ResearcherPendingTwo__original__disclosure_23213",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherPendingTwo__evidence",
+      "label": "Why the scores differ",
+      "key": "ResearcherPendingTwo__evidence__disclosure_23417",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherPendingTwo__evidence",
+      "label": "Earlier events \u00b7 10",
+      "key": "ResearcherPendingTwo__evidence__disclosure_23444",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherPendingTwo__conversation",
+      "label": "Why the scores differ",
+      "key": "ResearcherPendingTwo__conversation__disclosure_23614",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherPendingTwo__conversation",
+      "label": "Earlier events \u00b7 10",
+      "key": "ResearcherPendingTwo__conversation__disclosure_23641",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherPendingTwo__activity",
+      "label": "Why the scores differ",
+      "key": "ResearcherPendingTwo__activity__disclosure_23895",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherVerifiedTwo",
+      "label": "Verification criteria & tested environment",
+      "key": "ResearcherVerifiedTwo__disclosure_24107",
+      "defaultOpen": true
+    },
+    {
+      "owner": "ResearcherVerifiedTwo",
+      "label": "Attempt 1 \u00b7 retained evidence and result",
+      "key": "ResearcherVerifiedTwo__disclosure_24112",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherVerifiedTwo",
+      "label": "Why the scores differ",
+      "key": "ResearcherVerifiedTwo__disclosure_24132",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherVerifiedTwo",
+      "label": "Earlier events \u00b7 11",
+      "key": "ResearcherVerifiedTwo__disclosure_24159",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherVerifiedTwo__drawer",
+      "label": "Why the scores differ",
+      "key": "ResearcherVerifiedTwo__drawer__disclosure_24188",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherVerifiedTwo__drawer",
+      "label": "Audience & encryption",
+      "key": "ResearcherVerifiedTwo__drawer__disclosure_24193",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherVerifiedTwo__original",
+      "label": "Request details",
+      "key": "ResearcherVerifiedTwo__original__disclosure_24501",
+      "defaultOpen": true
+    },
+    {
+      "owner": "ResearcherVerifiedTwo__original",
+      "label": "Why the scores differ",
+      "key": "ResearcherVerifiedTwo__original__disclosure_24546",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherVerifiedTwo__original",
+      "label": "Earlier events \u00b7 11",
+      "key": "ResearcherVerifiedTwo__original__disclosure_24573",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherVerifiedTwo__evidence",
+      "label": "Why the scores differ",
+      "key": "ResearcherVerifiedTwo__evidence__disclosure_24777",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherVerifiedTwo__evidence",
+      "label": "Earlier events \u00b7 11",
+      "key": "ResearcherVerifiedTwo__evidence__disclosure_24804",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherVerifiedTwo__conversation",
+      "label": "Why the scores differ",
+      "key": "ResearcherVerifiedTwo__conversation__disclosure_24974",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherVerifiedTwo__conversation",
+      "label": "Earlier events \u00b7 11",
+      "key": "ResearcherVerifiedTwo__conversation__disclosure_25001",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherVerifiedTwo__activity",
+      "label": "Why the scores differ",
+      "key": "ResearcherVerifiedTwo__activity__disclosure_25264",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedResearcherTwo",
+      "label": "Verification criteria & tested environment",
+      "key": "VerifiedResearcherTwo__disclosure_25469",
+      "defaultOpen": true
+    },
+    {
+      "owner": "VerifiedResearcherTwo",
+      "label": "Attempt 1 \u00b7 retained evidence and result",
+      "key": "VerifiedResearcherTwo__disclosure_25474",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedResearcherTwo",
+      "label": "Why the scores differ",
+      "key": "VerifiedResearcherTwo__disclosure_25494",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedResearcherTwo",
+      "label": "Earlier events \u00b7 11",
+      "key": "VerifiedResearcherTwo__disclosure_25521",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedResearcherTwo__drawer",
+      "label": "Why the scores differ",
+      "key": "VerifiedResearcherTwo__drawer__disclosure_25552",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedResearcherTwo__drawer",
+      "label": "Audience & encryption",
+      "key": "VerifiedResearcherTwo__drawer__disclosure_25557",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedResearcherTwo__original",
+      "label": "Request details",
+      "key": "VerifiedResearcherTwo__original__disclosure_25886",
+      "defaultOpen": true
+    },
+    {
+      "owner": "VerifiedResearcherTwo__original",
+      "label": "Why the scores differ",
+      "key": "VerifiedResearcherTwo__original__disclosure_25931",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedResearcherTwo__original",
+      "label": "Earlier events \u00b7 11",
+      "key": "VerifiedResearcherTwo__original__disclosure_25958",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedResearcherTwo__evidence",
+      "label": "Why the scores differ",
+      "key": "VerifiedResearcherTwo__evidence__disclosure_26185",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedResearcherTwo__evidence",
+      "label": "Earlier events \u00b7 11",
+      "key": "VerifiedResearcherTwo__evidence__disclosure_26212",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedResearcherTwo__conversation",
+      "label": "Why the scores differ",
+      "key": "VerifiedResearcherTwo__conversation__disclosure_26407",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedResearcherTwo__conversation",
+      "label": "Earlier events \u00b7 11",
+      "key": "VerifiedResearcherTwo__conversation__disclosure_26434",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedResearcherTwo__activity",
+      "label": "Why the scores differ",
+      "key": "VerifiedResearcherTwo__activity__disclosure_26720",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedResearcherTwo__internal",
+      "label": "Why the scores differ",
+      "key": "VerifiedResearcherTwo__internal__disclosure_26912",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedResearcherTwo__internal",
+      "label": "Earlier events \u00b7 11",
+      "key": "VerifiedResearcherTwo__internal__disclosure_26939",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixDeployed",
+      "label": "Why the scores differ",
+      "key": "FixDeployed__disclosure_27161",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixDeployed",
+      "label": "Earlier events \u00b7 4",
+      "key": "FixDeployed__disclosure_27188",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixDeployed__drawer",
+      "label": "Why the scores differ",
+      "key": "FixDeployed__drawer__disclosure_27217",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixDeployed__drawer",
+      "label": "Audience & encryption",
+      "key": "FixDeployed__drawer__disclosure_27222",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixDeployed__original",
+      "label": "Request details",
+      "key": "FixDeployed__original__disclosure_27488",
+      "defaultOpen": true
+    },
+    {
+      "owner": "FixDeployed__original",
+      "label": "Why the scores differ",
+      "key": "FixDeployed__original__disclosure_27533",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixDeployed__original",
+      "label": "Earlier events \u00b7 4",
+      "key": "FixDeployed__original__disclosure_27560",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixDeployed__evidence",
+      "label": "Why the scores differ",
+      "key": "FixDeployed__evidence__disclosure_27785",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixDeployed__evidence",
+      "label": "Earlier events \u00b7 4",
+      "key": "FixDeployed__evidence__disclosure_27812",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixDeployed__conversation",
+      "label": "Why the scores differ",
+      "key": "FixDeployed__conversation__disclosure_28005",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixDeployed__conversation",
+      "label": "Earlier events \u00b7 4",
+      "key": "FixDeployed__conversation__disclosure_28032",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixDeployed__activity",
+      "label": "Why the scores differ",
+      "key": "FixDeployed__activity__disclosure_28253",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixDeployed__internal",
+      "label": "Why the scores differ",
+      "key": "FixDeployed__internal__disclosure_28443",
+      "defaultOpen": false
+    },
+    {
+      "owner": "FixDeployed__internal",
+      "label": "Earlier events \u00b7 4",
+      "key": "FixDeployed__internal__disclosure_28470",
+      "defaultOpen": false
+    },
+    {
+      "owner": "RetestPending",
+      "label": "Why the scores differ",
+      "key": "RetestPending__disclosure_28705",
+      "defaultOpen": false
+    },
+    {
+      "owner": "RetestPending",
+      "label": "Earlier events \u00b7 5",
+      "key": "RetestPending__disclosure_28732",
+      "defaultOpen": false
+    },
+    {
+      "owner": "RetestPending__drawer",
+      "label": "Why the scores differ",
+      "key": "RetestPending__drawer__disclosure_28763",
+      "defaultOpen": false
+    },
+    {
+      "owner": "RetestPending__drawer",
+      "label": "Audience & encryption",
+      "key": "RetestPending__drawer__disclosure_28768",
+      "defaultOpen": false
+    },
+    {
+      "owner": "RetestPending__original",
+      "label": "Request details",
+      "key": "RetestPending__original__disclosure_29043",
+      "defaultOpen": true
+    },
+    {
+      "owner": "RetestPending__original",
+      "label": "Why the scores differ",
+      "key": "RetestPending__original__disclosure_29088",
+      "defaultOpen": false
+    },
+    {
+      "owner": "RetestPending__original",
+      "label": "Earlier events \u00b7 5",
+      "key": "RetestPending__original__disclosure_29115",
+      "defaultOpen": false
+    },
+    {
+      "owner": "RetestPending__evidence",
+      "label": "Why the scores differ",
+      "key": "RetestPending__evidence__disclosure_29342",
+      "defaultOpen": false
+    },
+    {
+      "owner": "RetestPending__evidence",
+      "label": "Earlier events \u00b7 5",
+      "key": "RetestPending__evidence__disclosure_29369",
+      "defaultOpen": false
+    },
+    {
+      "owner": "RetestPending__conversation",
+      "label": "Why the scores differ",
+      "key": "RetestPending__conversation__disclosure_29564",
+      "defaultOpen": false
+    },
+    {
+      "owner": "RetestPending__conversation",
+      "label": "Earlier events \u00b7 5",
+      "key": "RetestPending__conversation__disclosure_29591",
+      "defaultOpen": false
+    },
+    {
+      "owner": "RetestPending__activity",
+      "label": "Why the scores differ",
+      "key": "RetestPending__activity__disclosure_29823",
+      "defaultOpen": false
+    },
+    {
+      "owner": "RetestPending__internal",
+      "label": "Why the scores differ",
+      "key": "RetestPending__internal__disclosure_30015",
+      "defaultOpen": false
+    },
+    {
+      "owner": "RetestPending__internal",
+      "label": "Earlier events \u00b7 5",
+      "key": "RetestPending__internal__disclosure_30042",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedResearcher",
+      "label": "Verification criteria & tested environment",
+      "key": "VerifiedResearcher__disclosure_30323",
+      "defaultOpen": true
+    },
+    {
+      "owner": "VerifiedResearcher",
+      "label": "Why the scores differ",
+      "key": "VerifiedResearcher__disclosure_30343",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedResearcher",
+      "label": "Earlier events \u00b7 6",
+      "key": "VerifiedResearcher__disclosure_30370",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedResearcher__drawer",
+      "label": "Why the scores differ",
+      "key": "VerifiedResearcher__drawer__disclosure_30401",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedResearcher__drawer",
+      "label": "Audience & encryption",
+      "key": "VerifiedResearcher__drawer__disclosure_30406",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedResearcher__original",
+      "label": "Request details",
+      "key": "VerifiedResearcher__original__disclosure_30690",
+      "defaultOpen": true
+    },
+    {
+      "owner": "VerifiedResearcher__original",
+      "label": "Why the scores differ",
+      "key": "VerifiedResearcher__original__disclosure_30735",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedResearcher__original",
+      "label": "Earlier events \u00b7 6",
+      "key": "VerifiedResearcher__original__disclosure_30762",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedResearcher__evidence",
+      "label": "Why the scores differ",
+      "key": "VerifiedResearcher__evidence__disclosure_30989",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedResearcher__evidence",
+      "label": "Earlier events \u00b7 6",
+      "key": "VerifiedResearcher__evidence__disclosure_31016",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedResearcher__conversation",
+      "label": "Why the scores differ",
+      "key": "VerifiedResearcher__conversation__disclosure_31211",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedResearcher__conversation",
+      "label": "Earlier events \u00b7 6",
+      "key": "VerifiedResearcher__conversation__disclosure_31238",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedResearcher__activity",
+      "label": "Why the scores differ",
+      "key": "VerifiedResearcher__activity__disclosure_31479",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedResearcher__internal",
+      "label": "Why the scores differ",
+      "key": "VerifiedResearcher__internal__disclosure_31671",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedResearcher__internal",
+      "label": "Earlier events \u00b7 6",
+      "key": "VerifiedResearcher__internal__disclosure_31698",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedInternal",
+      "label": "Verification criteria & tested environment",
+      "key": "VerifiedInternal__disclosure_31893",
+      "defaultOpen": true
+    },
+    {
+      "owner": "VerifiedInternal",
+      "label": "Why the scores differ",
+      "key": "VerifiedInternal__disclosure_31913",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedInternal",
+      "label": "Earlier events \u00b7 6",
+      "key": "VerifiedInternal__disclosure_31940",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedInternal__drawer",
+      "label": "Why the scores differ",
+      "key": "VerifiedInternal__drawer__disclosure_31971",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedInternal__drawer",
+      "label": "Audience & encryption",
+      "key": "VerifiedInternal__drawer__disclosure_31976",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedInternal__original",
+      "label": "Request details",
+      "key": "VerifiedInternal__original__disclosure_32260",
+      "defaultOpen": true
+    },
+    {
+      "owner": "VerifiedInternal__original",
+      "label": "Why the scores differ",
+      "key": "VerifiedInternal__original__disclosure_32305",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedInternal__original",
+      "label": "Earlier events \u00b7 6",
+      "key": "VerifiedInternal__original__disclosure_32332",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedInternal__evidence",
+      "label": "Why the scores differ",
+      "key": "VerifiedInternal__evidence__disclosure_32559",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedInternal__evidence",
+      "label": "Earlier events \u00b7 6",
+      "key": "VerifiedInternal__evidence__disclosure_32586",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedInternal__conversation",
+      "label": "Why the scores differ",
+      "key": "VerifiedInternal__conversation__disclosure_32781",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedInternal__conversation",
+      "label": "Earlier events \u00b7 6",
+      "key": "VerifiedInternal__conversation__disclosure_32808",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedInternal__activity",
+      "label": "Why the scores differ",
+      "key": "VerifiedInternal__activity__disclosure_33049",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedInternal__internal",
+      "label": "Why the scores differ",
+      "key": "VerifiedInternal__internal__disclosure_33241",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedInternal__internal",
+      "label": "Earlier events \u00b7 6",
+      "key": "VerifiedInternal__internal__disclosure_33268",
+      "defaultOpen": false
+    },
+    {
+      "owner": "RetestFailed",
+      "label": "Why the scores differ",
+      "key": "RetestFailed__disclosure_33518",
+      "defaultOpen": false
+    },
+    {
+      "owner": "RetestFailed",
+      "label": "Earlier events \u00b7 7",
+      "key": "RetestFailed__disclosure_33545",
+      "defaultOpen": false
+    },
+    {
+      "owner": "RetestFailed__drawer",
+      "label": "Why the scores differ",
+      "key": "RetestFailed__drawer__disclosure_33574",
+      "defaultOpen": false
+    },
+    {
+      "owner": "RetestFailed__drawer",
+      "label": "Audience & encryption",
+      "key": "RetestFailed__drawer__disclosure_33579",
+      "defaultOpen": false
+    },
+    {
+      "owner": "RetestFailed__original",
+      "label": "Request details",
+      "key": "RetestFailed__original__disclosure_33827",
+      "defaultOpen": true
+    },
+    {
+      "owner": "RetestFailed__original",
+      "label": "Why the scores differ",
+      "key": "RetestFailed__original__disclosure_33872",
+      "defaultOpen": false
+    },
+    {
+      "owner": "RetestFailed__original",
+      "label": "Earlier events \u00b7 7",
+      "key": "RetestFailed__original__disclosure_33899",
+      "defaultOpen": false
+    },
+    {
+      "owner": "RetestFailed__evidence",
+      "label": "Why the scores differ",
+      "key": "RetestFailed__evidence__disclosure_34124",
+      "defaultOpen": false
+    },
+    {
+      "owner": "RetestFailed__evidence",
+      "label": "Earlier events \u00b7 7",
+      "key": "RetestFailed__evidence__disclosure_34151",
+      "defaultOpen": false
+    },
+    {
+      "owner": "RetestFailed__conversation",
+      "label": "Why the scores differ",
+      "key": "RetestFailed__conversation__disclosure_34344",
+      "defaultOpen": false
+    },
+    {
+      "owner": "RetestFailed__conversation",
+      "label": "Earlier events \u00b7 7",
+      "key": "RetestFailed__conversation__disclosure_34371",
+      "defaultOpen": false
+    },
+    {
+      "owner": "RetestFailed__activity",
+      "label": "Why the scores differ",
+      "key": "RetestFailed__activity__disclosure_34619",
+      "defaultOpen": false
+    },
+    {
+      "owner": "RetestFailed__internal",
+      "label": "Why the scores differ",
+      "key": "RetestFailed__internal__disclosure_34809",
+      "defaultOpen": false
+    },
+    {
+      "owner": "RetestFailed__internal",
+      "label": "Earlier events \u00b7 7",
+      "key": "RetestFailed__internal__disclosure_34836",
+      "defaultOpen": false
+    },
+    {
+      "owner": "UnverifiedClosed",
+      "label": "Why the scores differ",
+      "key": "UnverifiedClosed__disclosure_35064",
+      "defaultOpen": false
+    },
+    {
+      "owner": "UnverifiedClosed",
+      "label": "Earlier events \u00b7 6",
+      "key": "UnverifiedClosed__disclosure_35091",
+      "defaultOpen": false
+    },
+    {
+      "owner": "UnverifiedClosed__drawer",
+      "label": "Why the scores differ",
+      "key": "UnverifiedClosed__drawer__disclosure_35122",
+      "defaultOpen": false
+    },
+    {
+      "owner": "UnverifiedClosed__drawer",
+      "label": "Audience & encryption",
+      "key": "UnverifiedClosed__drawer__disclosure_35127",
+      "defaultOpen": false
+    },
+    {
+      "owner": "UnverifiedClosed__original",
+      "label": "Request details",
+      "key": "UnverifiedClosed__original__disclosure_35409",
+      "defaultOpen": true
+    },
+    {
+      "owner": "UnverifiedClosed__original",
+      "label": "Why the scores differ",
+      "key": "UnverifiedClosed__original__disclosure_35454",
+      "defaultOpen": false
+    },
+    {
+      "owner": "UnverifiedClosed__original",
+      "label": "Earlier events \u00b7 6",
+      "key": "UnverifiedClosed__original__disclosure_35481",
+      "defaultOpen": false
+    },
+    {
+      "owner": "UnverifiedClosed__evidence",
+      "label": "Why the scores differ",
+      "key": "UnverifiedClosed__evidence__disclosure_35706",
+      "defaultOpen": false
+    },
+    {
+      "owner": "UnverifiedClosed__evidence",
+      "label": "Earlier events \u00b7 6",
+      "key": "UnverifiedClosed__evidence__disclosure_35733",
+      "defaultOpen": false
+    },
+    {
+      "owner": "UnverifiedClosed__conversation",
+      "label": "Why the scores differ",
+      "key": "UnverifiedClosed__conversation__disclosure_35926",
+      "defaultOpen": false
+    },
+    {
+      "owner": "UnverifiedClosed__conversation",
+      "label": "Earlier events \u00b7 6",
+      "key": "UnverifiedClosed__conversation__disclosure_35953",
+      "defaultOpen": false
+    },
+    {
+      "owner": "UnverifiedClosed__activity",
+      "label": "Why the scores differ",
+      "key": "UnverifiedClosed__activity__disclosure_36192",
+      "defaultOpen": false
+    },
+    {
+      "owner": "UnverifiedClosed__internal",
+      "label": "Why the scores differ",
+      "key": "UnverifiedClosed__internal__disclosure_36382",
+      "defaultOpen": false
+    },
+    {
+      "owner": "UnverifiedClosed__internal",
+      "label": "Earlier events \u00b7 6",
+      "key": "UnverifiedClosed__internal__disclosure_36409",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportReopened",
+      "label": "Request details",
+      "key": "ReportReopened__disclosure_36638",
+      "defaultOpen": true
+    },
+    {
+      "owner": "ReportReopened",
+      "label": "Why the scores differ",
+      "key": "ReportReopened__disclosure_36683",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportReopened",
+      "label": "Earlier events \u00b7 1",
+      "key": "ReportReopened__disclosure_36710",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportReopened__drawer",
+      "label": "Why the scores differ",
+      "key": "ReportReopened__drawer__disclosure_36743",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportReopened__drawer",
+      "label": "Audience & encryption",
+      "key": "ReportReopened__drawer__disclosure_36748",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportReopened__evidence",
+      "label": "Why the scores differ",
+      "key": "ReportReopened__evidence__disclosure_37002",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportReopened__evidence",
+      "label": "Earlier events \u00b7 1",
+      "key": "ReportReopened__evidence__disclosure_37029",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportReopened__conversation",
+      "label": "Why the scores differ",
+      "key": "ReportReopened__conversation__disclosure_37226",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportReopened__conversation",
+      "label": "Earlier events \u00b7 1",
+      "key": "ReportReopened__conversation__disclosure_37253",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportReopened__remediation",
+      "label": "Why the scores differ",
+      "key": "ReportReopened__remediation__disclosure_37452",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportReopened__remediation",
+      "label": "Earlier events \u00b7 1",
+      "key": "ReportReopened__remediation__disclosure_37479",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportReopened__activity",
+      "label": "Why the scores differ",
+      "key": "ReportReopened__activity__disclosure_37677",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportReopened__internal",
+      "label": "Why the scores differ",
+      "key": "ReportReopened__internal__disclosure_37871",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportReopened__internal",
+      "label": "Earlier events \u00b7 1",
+      "key": "ReportReopened__internal__disclosure_37898",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Queue1366",
+      "label": "Earlier events \u00b7 1",
+      "key": "Queue1366__disclosure_45039",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Report1366",
+      "label": "Request details",
+      "key": "Report1366__disclosure_45249",
+      "defaultOpen": true
+    },
+    {
+      "owner": "Report1366",
+      "label": "Why the scores differ",
+      "key": "Report1366__disclosure_45294",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Report1366",
+      "label": "Earlier events \u00b7 1",
+      "key": "Report1366__disclosure_45321",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Report1366__drawer",
+      "label": "Why the scores differ",
+      "key": "Report1366__drawer__disclosure_45354",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Report1366__drawer",
+      "label": "Audience & encryption",
+      "key": "Report1366__drawer__disclosure_45359",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Report1366__evidence",
+      "label": "Why the scores differ",
+      "key": "Report1366__evidence__disclosure_45613",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Report1366__evidence",
+      "label": "Earlier events \u00b7 1",
+      "key": "Report1366__evidence__disclosure_45640",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Report1366__conversation",
+      "label": "Why the scores differ",
+      "key": "Report1366__conversation__disclosure_45837",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Report1366__conversation",
+      "label": "Earlier events \u00b7 1",
+      "key": "Report1366__conversation__disclosure_45864",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Report1366__remediation",
+      "label": "Why the scores differ",
+      "key": "Report1366__remediation__disclosure_46063",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Report1366__remediation",
+      "label": "Earlier events \u00b7 1",
+      "key": "Report1366__remediation__disclosure_46090",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Report1366__activity",
+      "label": "Why the scores differ",
+      "key": "Report1366__activity__disclosure_46288",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Report1366__internal",
+      "label": "Why the scores differ",
+      "key": "Report1366__internal__disclosure_46482",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Report1366__internal",
+      "label": "Earlier events \u00b7 1",
+      "key": "Report1366__internal__disclosure_46509",
+      "defaultOpen": false
+    },
+    {
+      "owner": "MobileReview",
+      "label": "Request details",
+      "key": "MobileReview__disclosure_46784",
+      "defaultOpen": true
+    },
+    {
+      "owner": "MobileReport",
+      "label": "Request details",
+      "key": "MobileReport__disclosure_46898",
+      "defaultOpen": true
+    },
+    {
+      "owner": "MobileOriginal",
+      "label": "Request details",
+      "key": "MobileOriginal__disclosure_47163",
+      "defaultOpen": true
+    },
+    {
+      "owner": "MobileVerified",
+      "label": "Verification criteria & tested environment",
+      "key": "MobileVerified__disclosure_47374",
+      "defaultOpen": true
+    },
+    {
+      "owner": "MobileVerified",
+      "label": "Request details",
+      "key": "MobileVerified__disclosure_47428",
+      "defaultOpen": true
+    },
+    {
+      "owner": "ReportConversation",
+      "label": "Why the scores differ",
+      "key": "ReportConversation__disclosure_48237",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportConversation",
+      "label": "Earlier events \u00b7 1",
+      "key": "ReportConversation__disclosure_48264",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportConversation__drawer",
+      "label": "Why the scores differ",
+      "key": "ReportConversation__drawer__disclosure_48297",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportConversation__drawer",
+      "label": "Audience & encryption",
+      "key": "ReportConversation__drawer__disclosure_48302",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportConversation__original",
+      "label": "Request details",
+      "key": "ReportConversation__original__disclosure_48541",
+      "defaultOpen": true
+    },
+    {
+      "owner": "ReportConversation__original",
+      "label": "Why the scores differ",
+      "key": "ReportConversation__original__disclosure_48586",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportConversation__original",
+      "label": "Earlier events \u00b7 1",
+      "key": "ReportConversation__original__disclosure_48613",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportConversation__evidence",
+      "label": "Why the scores differ",
+      "key": "ReportConversation__evidence__disclosure_48842",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportConversation__evidence",
+      "label": "Earlier events \u00b7 1",
+      "key": "ReportConversation__evidence__disclosure_48869",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportConversation__remediation",
+      "label": "Why the scores differ",
+      "key": "ReportConversation__remediation__disclosure_49068",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportConversation__remediation",
+      "label": "Earlier events \u00b7 1",
+      "key": "ReportConversation__remediation__disclosure_49095",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportConversation__activity",
+      "label": "Why the scores differ",
+      "key": "ReportConversation__activity__disclosure_49293",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportConversation__internal",
+      "label": "Why the scores differ",
+      "key": "ReportConversation__internal__disclosure_49487",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportConversation__internal",
+      "label": "Earlier events \u00b7 1",
+      "key": "ReportConversation__internal__disclosure_49514",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportEvidence",
+      "label": "Why the scores differ",
+      "key": "ReportEvidence__disclosure_49743",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportEvidence",
+      "label": "Earlier events \u00b7 1",
+      "key": "ReportEvidence__disclosure_49770",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportEvidence__drawer",
+      "label": "Why the scores differ",
+      "key": "ReportEvidence__drawer__disclosure_49803",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportEvidence__drawer",
+      "label": "Audience & encryption",
+      "key": "ReportEvidence__drawer__disclosure_49808",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportEvidence__original",
+      "label": "Request details",
+      "key": "ReportEvidence__original__disclosure_50047",
+      "defaultOpen": true
+    },
+    {
+      "owner": "ReportEvidence__original",
+      "label": "Why the scores differ",
+      "key": "ReportEvidence__original__disclosure_50092",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportEvidence__original",
+      "label": "Earlier events \u00b7 1",
+      "key": "ReportEvidence__original__disclosure_50119",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportEvidence__conversation",
+      "label": "Why the scores differ",
+      "key": "ReportEvidence__conversation__disclosure_50316",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportEvidence__conversation",
+      "label": "Earlier events \u00b7 1",
+      "key": "ReportEvidence__conversation__disclosure_50343",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportEvidence__remediation",
+      "label": "Why the scores differ",
+      "key": "ReportEvidence__remediation__disclosure_50542",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportEvidence__remediation",
+      "label": "Earlier events \u00b7 1",
+      "key": "ReportEvidence__remediation__disclosure_50569",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportEvidence__activity",
+      "label": "Why the scores differ",
+      "key": "ReportEvidence__activity__disclosure_50767",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportEvidence__internal",
+      "label": "Why the scores differ",
+      "key": "ReportEvidence__internal__disclosure_50961",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ReportEvidence__internal",
+      "label": "Earlier events \u00b7 1",
+      "key": "ReportEvidence__internal__disclosure_50988",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherConversation",
+      "label": "Why the scores differ",
+      "key": "ResearcherConversation__disclosure_51160",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherConversation",
+      "label": "Earlier events \u00b7 1",
+      "key": "ResearcherConversation__disclosure_51187",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherConversation__drawer",
+      "label": "Why the scores differ",
+      "key": "ResearcherConversation__drawer__disclosure_51218",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherConversation__drawer",
+      "label": "Audience & encryption",
+      "key": "ResearcherConversation__drawer__disclosure_51223",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherConversation__original",
+      "label": "Request details",
+      "key": "ResearcherConversation__original__disclosure_51439",
+      "defaultOpen": true
+    },
+    {
+      "owner": "ResearcherConversation__original",
+      "label": "Why the scores differ",
+      "key": "ResearcherConversation__original__disclosure_51484",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherConversation__original",
+      "label": "Earlier events \u00b7 1",
+      "key": "ResearcherConversation__original__disclosure_51511",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherConversation__evidence",
+      "label": "Why the scores differ",
+      "key": "ResearcherConversation__evidence__disclosure_51715",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherConversation__evidence",
+      "label": "Earlier events \u00b7 1",
+      "key": "ResearcherConversation__evidence__disclosure_51742",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherConversation__remediation",
+      "label": "Why the scores differ",
+      "key": "ResearcherConversation__remediation__disclosure_51916",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherConversation__remediation",
+      "label": "Earlier events \u00b7 1",
+      "key": "ResearcherConversation__remediation__disclosure_51943",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherConversation__activity",
+      "label": "Why the scores differ",
+      "key": "ResearcherConversation__activity__disclosure_52116",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherEvidence",
+      "label": "Why the scores differ",
+      "key": "ResearcherEvidence__disclosure_52324",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherEvidence",
+      "label": "Earlier events \u00b7 1",
+      "key": "ResearcherEvidence__disclosure_52351",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherEvidence__drawer",
+      "label": "Why the scores differ",
+      "key": "ResearcherEvidence__drawer__disclosure_52382",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherEvidence__drawer",
+      "label": "Audience & encryption",
+      "key": "ResearcherEvidence__drawer__disclosure_52387",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherEvidence__original",
+      "label": "Request details",
+      "key": "ResearcherEvidence__original__disclosure_52603",
+      "defaultOpen": true
+    },
+    {
+      "owner": "ResearcherEvidence__original",
+      "label": "Why the scores differ",
+      "key": "ResearcherEvidence__original__disclosure_52648",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherEvidence__original",
+      "label": "Earlier events \u00b7 1",
+      "key": "ResearcherEvidence__original__disclosure_52675",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherEvidence__conversation",
+      "label": "Why the scores differ",
+      "key": "ResearcherEvidence__conversation__disclosure_52845",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherEvidence__conversation",
+      "label": "Earlier events \u00b7 1",
+      "key": "ResearcherEvidence__conversation__disclosure_52872",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherEvidence__remediation",
+      "label": "Why the scores differ",
+      "key": "ResearcherEvidence__remediation__disclosure_53046",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherEvidence__remediation",
+      "label": "Earlier events \u00b7 1",
+      "key": "ResearcherEvidence__remediation__disclosure_53073",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherEvidence__activity",
+      "label": "Why the scores differ",
+      "key": "ResearcherEvidence__activity__disclosure_53246",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedInternalTwo",
+      "label": "Verification criteria & tested environment",
+      "key": "VerifiedInternalTwo__disclosure_54227",
+      "defaultOpen": true
+    },
+    {
+      "owner": "VerifiedInternalTwo",
+      "label": "Attempt 1 \u00b7 retained evidence and result",
+      "key": "VerifiedInternalTwo__disclosure_54232",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedInternalTwo",
+      "label": "Why the scores differ",
+      "key": "VerifiedInternalTwo__disclosure_54252",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedInternalTwo",
+      "label": "Earlier events \u00b7 11",
+      "key": "VerifiedInternalTwo__disclosure_54279",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedInternalTwo__drawer",
+      "label": "Why the scores differ",
+      "key": "VerifiedInternalTwo__drawer__disclosure_54310",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedInternalTwo__drawer",
+      "label": "Audience & encryption",
+      "key": "VerifiedInternalTwo__drawer__disclosure_54315",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedInternalTwo__original",
+      "label": "Request details",
+      "key": "VerifiedInternalTwo__original__disclosure_54644",
+      "defaultOpen": true
+    },
+    {
+      "owner": "VerifiedInternalTwo__original",
+      "label": "Why the scores differ",
+      "key": "VerifiedInternalTwo__original__disclosure_54689",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedInternalTwo__original",
+      "label": "Earlier events \u00b7 11",
+      "key": "VerifiedInternalTwo__original__disclosure_54716",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedInternalTwo__evidence",
+      "label": "Why the scores differ",
+      "key": "VerifiedInternalTwo__evidence__disclosure_54943",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedInternalTwo__evidence",
+      "label": "Earlier events \u00b7 11",
+      "key": "VerifiedInternalTwo__evidence__disclosure_54970",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedInternalTwo__conversation",
+      "label": "Why the scores differ",
+      "key": "VerifiedInternalTwo__conversation__disclosure_55165",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedInternalTwo__conversation",
+      "label": "Earlier events \u00b7 11",
+      "key": "VerifiedInternalTwo__conversation__disclosure_55192",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedInternalTwo__activity",
+      "label": "Why the scores differ",
+      "key": "VerifiedInternalTwo__activity__disclosure_55478",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedInternalTwo__internal",
+      "label": "Why the scores differ",
+      "key": "VerifiedInternalTwo__internal__disclosure_55670",
+      "defaultOpen": false
+    },
+    {
+      "owner": "VerifiedInternalTwo__internal",
+      "label": "Earlier events \u00b7 11",
+      "key": "VerifiedInternalTwo__internal__disclosure_55697",
+      "defaultOpen": false
+    },
+    {
+      "owner": "UnverifiedClosedTwo",
+      "label": "Attempt 1 \u00b7 retained evidence and result",
+      "key": "UnverifiedClosedTwo__disclosure_55917",
+      "defaultOpen": false
+    },
+    {
+      "owner": "UnverifiedClosedTwo",
+      "label": "Why the scores differ",
+      "key": "UnverifiedClosedTwo__disclosure_55937",
+      "defaultOpen": false
+    },
+    {
+      "owner": "UnverifiedClosedTwo",
+      "label": "Earlier events \u00b7 9",
+      "key": "UnverifiedClosedTwo__disclosure_55964",
+      "defaultOpen": false
+    },
+    {
+      "owner": "UnverifiedClosedTwo__drawer",
+      "label": "Why the scores differ",
+      "key": "UnverifiedClosedTwo__drawer__disclosure_55995",
+      "defaultOpen": false
+    },
+    {
+      "owner": "UnverifiedClosedTwo__drawer",
+      "label": "Audience & encryption",
+      "key": "UnverifiedClosedTwo__drawer__disclosure_56000",
+      "defaultOpen": false
+    },
+    {
+      "owner": "UnverifiedClosedTwo__original",
+      "label": "Request details",
+      "key": "UnverifiedClosedTwo__original__disclosure_56309",
+      "defaultOpen": true
+    },
+    {
+      "owner": "UnverifiedClosedTwo__original",
+      "label": "Why the scores differ",
+      "key": "UnverifiedClosedTwo__original__disclosure_56354",
+      "defaultOpen": false
+    },
+    {
+      "owner": "UnverifiedClosedTwo__original",
+      "label": "Earlier events \u00b7 9",
+      "key": "UnverifiedClosedTwo__original__disclosure_56381",
+      "defaultOpen": false
+    },
+    {
+      "owner": "UnverifiedClosedTwo__evidence",
+      "label": "Why the scores differ",
+      "key": "UnverifiedClosedTwo__evidence__disclosure_56606",
+      "defaultOpen": false
+    },
+    {
+      "owner": "UnverifiedClosedTwo__evidence",
+      "label": "Earlier events \u00b7 9",
+      "key": "UnverifiedClosedTwo__evidence__disclosure_56633",
+      "defaultOpen": false
+    },
+    {
+      "owner": "UnverifiedClosedTwo__conversation",
+      "label": "Why the scores differ",
+      "key": "UnverifiedClosedTwo__conversation__disclosure_56826",
+      "defaultOpen": false
+    },
+    {
+      "owner": "UnverifiedClosedTwo__conversation",
+      "label": "Earlier events \u00b7 9",
+      "key": "UnverifiedClosedTwo__conversation__disclosure_56853",
+      "defaultOpen": false
+    },
+    {
+      "owner": "UnverifiedClosedTwo__activity",
+      "label": "Why the scores differ",
+      "key": "UnverifiedClosedTwo__activity__disclosure_57119",
+      "defaultOpen": false
+    },
+    {
+      "owner": "UnverifiedClosedTwo__internal",
+      "label": "Why the scores differ",
+      "key": "UnverifiedClosedTwo__internal__disclosure_57309",
+      "defaultOpen": false
+    },
+    {
+      "owner": "UnverifiedClosedTwo__internal",
+      "label": "Earlier events \u00b7 9",
+      "key": "UnverifiedClosedTwo__internal__disclosure_57336",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherTriaging",
+      "label": "Request details",
+      "key": "ResearcherTriaging__disclosure_57649",
+      "defaultOpen": true
+    },
+    {
+      "owner": "ResearcherTriaging",
+      "label": "Why the scores differ",
+      "key": "ResearcherTriaging__disclosure_57694",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherTriaging",
+      "label": "Earlier events \u00b7 1",
+      "key": "ResearcherTriaging__disclosure_57721",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherTriaging__drawer",
+      "label": "Why the scores differ",
+      "key": "ResearcherTriaging__drawer__disclosure_57752",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherTriaging__drawer",
+      "label": "Audience & encryption",
+      "key": "ResearcherTriaging__drawer__disclosure_57757",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherTriaging__evidence",
+      "label": "Why the scores differ",
+      "key": "ResearcherTriaging__evidence__disclosure_57988",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherTriaging__evidence",
+      "label": "Earlier events \u00b7 1",
+      "key": "ResearcherTriaging__evidence__disclosure_58015",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherTriaging__conversation",
+      "label": "Why the scores differ",
+      "key": "ResearcherTriaging__conversation__disclosure_58185",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherTriaging__conversation",
+      "label": "Earlier events \u00b7 1",
+      "key": "ResearcherTriaging__conversation__disclosure_58212",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherTriaging__remediation",
+      "label": "Why the scores differ",
+      "key": "ResearcherTriaging__remediation__disclosure_58386",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherTriaging__remediation",
+      "label": "Earlier events \u00b7 1",
+      "key": "ResearcherTriaging__remediation__disclosure_58413",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherTriaging__activity",
+      "label": "Why the scores differ",
+      "key": "ResearcherTriaging__activity__disclosure_58586",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherAccepted",
+      "label": "Why the scores differ",
+      "key": "ResearcherAccepted__disclosure_58757",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherAccepted",
+      "label": "Earlier events \u00b7 2",
+      "key": "ResearcherAccepted__disclosure_58784",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherAccepted__drawer",
+      "label": "Why the scores differ",
+      "key": "ResearcherAccepted__drawer__disclosure_58813",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherAccepted__drawer",
+      "label": "Audience & encryption",
+      "key": "ResearcherAccepted__drawer__disclosure_58818",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherAccepted__original",
+      "label": "Request details",
+      "key": "ResearcherAccepted__original__disclosure_59043",
+      "defaultOpen": true
+    },
+    {
+      "owner": "ResearcherAccepted__original",
+      "label": "Why the scores differ",
+      "key": "ResearcherAccepted__original__disclosure_59088",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherAccepted__original",
+      "label": "Earlier events \u00b7 2",
+      "key": "ResearcherAccepted__original__disclosure_59115",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherAccepted__evidence",
+      "label": "Why the scores differ",
+      "key": "ResearcherAccepted__evidence__disclosure_59317",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherAccepted__evidence",
+      "label": "Earlier events \u00b7 2",
+      "key": "ResearcherAccepted__evidence__disclosure_59344",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherAccepted__conversation",
+      "label": "Why the scores differ",
+      "key": "ResearcherAccepted__conversation__disclosure_59512",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherAccepted__conversation",
+      "label": "Earlier events \u00b7 2",
+      "key": "ResearcherAccepted__conversation__disclosure_59539",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherAccepted__activity",
+      "label": "Why the scores differ",
+      "key": "ResearcherAccepted__activity__disclosure_59719",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherFixProposed",
+      "label": "Why the scores differ",
+      "key": "ResearcherFixProposed__disclosure_59895",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherFixProposed",
+      "label": "Earlier events \u00b7 3",
+      "key": "ResearcherFixProposed__disclosure_59922",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherFixProposed__drawer",
+      "label": "Why the scores differ",
+      "key": "ResearcherFixProposed__drawer__disclosure_59951",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherFixProposed__drawer",
+      "label": "Audience & encryption",
+      "key": "ResearcherFixProposed__drawer__disclosure_59956",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherFixProposed__original",
+      "label": "Request details",
+      "key": "ResearcherFixProposed__original__disclosure_60190",
+      "defaultOpen": true
+    },
+    {
+      "owner": "ResearcherFixProposed__original",
+      "label": "Why the scores differ",
+      "key": "ResearcherFixProposed__original__disclosure_60235",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherFixProposed__original",
+      "label": "Earlier events \u00b7 3",
+      "key": "ResearcherFixProposed__original__disclosure_60262",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherFixProposed__evidence",
+      "label": "Why the scores differ",
+      "key": "ResearcherFixProposed__evidence__disclosure_60464",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherFixProposed__evidence",
+      "label": "Earlier events \u00b7 3",
+      "key": "ResearcherFixProposed__evidence__disclosure_60491",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherFixProposed__conversation",
+      "label": "Why the scores differ",
+      "key": "ResearcherFixProposed__conversation__disclosure_60659",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherFixProposed__conversation",
+      "label": "Earlier events \u00b7 3",
+      "key": "ResearcherFixProposed__conversation__disclosure_60686",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherFixProposed__activity",
+      "label": "Why the scores differ",
+      "key": "ResearcherFixProposed__activity__disclosure_60875",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherDeployed",
+      "label": "Why the scores differ",
+      "key": "ResearcherDeployed__disclosure_61051",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherDeployed",
+      "label": "Earlier events \u00b7 4",
+      "key": "ResearcherDeployed__disclosure_61078",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherDeployed__drawer",
+      "label": "Why the scores differ",
+      "key": "ResearcherDeployed__drawer__disclosure_61107",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherDeployed__drawer",
+      "label": "Audience & encryption",
+      "key": "ResearcherDeployed__drawer__disclosure_61112",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherDeployed__original",
+      "label": "Request details",
+      "key": "ResearcherDeployed__original__disclosure_61355",
+      "defaultOpen": true
+    },
+    {
+      "owner": "ResearcherDeployed__original",
+      "label": "Why the scores differ",
+      "key": "ResearcherDeployed__original__disclosure_61400",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherDeployed__original",
+      "label": "Earlier events \u00b7 4",
+      "key": "ResearcherDeployed__original__disclosure_61427",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherDeployed__evidence",
+      "label": "Why the scores differ",
+      "key": "ResearcherDeployed__evidence__disclosure_61629",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherDeployed__evidence",
+      "label": "Earlier events \u00b7 4",
+      "key": "ResearcherDeployed__evidence__disclosure_61656",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherDeployed__conversation",
+      "label": "Why the scores differ",
+      "key": "ResearcherDeployed__conversation__disclosure_61824",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherDeployed__conversation",
+      "label": "Earlier events \u00b7 4",
+      "key": "ResearcherDeployed__conversation__disclosure_61851",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherDeployed__activity",
+      "label": "Why the scores differ",
+      "key": "ResearcherDeployed__activity__disclosure_62049",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherVerifiedInternal",
+      "label": "Verification criteria & tested environment",
+      "key": "ResearcherVerifiedInternal__disclosure_62225",
+      "defaultOpen": true
+    },
+    {
+      "owner": "ResearcherVerifiedInternal",
+      "label": "Why the scores differ",
+      "key": "ResearcherVerifiedInternal__disclosure_62245",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherVerifiedInternal",
+      "label": "Earlier events \u00b7 6",
+      "key": "ResearcherVerifiedInternal__disclosure_62272",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherVerifiedInternal__drawer",
+      "label": "Why the scores differ",
+      "key": "ResearcherVerifiedInternal__drawer__disclosure_62301",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherVerifiedInternal__drawer",
+      "label": "Audience & encryption",
+      "key": "ResearcherVerifiedInternal__drawer__disclosure_62306",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherVerifiedInternal__original",
+      "label": "Request details",
+      "key": "ResearcherVerifiedInternal__original__disclosure_62569",
+      "defaultOpen": true
+    },
+    {
+      "owner": "ResearcherVerifiedInternal__original",
+      "label": "Why the scores differ",
+      "key": "ResearcherVerifiedInternal__original__disclosure_62614",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherVerifiedInternal__original",
+      "label": "Earlier events \u00b7 6",
+      "key": "ResearcherVerifiedInternal__original__disclosure_62641",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherVerifiedInternal__evidence",
+      "label": "Why the scores differ",
+      "key": "ResearcherVerifiedInternal__evidence__disclosure_62845",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherVerifiedInternal__evidence",
+      "label": "Earlier events \u00b7 6",
+      "key": "ResearcherVerifiedInternal__evidence__disclosure_62872",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherVerifiedInternal__conversation",
+      "label": "Why the scores differ",
+      "key": "ResearcherVerifiedInternal__conversation__disclosure_63042",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherVerifiedInternal__conversation",
+      "label": "Earlier events \u00b7 6",
+      "key": "ResearcherVerifiedInternal__conversation__disclosure_63069",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherVerifiedInternal__activity",
+      "label": "Why the scores differ",
+      "key": "ResearcherVerifiedInternal__activity__disclosure_63287",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherUnverified",
+      "label": "Why the scores differ",
+      "key": "ResearcherUnverified__disclosure_63464",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherUnverified",
+      "label": "Earlier events \u00b7 6",
+      "key": "ResearcherUnverified__disclosure_63491",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherUnverified__drawer",
+      "label": "Why the scores differ",
+      "key": "ResearcherUnverified__drawer__disclosure_63520",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherUnverified__drawer",
+      "label": "Audience & encryption",
+      "key": "ResearcherUnverified__drawer__disclosure_63525",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherUnverified__original",
+      "label": "Request details",
+      "key": "ResearcherUnverified__original__disclosure_63786",
+      "defaultOpen": true
+    },
+    {
+      "owner": "ResearcherUnverified__original",
+      "label": "Why the scores differ",
+      "key": "ResearcherUnverified__original__disclosure_63831",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherUnverified__original",
+      "label": "Earlier events \u00b7 6",
+      "key": "ResearcherUnverified__original__disclosure_63858",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherUnverified__evidence",
+      "label": "Why the scores differ",
+      "key": "ResearcherUnverified__evidence__disclosure_64060",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherUnverified__evidence",
+      "label": "Earlier events \u00b7 6",
+      "key": "ResearcherUnverified__evidence__disclosure_64087",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherUnverified__conversation",
+      "label": "Why the scores differ",
+      "key": "ResearcherUnverified__conversation__disclosure_64255",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherUnverified__conversation",
+      "label": "Earlier events \u00b7 6",
+      "key": "ResearcherUnverified__conversation__disclosure_64282",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherUnverified__activity",
+      "label": "Why the scores differ",
+      "key": "ResearcherUnverified__activity__disclosure_64498",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherFixProposedTwo",
+      "label": "Attempt 1 \u00b7 retained evidence and result",
+      "key": "ResearcherFixProposedTwo__disclosure_64667",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherFixProposedTwo",
+      "label": "Why the scores differ",
+      "key": "ResearcherFixProposedTwo__disclosure_64687",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherFixProposedTwo",
+      "label": "Earlier events \u00b7 8",
+      "key": "ResearcherFixProposedTwo__disclosure_64714",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherFixProposedTwo__drawer",
+      "label": "Why the scores differ",
+      "key": "ResearcherFixProposedTwo__drawer__disclosure_64743",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherFixProposedTwo__drawer",
+      "label": "Audience & encryption",
+      "key": "ResearcherFixProposedTwo__drawer__disclosure_64748",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherFixProposedTwo__original",
+      "label": "Request details",
+      "key": "ResearcherFixProposedTwo__original__disclosure_65027",
+      "defaultOpen": true
+    },
+    {
+      "owner": "ResearcherFixProposedTwo__original",
+      "label": "Why the scores differ",
+      "key": "ResearcherFixProposedTwo__original__disclosure_65072",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherFixProposedTwo__original",
+      "label": "Earlier events \u00b7 8",
+      "key": "ResearcherFixProposedTwo__original__disclosure_65099",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherFixProposedTwo__evidence",
+      "label": "Why the scores differ",
+      "key": "ResearcherFixProposedTwo__evidence__disclosure_65301",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherFixProposedTwo__evidence",
+      "label": "Earlier events \u00b7 8",
+      "key": "ResearcherFixProposedTwo__evidence__disclosure_65328",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherFixProposedTwo__conversation",
+      "label": "Why the scores differ",
+      "key": "ResearcherFixProposedTwo__conversation__disclosure_65496",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherFixProposedTwo__conversation",
+      "label": "Earlier events \u00b7 8",
+      "key": "ResearcherFixProposedTwo__conversation__disclosure_65523",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherFixProposedTwo__activity",
+      "label": "Why the scores differ",
+      "key": "ResearcherFixProposedTwo__activity__disclosure_65757",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherDeployedTwo",
+      "label": "Attempt 1 \u00b7 retained evidence and result",
+      "key": "ResearcherDeployedTwo__disclosure_65926",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherDeployedTwo",
+      "label": "Why the scores differ",
+      "key": "ResearcherDeployedTwo__disclosure_65946",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherDeployedTwo",
+      "label": "Earlier events \u00b7 9",
+      "key": "ResearcherDeployedTwo__disclosure_65973",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherDeployedTwo__drawer",
+      "label": "Why the scores differ",
+      "key": "ResearcherDeployedTwo__drawer__disclosure_66002",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherDeployedTwo__drawer",
+      "label": "Audience & encryption",
+      "key": "ResearcherDeployedTwo__drawer__disclosure_66007",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherDeployedTwo__original",
+      "label": "Request details",
+      "key": "ResearcherDeployedTwo__original__disclosure_66295",
+      "defaultOpen": true
+    },
+    {
+      "owner": "ResearcherDeployedTwo__original",
+      "label": "Why the scores differ",
+      "key": "ResearcherDeployedTwo__original__disclosure_66340",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherDeployedTwo__original",
+      "label": "Earlier events \u00b7 9",
+      "key": "ResearcherDeployedTwo__original__disclosure_66367",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherDeployedTwo__evidence",
+      "label": "Why the scores differ",
+      "key": "ResearcherDeployedTwo__evidence__disclosure_66569",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherDeployedTwo__evidence",
+      "label": "Earlier events \u00b7 9",
+      "key": "ResearcherDeployedTwo__evidence__disclosure_66596",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherDeployedTwo__conversation",
+      "label": "Why the scores differ",
+      "key": "ResearcherDeployedTwo__conversation__disclosure_66764",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherDeployedTwo__conversation",
+      "label": "Earlier events \u00b7 9",
+      "key": "ResearcherDeployedTwo__conversation__disclosure_66791",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherDeployedTwo__activity",
+      "label": "Why the scores differ",
+      "key": "ResearcherDeployedTwo__activity__disclosure_67034",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherVerifiedInternalTwo",
+      "label": "Verification criteria & tested environment",
+      "key": "ResearcherVerifiedInternalTwo__disclosure_67218",
+      "defaultOpen": true
+    },
+    {
+      "owner": "ResearcherVerifiedInternalTwo",
+      "label": "Attempt 1 \u00b7 retained evidence and result",
+      "key": "ResearcherVerifiedInternalTwo__disclosure_67223",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherVerifiedInternalTwo",
+      "label": "Why the scores differ",
+      "key": "ResearcherVerifiedInternalTwo__disclosure_67243",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherVerifiedInternalTwo",
+      "label": "Earlier events \u00b7 11",
+      "key": "ResearcherVerifiedInternalTwo__disclosure_67270",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherVerifiedInternalTwo__drawer",
+      "label": "Why the scores differ",
+      "key": "ResearcherVerifiedInternalTwo__drawer__disclosure_67299",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherVerifiedInternalTwo__drawer",
+      "label": "Audience & encryption",
+      "key": "ResearcherVerifiedInternalTwo__drawer__disclosure_67304",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherVerifiedInternalTwo__original",
+      "label": "Request details",
+      "key": "ResearcherVerifiedInternalTwo__original__disclosure_67612",
+      "defaultOpen": true
+    },
+    {
+      "owner": "ResearcherVerifiedInternalTwo__original",
+      "label": "Why the scores differ",
+      "key": "ResearcherVerifiedInternalTwo__original__disclosure_67657",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherVerifiedInternalTwo__original",
+      "label": "Earlier events \u00b7 11",
+      "key": "ResearcherVerifiedInternalTwo__original__disclosure_67684",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherVerifiedInternalTwo__evidence",
+      "label": "Why the scores differ",
+      "key": "ResearcherVerifiedInternalTwo__evidence__disclosure_67888",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherVerifiedInternalTwo__evidence",
+      "label": "Earlier events \u00b7 11",
+      "key": "ResearcherVerifiedInternalTwo__evidence__disclosure_67915",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherVerifiedInternalTwo__conversation",
+      "label": "Why the scores differ",
+      "key": "ResearcherVerifiedInternalTwo__conversation__disclosure_68085",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherVerifiedInternalTwo__conversation",
+      "label": "Earlier events \u00b7 11",
+      "key": "ResearcherVerifiedInternalTwo__conversation__disclosure_68112",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherVerifiedInternalTwo__activity",
+      "label": "Why the scores differ",
+      "key": "ResearcherVerifiedInternalTwo__activity__disclosure_68375",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherUnverifiedTwo",
+      "label": "Attempt 1 \u00b7 retained evidence and result",
+      "key": "ResearcherUnverifiedTwo__disclosure_68545",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherUnverifiedTwo",
+      "label": "Why the scores differ",
+      "key": "ResearcherUnverifiedTwo__disclosure_68565",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherUnverifiedTwo",
+      "label": "Earlier events \u00b7 9",
+      "key": "ResearcherUnverifiedTwo__disclosure_68592",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherUnverifiedTwo__drawer",
+      "label": "Why the scores differ",
+      "key": "ResearcherUnverifiedTwo__drawer__disclosure_68621",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherUnverifiedTwo__drawer",
+      "label": "Audience & encryption",
+      "key": "ResearcherUnverifiedTwo__drawer__disclosure_68626",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherUnverifiedTwo__original",
+      "label": "Request details",
+      "key": "ResearcherUnverifiedTwo__original__disclosure_68914",
+      "defaultOpen": true
+    },
+    {
+      "owner": "ResearcherUnverifiedTwo__original",
+      "label": "Why the scores differ",
+      "key": "ResearcherUnverifiedTwo__original__disclosure_68959",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherUnverifiedTwo__original",
+      "label": "Earlier events \u00b7 9",
+      "key": "ResearcherUnverifiedTwo__original__disclosure_68986",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherUnverifiedTwo__evidence",
+      "label": "Why the scores differ",
+      "key": "ResearcherUnverifiedTwo__evidence__disclosure_69188",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherUnverifiedTwo__evidence",
+      "label": "Earlier events \u00b7 9",
+      "key": "ResearcherUnverifiedTwo__evidence__disclosure_69215",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherUnverifiedTwo__conversation",
+      "label": "Why the scores differ",
+      "key": "ResearcherUnverifiedTwo__conversation__disclosure_69383",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherUnverifiedTwo__conversation",
+      "label": "Earlier events \u00b7 9",
+      "key": "ResearcherUnverifiedTwo__conversation__disclosure_69410",
+      "defaultOpen": false
+    },
+    {
+      "owner": "ResearcherUnverifiedTwo__activity",
+      "label": "Why the scores differ",
+      "key": "ResearcherUnverifiedTwo__activity__disclosure_69653",
+      "defaultOpen": false
+    },
+    {
+      "owner": "MobileFailedCase",
+      "label": "Request details",
+      "key": "MobileFailedCase__disclosure_69733",
+      "defaultOpen": true
+    },
+    {
+      "owner": "MobileCompletedTwo",
+      "label": "Verification criteria & tested environment",
+      "key": "MobileCompletedTwo__disclosure_70022",
+      "defaultOpen": true
+    },
+    {
+      "owner": "MobileCompletedTwo",
+      "label": "Attempt 1 \u00b7 retained evidence and result",
+      "key": "MobileCompletedTwo__disclosure_70027",
+      "defaultOpen": false
+    },
+    {
+      "owner": "MobileCompletedTwo",
+      "label": "Request details",
+      "key": "MobileCompletedTwo__disclosure_70081",
+      "defaultOpen": true
+    },
+    {
+      "owner": "Active1366",
+      "label": "Why the scores differ",
+      "key": "Active1366__disclosure_70293",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Active1366",
+      "label": "Earlier events \u00b7 5",
+      "key": "Active1366__disclosure_70320",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Active1366__drawer",
+      "label": "Why the scores differ",
+      "key": "Active1366__drawer__disclosure_70349",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Active1366__drawer",
+      "label": "Audience & encryption",
+      "key": "Active1366__drawer__disclosure_70354",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Active1366__original",
+      "label": "Request details",
+      "key": "Active1366__original__disclosure_70608",
+      "defaultOpen": true
+    },
+    {
+      "owner": "Active1366__original",
+      "label": "Why the scores differ",
+      "key": "Active1366__original__disclosure_70653",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Active1366__original",
+      "label": "Earlier events \u00b7 5",
+      "key": "Active1366__original__disclosure_70680",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Active1366__evidence",
+      "label": "Why the scores differ",
+      "key": "Active1366__evidence__disclosure_70884",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Active1366__evidence",
+      "label": "Earlier events \u00b7 5",
+      "key": "Active1366__evidence__disclosure_70911",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Active1366__conversation",
+      "label": "Why the scores differ",
+      "key": "Active1366__conversation__disclosure_71081",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Active1366__conversation",
+      "label": "Earlier events \u00b7 5",
+      "key": "Active1366__conversation__disclosure_71108",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Active1366__activity",
+      "label": "Why the scores differ",
+      "key": "Active1366__activity__disclosure_71317",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Completed1366",
+      "label": "Verification criteria & tested environment",
+      "key": "Completed1366__disclosure_71522",
+      "defaultOpen": true
+    },
+    {
+      "owner": "Completed1366",
+      "label": "Attempt 1 \u00b7 retained evidence and result",
+      "key": "Completed1366__disclosure_71527",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Completed1366",
+      "label": "Why the scores differ",
+      "key": "Completed1366__disclosure_71547",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Completed1366",
+      "label": "Earlier events \u00b7 11",
+      "key": "Completed1366__disclosure_71574",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Completed1366__drawer",
+      "label": "Why the scores differ",
+      "key": "Completed1366__drawer__disclosure_71605",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Completed1366__drawer",
+      "label": "Audience & encryption",
+      "key": "Completed1366__drawer__disclosure_71610",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Completed1366__original",
+      "label": "Request details",
+      "key": "Completed1366__original__disclosure_71939",
+      "defaultOpen": true
+    },
+    {
+      "owner": "Completed1366__original",
+      "label": "Why the scores differ",
+      "key": "Completed1366__original__disclosure_71984",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Completed1366__original",
+      "label": "Earlier events \u00b7 11",
+      "key": "Completed1366__original__disclosure_72011",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Completed1366__evidence",
+      "label": "Why the scores differ",
+      "key": "Completed1366__evidence__disclosure_72238",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Completed1366__evidence",
+      "label": "Earlier events \u00b7 11",
+      "key": "Completed1366__evidence__disclosure_72265",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Completed1366__conversation",
+      "label": "Why the scores differ",
+      "key": "Completed1366__conversation__disclosure_72460",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Completed1366__conversation",
+      "label": "Earlier events \u00b7 11",
+      "key": "Completed1366__conversation__disclosure_72487",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Completed1366__activity",
+      "label": "Why the scores differ",
+      "key": "Completed1366__activity__disclosure_72773",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Completed1366__internal",
+      "label": "Why the scores differ",
+      "key": "Completed1366__internal__disclosure_72965",
+      "defaultOpen": false
+    },
+    {
+      "owner": "Completed1366__internal",
+      "label": "Earlier events \u00b7 11",
+      "key": "Completed1366__internal__disclosure_72992",
+      "defaultOpen": false
+    },
+    {
+      "owner": "QueueStageTriage",
+      "label": "Earlier events \u00b7 1",
+      "key": "QueueStageTriage__disclosure_73157",
+      "defaultOpen": false
+    },
+    {
+      "owner": "File_evidence_request_txt",
+      "label": "File integrity & local decryption",
+      "key": "File_evidence_request_txt__disclosure_73753",
+      "defaultOpen": false
+    },
+    {
+      "owner": "File_response_comparison_txt",
+      "label": "File integrity & local decryption",
+      "key": "File_response_comparison_txt__disclosure_73779",
+      "defaultOpen": false
+    },
+    {
+      "owner": "File_evidence_request_txt_Narrow",
+      "label": "File integrity & local decryption",
+      "key": "File_evidence_request_txt_Narrow__disclosure_73805",
+      "defaultOpen": false
+    },
+    {
+      "owner": "File_response_comparison_txt_Narrow",
+      "label": "File integrity & local decryption",
+      "key": "File_response_comparison_txt_Narrow__disclosure_73831",
+      "defaultOpen": false
+    }
+  ]
+}

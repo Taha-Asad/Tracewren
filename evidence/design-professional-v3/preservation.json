@@ -1,0 +1,16 @@
+{
+  "originalNativeFile": "figma/BugBountyTrack-UX.figcraft",
+  "originalNativeSha256": "983157cc79f0550b4968a5b6f80fb5abd255e8302bb4cb646b804252d8e9204d",
+  "coffeeNativeFile": "figma/BugBountyTrack-Coffee-v2.figcraft",
+  "coffeeNativeSha256": "4576c90321fd82e1f13b448b05b33b68c789a64d66f7e9e822fa0aa3822cb33d",
+  "sourceFilesCompared": 64,
+  "changedSourceFiles": [],
+  "originalViewKeys": 330,
+  "retainedOriginalViewKeys": 330,
+  "removedOriginalViewKeys": [],
+  "v2Views": 342,
+  "replacedDocumentationKeys": {
+    "CoffeeChanges": "RefinementChanges"
+  },
+  "scope": "V3 is a separate native file. Both earlier editions, previews, handoff, and product source documents remain unchanged."
+}
