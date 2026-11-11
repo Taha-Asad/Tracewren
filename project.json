@@ -1,0 +1,39 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "projectId": "PRO-01",
+  "portalId": "PTUT-PRJ-089",
+  "portalTitle": "Private Bug Bounty & Vulnerability Disclosure Platform",
+  "displayName": "PRO-01",
+  "brandName": "PRO-01",
+  "tagline": "Confidential vulnerability disclosure and evidence-based remediation workspace",
+  "studentAuthor": "Taha Asadullah",
+  "rollNo": "24-ST-013",
+  "session": "2024-2028",
+  "batch": "24-SET-Fall",
+  "section": "SET-B",
+  "officialEmail": "24-st-013@students.ptut.edu.pk",
+  "supervisor": "Sir Umar Hayat",
+  "category": "9. CYBERSECURITY, PRIVACY & LEGALTECH",
+  "type": "university-fyp",
+  "status": "active",
+  "paths": {
+    "root": ".",
+    "apps": "apps",
+    "packages": "packages",
+    "requirements": "requirements",
+    "architecture": "architecture",
+    "decisions": "decisions",
+    "evidence": "evidence"
+  },
+  "stack": {
+    "primaryLanguage": "TypeScript",
+    "backend": ["Node.js", "NestJS"],
+    "frontend": ["Next.js", "Mantine 9"],
+    "database": ["PostgreSQL", "Neon"],
+    "orm": ["Prisma"],
+    "cryptography": ["OpenPGP.js", "Curve25519"],
+    "standards": ["RFC-9116", "CVSS-3.1"]
+  },
+  "activePhase": "Phase 2: System Architecture & Core Implementation",
+  "activeMilestone": "Clean decoupled monorepo baseline"
+}

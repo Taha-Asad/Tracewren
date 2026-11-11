@@ -1,0 +1,15 @@
+{
+  "name": "pro-01",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Confidential vulnerability reporting and evidence-based remediation workspace",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=22.0.0",
+    "npm": ">=10"
+  }
+}
