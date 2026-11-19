@@ -2,8 +2,8 @@ FROM node:22-alpine AS builder
 
 WORKDIR /app
 
-# Install OpenSSL required by Prisma on Alpine
-RUN apk add --no-cache openssl
+# Install OpenSSL and libc6-compat required by Prisma & Next.js native binaries on Alpine
+RUN apk add --no-cache openssl libc6-compat
 
 # Copy workspace manifests first for layer caching
 COPY package.json package-lock.json project.json ./
@@ -16,10 +16,13 @@ RUN npm ci
 COPY apps/ ./apps/
 COPY packages/ ./packages/
 
-# Generate Prisma Client and build both API and Web apps
-RUN npx --prefix apps/api prisma generate \
-  && npm --prefix apps/api run build \
-  && npm --prefix apps/web run build
+# Provide build-time placeholder DB URLs (never baked into runner stage)
+ENV DATABASE_URL="postgresql://postgres:postgres@localhost:5432/bbt?schema=bbt_core"
+ENV DIRECT_DATABASE_URL="postgresql://postgres:postgres@localhost:5432/bbt?schema=bbt_core"
+
+# Generate Prisma Client and build both API and Web apps from their own directories
+RUN cd /app/apps/api && npx prisma generate && npm run build \
+  && cd /app/apps/web && npm run build
 
 FROM node:22-alpine AS runner
 
