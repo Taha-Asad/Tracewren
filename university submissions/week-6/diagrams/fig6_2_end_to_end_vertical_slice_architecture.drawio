@@ -1,0 +1,62 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" version="21.0.0" type="device">
+  <diagram id="fig6_2_end_to_end_vertical_slice_architecture" name="End-to-End Vertical Slice Architecture">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" background="#000000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title_2" value="&lt;h1 style=&quot;color:#ffffff;font-family:Helvetica;margin:0;font-weight:normal;&quot;&gt;BugBountyTrack — End-to-End Vertical Slice Architecture&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="100" y="30" width="1200" height="40" as="geometry" />
+        </mxCell>
+        <!-- Client Layer -->
+        <mxCell id="c_client" value="&lt;b&gt;Client Presentation Tier (Next.js 16 / React 19)&lt;/b&gt;&lt;br/&gt;CvssCalculatorWidget &amp;amp; Report Submission Form" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="500" y="100" width="400" height="60" as="geometry" />
+        </mxCell>
+        <!-- Ingress Transport -->
+        <mxCell id="c_transport" value="&lt;b&gt;Secure Transport Protocol&lt;/b&gt;&lt;br/&gt;HTTPS POST /reports/submit | Headers: Bearer Token, X-Workspace-Id" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="460" y="200" width="480" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e_cli_trans" value="JSON DTO Payload" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;labelBackgroundColor=#000000;" edge="1" source="c_client" target="c_transport" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- API Guard & Controller -->
+        <mxCell id="c_guard" value="&lt;b&gt;API Ingress &amp;amp; Guards (NestJS)&lt;/b&gt;&lt;br/&gt;SessionAuthGuard (Multi-tenant check) &amp;amp; ValidationPipe (SubmitReportDto)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="450" y="300" width="500" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e_trans_guard" value="" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=1.5;" edge="1" source="c_transport" target="c_guard" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Domain Business Logic -->
+        <mxCell id="c_domain" value="&lt;b&gt;Core Domain Business Logic (Pure TypeScript)&lt;/b&gt;&lt;br/&gt;CvssService.evaluateVector() &amp;amp; CvssEngine.calculateScore()" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=2;fontColor=#ffffff;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="460" y="400" width="480" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e_guard_dom" value="Validated DTO" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;labelBackgroundColor=#000000;" edge="1" source="c_guard" target="c_domain" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Service & Data Access -->
+        <mxCell id="c_serv" value="&lt;b&gt;Service &amp;amp; Data Access Layer&lt;/b&gt;&lt;br/&gt;ReportsService.submitReport() invokes Prisma Client ORM" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="475" y="500" width="450" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e_dom_serv" value="Computed Score &amp;amp; Severity" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;labelBackgroundColor=#000000;" edge="1" source="c_domain" target="c_serv" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Database Persistence -->
+        <mxCell id="c_db" value="&lt;b&gt;Neon Serverless PostgreSQL Database&lt;/b&gt;&lt;br/&gt;Persists record into reports table with tenant foreign keys and CVSS vector" style="shape=cylinder3;whiteSpace=wrap;html=1;boundedLbl=1;backgroundOutline=1;size=15;fillColor=none;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="490" y="600" width="420" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="e_serv_db" value="SQL INSERT / Transaction" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;labelBackgroundColor=#000000;" edge="1" source="c_serv" target="c_db" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Return Loop -->
+        <mxCell id="c_res" value="&lt;b&gt;Synchronous 201 Created Response&lt;/b&gt;&lt;br/&gt;Report Entity, Score, SLA Timer, Bounty Range" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="500" y="730" width="400" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e_db_res" value="" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=1.5;" edge="1" source="c_db" target="c_res" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

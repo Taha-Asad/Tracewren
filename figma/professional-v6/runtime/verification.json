@@ -1,0 +1,522 @@
+{
+  "status": "passed",
+  "method": "Real FigCraft presenter mouse clicks and scrolling. Explicit study starts only at Start, MobileProgram and MobileActive; no injected navigation between journey actions. Prepared service results; no backend execution.",
+  "trace": [
+    {
+      "source": "Start",
+      "click": "Start full journey",
+      "destination": "Program",
+      "scrolled": false
+    },
+    {
+      "source": "Program",
+      "click": "Submit a report",
+      "destination": "Access",
+      "scrolled": false
+    },
+    {
+      "source": "Access",
+      "click": "Use guest access",
+      "destination": "GuestAccess",
+      "scrolled": false
+    },
+    {
+      "source": "GuestAccess",
+      "click": "Create local key & continue",
+      "destination": "ReportForm",
+      "scrolled": false
+    },
+    {
+      "source": "ReportForm",
+      "click": "Review & encrypt",
+      "destination": "Review",
+      "scrolled": true
+    },
+    {
+      "screenshot": "figma/professional-v6/runtime/Review.png"
+    },
+    {
+      "source": "Review",
+      "click": "Encrypt & submit",
+      "destination": "Receipt",
+      "scrolled": false
+    },
+    {
+      "source": "Receipt",
+      "click": "Open my report",
+      "destination": "RecoveryGate",
+      "scrolled": false
+    },
+    {
+      "source": "RecoveryGate",
+      "click": "Return to recovery confirmation",
+      "destination": "Receipt",
+      "scrolled": false
+    },
+    {
+      "source": "Receipt",
+      "click": "Save recovery file",
+      "destination": "RecoveryFile",
+      "scrolled": false
+    },
+    {
+      "source": "RecoveryFile",
+      "click": "Return to recovery confirmation",
+      "destination": "Receipt",
+      "scrolled": false
+    },
+    {
+      "source": "Receipt",
+      "click": "I saved the recovery file securely.",
+      "destination": "Receipt",
+      "scrolled": false
+    },
+    {
+      "source": "Receipt",
+      "click": "Open my report",
+      "destination": "ResearcherNew",
+      "scrolled": false
+    },
+    {
+      "source": "ResearcherNew",
+      "click": "Demo: defender view",
+      "destination": "RoleDefenderNew",
+      "scrolled": true
+    },
+    {
+      "source": "RoleDefenderNew",
+      "click": "Continue as defender",
+      "destination": "CaseLocked",
+      "scrolled": false
+    },
+    {
+      "source": "CaseLocked",
+      "click": "Unlock on this device",
+      "destination": "Unlock",
+      "scrolled": false
+    },
+    {
+      "source": "Unlock",
+      "click": "Unlock on this device",
+      "destination": "CaseNew",
+      "scrolled": false
+    },
+    {
+      "source": "CaseNew",
+      "click": "Begin triage",
+      "destination": "BeginTriage",
+      "scrolled": false
+    },
+    {
+      "source": "BeginTriage",
+      "click": "Begin triage",
+      "destination": "CaseTriage",
+      "scrolled": false
+    },
+    {
+      "screenshot": "figma/professional-v6/runtime/CaseTriage.png"
+    },
+    {
+      "source": "CaseTriage",
+      "click": "Assess & accept",
+      "destination": "Assessment",
+      "scrolled": false
+    },
+    {
+      "source": "Assessment",
+      "click": "Accept with this assessment",
+      "destination": "CaseAccepted",
+      "scrolled": false
+    },
+    {
+      "source": "CaseAccepted",
+      "click": "Propose a fix",
+      "destination": "Fix1",
+      "scrolled": false
+    },
+    {
+      "source": "Fix1",
+      "click": "Check commit & branch",
+      "destination": "CommitChecked1",
+      "scrolled": false
+    },
+    {
+      "source": "CommitChecked1",
+      "click": "Record proposal",
+      "destination": "CaseProposed",
+      "scrolled": false
+    },
+    {
+      "source": "CaseProposed",
+      "click": "Record deployment",
+      "destination": "Deploy1",
+      "scrolled": false
+    },
+    {
+      "source": "Deploy1",
+      "click": "Save deployment",
+      "destination": "CaseDeployed",
+      "scrolled": false
+    },
+    {
+      "source": "CaseDeployed",
+      "click": "Request retest",
+      "destination": "Invite1",
+      "scrolled": false
+    },
+    {
+      "source": "Invite1",
+      "click": "Send retest invitation",
+      "destination": "CasePending",
+      "scrolled": false
+    },
+    {
+      "source": "CasePending",
+      "click": "Demo: researcher view",
+      "destination": "RoleResearcher",
+      "scrolled": true
+    },
+    {
+      "source": "RoleResearcher",
+      "click": "Continue as researcher",
+      "destination": "ResearcherPending",
+      "scrolled": false
+    },
+    {
+      "screenshot": "figma/professional-v6/runtime/ResearcherPending.png"
+    },
+    {
+      "source": "ResearcherPending",
+      "click": "Retest deployment",
+      "destination": "RetestForm",
+      "scrolled": false
+    },
+    {
+      "source": "RetestForm",
+      "click": "Still reproducible",
+      "destination": "FailedAttestation",
+      "scrolled": false
+    },
+    {
+      "source": "FailedAttestation",
+      "click": "Sign failed retest",
+      "destination": "ResearcherFailed",
+      "scrolled": false
+    },
+    {
+      "screenshot": "figma/professional-v6/runtime/ResearcherFailed.png"
+    },
+    {
+      "source": "ResearcherFailed",
+      "click": "Demo: defender view",
+      "destination": "RoleDefenderFailed",
+      "scrolled": true
+    },
+    {
+      "source": "RoleDefenderFailed",
+      "click": "Continue as defender",
+      "destination": "CaseFailed",
+      "scrolled": false
+    },
+    {
+      "source": "CaseFailed",
+      "click": "Propose attempt 2",
+      "destination": "Fix2",
+      "scrolled": false
+    },
+    {
+      "source": "Fix2",
+      "click": "Check commit & branch",
+      "destination": "CommitChecked2",
+      "scrolled": false
+    },
+    {
+      "source": "CommitChecked2",
+      "click": "Record proposal",
+      "destination": "CaseProposed2",
+      "scrolled": false
+    },
+    {
+      "source": "CaseProposed2",
+      "click": "Record deployment",
+      "destination": "Deploy2",
+      "scrolled": false
+    },
+    {
+      "source": "Deploy2",
+      "click": "Save deployment",
+      "destination": "CaseDeployed2",
+      "scrolled": false
+    },
+    {
+      "source": "CaseDeployed2",
+      "click": "Request retest",
+      "destination": "Invite2",
+      "scrolled": false
+    },
+    {
+      "source": "Invite2",
+      "click": "Send retest invitation",
+      "destination": "CasePending2",
+      "scrolled": false
+    },
+    {
+      "source": "CasePending2",
+      "click": "Demo: researcher view",
+      "destination": "RoleResearcher2",
+      "scrolled": true
+    },
+    {
+      "source": "RoleResearcher2",
+      "click": "Continue as researcher",
+      "destination": "ResearcherPending2",
+      "scrolled": false
+    },
+    {
+      "source": "ResearcherPending2",
+      "click": "Retest deployment",
+      "destination": "RetestForm2",
+      "scrolled": false
+    },
+    {
+      "source": "RetestForm2",
+      "click": "Confirm fixed",
+      "destination": "ResearcherVerified2",
+      "scrolled": false
+    },
+    {
+      "screenshot": "figma/professional-v6/runtime/ResearcherVerified2.png"
+    },
+    {
+      "source": "ResearcherVerified2",
+      "click": "Overview",
+      "destination": "ResearcherVerified2__report",
+      "scrolled": false
+    },
+    {
+      "source": "ResearcherVerified2__report",
+      "click": "Evidence",
+      "destination": "ResearcherVerified2__evidence",
+      "scrolled": false
+    },
+    {
+      "source": "ResearcherVerified2__evidence",
+      "click": "Remediation",
+      "destination": "ResearcherVerified2",
+      "scrolled": false
+    },
+    {
+      "screenshot": "figma/professional-v6/runtime/ResearcherVerified2.png"
+    },
+    {
+      "source": "ResearcherVerified2",
+      "click": "My reports",
+      "destination": "ResearchDesk",
+      "scrolled": false
+    },
+    {
+      "source": "ResearchDesk",
+      "click": "Open current report",
+      "destination": "ResearcherVerified2",
+      "scrolled": false
+    },
+    {
+      "screenshot": "figma/professional-v6/runtime/ResearcherVerified2.png"
+    },
+    {
+      "screenshot": "figma/professional-v6/runtime/completed-after-tab-roundtrip.png"
+    },
+    {
+      "source": "MobileProgram",
+      "click": "Submit a report",
+      "destination": "MobileGuest",
+      "scrolled": false
+    },
+    {
+      "source": "MobileGuest",
+      "click": "Create key & continue",
+      "destination": "MobileReportForm",
+      "scrolled": false
+    },
+    {
+      "source": "MobileReportForm",
+      "click": "Review before encrypting",
+      "destination": "MobileReview",
+      "scrolled": true
+    },
+    {
+      "source": "MobileReview",
+      "click": "Encrypt & submit",
+      "destination": "MobileReceipt",
+      "scrolled": true
+    },
+    {
+      "source": "MobileReceipt",
+      "click": "Open my report",
+      "destination": "MobileRecoveryGate",
+      "scrolled": false
+    },
+    {
+      "source": "MobileRecoveryGate",
+      "click": "Return to receipt",
+      "destination": "MobileReceipt",
+      "scrolled": false
+    },
+    {
+      "source": "MobileReceipt",
+      "click": "Save .bbt-recovery.json",
+      "destination": "MobileRecoveryFile",
+      "scrolled": false
+    },
+    {
+      "source": "MobileRecoveryFile",
+      "click": "Return to receipt",
+      "destination": "MobileReceipt",
+      "scrolled": false
+    },
+    {
+      "source": "MobileReceipt",
+      "click": "I saved the recovery file securely.",
+      "destination": "MobileReceipt",
+      "scrolled": false
+    },
+    {
+      "source": "MobileReceipt",
+      "click": "Open my report",
+      "destination": "MobileNew",
+      "scrolled": false
+    },
+    {
+      "source": "MobileActive",
+      "click": "Original",
+      "destination": "MobileOriginal",
+      "scrolled": false
+    },
+    {
+      "source": "MobileOriginal",
+      "click": "Evidence",
+      "destination": "MobileEvidence",
+      "scrolled": false
+    },
+    {
+      "source": "MobileEvidence",
+      "click": "Case",
+      "destination": "MobileActive",
+      "scrolled": false
+    },
+    {
+      "source": "MobileActive",
+      "click": "Retest attempt 1",
+      "destination": "MobileRetest1",
+      "scrolled": false
+    },
+    {
+      "source": "MobileRetest1",
+      "click": "Still reproducible",
+      "destination": "MobileFailure1",
+      "scrolled": false
+    },
+    {
+      "source": "MobileFailure1",
+      "click": "Sign failed retest",
+      "destination": "MobileFailed",
+      "scrolled": false
+    },
+    {
+      "screenshot": "figma/professional-v6/runtime/MobileFailed.png"
+    },
+    {
+      "source": "MobileFailed",
+      "click": "Demo: switch to defender",
+      "destination": "MobileRoleDefender",
+      "scrolled": true
+    },
+    {
+      "source": "MobileRoleDefender",
+      "click": "Continue as defender",
+      "destination": "MobileDefenderFailed",
+      "scrolled": false
+    },
+    {
+      "source": "MobileDefenderFailed",
+      "click": "Propose attempt 2",
+      "destination": "MobileFix2",
+      "scrolled": false
+    },
+    {
+      "source": "MobileFix2",
+      "click": "Check & record proposal",
+      "destination": "MobileDeploy2",
+      "scrolled": false
+    },
+    {
+      "source": "MobileDeploy2",
+      "click": "Save deployment",
+      "destination": "MobileInvite2",
+      "scrolled": false
+    },
+    {
+      "source": "MobileInvite2",
+      "click": "Send retest invitation",
+      "destination": "MobileDefenderPending2",
+      "scrolled": false
+    },
+    {
+      "source": "MobileDefenderPending2",
+      "click": "Demo: switch to researcher",
+      "destination": "MobileRoleResearcher2",
+      "scrolled": false
+    },
+    {
+      "source": "MobileRoleResearcher2",
+      "click": "Continue as researcher",
+      "destination": "MobileActive2",
+      "scrolled": false
+    },
+    {
+      "screenshot": "figma/professional-v6/runtime/MobileActive2.png"
+    },
+    {
+      "source": "MobileActive2",
+      "click": "Retest attempt 2",
+      "destination": "MobileRetest2",
+      "scrolled": false
+    },
+    {
+      "source": "MobileRetest2",
+      "click": "Sign & confirm fixed",
+      "destination": "MobileComplete",
+      "scrolled": false
+    },
+    {
+      "screenshot": "figma/professional-v6/runtime/MobileComplete.png"
+    },
+    {
+      "source": "MobileComplete",
+      "click": "Original",
+      "destination": "MobileComplete__report",
+      "scrolled": false
+    },
+    {
+      "source": "MobileComplete__report",
+      "click": "Evidence",
+      "destination": "MobileComplete__evidence",
+      "scrolled": false
+    },
+    {
+      "source": "MobileComplete__evidence",
+      "click": "Case",
+      "destination": "MobileComplete",
+      "scrolled": false
+    },
+    {
+      "screenshot": "figma/professional-v6/runtime/MobileComplete.png"
+    },
+    {
+      "screenshot": "figma/professional-v6/runtime/Queue.png"
+    },
+    {
+      "screenshot": "figma/professional-v6/runtime/MobileOriginal.png"
+    }
+  ]
+}

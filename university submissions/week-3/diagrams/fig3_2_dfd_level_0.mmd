@@ -1,0 +1,49 @@
+flowchart LR
+    %% =========================================================================
+    %% PRIMARY USERS (LEFT COLUMN)
+    %% =========================================================================
+    subgraph USERS["<b>Primary External Users</b>"]
+        direction TB
+        E1["<b>Entity E1: Security Researcher</b><br/>• Submits Encrypted Vulnerabilities<br/>• Generates OpenPGP v6 Keys<br/>• Holds Ephemeral Decryption Token"]
+        E2["<b>Entity E2: Program Defender</b><br/>• Manages Tenant & Security Scope<br/>• Reviews Triage & Approves Retests<br/>• Enforces TOTP Step-Up Auth"]
+    end
+
+    %% =========================================================================
+    %% CENTRAL CONTEXT PROCESS (CENTER COLUMN)
+    %% =========================================================================
+    BBT(("<b>Process 0.0</b><br/><br/><b>BugBountyTrack<br/>Platform</b><br/><br/><i>Zero-Plaintext Multi-Tenant<br/>Vulnerability Management</i>"))
+
+    %% =========================================================================
+    %% EXTERNAL SERVICES (RIGHT COLUMN)
+    %% =========================================================================
+    subgraph SERVICES["<b>External Integrated Cloud Services</b>"]
+        direction TB
+        E3["<b>Entity E3: GitHub REST API</b><br/>Commit Ancestry & Verification Engine"]
+        E4["<b>Entity E4: Resend Mail Service</b><br/>Class A Metadata Operational Alerts"]
+        E5["<b>Entity E5: Cloudflare R2</b><br/>Encrypted Binary PoC Object Storage"]
+        E6["<b>Entity E6: GitHub Actions Cron</b><br/>HMAC-SHA256 Scheduled SLA Trigger"]
+    end
+
+    %% =========================================================================
+    %% DATA FLOW INTERCONNECTS
+    %% =========================================================================
+    E1 <-->|"<b>Encrypted Reports & Retest Proof</b><br/>◀ Signed RFC 9116 Policy & Keys<br/>◀ Cryptographic Receipts"| BBT
+    E2 <-->|"<b>Program Scopes & Policies</b><br/><b>Triage & Fix Attestations</b><br/>◀ Encrypted Report Feed<br/>◀ Retest Outcome Verification"| BBT
+
+    BBT <-->|"<b>Commit Ancestry Queries</b><br/>◀ Commit Existence & Ancestry Evidence"| E3
+    BBT -->|"<b>Transactional Metadata Alerts</b><br/>(Zero Plaintext Exploit Data)"| E4
+    BBT <-->|"<b>15-Min Presigned S3 Leases</b><br/>◀ Encrypted PoC Payload Storage"| E5
+    BBT <-->|"<b>Hourly SLA Check (HMAC)</b>"| E6
+
+    %% =========================================================================
+    %% STYLING DIRECTIVES
+    %% =========================================================================
+    classDef userCard fill:#EFF6FF,stroke:#2563EB,stroke-width:2px,color:#1E3A8A;
+    classDef bbtNode fill:#EDE9FE,stroke:#7C3AED,stroke-width:3px,color:#3B0764;
+    classDef svcCard fill:#F8FAFC,stroke:#475569,stroke-width:1.5px,color:#0F172A;
+    classDef subgStyle fill:#FFFFFF,stroke:#CBD5E1,stroke-width:1.5px,color:#0F172A;
+
+    class USERS,SERVICES subgStyle;
+    class E1,E2 userCard;
+    class BBT bbtNode;
+    class E3,E4,E5,E6 svcCard;

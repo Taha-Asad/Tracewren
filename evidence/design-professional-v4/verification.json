@@ -1,0 +1,535 @@
+{
+  "artifact": "figma/BugBountyTrack-Professional-v4.figcraft",
+  "sha256": "05221cc95aabc299f15d54d15cf461b62a601aeb56814282a22c3e2b8393565d",
+  "pageCount": 15,
+  "views": 1205,
+  "nodeCounts": {
+    "page": 15,
+    "component": 42,
+    "vector": 21913,
+    "text": 74543,
+    "componentSet": 2,
+    "rectangle": 19372,
+    "frame": 60934,
+    "instance": 26795,
+    "ellipse": 3039
+  },
+  "journey": [
+    {
+      "source": "SubmitIdentity",
+      "action": "Use guest access",
+      "destination": "GuestKey",
+      "reportState": "Retest pending"
+    },
+    {
+      "source": "GuestKey",
+      "action": "Create local key & continue",
+      "destination": "SubmitDetails",
+      "reportState": "Retest pending"
+    },
+    {
+      "source": "SubmitDetails",
+      "action": "Review report",
+      "destination": "SubmitReview",
+      "reportState": "Retest pending"
+    },
+    {
+      "source": "SubmitReview",
+      "action": "Encrypt & submit",
+      "destination": "SubmissionReceipt",
+      "reportState": "Retest pending"
+    },
+    {
+      "source": "SubmissionReceipt",
+      "action": "Open my report",
+      "destination": "BackupNeeded",
+      "reportState": "Retest pending"
+    },
+    {
+      "source": "BackupNeeded",
+      "action": "Back to receipt",
+      "destination": "SubmissionReceipt",
+      "reportState": "Retest pending"
+    },
+    {
+      "source": "SubmissionReceipt",
+      "action": "Save .bbt-recovery.json",
+      "destination": "RecoveryDownloaded",
+      "reportState": "Retest pending"
+    },
+    {
+      "source": "RecoveryDownloaded",
+      "action": "Return to saved confirmation",
+      "destination": "SubmissionReceipt",
+      "reportState": "Retest pending"
+    },
+    {
+      "source": "SubmissionReceipt",
+      "action": "I saved my recovery file",
+      "destination": "SubmissionReceipt",
+      "reportState": "Retest pending"
+    },
+    {
+      "source": "SubmissionReceipt",
+      "action": "Open my report",
+      "destination": "ResearcherReport",
+      "reportState": "New"
+    },
+    {
+      "source": "ResearcherReport",
+      "action": "Demo: switch to defender",
+      "destination": "RoleDefenderNew",
+      "reportState": "New"
+    },
+    {
+      "source": "RoleDefenderNew",
+      "action": "Continue as defender",
+      "destination": "ReportLocked",
+      "reportState": "New"
+    },
+    {
+      "source": "ReportLocked",
+      "action": "Unlock report",
+      "destination": "Unlock",
+      "reportState": "New"
+    },
+    {
+      "source": "Unlock",
+      "action": "Unlock locally",
+      "destination": "ReportTriage",
+      "reportState": "Triaging"
+    },
+    {
+      "source": "ReportTriage",
+      "action": "Accept report",
+      "destination": "Accept",
+      "reportState": "Triaging"
+    },
+    {
+      "source": "Accept",
+      "action": "Accept & notify",
+      "destination": "Accepted",
+      "reportState": "Accepted"
+    },
+    {
+      "source": "Accepted",
+      "action": "Propose a fix",
+      "destination": "FixCommit",
+      "reportState": "Accepted"
+    },
+    {
+      "source": "FixCommit",
+      "action": "Check commit & branch",
+      "destination": "CommitChecked",
+      "reportState": "Accepted"
+    },
+    {
+      "source": "CommitChecked",
+      "action": "Record proposal",
+      "destination": "FixProposed",
+      "reportState": "Fix proposed"
+    },
+    {
+      "source": "FixProposed",
+      "action": "Record deployment",
+      "destination": "Deployment",
+      "reportState": "Fix proposed"
+    },
+    {
+      "source": "Deployment",
+      "action": "Record deployment",
+      "destination": "FixDeployed",
+      "reportState": "Fix proposed \u00b7 deployed"
+    },
+    {
+      "source": "FixDeployed",
+      "action": "Request retest",
+      "destination": "RequestRetest",
+      "reportState": "Fix proposed \u00b7 deployed"
+    },
+    {
+      "source": "RequestRetest",
+      "action": "Send retest invitation",
+      "destination": "RetestPending",
+      "reportState": "Retest pending"
+    },
+    {
+      "source": "RetestPending",
+      "action": "Demo: switch to researcher",
+      "destination": "RoleResearcher",
+      "reportState": "Retest pending"
+    },
+    {
+      "source": "RoleResearcher",
+      "action": "Continue as researcher",
+      "destination": "ResearcherRetestPending",
+      "reportState": "Retest pending"
+    },
+    {
+      "source": "ResearcherRetestPending",
+      "action": "Retest attempt 1",
+      "destination": "ResearcherRetest",
+      "reportState": "Retest pending"
+    },
+    {
+      "source": "ResearcherRetest",
+      "action": "Still reproducible",
+      "destination": "RetestFailedForm",
+      "reportState": "Retest pending"
+    },
+    {
+      "source": "RetestFailedForm",
+      "action": "Sign failed retest",
+      "destination": "ResearcherRetestFailed",
+      "reportState": "Accepted"
+    },
+    {
+      "source": "ResearcherRetestFailed",
+      "action": "Demo: switch to defender",
+      "destination": "RoleDefenderFailed",
+      "reportState": "Accepted"
+    },
+    {
+      "source": "RoleDefenderFailed",
+      "action": "Continue as defender",
+      "destination": "RetestFailed",
+      "reportState": "Accepted"
+    },
+    {
+      "source": "RetestFailed",
+      "action": "Propose attempt 2",
+      "destination": "FixAttemptTwo",
+      "reportState": "Accepted"
+    },
+    {
+      "source": "FixAttemptTwo",
+      "action": "Check replacement evidence",
+      "destination": "CommitCheckedTwo",
+      "reportState": "Accepted"
+    },
+    {
+      "source": "CommitCheckedTwo",
+      "action": "Record attempt 2 proposal",
+      "destination": "FixProposedTwo",
+      "reportState": "Fix proposed"
+    },
+    {
+      "source": "FixProposedTwo",
+      "action": "Record deployment",
+      "destination": "DeploymentTwo",
+      "reportState": "Fix proposed"
+    },
+    {
+      "source": "DeploymentTwo",
+      "action": "Save attempt 2 deployment",
+      "destination": "FixDeployedTwo",
+      "reportState": "Fix proposed \u00b7 deployed"
+    },
+    {
+      "source": "FixDeployedTwo",
+      "action": "Request retest",
+      "destination": "RequestRetestTwo",
+      "reportState": "Fix proposed \u00b7 deployed"
+    },
+    {
+      "source": "RequestRetestTwo",
+      "action": "Send attempt 2 invitation",
+      "destination": "RetestPendingTwo",
+      "reportState": "Retest pending"
+    },
+    {
+      "source": "RetestPendingTwo",
+      "action": "Demo: switch to researcher",
+      "destination": "RoleResearcherTwo",
+      "reportState": "Retest pending"
+    },
+    {
+      "source": "RoleResearcherTwo",
+      "action": "Continue as researcher",
+      "destination": "ResearcherPendingTwo",
+      "reportState": "Retest pending"
+    },
+    {
+      "source": "ResearcherPendingTwo",
+      "action": "Retest attempt 2",
+      "destination": "ResearcherRetestTwo",
+      "reportState": "Retest pending"
+    },
+    {
+      "source": "ResearcherRetestTwo",
+      "action": "Sign attempt 2 as fixed",
+      "destination": "ResearcherVerifiedTwo",
+      "reportState": "Verified by researcher"
+    },
+    {
+      "source": "ResearcherVerifiedTwo",
+      "action": "My reports",
+      "destination": "MyReports",
+      "reportState": "Verified by researcher"
+    },
+    {
+      "source": "MyReports",
+      "action": "Open current case",
+      "destination": "ResearcherVerifiedTwo",
+      "reportState": "Verified by researcher"
+    },
+    {
+      "source": "Queue",
+      "action": "Open & unlock",
+      "destination": "VerifiedResearcherTwo",
+      "reportState": "Verified by researcher"
+    }
+  ],
+  "statePreservingTabChecks": 3560,
+  "queueRowChecks": [
+    [
+      "Queue",
+      "BBT-0241",
+      "VerifiedResearcherTwo"
+    ],
+    [
+      "Queue",
+      "BBT-0239",
+      "Case0239"
+    ],
+    [
+      "Queue",
+      "BBT-0237",
+      "Case0237"
+    ],
+    [
+      "Queue",
+      "BBT-0235",
+      "Case0235"
+    ],
+    [
+      "Queue",
+      "BBT-0230",
+      "Case0230"
+    ],
+    [
+      "Queue",
+      "BBT-0227",
+      "Case0227"
+    ],
+    [
+      "QueueAssigned",
+      "BBT-0241",
+      "VerifiedResearcherTwo"
+    ],
+    [
+      "QueueAssigned",
+      "BBT-0235",
+      "Case0235"
+    ],
+    [
+      "QueueAssigned",
+      "BBT-0227",
+      "Case0227"
+    ],
+    [
+      "QueueAttention",
+      "BBT-0241",
+      "VerifiedResearcherTwo"
+    ],
+    [
+      "QueueAttention",
+      "BBT-0237",
+      "Case0237"
+    ],
+    [
+      "QueueAttention",
+      "BBT-0235",
+      "Case0235"
+    ],
+    [
+      "Queue1366",
+      "BBT-0241",
+      "VerifiedResearcherTwo"
+    ],
+    [
+      "Queue1366",
+      "BBT-0239",
+      "Case0239"
+    ],
+    [
+      "Queue1366",
+      "BBT-0237",
+      "Case0237"
+    ],
+    [
+      "Queue1366",
+      "BBT-0235",
+      "Case0235"
+    ],
+    [
+      "Queue1366",
+      "BBT-0230",
+      "Case0230"
+    ],
+    [
+      "Queue1366",
+      "BBT-0227",
+      "Case0227"
+    ],
+    [
+      "QueueCompact",
+      "BBT-0241",
+      "VerifiedResearcherTwo"
+    ],
+    [
+      "QueueCompact",
+      "BBT-0237",
+      "Case0237"
+    ],
+    [
+      "QueueCompact",
+      "BBT-0235",
+      "Case0235"
+    ],
+    [
+      "OwnerOverview",
+      "BBT-0241",
+      "VerifiedResearcherTwo"
+    ],
+    [
+      "OwnerOverview",
+      "BBT-0237",
+      "Case0237"
+    ],
+    [
+      "OwnerOverview",
+      "BBT-0235",
+      "Case0235"
+    ],
+    [
+      "MyReports",
+      "BBT-0241",
+      "ResearcherVerifiedTwo"
+    ],
+    [
+      "MyReports",
+      "BBT-0235",
+      "ResearchCase0235"
+    ],
+    [
+      "MyReports",
+      "BBT-0227",
+      "ResearchCase0227"
+    ],
+    [
+      "QueueStageTriage",
+      "BBT-0241",
+      "VerifiedResearcherTwo"
+    ],
+    [
+      "QueueStageInfo",
+      "BBT-0235",
+      "Case0235"
+    ],
+    [
+      "QueueStageFix",
+      "BBT-0239",
+      "Case0239"
+    ],
+    [
+      "QueueStageFix",
+      "BBT-0230",
+      "Case0230"
+    ],
+    [
+      "QueueStageRetest",
+      "BBT-0237",
+      "Case0237"
+    ],
+    [
+      "QueueStageVerified",
+      "BBT-0227",
+      "Case0227"
+    ]
+  ],
+  "unexpectedBounds": [],
+  "textContrastFailures": [],
+  "invalidDestinations": [],
+  "contrast": [
+    {
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 13.79,
+      "normalTextPass": true
+    },
+    {
+      "foreground": "muted",
+      "background": "canvas",
+      "ratio": 5.24,
+      "normalTextPass": true
+    },
+    {
+      "foreground": "faint",
+      "background": "canvas",
+      "ratio": 4.72,
+      "normalTextPass": true
+    },
+    {
+      "foreground": "action",
+      "background": "selected",
+      "ratio": 5.87,
+      "normalTextPass": true
+    },
+    {
+      "foreground": "onAction",
+      "background": "action",
+      "ratio": 6.84,
+      "normalTextPass": true
+    },
+    {
+      "foreground": "navMuted",
+      "background": "nav",
+      "ratio": 7.03,
+      "normalTextPass": true
+    },
+    {
+      "foreground": "onDarkBrass",
+      "background": "nav",
+      "ratio": 8.39,
+      "normalTextPass": true
+    },
+    {
+      "foreground": "brass",
+      "background": "brassSurface",
+      "ratio": 5.87,
+      "normalTextPass": true
+    },
+    {
+      "foreground": "warning",
+      "background": "warningSurface",
+      "ratio": 5.22,
+      "normalTextPass": true
+    },
+    {
+      "foreground": "danger",
+      "background": "dangerSurface",
+      "ratio": 5.47,
+      "normalTextPass": true
+    },
+    {
+      "foreground": "success",
+      "background": "successSurface",
+      "ratio": 5.88,
+      "normalTextPass": true
+    },
+    {
+      "foreground": "info",
+      "background": "infoSurface",
+      "ratio": 5.98,
+      "normalTextPass": true
+    },
+    {
+      "foreground": "internal",
+      "background": "internalSurface",
+      "ratio": 5.72,
+      "normalTextPass": true
+    }
+  ],
+  "scope": "Saved native interactions executed from parsed action AST, plus geometry, text contrast and source/permission invariants. GUI playback recorded separately."
+}

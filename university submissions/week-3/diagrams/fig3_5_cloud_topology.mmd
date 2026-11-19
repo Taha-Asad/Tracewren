@@ -1,0 +1,83 @@
+flowchart TB
+    %% =========================================================================
+    %% TIER 1: GLOBAL CLIENTS
+    %% =========================================================================
+    subgraph T1["<b>TIER 1: GLOBAL USER CLIENT ENDPOINTS</b>"]
+        direction LR
+        C1["<b>Security Researchers</b><br/>• Web Browsers (Firefox / Chromium / Safari)<br/>• OpenPGP.js v6 WebCrypto (Curve25519)<br/>• Ephemeral Client Decryption Nonces"]
+        C2["<b>Organization Defenders</b><br/>• Web Browsers (Desktop & Mobile >= 320px)<br/>• Argon2id Passwords + TOTP MFA Step-Up<br/>• Protected Client Keystore (IndexedDB)"]
+        C1 ~~~ C2
+    end
+
+    %% =========================================================================
+    %% TIER 2: CLOUDFLARE EDGE PERIMETER
+    %% =========================================================================
+    subgraph T2["<b>TIER 2: CLOUDFLARE GLOBAL ANYCAST EDGE PERIMETER</b>"]
+        direction LR
+        CF_DNS["<b>Cloudflare Anycast DNS</b><br/>• DNSSEC Signed & Zone Redundancy<br/>• Sub-50ms Global Query Latency"]
+        CF_WAF["<b>WAF & DDoS Shield</b><br/>• L3/L4/L7 Volumetric Mitigation<br/>• IP Token-Bucket Rate Limiter"]
+        CF_BOT["<b>Cloudflare Turnstile</b><br/>• Non-Interactive Bot Protection<br/>• Zero User Tracking Cookies"]
+        CF_DNS --> CF_WAF --> CF_BOT
+    end
+
+    %% =========================================================================
+    %% TIER 3: VERCEL SERVERLESS APPLICATION FLEET
+    %% =========================================================================
+    subgraph T3["<b>TIER 3: VERCEL SERVERLESS COMPUTE FLEET (NODE.JS 22 LTS)</b>"]
+        direction LR
+        subgraph T3_APP["<b>Next.js 14+ App Router Fleet</b>"]
+            direction LR
+            V_EDGE["<b>Edge Network Routing</b><br/>Static Asset Caching & Middleware"]
+            V_API["<b>Stateless API Handlers</b><br/>/api/v1/* & RFC 9116 security.txt<br/>CSPRNG Session Governance"]
+            V_CORE["<b>Domain Core Engines</b><br/>Deterministic CVSS 3.1 (8.22 Ceiling)<br/>Commit Ancestry Validation Engine"]
+            V_EDGE --> V_API --> V_CORE
+        end
+        subgraph T3_EXT["<b>External Cloud Forges & Automation</b>"]
+            direction TB
+            EXT_GH["<b>GitHub REST API v3</b><br/>Branch Ancestry Validation"]
+            EXT_MAIL["<b>Resend Mail API</b><br/>Class A Transactional Alerts"]
+            EXT_CRON["<b>GitHub Actions Cron</b><br/>HMAC-SHA256 SLA Trigger"]
+        end
+        T3_APP <--> T3_EXT
+    end
+
+    %% =========================================================================
+    %% TIER 4: MANAGED CLOUD PERSISTENCE
+    %% =========================================================================
+    subgraph T4["<b>TIER 4: MANAGED CLOUD PERSISTENCE & STORAGE TIER</b>"]
+        direction LR
+        subgraph T4_DB["<b>Relational Database (Neon PostgreSQL 16 - us-east-1)</b>"]
+            direction TB
+            DB_PGB["<b>PgBouncer Connection Pooler</b><br/>TLS 1.3 Multiplexing (Port 6543)"]
+            DB_COMP["<b>Postgres 16 Compute Engine</b><br/>FORCE ROW LEVEL SECURITY (bbt_app role)<br/>Hardened SECURITY DEFINER search_path"]
+            DB_STOR["<b>Storage Engine & Audit Ledger</b><br/>Dual Hash-Chained Append-Only Ledger<br/>Continuous PITR Backups"]
+            DB_PGB --> DB_COMP --> DB_STOR
+        end
+        subgraph T4_R2["<b>Object Storage (Cloudflare R2 Multi-Region)</b>"]
+            direction TB
+            R2_BUCKET["<b>Encrypted Attachment Store</b><br/>S3-Compatible Bucket (SSE-R2 AES-256)<br/>RFC 9580 SEIPDv2 Binary PoCs<br/>Zero Bandwidth Egress Fees ($0.00/GB)"]
+            R2_URLS["<b>15-Minute Presigned S3 URLs</b><br/>Direct Client Browser PUT / GET<br/>Zero Server Memory Buffering"]
+            R2_BUCKET --> R2_URLS
+        end
+        T4_DB ~~~ T4_R2
+    end
+
+    %% Clean Stack Connections
+    T1 ==>|"<b>HTTPS TLS 1.3</b>: Anycast Web Ingress"| T2
+    T2 ==>|"<b>Clean Forwarded Traffic</b>: Verified Bot Tokens"| T3
+    T3 ==>|"<b>TLS 1.3 Pooled TCP :6543 & S3 Presigned URL Minting</b>"| T4
+
+    %% Styling
+    classDef clientStyle fill:#EFF6FF,stroke:#2563EB,stroke-width:2px,color:#1E3A8A;
+    classDef cfStyle fill:#FFF7ED,stroke:#F97316,stroke-width:2px,color:#9A3412;
+    classDef vercelStyle fill:#F5F3FF,stroke:#7C3AED,stroke-width:2px,color:#5B21B6;
+    classDef neonStyle fill:#ECFDF5,stroke:#059669,stroke-width:2px,color:#065F46;
+    classDef cardStyle fill:#FFFFFF,stroke:#64748B,stroke-width:1.5px,color:#0F172A;
+    classDef extCard fill:#F8FAFC,stroke:#475569,stroke-width:1.5px,stroke-dasharray: 4 4,color:#1E293B;
+
+    class T1 clientStyle;
+    class T2 cfStyle;
+    class T3,T3_APP vercelStyle;
+    class T4,T4_DB,T4_R2 neonStyle;
+    class C1,C2,CF_DNS,CF_WAF,CF_BOT,V_EDGE,V_API,V_CORE,DB_PGB,DB_COMP,DB_STOR,R2_BUCKET,R2_URLS cardStyle;
+    class EXT_GH,EXT_MAIL,EXT_CRON extCard;

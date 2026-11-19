@@ -1,0 +1,22 @@
+{
+  "nativeFile": "figma/BugBountyTrack-Professional-v3.figcraft",
+  "sha256": "a2362272d20e4e17b99c3beb8a65935eb524003ff66d094dd0b93b360eebfa50",
+  "views": 342,
+  "originalViewsRetained": 330,
+  "replacedDocumentationKeys": {
+    "CoffeeChanges": "RefinementChanges"
+  },
+  "featureScope": "Visual refinement; no new product features",
+  "fonts": [
+    "Inter",
+    "JetBrains Mono"
+  ],
+  "textStyles": 43,
+  "variables": 135,
+  "flowStarts": 33,
+  "interactions": 2674,
+  "nativeActionChecks": 22,
+  "previews": 342,
+  "comparisons": 10,
+  "verificationScope": "Saved-file structure, geometry, contrast, references and parsed native action traces. Not a GUI playback test, runtime security test, live input test or accessibility certification."
+}

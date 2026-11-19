@@ -1,0 +1,124 @@
+flowchart TB
+    %% =========================================================================
+    %% MODULE 1: IDENTITY, TENANT & POLICY GOVERNANCE
+    %% =========================================================================
+    subgraph M1["<b>MODULE 1: TENANT, SESSION & CRYPTOGRAPHIC POLICY GOVERNANCE</b>"]
+        direction LR
+        subgraph M1_USERS["<b>Actors</b>"]
+            E2_A["<b>E2: Org Defender</b>"]
+            E1_A["<b>E1: Researcher</b>"]
+        end
+        subgraph M1_PROCS["<b>Governance Processes</b>"]
+            P1(("<b>1.0</b><br/>Tenant & Session<br/>Governance"))
+            P2(("<b>2.0</b><br/>RFC 9116 Policy &<br/>Key Management"))
+        end
+        subgraph M1_STORES["<b>Data Stores</b>"]
+            D1[("<b>D1</b><br/>Organizations &<br/>Tenant Registry")]
+            D2[("<b>D2</b><br/>Cryptographic<br/>Key Store")]
+        end
+
+        E2_A -->|Credentials & TOTP| P1
+        P1 <-->|Read / Write Sessions| D1
+        E2_A -->|Program Scope & Keys| P2
+        E1_A <-->|Policy & Key Discovery| P2
+        P2 <-->|Store / Retrieve Public Keys| D2
+    end
+
+    %% =========================================================================
+    %% MODULE 2: ZERO-PLAINTEXT INTAKE & STORAGE ACCOUNTING
+    %% =========================================================================
+    subgraph M2["<b>MODULE 2: CRYPTOGRAPHIC INTAKE & STORAGE QUOTA ACCOUNTING</b>"]
+        direction LR
+        subgraph M2_USERS["<b>Submitter & Cloud</b>"]
+            E1_B["<b>E1: Researcher</b>"]
+            E5_B["<b>E5: Cloudflare R2</b>"]
+        end
+        subgraph M2_PROCS["<b>Intake Process</b>"]
+            P3(("<b>3.0</b><br/>Cryptographic Intake &<br/>Storage Accounting"))
+        end
+        subgraph M2_STORES["<b>Data Stores</b>"]
+            D7[("<b>D7</b><br/>Storage Quotas &<br/>Claim Leases")]
+            D5[("<b>D5</b><br/>Encrypted Attachment<br/>Registry")]
+            D3_A[("<b>D3</b><br/>Reports & Triage<br/>Store (Ciphertexts)")]
+        end
+
+        E1_B -->|Turnstile Token & Encrypted Report| P3
+        P3 <-->|Check & Deduct Quotas| D7
+        P3 <-->|Mint 15-Min Presigned S3 Lease| E5_B
+        P3 -->|Register Attachment UUIDs| D5
+        P3 -->|Store Class B Ciphertext & Receipt| D3_A
+    end
+
+    %% =========================================================================
+    %% MODULE 3: DETERMINISTIC SCORING & DUAL-LANE TRIAGE
+    %% =========================================================================
+    subgraph M3["<b>MODULE 3: CVSS v3.1 SCORING & DUAL-LANE TRIAGE BROKER</b>"]
+        direction LR
+        subgraph M3_USERS["<b>Triage Participants</b>"]
+            E2_C["<b>E2: Org Defender</b>"]
+            E4_C["<b>E4: Resend Mail</b>"]
+        end
+        subgraph M3_PROCS["<b>Triage Processes</b>"]
+            P4(("<b>4.0</b><br/>Deterministic CVSS v3.1<br/>Base Scoring Engine"))
+            P5(("<b>5.0</b><br/>Dual-Lane Triage &<br/>Notification Broker"))
+        end
+        subgraph M3_STORES["<b>Data Stores</b>"]
+            D3_B[("<b>D3</b><br/>Reports & Triage<br/>Threads")]
+        end
+
+        E2_C -->|"Metrics Vector: AV, AC, PR, UI, S, C, I, A"| P4
+        P4 -->|Computed Base Score & Vector String| D3_B
+        E2_C <-->|Class B / Class C Thread Messages| P5
+        P5 <-->|Read / Write Triage State & Comments| D3_B
+        P5 -->|Class A Operational Notification Alerts| E4_C
+    end
+
+    %% =========================================================================
+    %% MODULE 4: REMEDIATION ATTESTATION, RETEST & AUDIT LEDGER
+    %% =========================================================================
+    subgraph M4["<b>MODULE 4: REMEDIATION ATTESTATION, RETEST & HASH-CHAINED AUDIT</b>"]
+        direction LR
+        subgraph M4_USERS["<b>Verification & Trigger</b>"]
+            E3_D["<b>E3: GitHub REST API</b>"]
+            E6_D["<b>E6: Actions Cron</b>"]
+            E1_D["<b>E1: Researcher</b>"]
+        end
+        subgraph M4_PROCS["<b>Verification Processes</b>"]
+            P6(("<b>6.0</b><br/>Remediation Attestation &<br/>Commit Verifier"))
+            P7(("<b>7.0</b><br/>Attested Retest &<br/>Audit Ledger Engine"))
+        end
+        subgraph M4_STORES["<b>Data Stores</b>"]
+            D4[("<b>D4</b><br/>Remediation Records<br/>& Config Hashes")]
+            D6[("<b>D6</b><br/>Dual Hash-Chained<br/>Audit Ledger")]
+        end
+
+        P6 <-->|"Query: GET compare/branch...sha"| E3_D
+        P6 -->|Write Verified Commit Evidence| D4
+        E1_D -->|Retest Verification Verdict| P7
+        E6_D -->|Hourly Lease Reclamation Trigger| P7
+        P7 -->|Append-Only row_hash & report_chain_hash| D6
+    end
+
+    %% Inter-Module Linear Pipeline Connections
+    M1 ==>|"<b>Active Session Context & Public Keys</b>"| M2
+    M2 ==>|"<b>Pending Encrypted Report Records (D3)</b>"| M3
+    M3 ==>|"<b>Triaged Vulnerabilities Requiring Fix Attestation</b>"| M4
+
+    %% Styling
+    classDef m1Style fill:#EFF6FF,stroke:#2563EB,stroke-width:2px,color:#1E3A8A;
+    classDef m2Style fill:#F0FDF4,stroke:#16A34A,stroke-width:2px,color:#14532D;
+    classDef m3Style fill:#FAF5FF,stroke:#9333EA,stroke-width:2px,color:#581C87;
+    classDef m4Style fill:#FFFBEB,stroke:#D97706,stroke-width:2px,color:#78350F;
+
+    classDef procNode fill:#FFFFFF,stroke:#475569,stroke-width:2px,color:#0F172A;
+    classDef storeNode fill:#F8FAFC,stroke:#0284C7,stroke-width:1.5px,color:#0369A1;
+    classDef userNode fill:#FFFFFF,stroke:#64748B,stroke-width:1.5px,color:#0F172A;
+
+    class M1 m1Style;
+    class M2 m2Style;
+    class M3 m3Style;
+    class M4 m4Style;
+
+    class P1,P2,P3,P4,P5,P6,P7 procNode;
+    class D1,D2,D3_A,D3_B,D4,D5,D6,D7 storeNode;
+    class E1_A,E2_A,E1_B,E5_B,E2_C,E4_C,E1_D,E3_D,E6_D userNode;

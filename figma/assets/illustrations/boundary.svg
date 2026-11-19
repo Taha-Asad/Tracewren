@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="190" viewBox="0 0 280 190">
+<title>Boundary / conceptual research illustration</title>
+<g><title>Soft ink field</title><ellipse cx="137.0" cy="96.0" rx="113.0" ry="79.0" fill="#E0EFEB" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Contour / research field</title><path d="M 23 125 C 11 81 44 28 85 20 M 240 43 C 273 73 269 129 235 156" fill="none" stroke="#718984" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Workspace A / rear panel</title><rect x="40" y="33" width="88" height="115" rx="6" fill="#C2D8CC" stroke="#242E30" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Workspace A / paper</title><rect x="31" y="42" width="88" height="115" rx="6" fill="#FFFEF9" stroke="#242E30" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Workspace A / title</title><rect x="43" y="58" width="46.64" height="5" rx="1.5" fill="#17645D" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Workspace A / evidence line 0</title><rect x="43" y="76" width="59.84" height="2" rx="1.5" fill="#718984" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Workspace A / evidence line 1</title><rect x="43" y="86" width="69.52000000000001" height="2" rx="1.5" fill="#718984" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Workspace A / evidence line 2</title><rect x="43" y="96" width="49.28" height="2" rx="1.5" fill="#718984" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Workspace A / avatar tile</title><rect x="43" y="112" width="27" height="27" rx="5" fill="#E0EFEB" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Workspace A / account</title><ellipse cx="56.5" cy="121.5" rx="4.5" ry="4.5" fill="#17645D" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Workspace A / account shoulders</title><path d="M 48 134 C 48 124 65 124 65 134" fill="#17645D" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Workspace B / panel</title><rect x="177" y="32" width="74" height="105" rx="6" fill="#17645D" stroke="#242E30" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Workspace B / header</title><rect x="190" y="49" width="37" height="5" rx="1.5" fill="#C2D8CC" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Workspace B / protected data</title><rect x="190" y="69" width="46" height="2" rx="1.5" fill="#C2D8CC" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Workspace B / protected data</title><rect x="190" y="80" width="32" height="2" rx="1.5" fill="#C2D8CC" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Workspace B / protected data</title><rect x="190" y="91" width="46" height="2" rx="1.5" fill="#C2D8CC" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Authorization boundary</title><rect x="145" y="23" width="2" height="9" rx="1.5" fill="#718984" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Authorization boundary</title><rect x="145" y="39" width="2" height="9" rx="1.5" fill="#718984" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Authorization boundary</title><rect x="145" y="55" width="2" height="9" rx="1.5" fill="#718984" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Authorization boundary</title><rect x="145" y="71" width="2" height="9" rx="1.5" fill="#718984" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Authorization boundary</title><rect x="145" y="87" width="2" height="9" rx="1.5" fill="#718984" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Authorization boundary</title><rect x="145" y="119" width="2" height="9" rx="1.5" fill="#718984" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Authorization boundary</title><rect x="145" y="135" width="2" height="9" rx="1.5" fill="#718984" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Authorization boundary</title><rect x="145" y="151" width="2" height="9" rx="1.5" fill="#718984" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Cross-boundary request</title><path d="M 88 103 C 113 80 145 92 176 102" fill="none" stroke="#A03F35" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Request arrow</title><path d="M 166 94 L 179 103 L 165 109" fill="none" stroke="#A03F35" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Lens / charcoal rim</title><ellipse cx="179.0" cy="117.0" rx="37.0" ry="37.0" fill="#242E30" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Lens / paper rim</title><ellipse cx="179.0" cy="117.0" rx="32.0" ry="32.0" fill="#FFFEF9" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Lens / tinted glass</title><ellipse cx="179.0" cy="117.0" rx="27.0" ry="27.0" fill="#E0EFEB" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Lens / handle</title><path d="M 205 142 L 233 168 C 238 173 230 181 225 176 L 197 150 Z" fill="#17645D" stroke="#242E30" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Lens / open boundary</title><path d="M 177 99 L 177 108 M 177 127 L 177 136" fill="none" stroke="#242E30" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Lens / visible crossing</title><path d="M 161 118 L 192 118 M 185 112 L 192 118 L 185 124" fill="none" stroke="#A03F35" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Finding marker</title><ellipse cx="121.5" cy="32.5" rx="10.5" ry="10.5" fill="#FAE9E2" stroke="#A03F35" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Finding / attention</title><rect x="120" y="26" width="3" height="8" rx="1.5" fill="#A03F35" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Finding / point</title><ellipse cx="121.5" cy="37.5" rx="1.5" ry="1.5" fill="#A03F35" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+</svg>

@@ -1,0 +1,49 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" version="21.0.0" type="device">
+  <diagram id="auth_session_lifecycle" name="Multi-Tenant Authentication &amp; Session Lifecycle">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="450" background="#000000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title_4" value="&lt;h1 style=&quot;color:#ffffff;font-family:Helvetica;margin:0;font-weight:normal;&quot;&gt;BugBountyTrack — Multi-Tenant Authentication &amp;amp; Session Security Lifecycle&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="100" y="30" width="1300" height="40" as="geometry" />
+        </mxCell>
+        <!-- Lifecycle Steps -->
+        <mxCell id="step1" value="&lt;b&gt;1. Registration Request&lt;/b&gt;&lt;br/&gt;POST /auth/register-organization&lt;br/&gt;(email, password, orgName, slug)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="100" y="100" width="260" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="step2" value="&lt;b&gt;2. DTO Validation&lt;/b&gt;&lt;br/&gt;RegisterWorkspaceDto&lt;br/&gt;Email normalization &amp;amp; length checks" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="400" y="100" width="260" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="step3" value="&lt;b&gt;3. Argon2id Password Hashing&lt;/b&gt;&lt;br/&gt;m=65536 (64 MB), t=3, p=4&lt;br/&gt;Constant-time verification" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="700" y="100" width="260" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="step4" value="&lt;b&gt;4. Atomic DB Transaction&lt;/b&gt;&lt;br/&gt;Insert User, Organization,&lt;br/&gt;UserMembership (ORG_OWNER)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.8;fontColor=#ffffff;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="100" width="260" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="e_1_2" value="" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=1.5;" edge="1" source="step1" target="step2" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_2_3" value="" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=1.5;" edge="1" source="step2" target="step3" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_3_4" value="" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=1.5;" edge="1" source="step3" target="step4" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        
+        <mxCell id="step5" value="&lt;b&gt;5. Token &amp;amp; Session Issuance&lt;/b&gt;&lt;br/&gt;crypto.randomBytes(32)&lt;br/&gt;Persist SHA-256 hash in DB (30d)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.8;fontColor=#ffffff;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="1000" y="240" width="260" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="step6" value="&lt;b&gt;6. Secure Cookie Dispatch&lt;/b&gt;&lt;br/&gt;Set-Cookie: caulvyn_session&lt;br/&gt;HttpOnly, Secure, SameSite=Lax" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="700" y="240" width="260" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="step7" value="&lt;b&gt;7. Subsequent Auth Requests&lt;/b&gt;&lt;br/&gt;SessionAuthGuard intercepts request&lt;br/&gt;Resolves caller, tenant &amp;amp; membership" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="400" y="240" width="260" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="step8" value="&lt;b&gt;8. Multi-Tenant RBAC Guard&lt;/b&gt;&lt;br/&gt;RolesGuard &amp;amp; ProgramRolesGuard&lt;br/&gt;ORG_OWNER / DEFENDER / TRIAGER" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.8;fontColor=#ffffff;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="100" y="240" width="260" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="e_4_5" value="" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=1.5;" edge="1" source="step4" target="step5" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_5_6" value="" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=1.5;" edge="1" source="step5" target="step6" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_6_7" value="" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=1.5;" edge="1" source="step6" target="step7" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_7_8" value="" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=1.5;" edge="1" source="step7" target="step8" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

@@ -1,0 +1,41 @@
+present Landing
+Landing / Find a program → ProgramDirectory
+ProgramDirectory / Search programs → DirectoryFiltered
+DirectoryFiltered / Review scope & policy → Program
+Program / Submit a report → Access
+Access / Use guest access → GuestAccess
+capture public-to-private-intake
+present Landing
+Landing / Get started → GetStarted
+GetStarted / Create a researcher account → Register
+Register / Create account → VerifyEmail
+VerifyEmail / Check verification status → EmailVerified
+EmailVerified / Continue to researcher setup → ResearcherWelcome
+ResearcherWelcome / Edit profile → AccountProfile
+AccountProfile / Save profile → ProfileSaved
+ProfileSaved / Security → AccountSecurity
+AccountSecurity / Revoke session → RevokeSession
+RevokeSession / Revoke session → SessionRevoked
+capture account-security
+present ProgramManagement
+ProgramManagement / Create a program → CreateProgram
+CreateProgram / Save draft → ProgramDraft
+ProgramDraft / Back to programs → ProgramManagement
+ProgramManagement / Manage scope → ManageScope
+ManageScope / Save scope draft → ScopeSaved
+capture scope-draft
+present MobileLanding
+MobileLanding / Menu → WebsiteMenu
+WebsiteMenu / Find a program → MobileDirectory
+MobileDirectory / Review scope & policy → MobileProgram
+capture mobile-program
+present MobileAccount
+MobileAccount / Profile settings → MobileProfile
+MobileProfile / Save profile → MobileProfileSaved
+MobileProfileSaved / Back to account → MobileAccount
+MobileAccount / Notifications → MobileNotifications
+MobileNotifications / Mark all read → MobileNotificationsRead
+capture mobile-notifications
+present Landing
+capture landing
+Completion presenter passed

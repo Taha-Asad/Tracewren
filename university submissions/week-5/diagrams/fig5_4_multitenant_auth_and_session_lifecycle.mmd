@@ -1,0 +1,51 @@
+sequenceDiagram
+    %% =========================================================================
+    %% FIGURE 5.4: MULTI-TENANT AUTHENTICATION & SESSION LIFECYCLE
+    %% BugBountyTrack — Milestone Week 5 Specification
+    %% Pure Minimalist Monochrome Styling on Black Canvas
+    %% =========================================================================
+
+    autonumber
+    actor User as Client Browser / Defender
+    participant Controller as AuthController (/auth)
+    participant Service as AuthService
+    participant Hasher as Argon2id Engine
+    participant DB as Neon PostgreSQL (bbt_core)
+    participant Guard as SessionAuthGuard & RolesGuard
+
+    Note over User,DB: PHASE 1: MULTI-TENANT WORKSPACE SIGNUP & PROVISIONING
+    User->>Controller: POST /auth/register-organization (email, password, orgName, slug)
+    Controller->>Service: registerWorkspace(dto, userAgent, ipAddress)
+    Service->>DB: Check uniqueness (email, org slug, domain)
+    Service->>Hasher: hash(password, argon2id: m=65536, t=3, p=4)
+    Hasher-->>Service: argon2id_hash_string
+    Service->>DB: ATOMIC TRANSACTION: Insert User, Organization, Membership(ORG_OWNER), Default Program
+    Service->>Service: Generate 256-bit entropy session token (crypto.randomBytes(32))
+    Service->>DB: Insert Session record (token_hash: sha256, expires_at: +30d)
+    Service-->>Controller: AuthSessionResponse (token, user, org, expiresAt)
+    Controller-->>User: 201 Created + Set-Cookie: caulvyn_session (HttpOnly, Secure, SameSite=Lax)
+
+    Note over User,DB: PHASE 2: SUBSEQUENT LOGIN WITH CONSTANT-TIME TIMING DEFENSE
+    User->>Controller: POST /auth/login (email, password)
+    Controller->>Service: login(dto, userAgent, ipAddress)
+    Service->>DB: Find user by email
+    alt User Not Found
+        Service->>Hasher: verify(DUMMY_ARGON2_HASH, password)
+        Service-->>Controller: 401 Unauthorized (Invalid credentials)
+    else User Exists
+        Service->>Hasher: verify(user.password_hash, password)
+        Service->>DB: Provision new Session row (token_hash, user_id)
+        Service-->>Controller: AuthSessionResponse + Cookie
+        Controller-->>User: 200 OK + Updated Session Cookie
+    end
+
+    Note over User,DB: PHASE 3: AUTHENTICATED REQUEST & RBAC GUARD CLEARANCE
+    User->>Guard: GET /auth/organization-admin-check (Cookie / Bearer Token)
+    Guard->>DB: Validate session token_hash AND user active status
+    Guard->>Guard: Resolve active tenant context & membership role
+    alt Role matches ORG_OWNER or ORG_ADMIN
+        Guard-->>Controller: Grant Execution Clearance
+        Controller-->>User: 200 OK (Clearance verified)
+    else Insufficient Privileges
+        Guard-->>User: 403 Forbidden (Insufficient role privileges)
+    end

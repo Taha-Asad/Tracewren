@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" version="21.0.0" type="device">
+  <diagram id="fig6_4_bounty_sla_state_machine" name="Bounty Evaluation &amp; SLA State Machine">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="950" background="#000000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title_4" value="&lt;h1 style=&quot;color:#ffffff;font-family:Helvetica;margin:0;font-weight:normal;&quot;&gt;BugBountyTrack — Bounty Evaluation &amp;amp; SLA Lifecycle State Machine&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="100" y="30" width="1200" height="40" as="geometry" />
+        </mxCell>
+        <!-- Initial State -->
+        <mxCell id="s_init" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffffff;strokeColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="685" y="100" width="30" height="30" as="geometry" />
+        </mxCell>
+        <!-- Submitted State -->
+        <mxCell id="s_sub" value="&lt;b&gt;STATE: SUBMITTED&lt;/b&gt;&lt;br/&gt;CVSS 3.1 Base Score Evaluated &amp;amp; SLA Clock Initialized" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="500" y="170" width="400" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e_s_init_sub" value="" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=1.5;" edge="1" source="s_init" target="s_sub" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Triaged State -->
+        <mxCell id="s_triaged" value="&lt;b&gt;STATE: TRIAGED&lt;/b&gt;&lt;br/&gt;Security Lead Confirms Validity &amp;amp; Assigns Severity" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="500" y="280" width="400" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e_s_sub_tri" value="Valid Finding" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;labelBackgroundColor=#000000;" edge="1" source="s_sub" target="s_triaged" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Rejected State -->
+        <mxCell id="s_rej" value="&lt;b&gt;STATE: REJECTED&lt;/b&gt;&lt;br/&gt;Duplicate / Out-of-Scope / Informative Only" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="980" y="170" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e_s_sub_rej" value="Invalid / Out of Scope" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;labelBackgroundColor=#000000;" edge="1" source="s_sub" target="s_rej" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Remediation State -->
+        <mxCell id="s_remed" value="&lt;b&gt;STATE: IN_REMEDIATION&lt;/b&gt;&lt;br/&gt;Engineering Team Developing Fix Against SLA Countdown" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="500" y="390" width="400" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e_s_tri_remed" value="Patch Assigned" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;labelBackgroundColor=#000000;" edge="1" source="s_triaged" target="s_remed" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- SLA Breach / Escalation -->
+        <mxCell id="s_breach" value="&lt;b&gt;STATE: SLA_BREACH / ESCALATED&lt;/b&gt;&lt;br/&gt;Clock Reaches 0h — Alert to Workspace Owner" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.5;strokeDashed=1;fontColor=#ffffff;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="120" y="390" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e_s_remed_breach" value="Clock Expired" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;labelBackgroundColor=#000000;" edge="1" source="s_remed" target="s_breach" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_s_breach_remed" value="Prioritized Fix" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;labelBackgroundColor=#000000;" edge="1" source="s_breach" target="s_remed" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Validating State -->
+        <mxCell id="s_val" value="&lt;b&gt;STATE: VALIDATING&lt;/b&gt;&lt;br/&gt;Fix Deployed to Staging; Automated Retest Initiated" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="500" y="500" width="400" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e_s_remed_val" value="Fix Deployed" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;labelBackgroundColor=#000000;" edge="1" source="s_remed" target="s_val" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e_s_val_remed" value="Retest Failed" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;labelBackgroundColor=#000000;curved=1;" edge="1" source="s_val" target="s_remed" parent="1">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="930" y="470" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <!-- Resolved State -->
+        <mxCell id="s_res" value="&lt;b&gt;STATE: RESOLVED&lt;/b&gt;&lt;br/&gt;Retest Passed; Vulnerability Formally Closed" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="500" y="610" width="400" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e_s_val_res" value="Retest Passed" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;labelBackgroundColor=#000000;" edge="1" source="s_val" target="s_res" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Bounty Disbursed -->
+        <mxCell id="s_bounty" value="&lt;b&gt;STATE: BOUNTY_DISBURSED&lt;/b&gt;&lt;br/&gt;Final Reward Computed &amp;amp; Disbursed to Researcher" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=2;fontColor=#ffffff;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="500" y="720" width="400" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e_s_res_bounty" value="Owner Approval" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;labelBackgroundColor=#000000;" edge="1" source="s_res" target="s_bounty" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Terminal State -->
+        <mxCell id="s_term" value="" style="ellipse;whiteSpace=wrap;html=1;aspect=fixed;fillColor=#ffffff;strokeColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="685" y="830" width="30" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="e_s_bounty_term" value="" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=1.5;" edge="1" source="s_bounty" target="s_term" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

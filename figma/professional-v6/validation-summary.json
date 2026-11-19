@@ -1,0 +1,17 @@
+{
+  "views": 581,
+  "newViews": 61,
+  "pages": 17,
+  "desktopJourneyActions": 51,
+  "mobileJourneyActions": 29,
+  "contextPreservingTabLinks": 1037,
+  "completionNavigationActions": 39,
+  "nativeCompletionActions": 28,
+  "unexpectedBounds": 0,
+  "textContrastFailures": 0,
+  "missingDestinations": 0,
+  "fullViewportPreviews": 581,
+  "priorVersionsPreserved": true,
+  "originalScreenIdsPreserved": true,
+  "artifactSha256": "5b5a7ed11ba9ca893838984f35a8622e098950d717a19546739073dc5c1befc5"
+}

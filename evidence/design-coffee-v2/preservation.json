@@ -1,0 +1,24 @@
+{
+  "originalNativeFile": "figma/BugBountyTrack-UX.figcraft",
+  "originalNativeSha256": "983157cc79f0550b4968a5b6f80fb5abd255e8302bb4cb646b804252d8e9204d",
+  "sourceFilesCompared": 64,
+  "changedSourceFiles": [],
+  "previousViewKeys": 330,
+  "retainedViewKeys": 330,
+  "removedViewKeys": [],
+  "addedViewKeys": [
+    "CoffeeChanges",
+    "DraftEditor",
+    "OwnerDecisions",
+    "ReportConversation",
+    "ReportEvidence",
+    "ReportFocus",
+    "ResearchDeskLocked",
+    "ResearchNeedsMe",
+    "ResearchVerified",
+    "ResearchWaiting",
+    "ResearcherConversation",
+    "ResearcherEvidence"
+  ],
+  "scope": "V2 is a separate native file. V1, its previews/handoff, and the existing product source documents are unchanged."
+}

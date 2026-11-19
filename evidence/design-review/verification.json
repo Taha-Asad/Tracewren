@@ -1,0 +1,1242 @@
+{
+  "artifact": "figma/BugBountyTrack-UX.figcraft",
+  "sha256": "983157cc79f0550b4968a5b6f80fb5abd255e8302bb4cb646b804252d8e9204d",
+  "pageCount": 14,
+  "views": 330,
+  "screens": 157,
+  "overlays": 141,
+  "wireframes": 10,
+  "workflowMaps": 7,
+  "flowStarts": 30,
+  "interactions": 2431,
+  "nodeCounts": {
+    "page": 14,
+    "text": 6427,
+    "instance": 2434,
+    "frame": 4849,
+    "vector": 1592,
+    "rectangle": 626,
+    "component": 33,
+    "componentSet": 2
+  },
+  "fonts": [
+    "Inter",
+    "Nunito Sans"
+  ],
+  "unexpectedBounds": [],
+  "intentionalScrollChildren": [
+    {
+      "screen": "ReportActivity",
+      "parent": 12443,
+      "child": 12464,
+      "parentName": "Scrollable main",
+      "childName": "Master recovery fetch initiated \u00b7 report event 9",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        765.0,
+        1160.0,
+        167.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "ReportActivity",
+      "parent": 12443,
+      "child": 12469,
+      "parentName": "Scrollable main",
+      "childName": "Actions",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        956.0,
+        1160.0,
+        44.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "RecoveryAudit",
+      "parent": 12547,
+      "child": 12568,
+      "parentName": "Scrollable main",
+      "childName": "Master recovery fetch initiated \u00b7 report event 9",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        765.0,
+        1160.0,
+        167.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "RecoveryAudit",
+      "parent": 12547,
+      "child": 12573,
+      "parentName": "Scrollable main",
+      "childName": "Actions",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        956.0,
+        1160.0,
+        44.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "AuditEvent",
+      "parent": 12579,
+      "child": 12600,
+      "parentName": "Dialog content",
+      "childName": "BBT/Button",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        28.0,
+        676.0,
+        193.0,
+        44.0
+      ],
+      "parentSize": [
+        760.0,
+        740.0
+      ]
+    },
+    {
+      "screen": "SubmitDetails",
+      "parent": 1315,
+      "child": 1332,
+      "parentName": "Public scroll region",
+      "childName": "Submission form and context",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        72.0,
+        197.0,
+        1296.0,
+        880.0
+      ],
+      "parentSize": [
+        1440.0,
+        974.0
+      ]
+    },
+    {
+      "screen": "PlannedIndex",
+      "parent": 13168,
+      "child": 13187,
+      "parentName": "Scrollable main",
+      "childName": "Platform operations \u00b7 WBS commercial",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        686.0,
+        1160.0,
+        167.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "Operator",
+      "parent": 13553,
+      "child": 13572,
+      "parentName": "Scrollable main",
+      "childName": "Abuse queue",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        651.0,
+        1160.0,
+        167.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "ResponsiveIndex",
+      "parent": 13789,
+      "child": 13814,
+      "parentName": "Responsive index",
+      "childName": "390 \u00d7 844 \u00b7 reporting",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        40.0,
+        848.0,
+        1360.0,
+        155.0
+      ],
+      "parentSize": [
+        1440.0,
+        1000.0
+      ]
+    },
+    {
+      "screen": "ResponsiveIndex",
+      "parent": 13789,
+      "child": 13819,
+      "parentName": "Responsive index",
+      "childName": "390 \u00d7 844 \u00b7 recovery",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        40.0,
+        1023.0,
+        1360.0,
+        155.0
+      ],
+      "parentSize": [
+        1440.0,
+        1000.0
+      ]
+    },
+    {
+      "screen": "ResponsiveIndex",
+      "parent": 13789,
+      "child": 13824,
+      "parentName": "Responsive index",
+      "childName": "390 \u00d7 844 \u00b7 retest",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        40.0,
+        1198.0,
+        1360.0,
+        155.0
+      ],
+      "parentSize": [
+        1440.0,
+        1000.0
+      ]
+    },
+    {
+      "screen": "Queue1366",
+      "parent": 13902,
+      "child": 13924,
+      "parentName": "Scrollable main",
+      "childName": "Reports table",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        287.0,
+        1086.0,
+        521.0
+      ],
+      "parentSize": [
+        1150.0,
+        704.0
+      ]
+    },
+    {
+      "screen": "Queue1366",
+      "parent": 13902,
+      "child": 14016,
+      "parentName": "Scrollable main",
+      "childName": "Queue footer",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        832.0,
+        1086.0,
+        44.0
+      ],
+      "parentSize": [
+        1150.0,
+        704.0
+      ]
+    },
+    {
+      "screen": "Report1366",
+      "parent": 14093,
+      "child": 14104,
+      "parentName": "Scrollable main",
+      "childName": "Report workbench",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        156.0,
+        1086.0,
+        967.0
+      ],
+      "parentSize": [
+        1150.0,
+        704.0
+      ]
+    },
+    {
+      "screen": "QueueCompact",
+      "parent": 14233,
+      "child": 14262,
+      "parentName": "Scrollable main",
+      "childName": "BBT-0235 \u00b7 Information disclosure",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        639.0,
+        776.0,
+        205.0
+      ],
+      "parentSize": [
+        840.0,
+        704.0
+      ]
+    },
+    {
+      "screen": "MobileReport",
+      "parent": 14420,
+      "child": 14442,
+      "parentName": "Mobile scroll region",
+      "childName": "BBT/Button",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        20.0,
+        770.0,
+        350.0,
+        44.0
+      ],
+      "parentSize": [
+        390.0,
+        780.0
+      ]
+    },
+    {
+      "screen": "FlowUC05",
+      "parent": 15184,
+      "child": 15227,
+      "parentName": "Workflow diagram",
+      "childName": "Back to workflow index \u00b7 link",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        40.0,
+        943.0,
+        220.0,
+        44.0
+      ],
+      "parentSize": [
+        1440.0,
+        1000.0
+      ]
+    },
+    {
+      "screen": "FlowUC07",
+      "parent": 15278,
+      "child": 15327,
+      "parentName": "Workflow diagram",
+      "childName": "Back to workflow index \u00b7 link",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        40.0,
+        943.0,
+        220.0,
+        44.0
+      ],
+      "parentSize": [
+        1440.0,
+        1000.0
+      ]
+    },
+    {
+      "screen": "WorkflowIndex",
+      "parent": 15330,
+      "child": 15383,
+      "parentName": "Workflow catalog",
+      "childName": "UC07 \u00b7 Audit & capacity",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        40.0,
+        868.0,
+        1360.0,
+        100.0
+      ],
+      "parentSize": [
+        1440.0,
+        1000.0
+      ]
+    },
+    {
+      "screen": "WorkflowIndex",
+      "parent": 15330,
+      "child": 15391,
+      "parentName": "Workflow catalog",
+      "childName": "BBT/Button",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        40.0,
+        988.0,
+        310.0,
+        44.0
+      ],
+      "parentSize": [
+        1440.0,
+        1000.0
+      ]
+    },
+    {
+      "screen": "WireframeIndex",
+      "parent": 15394,
+      "child": 15435,
+      "parentName": "Wireframe index content",
+      "childName": "Audit & capacity",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        40.0,
+        1044.0,
+        1360.0,
+        84.0
+      ],
+      "parentSize": [
+        1440.0,
+        1100.0
+      ]
+    },
+    {
+      "screen": "Foundations",
+      "parent": 15440,
+      "child": 15493,
+      "parentName": "Foundation documentation",
+      "childName": "Actions",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        40.0,
+        925.0,
+        1360.0,
+        44.0
+      ],
+      "parentSize": [
+        1440.0,
+        1000.0
+      ]
+    },
+    {
+      "screen": "ComponentGuide",
+      "parent": 15499,
+      "child": 15565,
+      "parentName": "Component documentation",
+      "childName": "Interaction rules",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        40.0,
+        765.0,
+        1360.0,
+        249.0
+      ],
+      "parentSize": [
+        1440.0,
+        1050.0
+      ]
+    },
+    {
+      "screen": "RoleMatrix",
+      "parent": 15573,
+      "child": 15606,
+      "parentName": "Access matrix",
+      "childName": "BBT/Button",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        40.0,
+        964.0,
+        319.0,
+        44.0
+      ],
+      "parentSize": [
+        1440.0,
+        1000.0
+      ]
+    },
+    {
+      "screen": "StateReview",
+      "parent": 15775,
+      "child": 15842,
+      "parentName": "State review index",
+      "childName": "Capacity & integrity",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        40.0,
+        1008.0,
+        1360.0,
+        167.0
+      ],
+      "parentSize": [
+        1440.0,
+        1050.0
+      ]
+    },
+    {
+      "screen": "ScreenIndex",
+      "parent": 15907,
+      "child": 15967,
+      "parentName": "Screen family index",
+      "childName": "12 \u00b7 Responsive studies",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        40.0,
+        1068.0,
+        1360.0,
+        68.0
+      ],
+      "parentSize": [
+        1440.0,
+        1100.0
+      ]
+    },
+    {
+      "screen": "ScreenIndex",
+      "parent": 15907,
+      "child": 15972,
+      "parentName": "Screen family index",
+      "childName": "13 \u00b7 Developer handoff",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        40.0,
+        1152.0,
+        1360.0,
+        68.0
+      ],
+      "parentSize": [
+        1440.0,
+        1100.0
+      ]
+    },
+    {
+      "screen": "ScreenIndex",
+      "parent": 15907,
+      "child": 15977,
+      "parentName": "Screen family index",
+      "childName": "A view can be a finished screen, contextual overlay, wireframe, work",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        40.0,
+        1236.0,
+        1360.0,
+        21.0
+      ],
+      "parentSize": [
+        1440.0,
+        1100.0
+      ]
+    },
+    {
+      "screen": "Queue",
+      "parent": 179,
+      "child": 201,
+      "parentName": "Scrollable main",
+      "childName": "Reports table",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        287.0,
+        1160.0,
+        521.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "Queue",
+      "parent": 179,
+      "child": 293,
+      "parentName": "Scrollable main",
+      "childName": "Queue footer",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        832.0,
+        1160.0,
+        44.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "ResearcherReport",
+      "parent": 2267,
+      "child": 2278,
+      "parentName": "Scrollable main",
+      "childName": "Report workbench",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        156.0,
+        1160.0,
+        870.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "ResearcherNeedInfo",
+      "parent": 2381,
+      "child": 2397,
+      "parentName": "Scrollable main",
+      "childName": "Report workbench",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        310.0,
+        1160.0,
+        793.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "ResearcherRetestPending",
+      "parent": 2499,
+      "child": 2515,
+      "parentName": "Scrollable main",
+      "childName": "Report workbench",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        310.0,
+        1160.0,
+        793.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "ResearcherVerified",
+      "parent": 2617,
+      "child": 2631,
+      "parentName": "Scrollable main",
+      "childName": "Report workbench",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        260.0,
+        1160.0,
+        791.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "ResearcherRetestFailed",
+      "parent": 2732,
+      "child": 2746,
+      "parentName": "Scrollable main",
+      "childName": "Report workbench",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        260.0,
+        1160.0,
+        812.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "Notifications",
+      "parent": 3662,
+      "child": 3678,
+      "parentName": "Dialog content",
+      "childName": "Program roster updated",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        28.0,
+        447.0,
+        564.0,
+        147.0
+      ],
+      "parentSize": [
+        620.0,
+        510.0
+      ]
+    },
+    {
+      "screen": "SwitchWorkspace",
+      "parent": 3684,
+      "child": 3700,
+      "parentName": "Dialog content",
+      "childName": "Researcher workspace",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        28.0,
+        439.0,
+        564.0,
+        143.0
+      ],
+      "parentSize": [
+        620.0,
+        540.0
+      ]
+    },
+    {
+      "screen": "SwitchWorkspace",
+      "parent": 3684,
+      "child": 3705,
+      "parentName": "Dialog content",
+      "childName": "Northstar Labs \u00b7 Read only",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        28.0,
+        598.0,
+        564.0,
+        143.0
+      ],
+      "parentSize": [
+        620.0,
+        540.0
+      ]
+    },
+    {
+      "screen": "Score",
+      "parent": 3711,
+      "child": 3763,
+      "parentName": "Dialog content",
+      "childName": "Internal reviewer note \u00b7 optional",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        28.0,
+        751.0,
+        724.0,
+        116.0
+      ],
+      "parentSize": [
+        780.0,
+        780.0
+      ]
+    },
+    {
+      "screen": "Score",
+      "parent": 3711,
+      "child": 3767,
+      "parentName": "Dialog content",
+      "childName": "Actions",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        28.0,
+        883.0,
+        724.0,
+        44.0
+      ],
+      "parentSize": [
+        780.0,
+        780.0
+      ]
+    },
+    {
+      "screen": "Score",
+      "parent": 3711,
+      "child": 3772,
+      "parentName": "Dialog content",
+      "childName": "Show invalid vector state \u00b7 link",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        28.0,
+        943.0,
+        724.0,
+        44.0
+      ],
+      "parentSize": [
+        780.0,
+        780.0
+      ]
+    },
+    {
+      "screen": "Accepted",
+      "parent": 3898,
+      "child": 3912,
+      "parentName": "Scrollable main",
+      "childName": "Report workbench",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        260.0,
+        1160.0,
+        851.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "DefenderNeedInfo",
+      "parent": 4054,
+      "child": 4065,
+      "parentName": "Scrollable main",
+      "childName": "Report workbench",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        156.0,
+        1160.0,
+        851.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "TriageOutcomes",
+      "parent": 4118,
+      "child": 4139,
+      "parentName": "Dialog content",
+      "childName": "Risk acceptance",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        28.0,
+        610.0,
+        624.0,
+        147.0
+      ],
+      "parentSize": [
+        680.0,
+        660.0
+      ]
+    },
+    {
+      "screen": "FixProposed",
+      "parent": 5047,
+      "child": 5061,
+      "parentName": "Scrollable main",
+      "childName": "Report workbench",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        260.0,
+        1160.0,
+        909.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "FixDeployed",
+      "parent": 5919,
+      "child": 5933,
+      "parentName": "Scrollable main",
+      "childName": "Report workbench",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        260.0,
+        1160.0,
+        851.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "RetestPending",
+      "parent": 6078,
+      "child": 6094,
+      "parentName": "Scrollable main",
+      "childName": "Report workbench",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        310.0,
+        1160.0,
+        851.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "Program",
+      "parent": 611,
+      "child": 630,
+      "parentName": "Public scroll region",
+      "childName": "Scope and policy",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        72.0,
+        330.0,
+        1296.0,
+        603.0
+      ],
+      "parentSize": [
+        1440.0,
+        924.0
+      ]
+    },
+    {
+      "screen": "VerifiedResearcher",
+      "parent": 6305,
+      "child": 6319,
+      "parentName": "Scrollable main",
+      "childName": "Report workbench",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        260.0,
+        1160.0,
+        909.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "VerifiedInternal",
+      "parent": 6446,
+      "child": 6460,
+      "parentName": "Scrollable main",
+      "childName": "Report workbench",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        260.0,
+        1160.0,
+        909.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "UnverifiedClosed",
+      "parent": 6749,
+      "child": 6763,
+      "parentName": "Scrollable main",
+      "childName": "Report workbench",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        260.0,
+        1160.0,
+        909.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "ReportReopened",
+      "parent": 6907,
+      "child": 6918,
+      "parentName": "Scrollable main",
+      "childName": "Report workbench",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        156.0,
+        1160.0,
+        967.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "Security",
+      "parent": 7651,
+      "child": 7670,
+      "parentName": "Scrollable main",
+      "childName": "Local report keys",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        686.0,
+        1160.0,
+        167.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "ReportTriage",
+      "parent": 836,
+      "child": 847,
+      "parentName": "Scrollable main",
+      "childName": "Report workbench",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        156.0,
+        1160.0,
+        967.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "OwnerOverview",
+      "parent": 9576,
+      "child": 9586,
+      "parentName": "Scrollable main",
+      "childName": "Owner priorities",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        265.0,
+        1160.0,
+        554.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    },
+    {
+      "screen": "ReportInternal",
+      "parent": 976,
+      "child": 987,
+      "parentName": "Scrollable main",
+      "childName": "Report workbench",
+      "horizontal": false,
+      "vertical": true,
+      "bounds": [
+        32.0,
+        156.0,
+        1160.0,
+        967.0
+      ],
+      "parentSize": [
+        1224.0,
+        836.0
+      ]
+    }
+  ],
+  "invalidDestinations": [],
+  "textContrastFailures": [],
+  "contrast": [
+    {
+      "foreground": "ink",
+      "background": "surface",
+      "ratio": 13.79,
+      "normalTextPass": true
+    },
+    {
+      "foreground": "muted",
+      "background": "canvas",
+      "ratio": 5.24,
+      "normalTextPass": true
+    },
+    {
+      "foreground": "faint",
+      "background": "canvas",
+      "ratio": 4.72,
+      "normalTextPass": true
+    },
+    {
+      "foreground": "teal",
+      "background": "selected",
+      "ratio": 5.87,
+      "normalTextPass": true
+    },
+    {
+      "foreground": "onAction",
+      "background": "teal",
+      "ratio": 6.84,
+      "normalTextPass": true
+    },
+    {
+      "foreground": "navMuted",
+      "background": "nav",
+      "ratio": 7.03,
+      "normalTextPass": true
+    },
+    {
+      "foreground": "onDarkBrass",
+      "background": "nav",
+      "ratio": 7.54,
+      "normalTextPass": true
+    },
+    {
+      "foreground": "brass",
+      "background": "brassSurface",
+      "ratio": 4.58,
+      "normalTextPass": true
+    },
+    {
+      "foreground": "warning",
+      "background": "warningSurface",
+      "ratio": 5.22,
+      "normalTextPass": true
+    },
+    {
+      "foreground": "danger",
+      "background": "dangerSurface",
+      "ratio": 5.47,
+      "normalTextPass": true
+    },
+    {
+      "foreground": "success",
+      "background": "successSurface",
+      "ratio": 5.88,
+      "normalTextPass": true
+    },
+    {
+      "foreground": "info",
+      "background": "infoSurface",
+      "ratio": 5.98,
+      "normalTextPass": true
+    },
+    {
+      "foreground": "internal",
+      "background": "internalSurface",
+      "ratio": 5.72,
+      "normalTextPass": true
+    }
+  ],
+  "controls": [
+    {
+      "foreground": "control",
+      "background": "surface",
+      "ratio": 3.7,
+      "boundaryPass": true
+    },
+    {
+      "foreground": "control",
+      "background": "canvas",
+      "ratio": 3.28,
+      "boundaryPass": true
+    }
+  ],
+  "nativeActionTraces": [
+    {
+      "case": "Guest receipt before saved acknowledgement",
+      "destination": "BackupNeeded"
+    },
+    {
+      "case": "Guest receipt after acknowledgement",
+      "destination": "ResearcherReport"
+    },
+    {
+      "case": "Asset export redaction toggle",
+      "includedValue": "api.northstar.example",
+      "secondClick": "[REDACTED]"
+    },
+    {
+      "case": "Evidence export redaction toggle",
+      "includedValue": "7cb43e9d2f \u00b7 main",
+      "secondClick": "[REDACTED]"
+    },
+    {
+      "case": "FixAttemptTwo native route",
+      "destination": "CommitCheckedTwo"
+    },
+    {
+      "case": "CommitCheckedTwo native route",
+      "destination": "FixProposedTwo"
+    },
+    {
+      "case": "DeploymentTwo native route",
+      "destination": "FixDeployedTwo"
+    },
+    {
+      "case": "RequestRetestTwo native route",
+      "destination": "RetestPendingTwo"
+    },
+    {
+      "case": "ResearcherRetestTwo native route",
+      "destination": "ResearcherVerifiedTwo"
+    },
+    {
+      "case": "TimeoutGate native route",
+      "destination": "RetestPending"
+    },
+    {
+      "case": "OwnerRiskGate native route",
+      "destination": "ReportTriage"
+    },
+    {
+      "case": "RecoveryFetch native route",
+      "destination": "RecoveryLocalUnlock"
+    }
+  ],
+  "scope": "Saved-file structure, geometry, contrast, references and parsed native action traces. Not a GUI playback test, runtime security test, live input test or accessibility certification."
+}

@@ -1,0 +1,37 @@
+{
+  "evidence": "Fresh native file exports; static visual review, not app playback.",
+  "referencePalette": "V1 native file and original design-tokens.json",
+  "beforeScreens": [
+    "MyReports",
+    "ReportTriage",
+    "Queue",
+    "OwnerOverview",
+    "Program"
+  ],
+  "afterFullResolutionReviewed": [
+    "StartHere",
+    "MyReports",
+    "Queue",
+    "ReportTriage",
+    "OwnerOverview",
+    "Program",
+    "QueueCompact",
+    "MobileReport",
+    "ReportInternal",
+    "ReportEvidence",
+    "Report1366",
+    "SubmitDetails"
+  ],
+  "allViewsRendered": 342,
+  "fullResolutionExports": 22,
+  "comparisonPairs": 10,
+  "findingsResolved": [
+    "Original v1 colors restored; 32 saved native values matched.",
+    "Inter typography and 4px controls replaced rounded coffee styling.",
+    "Active retest and program areas now align their actions with the report identity.",
+    "Case details and assessment use a quiet ruled margin.",
+    "Compact wordmark fits at the 184px sidebar size.",
+    "Only the selected client row displays its selection rail; critical and low severities use the original semantic colors."
+  ],
+  "remaining": "Manual Present-mode playback, scroll gestures, keyboard focus, screen reader semantics and real inputs/services are not verified by this CLI review."
+}

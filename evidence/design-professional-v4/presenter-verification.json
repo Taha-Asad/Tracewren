@@ -1,0 +1,399 @@
+{
+  "status": "passed",
+  "method": "Real FigCraft presenter mouse clicks and scroll input over loopback control. No prototype navigation was injected between journey steps. Separate responsive studies were started explicitly.",
+  "trace": [
+    {
+      "source": "SubmitIdentity",
+      "click": "Use guest access",
+      "destination": "GuestKey",
+      "scrolled": false
+    },
+    {
+      "source": "GuestKey",
+      "click": "Create local key & continue",
+      "destination": "SubmitDetails",
+      "scrolled": false
+    },
+    {
+      "source": "SubmitDetails",
+      "click": "Review report",
+      "destination": "SubmitReview",
+      "scrolled": true
+    },
+    {
+      "screenshot": "figma/professional-v4/runtime/SubmitReview.png"
+    },
+    {
+      "source": "SubmitReview",
+      "click": "Encrypt & submit",
+      "destination": "SubmissionReceipt",
+      "scrolled": true
+    },
+    {
+      "source": "SubmissionReceipt",
+      "click": "Open my report",
+      "destination": "BackupNeeded",
+      "scrolled": false
+    },
+    {
+      "source": "BackupNeeded",
+      "click": "Back to receipt",
+      "destination": "SubmissionReceipt",
+      "scrolled": false
+    },
+    {
+      "source": "SubmissionReceipt",
+      "click": "Save .bbt-recovery.json",
+      "destination": "RecoveryDownloaded",
+      "scrolled": false
+    },
+    {
+      "source": "RecoveryDownloaded",
+      "click": "Return to saved confirmation",
+      "destination": "SubmissionReceipt",
+      "scrolled": false
+    },
+    {
+      "source": "SubmissionReceipt",
+      "click": "I saved my recovery file",
+      "destination": "SubmissionReceipt",
+      "scrolled": false
+    },
+    {
+      "source": "SubmissionReceipt",
+      "click": "Open my report",
+      "destination": "ResearcherReport",
+      "scrolled": false
+    },
+    {
+      "source": "ResearcherReport",
+      "click": "Demo: switch to defender",
+      "destination": "RoleDefenderNew",
+      "scrolled": false
+    },
+    {
+      "source": "RoleDefenderNew",
+      "click": "Continue as defender",
+      "destination": "ReportLocked",
+      "scrolled": false
+    },
+    {
+      "source": "ReportLocked",
+      "click": "Unlock report",
+      "destination": "Unlock",
+      "scrolled": false
+    },
+    {
+      "source": "Unlock",
+      "click": "Unlock locally",
+      "destination": "ReportTriage",
+      "scrolled": false
+    },
+    {
+      "screenshot": "figma/professional-v4/runtime/ReportTriage.png"
+    },
+    {
+      "source": "ReportTriage",
+      "click": "Accept report",
+      "destination": "Accept",
+      "scrolled": false
+    },
+    {
+      "source": "Accept",
+      "click": "Accept & notify",
+      "destination": "Accepted",
+      "scrolled": false
+    },
+    {
+      "source": "Accepted",
+      "click": "Propose a fix",
+      "destination": "FixCommit",
+      "scrolled": false
+    },
+    {
+      "source": "FixCommit",
+      "click": "Check commit & branch",
+      "destination": "CommitChecked",
+      "scrolled": false
+    },
+    {
+      "source": "CommitChecked",
+      "click": "Record proposal",
+      "destination": "FixProposed",
+      "scrolled": false
+    },
+    {
+      "source": "FixProposed",
+      "click": "Record deployment",
+      "destination": "Deployment",
+      "scrolled": false
+    },
+    {
+      "source": "Deployment",
+      "click": "Record deployment",
+      "destination": "FixDeployed",
+      "scrolled": false
+    },
+    {
+      "source": "FixDeployed",
+      "click": "Request retest",
+      "destination": "RequestRetest",
+      "scrolled": false
+    },
+    {
+      "source": "RequestRetest",
+      "click": "Send retest invitation",
+      "destination": "RetestPending",
+      "scrolled": false
+    },
+    {
+      "source": "RetestPending",
+      "click": "Demo: switch to researcher",
+      "destination": "RoleResearcher",
+      "scrolled": true
+    },
+    {
+      "source": "RoleResearcher",
+      "click": "Continue as researcher",
+      "destination": "ResearcherRetestPending",
+      "scrolled": false
+    },
+    {
+      "screenshot": "figma/professional-v4/runtime/ResearcherRetestPending.png"
+    },
+    {
+      "source": "ResearcherRetestPending",
+      "click": "Retest attempt 1",
+      "destination": "ResearcherRetest",
+      "scrolled": false
+    },
+    {
+      "source": "ResearcherRetest",
+      "click": "Still reproducible",
+      "destination": "RetestFailedForm",
+      "scrolled": false
+    },
+    {
+      "source": "RetestFailedForm",
+      "click": "Sign failed retest",
+      "destination": "ResearcherRetestFailed",
+      "scrolled": false
+    },
+    {
+      "source": "ResearcherRetestFailed",
+      "click": "Demo: switch to defender",
+      "destination": "RoleDefenderFailed",
+      "scrolled": true
+    },
+    {
+      "source": "RoleDefenderFailed",
+      "click": "Continue as defender",
+      "destination": "RetestFailed",
+      "scrolled": false
+    },
+    {
+      "screenshot": "figma/professional-v4/runtime/RetestFailed.png"
+    },
+    {
+      "source": "RetestFailed",
+      "click": "Propose attempt 2",
+      "destination": "FixAttemptTwo",
+      "scrolled": false
+    },
+    {
+      "source": "FixAttemptTwo",
+      "click": "Check replacement evidence",
+      "destination": "CommitCheckedTwo",
+      "scrolled": false
+    },
+    {
+      "source": "CommitCheckedTwo",
+      "click": "Record attempt 2 proposal",
+      "destination": "FixProposedTwo",
+      "scrolled": false
+    },
+    {
+      "source": "FixProposedTwo",
+      "click": "Record deployment",
+      "destination": "DeploymentTwo",
+      "scrolled": false
+    },
+    {
+      "source": "DeploymentTwo",
+      "click": "Save attempt 2 deployment",
+      "destination": "FixDeployedTwo",
+      "scrolled": false
+    },
+    {
+      "source": "FixDeployedTwo",
+      "click": "Request retest",
+      "destination": "RequestRetestTwo",
+      "scrolled": false
+    },
+    {
+      "source": "RequestRetestTwo",
+      "click": "Send attempt 2 invitation",
+      "destination": "RetestPendingTwo",
+      "scrolled": false
+    },
+    {
+      "source": "RetestPendingTwo",
+      "click": "Demo: switch to researcher",
+      "destination": "RoleResearcherTwo",
+      "scrolled": true
+    },
+    {
+      "source": "RoleResearcherTwo",
+      "click": "Continue as researcher",
+      "destination": "ResearcherPendingTwo",
+      "scrolled": false
+    },
+    {
+      "source": "ResearcherPendingTwo",
+      "click": "Retest attempt 2",
+      "destination": "ResearcherRetestTwo",
+      "scrolled": false
+    },
+    {
+      "source": "ResearcherRetestTwo",
+      "click": "Sign attempt 2 as fixed",
+      "destination": "ResearcherVerifiedTwo",
+      "scrolled": false
+    },
+    {
+      "screenshot": "figma/professional-v4/runtime/ResearcherVerifiedTwo.png"
+    },
+    {
+      "source": "ResearcherVerifiedTwo",
+      "click": "Original report",
+      "destination": "ResearcherVerifiedTwo__original",
+      "scrolled": false
+    },
+    {
+      "source": "ResearcherVerifiedTwo__original",
+      "click": "Evidence",
+      "destination": "ResearcherVerifiedTwo__evidence",
+      "scrolled": false
+    },
+    {
+      "source": "ResearcherVerifiedTwo__evidence",
+      "click": "Remediation",
+      "destination": "ResearcherVerifiedTwo",
+      "scrolled": false
+    },
+    {
+      "screenshot": "figma/professional-v4/runtime/completed-after-tab-roundtrip.png"
+    },
+    {
+      "source": "ResearcherVerifiedTwo",
+      "click": "My reports",
+      "destination": "MyReports",
+      "scrolled": false
+    },
+    {
+      "source": "MyReports",
+      "click": "Open current case",
+      "destination": "ResearcherVerifiedTwo",
+      "scrolled": false
+    },
+    {
+      "screenshot": "figma/professional-v4/runtime/Queue.png"
+    },
+    {
+      "screenshot": "figma/professional-v4/runtime/Active1366.png"
+    },
+    {
+      "screenshot": "figma/professional-v4/runtime/MobileActive.png"
+    },
+    {
+      "source": "MobileActive",
+      "click": "Original",
+      "destination": "MobileOriginal",
+      "scrolled": false
+    },
+    {
+      "source": "MobileOriginal",
+      "click": "Evidence",
+      "destination": "MobileEvidence",
+      "scrolled": false
+    },
+    {
+      "source": "MobileEvidence",
+      "click": "Case",
+      "destination": "MobileActive",
+      "scrolled": false
+    },
+    {
+      "screenshot": "figma/professional-v4/runtime/MobileOriginal.png"
+    },
+    {
+      "screenshot": "figma/professional-v4/runtime/MobileEvidence.png"
+    },
+    {
+      "screenshot": "figma/professional-v4/runtime/MobileFailedCase.png"
+    },
+    {
+      "screenshot": "figma/professional-v4/runtime/MobileCompletedTwo.png"
+    },
+    {
+      "source": "MobileReceipt",
+      "click": "Open my report",
+      "destination": "MobileBackupNeeded",
+      "scrolled": false
+    },
+    {
+      "source": "MobileBackupNeeded",
+      "click": "Return to receipt",
+      "destination": "MobileReceipt",
+      "scrolled": false
+    },
+    {
+      "source": "MobileReceipt",
+      "click": "Save recovery package",
+      "destination": "MobileRecoveryInfo",
+      "scrolled": false
+    },
+    {
+      "source": "MobileRecoveryInfo",
+      "click": "Confirm saved \u00b7 open report",
+      "destination": "MobileReport",
+      "scrolled": false
+    },
+    {
+      "source": "MobileActive",
+      "click": "Retest attempt 1",
+      "destination": "MobileRetest",
+      "scrolled": false
+    },
+    {
+      "source": "MobileRetest",
+      "click": "Still reproducible",
+      "destination": "MobileRetestFailed",
+      "scrolled": false
+    },
+    {
+      "source": "MobileRetestFailed",
+      "click": "Sign failed retest",
+      "destination": "MobileFailedRecorded",
+      "scrolled": false
+    },
+    {
+      "source": "MobileFailedRecorded",
+      "click": "Review failed attempt",
+      "destination": "MobileFailedCase",
+      "scrolled": false
+    },
+    {
+      "screenshot": "figma/professional-v4/runtime/narrow-failed-journey.png"
+    },
+    {
+      "source": "MobileRetest",
+      "click": "Sign & confirm fixed",
+      "destination": "MobileVerified",
+      "scrolled": false
+    },
+    {
+      "screenshot": "figma/professional-v4/runtime/narrow-verified-journey.png"
+    }
+  ]
+}

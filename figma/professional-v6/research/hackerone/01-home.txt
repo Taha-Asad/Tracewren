@@ -1,0 +1,520 @@
+Skip to main content
+New research: Exposure Debt is the next challenge in cybersecurity 
+Read the HackerOne Security Research Report
+User account menu
+Login
+Leaderboard
+Contacted by a hacker?
+Main navigation
+Platform
+H1 Platform
+
+Eliminates exploitable risk with continuous discovery, validation, prioritization, and remediation at AI scale.
+
+Hai
+
+Agentic AI orchestrator runs continuously across every stage.
+
+H1 Continuous Testing
+
+Pentest-grade signal across your attack surface, continuously.
+
+H1 Agentic Pentest
+
+AI agents and human experts, scaling with your attack surface.
+
+H1 Bounty
+
+Elite researchers find your most critical vulnerabilities.
+
+H1 Bounty Challenge
+
+Time-bound offensive testing by the world's top security researchers.
+
+H1 Validation
+
+Eliminates noise and confirms exploitability in your environment.
+
+H1 Remediation
+
+Source code-informed fix plans, delivered straight to engineering.
+
+H1 Code
+
+AI code security with human expert validation built in.
+
+H1 Code Security Audit
+
+Agentic analysis reasons across your full codebase to catch what other tools miss.
+
+H1 AI Red Teaming
+
+Adversarial testing for your AI systems and models.
+
+H1 Response
+
+Always-on vulnerability disclosure, from report to remediated risk.
+
+Solutions
+Use Cases
+Adversarial Exposure Validation
+AI Security, Safety & Trust
+Application Security
+Cloud Security
+Continuous Security Testing
+Continuous Vulnerability Discovery
+Crowdsourced Security
+CTEM
+Vulnerability Management
+Web3
+Industries
+Automotive & Transportation
+Crypto & Blockchain
+Financial Services
+Public Sector
+Healthcare
+Retail & E-Commerce
+Hospitality & Entertainment
+US Federal
+UK Government
+Heading
+The Future of AI
+Sub Heading
+A Security Guide
+CTA Component
+Download now
+Partners
+Partner Overview
+Technology Alliance
+Hackerone and AWS
+Find A Channel Partner
+Partner Portal
+Integration Partners
+Researchers
+HackerOne for Hackers
+Learn to Hack
+Ambassador World Cup
+Opportunities
+Leaderboard
+Researcher Community
+Resources
+Heading
+Research Report
+Sub Heading
+Why Exposure Debt is the next cybersecurity challenge.
+CTA Component
+Download the Report
+Events
+Event Calendar
+Live Hacking Events
+Ambassador World Cup
+Learn
+Blog
+Resource Center
+Customer Stories
+Vulnerability Disclosure Policy Map
+Platform Documentation
+Company
+Company Overview
+Leadership
+Careers
+Security & Trust
+Public Policy
+Newsroom
+Community Edition
+Get Started
+Not every vulnerability matters.
+Fix the ones that do.
+
+Focus on what’s real. The H1 Platform reduces risk by uncovering, 
+validating, and fixing the vulnerabilities that actually matter — fast.
+
+Get Started
+Explore the Platform
+Customer Stories
+The H1 Platform
+Continuous Threat Exposure Management (CTEM) closes the discovery-remediation gap
+
+A single connected system across discovery, validation, prioritization, and remediation, powered by Hai and an elite community of security researchers.
+
+Explore H1 Platform
+Hai
+Our agentic AI orchestrator coordinates agents across every stage, scoring and validating findings continuously and reducing prioritization decisions from hours to seconds.
+H1 Bounty
+Elite researchers find your most critical vulnerabilities, including novel attack chains and business logic flaws no automated tool reaches.
+H1 Agentic Pentest
+AI-driven pentesting that scales with your attack surface, delivering depth and speed time-boxed engagements can't match.
+H1 Continuous Testing
+Always-on agentic testing that continuously finds, validates, and proves exploitable vulnerabilities across your applications.
+H1 Remediation
+Closes the discovery-to-remediation gap with source code-informed fix plans, delivered in one click to engineering.
+H1 AI Red Teaming
+Adversarial testing for your AI systems and models, mapped to OWASP LLM Top 10, MITRE ATLAS, and NIST AI RMF.
+H1 Validation
+Eliminates noise and confirms exploitability in your environment at 95% accuracy, improving signal by 40%.
+H1 Code
+AI code security that reviews pull requests, validates exploitability, and delivers context-aware fixes into developer workflows.
+H1 Code Security Audit
+Agentic analysis catches flaws built over years of releases, and the ones AI-generated code ships too fast to catch.
+H1 Bounty Challenge
+Incentivized, time-boxed testing that rallies researchers around a specific scope or objective for fast, focused answers.
+We protect the world's top innovators.
+
+Our partnerships are rooted in trust, powered by innovation, and deliver measurable impact.
+
+Customer Story
+How Snap is pioneering AI with H1 AI Red Teaming
+Read Snap's story
+Customer Story
+Shopify reached inbox zero and accelerated validation and triage by 62% using Hai’s agentic AI capabilities.
+Read Shopify's story
+What's new at HackerOne
+Image
+Research Report
+Closing the AI Security Gap
+Download the Report
+Image
+Research Report
+HackerOne Security Research Report 2026
+Download the Report
+Image
+Blog
+Finding Fast, Fixing Slow: The Rising Exposure Debt
+Read Now
+Numbers that speak for themselves
+$4M+
+ROI
+
+per critical vulnerability before breach
+
+25%
+of findings are actionable.
+
+High signal, low noise
+
+222%
+increase
+
+in valid AI vulnerability reports over two years
+
+90%
+of customers
+
+have Hai AI agent enabled
+
+600k+
+bugs
+
+found & more discovered every day
+
+1300+
+companies
+
+trust HackerOne
+
+Real-world impact, backed by CISOs
+
+“HackerOne gives me telemetry I can build into my CTEM workflows. It’s easily digestible and integrates into the workflows I already have. I'm getting continuous security rather than continuous disruption.”
+
+Chelsea Weiss
+Director of Product Security
+
+"Hai Insight Agent, cut our validation time from 20 minutes to just 5. By replacing manual steps with clear context, we validate faster, clarify impact, and stay aligned. The attack path diagram helps us clearly communicate risk and drive action with the right teams."
+
+Connor Knabe
+Application Security Architect
+Speak with a security expert
+Ready to reduce risk continuously?
+
+Discover how HackerOne helps you uncover, validate, and eliminate real vulnerabilities before attackers do.
+
+Our team typically responds within 1 business day
+
+*
+First Name:
+*
+Last Name:
+*
+Business Email:
+*
+Company:
+*
+Job Title:
+*
+What is your security objective?
+Select...
+Identify and remediate vulnerabilities faster
+Fix security issues during development
+Scale my organization's security operations or skillsets
+Prove compliance
+Eliminate cloud misconfigurations
+Something else
+I don't work in security
+*
+Country:
+Select...
+United States
+United Kingdom
+Canada
+Albania
+Algeria
+Andorra
+Angola
+Anguilla
+Antigua and Barbuda
+Argentina
+Armenia
+Aruba
+Australia
+Austria
+Azerbaijan
+Bahamas
+Bahrain
+Bangladesh
+Barbados
+Belarus
+Belgium
+Belize
+Benin
+Bermuda
+Bhutan
+Bolivia
+Bonaire
+Bosnia and Herzegovina
+Botswana
+Bouvet Island
+Brazil
+British Indian Ocean Territory
+British Virgin Islands
+Brunei
+Bulgaria
+Burkina Faso
+Burundi
+Cambodia
+Cameroon
+Cape Verde
+Cayman Islands
+Central African
+Chad
+Chile
+China
+Clipperton Island
+Colombia
+Comoros
+Congo
+Costa Rica
+Croatia
+Cuba
+Curacao
+Cyprus
+Czech Republic
+Democratic Republic of the Congo
+Denmark
+Djibouti
+Dominica
+Dominican Republic
+Ecuador
+Egypt
+El Salvador
+Equatorial Guinea
+Eritrea
+Estonia
+Eswatini
+Ethiopia
+Falkland Islands
+Fiji
+Finland
+France
+French Guiana
+Gabon
+Gambia
+Georgia
+Germany
+Ghana
+Gibraltar
+Greece
+Greenland
+Grenada
+Guadeloupe
+Guatemala
+Guinea
+Guyana
+Haiti
+Honduras
+Hong Kong
+Hungary
+Iceland
+India
+Indonesia
+Iran
+Iraq
+Ireland
+Isle of Man
+Israel
+Italy
+Ivory Coast
+Jamaica
+Japan
+Jordan
+Kazakhstan
+Kenya
+Kosovo
+Kuwait
+Laos
+Latvia
+Lebanon
+Lesotho
+Liberia
+Libya
+Liechtenstein
+Lithuania
+Luxembourg
+Macau
+Macedonia
+Madagascar
+Malawi
+Malaysia
+Maldives
+Mali
+Malta
+Martinique
+Mauritania
+Mauritius
+Mexico
+Moldova
+Monaco
+Mongolia
+Montenegro
+Montserrat
+Morocco
+Mozambique
+Myanmar
+Namibia
+Navassa Island
+Nepal
+Netherlands
+New Zealand
+Nicaragua
+Niger
+Nigeria
+North Korea
+Norway
+Oman
+Pakistan
+Palestine
+Panama
+Papua New Guinea
+Paraguay
+Peru
+Philippines
+Poland
+Portugal
+Puerto Rico
+Qatar
+Republic of the Congo
+Romania
+Russia
+Russian Federation
+Rwanda
+Saba
+Saint Barthelemy
+Saint Kitts and Nevis
+Saint Lucia
+Saint Martin
+Saint Pierre and Miquelon
+Saint Vincent and the Grenadines
+Samoa
+San Marino
+Sao Tome and Principe
+Saudi Arabia
+Senegal
+Serbia
+Seychelles
+Sierra Leone
+Singapore
+Sint Eustatius
+Sint Maarten
+Slovakia
+Slovenia
+Somalia
+South Africa
+South Georgia and the South Sandwich Islands
+South Korea
+South Sandwich Islands
+South Sudan
+Spain
+Sri Lanka
+Sudan
+Suriname
+Sweden
+Switzerland
+Syria
+Taiwan
+Tanzania
+Thailand
+Timor-Leste
+Togo
+Trinidad and Tobago
+Tunisia
+Turkey
+Turks and Caicos Islands
+Uganda
+Ukraine
+United Arab Emirates
+Uruguay
+Vatican City
+Venezuela
+Vietnam
+Virgin Islands
+Yemen
+Zambia
+Zimbabwe
+We will handle your contact details in line with our Privacy Policy. If you prefer not to receive marketing emails from us, you can opt-out of all marketing communications or customize your preferences here!
+Submit
+Image
+Security Researchers
+Help build a safer internet
+
+Put your skills to work, earn rewards, and help eliminate vulnerabilities:
+
+Work alongside a trusted global community
+Contribute to real-world security outcomes
+Develop your skills through live events and hands-on experience
+Join the community
+Explore the leaderboard
+Contacted by a hacker?
+Menu 1
+Company
+Leadership
+Careers
+Partners
+Newsroom
+Contact Us
+Menu 2
+Knowledge Center
+Application Security
+Penetration Testing
+AI Red Teaming
+Hacking
+Cybersecurity Attacks
+CTEM
+Menu 3
+Resources
+Blog
+Documentation
+Leaderboard
+Partner Portal
+Resources
+Facebook
+X
+Linkedin
+Instagram
+Menu Bottom
+Cookie Preferences
+Policies
+Terms
+Privacy
+Security
+Trust
+Right Reserved
+©2026 HackerOne All rights reserved.

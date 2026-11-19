@@ -1,0 +1,65 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" version="21.0.0" type="device">
+  <diagram id="monorepo_scaffolding" name="Monorepo Directory Scaffolding Architecture">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1500" pageHeight="800" background="#000000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title_2" value="&lt;h1 style=&quot;color:#ffffff;font-family:Helvetica;margin:0;font-weight:normal;&quot;&gt;BugBountyTrack — Monorepo Directory Scaffolding Architecture&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="100" y="30" width="1300" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="root_box" value="&lt;b&gt;Monorepo Root (PRO-01)&lt;/b&gt;&lt;br/&gt;package.json | npm workspaces | .github/ | .gitignore | SESSION_LOG.md" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=2.2;fontColor=#ffffff;fontSize=13;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="450" y="90" width="600" height="60" as="geometry" />
+        </mxCell>
+        <!-- apps/api Box -->
+        <mxCell id="api_box" value="&lt;b&gt;apps/api (NestJS Enterprise Backend)&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.5;strokeDashed=1;fontColor=#ffffff;align=center;verticalAlign=top;spacingTop=10;fontSize=13;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="100" y="200" width="620" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="api_mod1" value="&lt;b&gt;src/main.ts &amp;amp; src/app.module.ts&lt;/b&gt;&lt;br/&gt;Global validation pipe, CORS, Swagger OpenAPI" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.2;fontColor=#ffffff;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="130" y="250" width="560" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="api_mod2" value="&lt;b&gt;src/auth/ (Authentication Subsystem)&lt;/b&gt;&lt;br/&gt;auth.controller.ts | auth.service.ts | Argon2id Hashing" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.2;fontColor=#ffffff;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="130" y="320" width="560" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="api_mod3" value="&lt;b&gt;src/auth/guards/ &amp;amp; src/auth/decorators/&lt;/b&gt;&lt;br/&gt;SessionAuthGuard | RolesGuard | ProgramRolesGuard | @CurrentUser()" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.2;fontColor=#ffffff;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="130" y="390" width="560" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="api_mod4" value="&lt;b&gt;src/database/ (Prisma ORM Gateway)&lt;/b&gt;&lt;br/&gt;prisma.service.ts | prisma-exception.filter.ts" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.2;fontColor=#ffffff;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="130" y="460" width="560" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="api_mod5" value="&lt;b&gt;prisma/schema.prisma &amp;amp; migrations/&lt;/b&gt;&lt;br/&gt;15 Relational Tables | bbt_core schema | Neon PostgreSQL Connection" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.2;fontColor=#ffffff;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="130" y="530" width="560" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="api_mod6" value="&lt;b&gt;test/ &amp;amp; src/**/*.spec.ts (Vitest Testing Harness)&lt;/b&gt;&lt;br/&gt;94 Passed Unit &amp;amp; Integration Tests across 9 suites" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.2;fontColor=#ffffff;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="130" y="600" width="560" height="50" as="geometry" />
+        </mxCell>
+        <!-- apps/web Box -->
+        <mxCell id="web_box" value="&lt;b&gt;apps/web (Next.js 15 Client Portal)&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.5;strokeDashed=1;fontColor=#ffffff;align=center;verticalAlign=top;spacingTop=10;fontSize=13;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="780" y="200" width="620" height="520" as="geometry" />
+        </mxCell>
+        <mxCell id="web_mod1" value="&lt;b&gt;src/app/ (Next.js 15 App Router)&lt;/b&gt;&lt;br/&gt;layout.tsx | page.tsx | globals.css" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.2;fontColor=#ffffff;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="810" y="250" width="560" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="web_mod2" value="&lt;b&gt;src/app/auth/ &amp;amp; src/app/login/&lt;/b&gt;&lt;br/&gt;Multi-Tenant Registration &amp;amp; Login Views" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.2;fontColor=#ffffff;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="810" y="320" width="560" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="web_mod3" value="&lt;b&gt;src/app/workspace/ &amp;amp; src/app/onboarding/&lt;/b&gt;&lt;br/&gt;Triage Workbench, Key Desk &amp;amp; Multi-Step Setup Wizard" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.2;fontColor=#ffffff;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="810" y="390" width="560" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="web_mod4" value="&lt;b&gt;src/components/ (Design Tokens &amp;amp; Ergonomic UI)&lt;/b&gt;&lt;br/&gt;Pure SVG Icons, Accessible Dialogs, Responsive Tables" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.2;fontColor=#ffffff;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="810" y="460" width="560" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="web_mod5" value="&lt;b&gt;src/lib/ (Client-Side Cryptographic Runtime)&lt;/b&gt;&lt;br/&gt;Curve25519 WebCrypto Engine | Key Wrapping" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.2;fontColor=#ffffff;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="810" y="530" width="560" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="web_mod6" value="&lt;b&gt;public/ &amp;amp; Static Media Assets&lt;/b&gt;&lt;br/&gt;Authentic Figma UI Assets &amp;amp; Vector Brand Marks" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.2;fontColor=#ffffff;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="810" y="600" width="560" height="50" as="geometry" />
+        </mxCell>
+        <mxCell id="e_root_api" value="" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=1.5;" edge="1" source="root_box" target="api_box" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_root_web" value="" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=1.5;" edge="1" source="root_box" target="web_box" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

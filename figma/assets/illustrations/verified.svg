@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="280" height="190" viewBox="0 0 280 190">
+<title>Verified / conceptual research illustration</title>
+<g><title>Soft ink field</title><ellipse cx="137.0" cy="96.0" rx="113.0" ry="79.0" fill="#E0EFEB" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Contour / research field</title><path d="M 23 125 C 11 81 44 28 85 20 M 240 43 C 273 73 269 129 235 156" fill="none" stroke="#718984" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Evidence / retained rear sheet</title><rect x="67" y="27" width="103" height="132" rx="5" fill="#C2D8CC" stroke="#242E30" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Verified report / paper</title><rect x="78" y="18" width="105" height="137" rx="6" fill="#FFFEF9" stroke="#242E30" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Verified report / title</title><rect x="90" y="34" width="55.650000000000006" height="5" rx="1.5" fill="#17645D" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Verified report / evidence line 0</title><rect x="90" y="52" width="71.4" height="2" rx="1.5" fill="#718984" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Verified report / evidence line 1</title><rect x="90" y="62" width="82.95" height="2" rx="1.5" fill="#718984" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Verified report / evidence line 2</title><rect x="90" y="72" width="58.800000000000004" height="2" rx="1.5" fill="#718984" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Report / folded corner</title><path d="M 157 18 L 183 44 L 157 44 Z" fill="#E0EFEB" stroke="#242E30" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Verification / recorded result</title><rect x="92" y="94" width="62" height="5" rx="1.5" fill="#17645D" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Verification / supporting record</title><rect x="92" y="110" width="55" height="2" rx="1.5" fill="#718984" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Verification / supporting record</title><rect x="92" y="121" width="40" height="2" rx="1.5" fill="#718984" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Verification / stamp surround</title><ellipse cx="191.5" cy="123.5" rx="40.5" ry="40.5" fill="#FFFEF9" stroke="#242E30" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Verified / shield</title><path d="M 191 86 C 200 94 213 96 225 98 L 225 122 C 225 142 207 156 191 164 C 176 156 158 142 158 122 L 158 98 C 170 96 182 93 191 86 Z" fill="#17645D" stroke="#242E30" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Verified / check</title><path d="M 174 123 L 186 135 L 208 111" fill="none" stroke="#FFFEF9" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Evidence / record connector</title><path d="M 46 72 L 46 142 C 46 154 56 162 68 162 L 114 162" fill="none" stroke="#718984" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Evidence / original record</title><ellipse cx="46.0" cy="69.0" rx="6.0" ry="6.0" fill="#FFFEF9" stroke="#17645D" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+<g><title>Evidence / attestation record</title><ellipse cx="116.0" cy="162.0" rx="6.0" ry="6.0" fill="#17645D" stroke="none" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></g>
+</svg>

@@ -1,0 +1,35 @@
+{
+  "scope": "Visual-reading refinement",
+  "savedFile": "All disclosure layouts and return routes verified in reading-verification.json; all tab/lifecycle routes and geometry verified separately.",
+  "presenterExercised": [
+    "Score disclosure open and closed",
+    "Case drawer and audience disclosure",
+    "Matching file inspectors and file-integrity disclosure",
+    "Request disclosure open and closed",
+    "Stage filter and matching case",
+    "Activity tab and contextual drawer"
+  ],
+  "presenterLimit": "The final automation run was interrupted when the FigCraft window closed. Prior-attempt and final narrow-screen playback were not completed in that run; their rendered layouts and native destinations were checked.",
+  "captures": [
+    "01-report-visual-path.png",
+    "02-score-accordion-open.png",
+    "03-case-drawer.png",
+    "04-drawer-accordion-open.png",
+    "05-evidence-inspectors.png",
+    "06-evidence-modal.png",
+    "07-modal-accordion-open.png",
+    "08-request-details-collapsed.png",
+    "09-request-details-expanded.png",
+    "10-queue-graph.png",
+    "11-exact-stage-filter.png",
+    "12-active-attempt.png",
+    "13-connected-case-timeline.png",
+    "14-completed-attempt-path.png",
+    "15-prior-attempt-expanded.png",
+    "16-narrow-evidence-modal.png",
+    "Active1366.png",
+    "MobileActive.png",
+    "MobileCompletedTwo.png",
+    "MobileOriginal.png"
+  ]
+}

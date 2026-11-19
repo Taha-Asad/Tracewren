@@ -1,0 +1,1643 @@
+{
+  "captured": "2026-11-07T16:40:29.783Z",
+  "viewport": {
+    "width": 1440,
+    "height": 1000
+  },
+  "pages": [
+    {
+      "name": "01-home",
+      "url": "https://www.hackerone.com/",
+      "title": "HackerOne | Leader in Continuous Threat Exposure Management | Security for AI",
+      "buttons": [
+        "\n                \n                    \n                \n            ",
+        "\n            \n        \n        \n      \n            \n        \n      \n    ",
+        "",
+        "",
+        "\n      \n        \n      \n    ",
+        "\n      \n        \n      \n    ",
+        "Submit",
+        "\n            \n        \n        \n      \n            \n        \n      \n    "
+      ],
+      "links": [
+        {
+          "text": "Skip to main content",
+          "url": "https://www.hackerone.com/#main-content"
+        },
+        {
+          "text": "Read the HackerOne Security Research Report",
+          "url": "https://www.hackerone.com/report/hacker-powered-security"
+        },
+        {
+          "text": "Login",
+          "url": "https://hackerone.com/users/sign_in"
+        },
+        {
+          "text": "Leaderboard",
+          "url": "https://hackerone.com/leaderboard"
+        },
+        {
+          "text": "Contacted by a hacker?",
+          "url": "https://www.hackerone.com/contact/security-incident"
+        },
+        {
+          "text": "Platform",
+          "url": "https://www.hackerone.com/platform"
+        },
+        {
+          "text": "H1 Platform\n\nEliminates exploitable risk with continuous discovery, validation, prioritization, and remediation at AI scale.",
+          "url": "https://www.hackerone.com/platform"
+        },
+        {
+          "text": "Hai\n\nAgentic AI orchestrator runs continuously across every stage.",
+          "url": "https://www.hackerone.com/platform/hai"
+        },
+        {
+          "text": "H1 Continuous Testing\n\nPentest-grade signal across your attack surface, continuously.",
+          "url": "https://www.hackerone.com/product/h1-continuous-testing"
+        },
+        {
+          "text": "H1 Agentic Pentest\n\nAI agents and human experts, scaling with your attack surface.",
+          "url": "https://www.hackerone.com/product/pentest"
+        },
+        {
+          "text": "H1 Bounty\n\nElite researchers find your most critical vulnerabilities.",
+          "url": "https://www.hackerone.com/product/bug-bounty-platform"
+        },
+        {
+          "text": "H1 Bounty Challenge\n\nTime-bound offensive testing by the world's top security researchers.",
+          "url": "https://www.hackerone.com/product/challenge"
+        },
+        {
+          "text": "H1 Validation\n\nEliminates noise and confirms exploitability in your environment.",
+          "url": "https://www.hackerone.com/product/h1-validation"
+        },
+        {
+          "text": "H1 Remediation\n\nSource code-informed fix plans, delivered straight to engineering.",
+          "url": "https://www.hackerone.com/product/h1-remediation"
+        },
+        {
+          "text": "H1 Code\n\nAI code security with human expert validation built in.",
+          "url": "https://www.hackerone.com/product/code"
+        },
+        {
+          "text": "H1 Code Security Audit\n\nAgentic analysis reasons across your full codebase to catch what other tools miss.",
+          "url": "https://www.hackerone.com/product/code-security-audit"
+        },
+        {
+          "text": "H1 AI Red Teaming\n\nAdversarial testing for your AI systems and models.",
+          "url": "https://www.hackerone.com/product/ai-red-teaming"
+        },
+        {
+          "text": "H1 Response\n\nAlways-on vulnerability disclosure, from report to remediated risk.",
+          "url": "https://www.hackerone.com/product/response-vulnerability-disclosure-program"
+        },
+        {
+          "text": "Solutions",
+          "url": "https://www.hackerone.com/solutions"
+        },
+        {
+          "text": "Adversarial Exposure Validation",
+          "url": "https://www.hackerone.com/solutions/adversarial-exposure-validation"
+        },
+        {
+          "text": "AI Security, Safety & Trust",
+          "url": "https://www.hackerone.com/solutions/ai"
+        },
+        {
+          "text": "Application Security",
+          "url": "https://www.hackerone.com/solutions/application-security-testing-software"
+        },
+        {
+          "text": "Cloud Security",
+          "url": "https://www.hackerone.com/solutions/cloud-security-solution"
+        },
+        {
+          "text": "Continuous Security Testing",
+          "url": "https://www.hackerone.com/solutions/continuous-security-testing"
+        },
+        {
+          "text": "Continuous Vulnerability Discovery",
+          "url": "https://www.hackerone.com/solutions/continuous-vulnerability-testing"
+        },
+        {
+          "text": "Crowdsourced Security",
+          "url": "https://www.hackerone.com/solutions/crowdsourced-security"
+        },
+        {
+          "text": "CTEM",
+          "url": "https://www.hackerone.com/solutions/continuous-threat-exposure-management"
+        },
+        {
+          "text": "Vulnerability Management",
+          "url": "https://www.hackerone.com/solutions/vulnerability-management-system"
+        },
+        {
+          "text": "Web3",
+          "url": "https://www.hackerone.com/solutions/web3"
+        },
+        {
+          "text": "Automotive & Transportation",
+          "url": "https://www.hackerone.com/solutions/automotive-and-transportation"
+        },
+        {
+          "text": "Crypto & Blockchain",
+          "url": "https://www.hackerone.com/solutions/crypto-blockchain"
+        },
+        {
+          "text": "Financial Services",
+          "url": "https://www.hackerone.com/solutions/financial-services"
+        },
+        {
+          "text": "Public Sector",
+          "url": "https://www.hackerone.com/solutions/public-sector"
+        },
+        {
+          "text": "Healthcare",
+          "url": "https://www.hackerone.com/solutions/healthcare"
+        },
+        {
+          "text": "Retail & E-Commerce",
+          "url": "https://www.hackerone.com/solutions/retail-ecommerce"
+        },
+        {
+          "text": "Hospitality & Entertainment",
+          "url": "https://www.hackerone.com/solutions/retail-hospitality-and-entertainment"
+        },
+        {
+          "text": "US Federal",
+          "url": "https://www.hackerone.com/solutions/united-states-federal"
+        },
+        {
+          "text": "UK Government",
+          "url": "https://www.hackerone.com/solutions/uk-government"
+        },
+        {
+          "text": "Download now",
+          "url": "https://www.hackerone.com/report/future-of-ai"
+        },
+        {
+          "text": "Partners",
+          "url": "https://www.hackerone.com/partners"
+        },
+        {
+          "text": "Partner Overview",
+          "url": "https://www.hackerone.com/partners"
+        },
+        {
+          "text": "Technology Alliance",
+          "url": "https://www.hackerone.com/partners/technology-alliance-program"
+        },
+        {
+          "text": "Hackerone and AWS",
+          "url": "https://www.hackerone.com/partners/aws"
+        },
+        {
+          "text": "Find A Channel Partner",
+          "url": "https://www.hackerone.com/partners/find-a-partner"
+        },
+        {
+          "text": "Partner Portal",
+          "url": "https://www.hackerone-partners.com/"
+        },
+        {
+          "text": "Integration Partners",
+          "url": "https://www.hackerone.com/partners/integrations"
+        },
+        {
+          "text": "Researchers",
+          "url": "https://www.hackerone.com/hackers"
+        },
+        {
+          "text": "HackerOne for Hackers",
+          "url": "https://www.hackerone.com/hackers"
+        },
+        {
+          "text": "Learn to Hack",
+          "url": "https://www.hackerone.com/hackers/how-to-start-hacking"
+        },
+        {
+          "text": "Ambassador World Cup",
+          "url": "https://www.hackerone.com/hackers/ambassador-world-cup"
+        },
+        {
+          "text": "Opportunities",
+          "url": "https://hackerone.com/opportunities/all"
+        },
+        {
+          "text": "Leaderboard",
+          "url": "https://hackerone.com/leaderboard"
+        },
+        {
+          "text": "Researcher Community",
+          "url": "https://www.hackerone.com/platform/community"
+        },
+        {
+          "text": "Resources",
+          "url": "https://www.hackerone.com/#"
+        },
+        {
+          "text": "Download the Report",
+          "url": "https://www.hackerone.com/report/hacker-powered-security"
+        },
+        {
+          "text": "Event Calendar",
+          "url": "https://www.hackerone.com/events"
+        },
+        {
+          "text": "Live Hacking Events",
+          "url": "https://h1.community/events/#/list"
+        },
+        {
+          "text": "Ambassador World Cup",
+          "url": "https://www.hackerone.com/hackers/ambassador-world-cup"
+        },
+        {
+          "text": "Blog",
+          "url": "https://www.hackerone.com/blog"
+        },
+        {
+          "text": "Resource Center",
+          "url": "https://www.hackerone.com/resources"
+        },
+        {
+          "text": "Customer Stories",
+          "url": "https://www.hackerone.com/resources/customer-story"
+        },
+        {
+          "text": "Vulnerability Disclosure Policy Map",
+          "url": "https://www.hackerone.com/vulnerability-disclosure-policy-map"
+        },
+        {
+          "text": "Platform Documentation",
+          "url": "https://docs.hackerone.com/en/"
+        },
+        {
+          "text": "Company",
+          "url": "https://www.hackerone.com/company"
+        },
+        {
+          "text": "Company Overview",
+          "url": "https://www.hackerone.com/company"
+        },
+        {
+          "text": "Leadership",
+          "url": "https://www.hackerone.com/company/leadership"
+        },
+        {
+          "text": "Careers",
+          "url": "https://www.hackerone.com/careers"
+        },
+        {
+          "text": "Security & Trust",
+          "url": "https://www.hackerone.com/trust"
+        },
+        {
+          "text": "Public Policy",
+          "url": "https://www.hackerone.com/company/public-policy"
+        },
+        {
+          "text": "Newsroom",
+          "url": "https://www.hackerone.com/company/newsroom"
+        },
+        {
+          "text": "Community Edition",
+          "url": "https://www.hackerone.com/company/open-source-community"
+        },
+        {
+          "text": "Get Started",
+          "url": "https://www.hackerone.com/contact"
+        },
+        {
+          "text": "HackerOne",
+          "url": "https://www.hackerone.com/"
+        },
+        {
+          "text": " Platform ",
+          "url": "https://www.hackerone.com/#"
+        },
+        {
+          "text": "\n                    \n                        \n                            \n            \n  \n\n  \n      \n            \n  \n    \n      \n      \n        \n        \n      \n    \n  \n\n      \n  \n\n      \n                        \n\n                        \n\n                            H1 Platform\n\n                            Eliminates exploitable risk with continuous discovery, validation, prioritization, and remediation at AI scale.\n                        \n                    \n                ",
+          "url": "https://www.hackerone.com/platform"
+        },
+        {
+          "text": "\n                    \n                        \n                            \n            \n  \n\n  \n      \n            \n  \n    \n      \n      \n    \n    \n      \n      \n      \n      \n      \n      \n    \n    \n      \n      \n    \n    \n      \n        \n      \n    \n    \n      \n      \n      \n      \n      \n      \n    \n    \n      \n      \n      \n      \n      \n      \n      \n      \n    \n    \n      \n      \n      \n      \n      \n      \n      \n      \n    \n    \n      \n      \n      \n      \n      \n      \n      \n      \n      \n    \n    \n      \n      \n    \n    \n      \n      \n      \n      \n      \n    \n  \n  \n    \n    \n    \n    \n    \n      \n    \n    \n    \n      \n    \n    \n    \n    \n      \n        \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n        \n        \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n        \n        \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n        \n        \n          \n          \n          \n          \n          \n          \n          \n          \n        \n        \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n        \n        \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n        \n        \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n        \n        \n        \n        \n        \n          \n          \n          \n          \n          \n        \n      \n    \n  \n  \n    \n      \n      \n    \n    \n      \n      \n    \n  \n\n      \n  \n\n      \n                        \n\n                        \n\n                            Hai\n\n                            Agentic AI orchestrator runs continuously across every stage.\n                        \n                    \n                ",
+          "url": "https://www.hackerone.com/platform/hai"
+        },
+        {
+          "text": "\n                    \n                        \n                            \n            \n  \n\n  \n      \n            \n  \n  \n  \n  \n  \n  \n  \n  \n\n      \n  \n\n      \n                        \n\n                        \n\n                            H1 Continuous Testing\n\n                            Pentest-grade signal across your attack surface, continuously.\n                        \n                    \n                ",
+          "url": "https://www.hackerone.com/product/h1-continuous-testing"
+        },
+        {
+          "text": "\n                    \n                        \n                            \n            \n  \n\n  \n      \n            \n  \n  \n  \n  \n\n      \n  \n\n      \n                        \n\n                        \n\n                            H1 Agentic Pentest\n\n                            AI agents and human experts, scaling with your attack surface.\n                        \n                    \n                ",
+          "url": "https://www.hackerone.com/product/pentest"
+        },
+        {
+          "text": "\n                    \n                        \n                            \n            \n  \n\n  \n      \n            \n  \n  \n  \n  \n  \n\n      \n  \n\n      \n                        \n\n                        \n\n                            H1 Bounty\n\n                            Elite researchers find your most critical vulnerabilities.\n                        \n                    \n                ",
+          "url": "https://www.hackerone.com/product/bug-bounty-platform"
+        },
+        {
+          "text": "\n                    \n                        \n                            \n            \n  \n\n  \n      \n            \n  \n  \n  \n  \n  \n  \n  \n  \n\n      \n  \n\n      \n                        \n\n                        \n\n                            H1 Bounty Challenge\n\n                            Time-bound offensive testing by the world's top security researchers.\n                        \n                    \n                ",
+          "url": "https://www.hackerone.com/product/challenge"
+        },
+        {
+          "text": "\n                    \n                        \n                            \n            \n  \n\n  \n      \n            \n  \n  \n  \n  \n  \n\n      \n  \n\n      \n                        \n\n                        \n\n                            H1 Validation\n\n                            Eliminates noise and confirms exploitability in your environment.\n                        \n                    \n                ",
+          "url": "https://www.hackerone.com/product/h1-validation"
+        },
+        {
+          "text": "\n                    \n                        \n                            \n            \n  \n\n  \n      \n            \n  \n  \n  \n  \n  \n\n      \n  \n\n      \n                        \n\n                        \n\n                            H1 Remediation\n\n                            Source code-informed fix plans, delivered straight to engineering.\n                        \n                    \n                ",
+          "url": "https://www.hackerone.com/product/h1-remediation"
+        },
+        {
+          "text": "\n                    \n                        \n                            \n            \n  \n\n  \n      \n            \n  \n  \n  \n  \n  \n  \n\n      \n  \n\n      \n                        \n\n                        \n\n                            H1 Code\n\n                            AI code security with human expert validation built in.\n                        \n                    \n                ",
+          "url": "https://www.hackerone.com/product/code"
+        },
+        {
+          "text": "\n                    \n                        \n                            \n            \n  \n\n  \n      \n            \n  \n  \n  \n  \n  \n  \n\n      \n  \n\n      \n                        \n\n                        \n\n                            H1 Code Security Audit\n\n                            Agentic analysis reasons across your full codebase to catch what other tools miss.\n                        \n                    \n                ",
+          "url": "https://www.hackerone.com/product/code-security-audit"
+        },
+        {
+          "text": "\n                    \n                        \n                            \n            \n  \n\n  \n      \n            \n  \n  \n  \n  \n  \n\n      \n  \n\n      \n                        \n\n                        \n\n                            H1 AI Red Teaming\n\n                            Adversarial testing for your AI systems and models.\n                        \n                    \n                ",
+          "url": "https://www.hackerone.com/product/ai-red-teaming"
+        },
+        {
+          "text": "\n                    \n                        \n                            \n            \n  \n\n  \n      \n            \n  \n    \n      \n    \n  \n  \n  \n  \n  \n    \n    \n    \n  \n\n      \n  \n\n      \n                        \n\n                        \n\n                            H1 Response\n\n                            Always-on vulnerability disclosure, from report to remediated risk.\n                        \n                    \n                ",
+          "url": "https://www.hackerone.com/product/response-vulnerability-disclosure-program"
+        },
+        {
+          "text": " Solutions ",
+          "url": "https://www.hackerone.com/#"
+        },
+        {
+          "text": "Adversarial Exposure Validation",
+          "url": "https://www.hackerone.com/solutions/adversarial-exposure-validation"
+        },
+        {
+          "text": "AI Security, Safety & Trust",
+          "url": "https://www.hackerone.com/solutions/ai"
+        },
+        {
+          "text": "Application Security",
+          "url": "https://www.hackerone.com/solutions/application-security-testing-software"
+        },
+        {
+          "text": "Cloud Security",
+          "url": "https://www.hackerone.com/solutions/cloud-security-solution"
+        },
+        {
+          "text": "Continuous Security Testing",
+          "url": "https://www.hackerone.com/solutions/continuous-security-testing"
+        },
+        {
+          "text": "Continuous Vulnerability Discovery",
+          "url": "https://www.hackerone.com/solutions/continuous-vulnerability-testing"
+        },
+        {
+          "text": "Crowdsourced Security",
+          "url": "https://www.hackerone.com/solutions/crowdsourced-security"
+        },
+        {
+          "text": "CTEM",
+          "url": "https://www.hackerone.com/solutions/continuous-threat-exposure-management"
+        },
+        {
+          "text": "Vulnerability Management",
+          "url": "https://www.hackerone.com/solutions/vulnerability-management-system"
+        },
+        {
+          "text": "Web3",
+          "url": "https://www.hackerone.com/solutions/web3"
+        },
+        {
+          "text": "Automotive & Transportation",
+          "url": "https://www.hackerone.com/solutions/automotive-and-transportation"
+        },
+        {
+          "text": "Crypto & Blockchain",
+          "url": "https://www.hackerone.com/solutions/crypto-blockchain"
+        },
+        {
+          "text": "Financial Services",
+          "url": "https://www.hackerone.com/solutions/financial-services"
+        },
+        {
+          "text": "Public Sector",
+          "url": "https://www.hackerone.com/solutions/public-sector"
+        },
+        {
+          "text": "Healthcare",
+          "url": "https://www.hackerone.com/solutions/healthcare"
+        },
+        {
+          "text": "Retail & E-Commerce",
+          "url": "https://www.hackerone.com/solutions/retail-ecommerce"
+        },
+        {
+          "text": "Hospitality & Entertainment",
+          "url": "https://www.hackerone.com/solutions/retail-hospitality-and-entertainment"
+        },
+        {
+          "text": "US Federal",
+          "url": "https://www.hackerone.com/solutions/united-states-federal"
+        },
+        {
+          "text": "UK Government",
+          "url": "https://www.hackerone.com/solutions/uk-government"
+        },
+        {
+          "text": "Download now",
+          "url": "https://www.hackerone.com/report/future-of-ai"
+        },
+        {
+          "text": " Partners ",
+          "url": "https://www.hackerone.com/#"
+        },
+        {
+          "text": "Partner Overview",
+          "url": "https://www.hackerone.com/partners"
+        },
+        {
+          "text": "Technology Alliance",
+          "url": "https://www.hackerone.com/partners/technology-alliance-program"
+        },
+        {
+          "text": "Hackerone and AWS",
+          "url": "https://www.hackerone.com/partners/aws"
+        },
+        {
+          "text": "Find  A Channel Partner",
+          "url": "https://www.hackerone.com/partners/find-a-partner"
+        },
+        {
+          "text": "Partner Portal",
+          "url": "https://www.hackerone-partners.com/"
+        },
+        {
+          "text": "Integration Partners",
+          "url": "https://www.hackerone.com/partners/integrations"
+        },
+        {
+          "text": " Researchers ",
+          "url": "https://www.hackerone.com/#"
+        },
+        {
+          "text": "HackerOne for Hackers",
+          "url": "https://www.hackerone.com/hackers"
+        },
+        {
+          "text": "Learn to Hack",
+          "url": "https://www.hackerone.com/hackers/how-to-start-hacking"
+        },
+        {
+          "text": "Ambassador World Cup",
+          "url": "https://www.hackerone.com/hackers/ambassador-world-cup"
+        },
+        {
+          "text": "Opportunities",
+          "url": "https://hackerone.com/opportunities/all"
+        },
+        {
+          "text": "Leaderboard",
+          "url": "https://hackerone.com/leaderboard"
+        }
+      ]
+    },
+    {
+      "name": "02-platform",
+      "url": "https://www.hackerone.com/platform",
+      "title": "Platform Overview | HackerOne",
+      "buttons": [
+        "\n                \n                    \n                \n            ",
+        "\n            \n        \n        \n      \n            \n        \n      \n    ",
+        "Submit",
+        "\n            \n        \n        \n      \n            \n        \n      \n    "
+      ],
+      "links": [
+        {
+          "text": "Skip to main content",
+          "url": "https://www.hackerone.com/platform#main-content"
+        },
+        {
+          "text": "Read the HackerOne Security Research Report",
+          "url": "https://www.hackerone.com/report/hacker-powered-security"
+        },
+        {
+          "text": "Login",
+          "url": "https://hackerone.com/users/sign_in"
+        },
+        {
+          "text": "Leaderboard",
+          "url": "https://hackerone.com/leaderboard"
+        },
+        {
+          "text": "Contacted by a hacker?",
+          "url": "https://www.hackerone.com/contact/security-incident"
+        },
+        {
+          "text": "Platform",
+          "url": "https://www.hackerone.com/platform"
+        },
+        {
+          "text": "H1 Platform\n\nEliminates exploitable risk with continuous discovery, validation, prioritization, and remediation at AI scale.",
+          "url": "https://www.hackerone.com/platform"
+        },
+        {
+          "text": "Hai\n\nAgentic AI orchestrator runs continuously across every stage.",
+          "url": "https://www.hackerone.com/platform/hai"
+        },
+        {
+          "text": "H1 Continuous Testing\n\nPentest-grade signal across your attack surface, continuously.",
+          "url": "https://www.hackerone.com/product/h1-continuous-testing"
+        },
+        {
+          "text": "H1 Agentic Pentest\n\nAI agents and human experts, scaling with your attack surface.",
+          "url": "https://www.hackerone.com/product/pentest"
+        },
+        {
+          "text": "H1 Bounty\n\nElite researchers find your most critical vulnerabilities.",
+          "url": "https://www.hackerone.com/product/bug-bounty-platform"
+        },
+        {
+          "text": "H1 Bounty Challenge\n\nTime-bound offensive testing by the world's top security researchers.",
+          "url": "https://www.hackerone.com/product/challenge"
+        },
+        {
+          "text": "H1 Validation\n\nEliminates noise and confirms exploitability in your environment.",
+          "url": "https://www.hackerone.com/product/h1-validation"
+        },
+        {
+          "text": "H1 Remediation\n\nSource code-informed fix plans, delivered straight to engineering.",
+          "url": "https://www.hackerone.com/product/h1-remediation"
+        },
+        {
+          "text": "H1 Code\n\nAI code security with human expert validation built in.",
+          "url": "https://www.hackerone.com/product/code"
+        },
+        {
+          "text": "H1 Code Security Audit\n\nAgentic analysis reasons across your full codebase to catch what other tools miss.",
+          "url": "https://www.hackerone.com/product/code-security-audit"
+        },
+        {
+          "text": "H1 AI Red Teaming\n\nAdversarial testing for your AI systems and models.",
+          "url": "https://www.hackerone.com/product/ai-red-teaming"
+        },
+        {
+          "text": "H1 Response\n\nAlways-on vulnerability disclosure, from report to remediated risk.",
+          "url": "https://www.hackerone.com/product/response-vulnerability-disclosure-program"
+        },
+        {
+          "text": "Solutions",
+          "url": "https://www.hackerone.com/solutions"
+        },
+        {
+          "text": "Adversarial Exposure Validation",
+          "url": "https://www.hackerone.com/solutions/adversarial-exposure-validation"
+        },
+        {
+          "text": "AI Security, Safety & Trust",
+          "url": "https://www.hackerone.com/solutions/ai"
+        },
+        {
+          "text": "Application Security",
+          "url": "https://www.hackerone.com/solutions/application-security-testing-software"
+        },
+        {
+          "text": "Cloud Security",
+          "url": "https://www.hackerone.com/solutions/cloud-security-solution"
+        },
+        {
+          "text": "Continuous Security Testing",
+          "url": "https://www.hackerone.com/solutions/continuous-security-testing"
+        },
+        {
+          "text": "Continuous Vulnerability Discovery",
+          "url": "https://www.hackerone.com/solutions/continuous-vulnerability-testing"
+        },
+        {
+          "text": "Crowdsourced Security",
+          "url": "https://www.hackerone.com/solutions/crowdsourced-security"
+        },
+        {
+          "text": "CTEM",
+          "url": "https://www.hackerone.com/solutions/continuous-threat-exposure-management"
+        },
+        {
+          "text": "Vulnerability Management",
+          "url": "https://www.hackerone.com/solutions/vulnerability-management-system"
+        },
+        {
+          "text": "Web3",
+          "url": "https://www.hackerone.com/solutions/web3"
+        },
+        {
+          "text": "Automotive & Transportation",
+          "url": "https://www.hackerone.com/solutions/automotive-and-transportation"
+        },
+        {
+          "text": "Crypto & Blockchain",
+          "url": "https://www.hackerone.com/solutions/crypto-blockchain"
+        },
+        {
+          "text": "Financial Services",
+          "url": "https://www.hackerone.com/solutions/financial-services"
+        },
+        {
+          "text": "Public Sector",
+          "url": "https://www.hackerone.com/solutions/public-sector"
+        },
+        {
+          "text": "Healthcare",
+          "url": "https://www.hackerone.com/solutions/healthcare"
+        },
+        {
+          "text": "Retail & E-Commerce",
+          "url": "https://www.hackerone.com/solutions/retail-ecommerce"
+        },
+        {
+          "text": "Hospitality & Entertainment",
+          "url": "https://www.hackerone.com/solutions/retail-hospitality-and-entertainment"
+        },
+        {
+          "text": "US Federal",
+          "url": "https://www.hackerone.com/solutions/united-states-federal"
+        },
+        {
+          "text": "UK Government",
+          "url": "https://www.hackerone.com/solutions/uk-government"
+        },
+        {
+          "text": "Download now",
+          "url": "https://www.hackerone.com/report/future-of-ai"
+        },
+        {
+          "text": "Partners",
+          "url": "https://www.hackerone.com/partners"
+        },
+        {
+          "text": "Partner Overview",
+          "url": "https://www.hackerone.com/partners"
+        },
+        {
+          "text": "Technology Alliance",
+          "url": "https://www.hackerone.com/partners/technology-alliance-program"
+        },
+        {
+          "text": "Hackerone and AWS",
+          "url": "https://www.hackerone.com/partners/aws"
+        },
+        {
+          "text": "Find A Channel Partner",
+          "url": "https://www.hackerone.com/partners/find-a-partner"
+        },
+        {
+          "text": "Partner Portal",
+          "url": "https://www.hackerone-partners.com/"
+        },
+        {
+          "text": "Integration Partners",
+          "url": "https://www.hackerone.com/partners/integrations"
+        },
+        {
+          "text": "Researchers",
+          "url": "https://www.hackerone.com/hackers"
+        },
+        {
+          "text": "HackerOne for Hackers",
+          "url": "https://www.hackerone.com/hackers"
+        },
+        {
+          "text": "Learn to Hack",
+          "url": "https://www.hackerone.com/hackers/how-to-start-hacking"
+        },
+        {
+          "text": "Ambassador World Cup",
+          "url": "https://www.hackerone.com/hackers/ambassador-world-cup"
+        },
+        {
+          "text": "Opportunities",
+          "url": "https://hackerone.com/opportunities/all"
+        },
+        {
+          "text": "Leaderboard",
+          "url": "https://hackerone.com/leaderboard"
+        },
+        {
+          "text": "Researcher Community",
+          "url": "https://www.hackerone.com/platform/community"
+        },
+        {
+          "text": "Resources",
+          "url": "https://www.hackerone.com/platform#"
+        },
+        {
+          "text": "Download the Report",
+          "url": "https://www.hackerone.com/report/hacker-powered-security"
+        },
+        {
+          "text": "Event Calendar",
+          "url": "https://www.hackerone.com/events"
+        },
+        {
+          "text": "Live Hacking Events",
+          "url": "https://h1.community/events/#/list"
+        },
+        {
+          "text": "Ambassador World Cup",
+          "url": "https://www.hackerone.com/hackers/ambassador-world-cup"
+        },
+        {
+          "text": "Blog",
+          "url": "https://www.hackerone.com/blog"
+        },
+        {
+          "text": "Resource Center",
+          "url": "https://www.hackerone.com/resources"
+        },
+        {
+          "text": "Customer Stories",
+          "url": "https://www.hackerone.com/resources/customer-story"
+        },
+        {
+          "text": "Vulnerability Disclosure Policy Map",
+          "url": "https://www.hackerone.com/vulnerability-disclosure-policy-map"
+        },
+        {
+          "text": "Platform Documentation",
+          "url": "https://docs.hackerone.com/en/"
+        },
+        {
+          "text": "Company",
+          "url": "https://www.hackerone.com/company"
+        },
+        {
+          "text": "Company Overview",
+          "url": "https://www.hackerone.com/company"
+        },
+        {
+          "text": "Leadership",
+          "url": "https://www.hackerone.com/company/leadership"
+        },
+        {
+          "text": "Careers",
+          "url": "https://www.hackerone.com/careers"
+        },
+        {
+          "text": "Security & Trust",
+          "url": "https://www.hackerone.com/trust"
+        },
+        {
+          "text": "Public Policy",
+          "url": "https://www.hackerone.com/company/public-policy"
+        },
+        {
+          "text": "Newsroom",
+          "url": "https://www.hackerone.com/company/newsroom"
+        },
+        {
+          "text": "Community Edition",
+          "url": "https://www.hackerone.com/company/open-source-community"
+        },
+        {
+          "text": "Get Started",
+          "url": "https://www.hackerone.com/contact"
+        },
+        {
+          "text": "HackerOne",
+          "url": "https://www.hackerone.com/"
+        },
+        {
+          "text": " Platform ",
+          "url": "https://www.hackerone.com/platform#"
+        },
+        {
+          "text": "\n                    \n                        \n                            \n            \n  \n\n  \n      \n            \n  \n    \n      \n      \n        \n        \n      \n    \n  \n\n      \n  \n\n      \n                        \n\n                        \n\n                            H1 Platform\n\n                            Eliminates exploitable risk with continuous discovery, validation, prioritization, and remediation at AI scale.\n                        \n                    \n                ",
+          "url": "https://www.hackerone.com/platform"
+        },
+        {
+          "text": "\n                    \n                        \n                            \n            \n  \n\n  \n      \n            \n  \n    \n      \n      \n    \n    \n      \n      \n      \n      \n      \n      \n    \n    \n      \n      \n    \n    \n      \n        \n      \n    \n    \n      \n      \n      \n      \n      \n      \n    \n    \n      \n      \n      \n      \n      \n      \n      \n      \n    \n    \n      \n      \n      \n      \n      \n      \n      \n      \n    \n    \n      \n      \n      \n      \n      \n      \n      \n      \n      \n    \n    \n      \n      \n    \n    \n      \n      \n      \n      \n      \n    \n  \n  \n    \n    \n    \n    \n    \n      \n    \n    \n    \n      \n    \n    \n    \n    \n      \n        \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n        \n        \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n        \n        \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n        \n        \n          \n          \n          \n          \n          \n          \n          \n          \n        \n        \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n        \n        \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n        \n        \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n        \n        \n        \n        \n        \n          \n          \n          \n          \n          \n        \n      \n    \n  \n  \n    \n      \n      \n    \n    \n      \n      \n    \n  \n\n      \n  \n\n      \n                        \n\n                        \n\n                            Hai\n\n                            Agentic AI orchestrator runs continuously across every stage.\n                        \n                    \n                ",
+          "url": "https://www.hackerone.com/platform/hai"
+        },
+        {
+          "text": "\n                    \n                        \n                            \n            \n  \n\n  \n      \n            \n  \n  \n  \n  \n  \n  \n  \n  \n\n      \n  \n\n      \n                        \n\n                        \n\n                            H1 Continuous Testing\n\n                            Pentest-grade signal across your attack surface, continuously.\n                        \n                    \n                ",
+          "url": "https://www.hackerone.com/product/h1-continuous-testing"
+        },
+        {
+          "text": "\n                    \n                        \n                            \n            \n  \n\n  \n      \n            \n  \n  \n  \n  \n\n      \n  \n\n      \n                        \n\n                        \n\n                            H1 Agentic Pentest\n\n                            AI agents and human experts, scaling with your attack surface.\n                        \n                    \n                ",
+          "url": "https://www.hackerone.com/product/pentest"
+        },
+        {
+          "text": "\n                    \n                        \n                            \n            \n  \n\n  \n      \n            \n  \n  \n  \n  \n  \n\n      \n  \n\n      \n                        \n\n                        \n\n                            H1 Bounty\n\n                            Elite researchers find your most critical vulnerabilities.\n                        \n                    \n                ",
+          "url": "https://www.hackerone.com/product/bug-bounty-platform"
+        },
+        {
+          "text": "\n                    \n                        \n                            \n            \n  \n\n  \n      \n            \n  \n  \n  \n  \n  \n  \n  \n  \n\n      \n  \n\n      \n                        \n\n                        \n\n                            H1 Bounty Challenge\n\n                            Time-bound offensive testing by the world's top security researchers.\n                        \n                    \n                ",
+          "url": "https://www.hackerone.com/product/challenge"
+        },
+        {
+          "text": "\n                    \n                        \n                            \n            \n  \n\n  \n      \n            \n  \n  \n  \n  \n  \n\n      \n  \n\n      \n                        \n\n                        \n\n                            H1 Validation\n\n                            Eliminates noise and confirms exploitability in your environment.\n                        \n                    \n                ",
+          "url": "https://www.hackerone.com/product/h1-validation"
+        },
+        {
+          "text": "\n                    \n                        \n                            \n            \n  \n\n  \n      \n            \n  \n  \n  \n  \n  \n\n      \n  \n\n      \n                        \n\n                        \n\n                            H1 Remediation\n\n                            Source code-informed fix plans, delivered straight to engineering.\n                        \n                    \n                ",
+          "url": "https://www.hackerone.com/product/h1-remediation"
+        },
+        {
+          "text": "\n                    \n                        \n                            \n            \n  \n\n  \n      \n            \n  \n  \n  \n  \n  \n  \n\n      \n  \n\n      \n                        \n\n                        \n\n                            H1 Code\n\n                            AI code security with human expert validation built in.\n                        \n                    \n                ",
+          "url": "https://www.hackerone.com/product/code"
+        },
+        {
+          "text": "\n                    \n                        \n                            \n            \n  \n\n  \n      \n            \n  \n  \n  \n  \n  \n  \n\n      \n  \n\n      \n                        \n\n                        \n\n                            H1 Code Security Audit\n\n                            Agentic analysis reasons across your full codebase to catch what other tools miss.\n                        \n                    \n                ",
+          "url": "https://www.hackerone.com/product/code-security-audit"
+        },
+        {
+          "text": "\n                    \n                        \n                            \n            \n  \n\n  \n      \n            \n  \n  \n  \n  \n  \n\n      \n  \n\n      \n                        \n\n                        \n\n                            H1 AI Red Teaming\n\n                            Adversarial testing for your AI systems and models.\n                        \n                    \n                ",
+          "url": "https://www.hackerone.com/product/ai-red-teaming"
+        },
+        {
+          "text": "\n                    \n                        \n                            \n            \n  \n\n  \n      \n            \n  \n    \n      \n    \n  \n  \n  \n  \n  \n    \n    \n    \n  \n\n      \n  \n\n      \n                        \n\n                        \n\n                            H1 Response\n\n                            Always-on vulnerability disclosure, from report to remediated risk.\n                        \n                    \n                ",
+          "url": "https://www.hackerone.com/product/response-vulnerability-disclosure-program"
+        },
+        {
+          "text": " Solutions ",
+          "url": "https://www.hackerone.com/platform#"
+        },
+        {
+          "text": "Adversarial Exposure Validation",
+          "url": "https://www.hackerone.com/solutions/adversarial-exposure-validation"
+        },
+        {
+          "text": "AI Security, Safety & Trust",
+          "url": "https://www.hackerone.com/solutions/ai"
+        },
+        {
+          "text": "Application Security",
+          "url": "https://www.hackerone.com/solutions/application-security-testing-software"
+        },
+        {
+          "text": "Cloud Security",
+          "url": "https://www.hackerone.com/solutions/cloud-security-solution"
+        },
+        {
+          "text": "Continuous Security Testing",
+          "url": "https://www.hackerone.com/solutions/continuous-security-testing"
+        },
+        {
+          "text": "Continuous Vulnerability Discovery",
+          "url": "https://www.hackerone.com/solutions/continuous-vulnerability-testing"
+        },
+        {
+          "text": "Crowdsourced Security",
+          "url": "https://www.hackerone.com/solutions/crowdsourced-security"
+        },
+        {
+          "text": "CTEM",
+          "url": "https://www.hackerone.com/solutions/continuous-threat-exposure-management"
+        },
+        {
+          "text": "Vulnerability Management",
+          "url": "https://www.hackerone.com/solutions/vulnerability-management-system"
+        },
+        {
+          "text": "Web3",
+          "url": "https://www.hackerone.com/solutions/web3"
+        },
+        {
+          "text": "Automotive & Transportation",
+          "url": "https://www.hackerone.com/solutions/automotive-and-transportation"
+        },
+        {
+          "text": "Crypto & Blockchain",
+          "url": "https://www.hackerone.com/solutions/crypto-blockchain"
+        },
+        {
+          "text": "Financial Services",
+          "url": "https://www.hackerone.com/solutions/financial-services"
+        },
+        {
+          "text": "Public Sector",
+          "url": "https://www.hackerone.com/solutions/public-sector"
+        },
+        {
+          "text": "Healthcare",
+          "url": "https://www.hackerone.com/solutions/healthcare"
+        },
+        {
+          "text": "Retail & E-Commerce",
+          "url": "https://www.hackerone.com/solutions/retail-ecommerce"
+        },
+        {
+          "text": "Hospitality & Entertainment",
+          "url": "https://www.hackerone.com/solutions/retail-hospitality-and-entertainment"
+        },
+        {
+          "text": "US Federal",
+          "url": "https://www.hackerone.com/solutions/united-states-federal"
+        },
+        {
+          "text": "UK Government",
+          "url": "https://www.hackerone.com/solutions/uk-government"
+        },
+        {
+          "text": "Download now",
+          "url": "https://www.hackerone.com/report/future-of-ai"
+        },
+        {
+          "text": " Partners ",
+          "url": "https://www.hackerone.com/platform#"
+        },
+        {
+          "text": "Partner Overview",
+          "url": "https://www.hackerone.com/partners"
+        },
+        {
+          "text": "Technology Alliance",
+          "url": "https://www.hackerone.com/partners/technology-alliance-program"
+        },
+        {
+          "text": "Hackerone and AWS",
+          "url": "https://www.hackerone.com/partners/aws"
+        },
+        {
+          "text": "Find  A Channel Partner",
+          "url": "https://www.hackerone.com/partners/find-a-partner"
+        },
+        {
+          "text": "Partner Portal",
+          "url": "https://www.hackerone-partners.com/"
+        },
+        {
+          "text": "Integration Partners",
+          "url": "https://www.hackerone.com/partners/integrations"
+        },
+        {
+          "text": " Researchers ",
+          "url": "https://www.hackerone.com/platform#"
+        },
+        {
+          "text": "HackerOne for Hackers",
+          "url": "https://www.hackerone.com/hackers"
+        },
+        {
+          "text": "Learn to Hack",
+          "url": "https://www.hackerone.com/hackers/how-to-start-hacking"
+        },
+        {
+          "text": "Ambassador World Cup",
+          "url": "https://www.hackerone.com/hackers/ambassador-world-cup"
+        },
+        {
+          "text": "Opportunities",
+          "url": "https://hackerone.com/opportunities/all"
+        },
+        {
+          "text": "Leaderboard",
+          "url": "https://hackerone.com/leaderboard"
+        }
+      ]
+    },
+    {
+      "name": "03-researchers",
+      "url": "https://www.hackerone.com/hackers/how-to-start-hacking",
+      "title": "Start Hacking & Join the Largest Hacker Community | HackerOne",
+      "buttons": [
+        "\n                \n                    \n                \n            ",
+        "\n      How do I get started?\n    ",
+        "\n      I have found a vulnerability, now what?\n    ",
+        "\n      When do I submit a security vulnerability?\n    ",
+        "\n      How do I write a good report?\n    ",
+        "\n      What tools can I use?\n    ",
+        "\n      What happens when I submit a report?\n    ",
+        "\n      How do I share back with the community?\n    ",
+        "\n      What is Hacktivity?\n    "
+      ],
+      "links": [
+        {
+          "text": "Skip to main content",
+          "url": "https://www.hackerone.com/hackers/how-to-start-hacking#main-content"
+        },
+        {
+          "text": "Read the HackerOne Security Research Report",
+          "url": "https://www.hackerone.com/report/hacker-powered-security"
+        },
+        {
+          "text": "Login",
+          "url": "https://hackerone.com/users/sign_in"
+        },
+        {
+          "text": "Leaderboard",
+          "url": "https://hackerone.com/leaderboard"
+        },
+        {
+          "text": "Contacted by a hacker?",
+          "url": "https://www.hackerone.com/contact/security-incident"
+        },
+        {
+          "text": "Platform",
+          "url": "https://www.hackerone.com/platform"
+        },
+        {
+          "text": "H1 Platform\n\nEliminates exploitable risk with continuous discovery, validation, prioritization, and remediation at AI scale.",
+          "url": "https://www.hackerone.com/platform"
+        },
+        {
+          "text": "Hai\n\nAgentic AI orchestrator runs continuously across every stage.",
+          "url": "https://www.hackerone.com/platform/hai"
+        },
+        {
+          "text": "H1 Continuous Testing\n\nPentest-grade signal across your attack surface, continuously.",
+          "url": "https://www.hackerone.com/product/h1-continuous-testing"
+        },
+        {
+          "text": "H1 Agentic Pentest\n\nAI agents and human experts, scaling with your attack surface.",
+          "url": "https://www.hackerone.com/product/pentest"
+        },
+        {
+          "text": "H1 Bounty\n\nElite researchers find your most critical vulnerabilities.",
+          "url": "https://www.hackerone.com/product/bug-bounty-platform"
+        },
+        {
+          "text": "H1 Bounty Challenge\n\nTime-bound offensive testing by the world's top security researchers.",
+          "url": "https://www.hackerone.com/product/challenge"
+        },
+        {
+          "text": "H1 Validation\n\nEliminates noise and confirms exploitability in your environment.",
+          "url": "https://www.hackerone.com/product/h1-validation"
+        },
+        {
+          "text": "H1 Remediation\n\nSource code-informed fix plans, delivered straight to engineering.",
+          "url": "https://www.hackerone.com/product/h1-remediation"
+        },
+        {
+          "text": "H1 Code\n\nAI code security with human expert validation built in.",
+          "url": "https://www.hackerone.com/product/code"
+        },
+        {
+          "text": "H1 Code Security Audit\n\nAgentic analysis reasons across your full codebase to catch what other tools miss.",
+          "url": "https://www.hackerone.com/product/code-security-audit"
+        },
+        {
+          "text": "H1 AI Red Teaming\n\nAdversarial testing for your AI systems and models.",
+          "url": "https://www.hackerone.com/product/ai-red-teaming"
+        },
+        {
+          "text": "H1 Response\n\nAlways-on vulnerability disclosure, from report to remediated risk.",
+          "url": "https://www.hackerone.com/product/response-vulnerability-disclosure-program"
+        },
+        {
+          "text": "Solutions",
+          "url": "https://www.hackerone.com/solutions"
+        },
+        {
+          "text": "Adversarial Exposure Validation",
+          "url": "https://www.hackerone.com/solutions/adversarial-exposure-validation"
+        },
+        {
+          "text": "AI Security, Safety & Trust",
+          "url": "https://www.hackerone.com/solutions/ai"
+        },
+        {
+          "text": "Application Security",
+          "url": "https://www.hackerone.com/solutions/application-security-testing-software"
+        },
+        {
+          "text": "Cloud Security",
+          "url": "https://www.hackerone.com/solutions/cloud-security-solution"
+        },
+        {
+          "text": "Continuous Security Testing",
+          "url": "https://www.hackerone.com/solutions/continuous-security-testing"
+        },
+        {
+          "text": "Continuous Vulnerability Discovery",
+          "url": "https://www.hackerone.com/solutions/continuous-vulnerability-testing"
+        },
+        {
+          "text": "Crowdsourced Security",
+          "url": "https://www.hackerone.com/solutions/crowdsourced-security"
+        },
+        {
+          "text": "CTEM",
+          "url": "https://www.hackerone.com/solutions/continuous-threat-exposure-management"
+        },
+        {
+          "text": "Vulnerability Management",
+          "url": "https://www.hackerone.com/solutions/vulnerability-management-system"
+        },
+        {
+          "text": "Web3",
+          "url": "https://www.hackerone.com/solutions/web3"
+        },
+        {
+          "text": "Automotive & Transportation",
+          "url": "https://www.hackerone.com/solutions/automotive-and-transportation"
+        },
+        {
+          "text": "Crypto & Blockchain",
+          "url": "https://www.hackerone.com/solutions/crypto-blockchain"
+        },
+        {
+          "text": "Financial Services",
+          "url": "https://www.hackerone.com/solutions/financial-services"
+        },
+        {
+          "text": "Public Sector",
+          "url": "https://www.hackerone.com/solutions/public-sector"
+        },
+        {
+          "text": "Healthcare",
+          "url": "https://www.hackerone.com/solutions/healthcare"
+        },
+        {
+          "text": "Retail & E-Commerce",
+          "url": "https://www.hackerone.com/solutions/retail-ecommerce"
+        },
+        {
+          "text": "Hospitality & Entertainment",
+          "url": "https://www.hackerone.com/solutions/retail-hospitality-and-entertainment"
+        },
+        {
+          "text": "US Federal",
+          "url": "https://www.hackerone.com/solutions/united-states-federal"
+        },
+        {
+          "text": "UK Government",
+          "url": "https://www.hackerone.com/solutions/uk-government"
+        },
+        {
+          "text": "Download now",
+          "url": "https://www.hackerone.com/report/future-of-ai"
+        },
+        {
+          "text": "Partners",
+          "url": "https://www.hackerone.com/partners"
+        },
+        {
+          "text": "Partner Overview",
+          "url": "https://www.hackerone.com/partners"
+        },
+        {
+          "text": "Technology Alliance",
+          "url": "https://www.hackerone.com/partners/technology-alliance-program"
+        },
+        {
+          "text": "Hackerone and AWS",
+          "url": "https://www.hackerone.com/partners/aws"
+        },
+        {
+          "text": "Find A Channel Partner",
+          "url": "https://www.hackerone.com/partners/find-a-partner"
+        },
+        {
+          "text": "Partner Portal",
+          "url": "https://www.hackerone-partners.com/"
+        },
+        {
+          "text": "Integration Partners",
+          "url": "https://www.hackerone.com/partners/integrations"
+        },
+        {
+          "text": "Researchers",
+          "url": "https://www.hackerone.com/hackers"
+        },
+        {
+          "text": "HackerOne for Hackers",
+          "url": "https://www.hackerone.com/hackers"
+        },
+        {
+          "text": "Learn to Hack",
+          "url": "https://www.hackerone.com/hackers/how-to-start-hacking"
+        },
+        {
+          "text": "Ambassador World Cup",
+          "url": "https://www.hackerone.com/hackers/ambassador-world-cup"
+        },
+        {
+          "text": "Opportunities",
+          "url": "https://hackerone.com/opportunities/all"
+        },
+        {
+          "text": "Leaderboard",
+          "url": "https://hackerone.com/leaderboard"
+        },
+        {
+          "text": "Researcher Community",
+          "url": "https://www.hackerone.com/platform/community"
+        },
+        {
+          "text": "Resources",
+          "url": "https://www.hackerone.com/hackers/how-to-start-hacking#"
+        },
+        {
+          "text": "Download the Report",
+          "url": "https://www.hackerone.com/report/hacker-powered-security"
+        },
+        {
+          "text": "Event Calendar",
+          "url": "https://www.hackerone.com/events"
+        },
+        {
+          "text": "Live Hacking Events",
+          "url": "https://h1.community/events/#/list"
+        },
+        {
+          "text": "Ambassador World Cup",
+          "url": "https://www.hackerone.com/hackers/ambassador-world-cup"
+        },
+        {
+          "text": "Blog",
+          "url": "https://www.hackerone.com/blog"
+        },
+        {
+          "text": "Resource Center",
+          "url": "https://www.hackerone.com/resources"
+        },
+        {
+          "text": "Customer Stories",
+          "url": "https://www.hackerone.com/resources/customer-story"
+        },
+        {
+          "text": "Vulnerability Disclosure Policy Map",
+          "url": "https://www.hackerone.com/vulnerability-disclosure-policy-map"
+        },
+        {
+          "text": "Platform Documentation",
+          "url": "https://docs.hackerone.com/en/"
+        },
+        {
+          "text": "Company",
+          "url": "https://www.hackerone.com/company"
+        },
+        {
+          "text": "Company Overview",
+          "url": "https://www.hackerone.com/company"
+        },
+        {
+          "text": "Leadership",
+          "url": "https://www.hackerone.com/company/leadership"
+        },
+        {
+          "text": "Careers",
+          "url": "https://www.hackerone.com/careers"
+        },
+        {
+          "text": "Security & Trust",
+          "url": "https://www.hackerone.com/trust"
+        },
+        {
+          "text": "Public Policy",
+          "url": "https://www.hackerone.com/company/public-policy"
+        },
+        {
+          "text": "Newsroom",
+          "url": "https://www.hackerone.com/company/newsroom"
+        },
+        {
+          "text": "Community Edition",
+          "url": "https://www.hackerone.com/company/open-source-community"
+        },
+        {
+          "text": "Get Started",
+          "url": "https://www.hackerone.com/contact"
+        },
+        {
+          "text": "HackerOne",
+          "url": "https://www.hackerone.com/"
+        },
+        {
+          "text": " Platform ",
+          "url": "https://www.hackerone.com/hackers/how-to-start-hacking#"
+        },
+        {
+          "text": "\n                    \n                        \n                            \n            \n  \n\n  \n      \n            \n  \n    \n      \n      \n        \n        \n      \n    \n  \n\n      \n  \n\n      \n                        \n\n                        \n\n                            H1 Platform\n\n                            Eliminates exploitable risk with continuous discovery, validation, prioritization, and remediation at AI scale.\n                        \n                    \n                ",
+          "url": "https://www.hackerone.com/platform"
+        },
+        {
+          "text": "\n                    \n                        \n                            \n            \n  \n\n  \n      \n            \n  \n    \n      \n      \n    \n    \n      \n      \n      \n      \n      \n      \n    \n    \n      \n      \n    \n    \n      \n        \n      \n    \n    \n      \n      \n      \n      \n      \n      \n    \n    \n      \n      \n      \n      \n      \n      \n      \n      \n    \n    \n      \n      \n      \n      \n      \n      \n      \n      \n    \n    \n      \n      \n      \n      \n      \n      \n      \n      \n      \n    \n    \n      \n      \n    \n    \n      \n      \n      \n      \n      \n    \n  \n  \n    \n    \n    \n    \n    \n      \n    \n    \n    \n      \n    \n    \n    \n    \n      \n        \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n        \n        \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n        \n        \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n        \n        \n          \n          \n          \n          \n          \n          \n          \n          \n        \n        \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n        \n        \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n        \n        \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n          \n        \n        \n        \n        \n        \n          \n          \n          \n          \n          \n        \n      \n    \n  \n  \n    \n      \n      \n    \n    \n      \n      \n    \n  \n\n      \n  \n\n      \n                        \n\n                        \n\n                            Hai\n\n                            Agentic AI orchestrator runs continuously across every stage.\n                        \n                    \n                ",
+          "url": "https://www.hackerone.com/platform/hai"
+        },
+        {
+          "text": "\n                    \n                        \n                            \n            \n  \n\n  \n      \n            \n  \n  \n  \n  \n  \n  \n  \n  \n\n      \n  \n\n      \n                        \n\n                        \n\n                            H1 Continuous Testing\n\n                            Pentest-grade signal across your attack surface, continuously.\n                        \n                    \n                ",
+          "url": "https://www.hackerone.com/product/h1-continuous-testing"
+        },
+        {
+          "text": "\n                    \n                        \n                            \n            \n  \n\n  \n      \n            \n  \n  \n  \n  \n\n      \n  \n\n      \n                        \n\n                        \n\n                            H1 Agentic Pentest\n\n                            AI agents and human experts, scaling with your attack surface.\n                        \n                    \n                ",
+          "url": "https://www.hackerone.com/product/pentest"
+        },
+        {
+          "text": "\n                    \n                        \n                            \n            \n  \n\n  \n      \n            \n  \n  \n  \n  \n  \n\n      \n  \n\n      \n                        \n\n                        \n\n                            H1 Bounty\n\n                            Elite researchers find your most critical vulnerabilities.\n                        \n                    \n                ",
+          "url": "https://www.hackerone.com/product/bug-bounty-platform"
+        },
+        {
+          "text": "\n                    \n                        \n                            \n            \n  \n\n  \n      \n            \n  \n  \n  \n  \n  \n  \n  \n  \n\n      \n  \n\n      \n                        \n\n                        \n\n                            H1 Bounty Challenge\n\n                            Time-bound offensive testing by the world's top security researchers.\n                        \n                    \n                ",
+          "url": "https://www.hackerone.com/product/challenge"
+        },
+        {
+          "text": "\n                    \n                        \n                            \n            \n  \n\n  \n      \n            \n  \n  \n  \n  \n  \n\n      \n  \n\n      \n                        \n\n                        \n\n                            H1 Validation\n\n                            Eliminates noise and confirms exploitability in your environment.\n                        \n                    \n                ",
+          "url": "https://www.hackerone.com/product/h1-validation"
+        },
+        {
+          "text": "\n                    \n                        \n                            \n            \n  \n\n  \n      \n            \n  \n  \n  \n  \n  \n\n      \n  \n\n      \n                        \n\n                        \n\n                            H1 Remediation\n\n                            Source code-informed fix plans, delivered straight to engineering.\n                        \n                    \n                ",
+          "url": "https://www.hackerone.com/product/h1-remediation"
+        },
+        {
+          "text": "\n                    \n                        \n                            \n            \n  \n\n  \n      \n            \n  \n  \n  \n  \n  \n  \n\n      \n  \n\n      \n                        \n\n                        \n\n                            H1 Code\n\n                            AI code security with human expert validation built in.\n                        \n                    \n                ",
+          "url": "https://www.hackerone.com/product/code"
+        },
+        {
+          "text": "\n                    \n                        \n                            \n            \n  \n\n  \n      \n            \n  \n  \n  \n  \n  \n  \n\n      \n  \n\n      \n                        \n\n                        \n\n                            H1 Code Security Audit\n\n                            Agentic analysis reasons across your full codebase to catch what other tools miss.\n                        \n                    \n                ",
+          "url": "https://www.hackerone.com/product/code-security-audit"
+        },
+        {
+          "text": "\n                    \n                        \n                            \n            \n  \n\n  \n      \n            \n  \n  \n  \n  \n  \n\n      \n  \n\n      \n                        \n\n                        \n\n                            H1 AI Red Teaming\n\n                            Adversarial testing for your AI systems and models.\n                        \n                    \n                ",
+          "url": "https://www.hackerone.com/product/ai-red-teaming"
+        },
+        {
+          "text": "\n                    \n                        \n                            \n            \n  \n\n  \n      \n            \n  \n    \n      \n    \n  \n  \n  \n  \n  \n    \n    \n    \n  \n\n      \n  \n\n      \n                        \n\n                        \n\n                            H1 Response\n\n                            Always-on vulnerability disclosure, from report to remediated risk.\n                        \n                    \n                ",
+          "url": "https://www.hackerone.com/product/response-vulnerability-disclosure-program"
+        },
+        {
+          "text": " Solutions ",
+          "url": "https://www.hackerone.com/hackers/how-to-start-hacking#"
+        },
+        {
+          "text": "Adversarial Exposure Validation",
+          "url": "https://www.hackerone.com/solutions/adversarial-exposure-validation"
+        },
+        {
+          "text": "AI Security, Safety & Trust",
+          "url": "https://www.hackerone.com/solutions/ai"
+        },
+        {
+          "text": "Application Security",
+          "url": "https://www.hackerone.com/solutions/application-security-testing-software"
+        },
+        {
+          "text": "Cloud Security",
+          "url": "https://www.hackerone.com/solutions/cloud-security-solution"
+        },
+        {
+          "text": "Continuous Security Testing",
+          "url": "https://www.hackerone.com/solutions/continuous-security-testing"
+        },
+        {
+          "text": "Continuous Vulnerability Discovery",
+          "url": "https://www.hackerone.com/solutions/continuous-vulnerability-testing"
+        },
+        {
+          "text": "Crowdsourced Security",
+          "url": "https://www.hackerone.com/solutions/crowdsourced-security"
+        },
+        {
+          "text": "CTEM",
+          "url": "https://www.hackerone.com/solutions/continuous-threat-exposure-management"
+        },
+        {
+          "text": "Vulnerability Management",
+          "url": "https://www.hackerone.com/solutions/vulnerability-management-system"
+        },
+        {
+          "text": "Web3",
+          "url": "https://www.hackerone.com/solutions/web3"
+        },
+        {
+          "text": "Automotive & Transportation",
+          "url": "https://www.hackerone.com/solutions/automotive-and-transportation"
+        },
+        {
+          "text": "Crypto & Blockchain",
+          "url": "https://www.hackerone.com/solutions/crypto-blockchain"
+        },
+        {
+          "text": "Financial Services",
+          "url": "https://www.hackerone.com/solutions/financial-services"
+        },
+        {
+          "text": "Public Sector",
+          "url": "https://www.hackerone.com/solutions/public-sector"
+        },
+        {
+          "text": "Healthcare",
+          "url": "https://www.hackerone.com/solutions/healthcare"
+        },
+        {
+          "text": "Retail & E-Commerce",
+          "url": "https://www.hackerone.com/solutions/retail-ecommerce"
+        },
+        {
+          "text": "Hospitality & Entertainment",
+          "url": "https://www.hackerone.com/solutions/retail-hospitality-and-entertainment"
+        },
+        {
+          "text": "US Federal",
+          "url": "https://www.hackerone.com/solutions/united-states-federal"
+        },
+        {
+          "text": "UK Government",
+          "url": "https://www.hackerone.com/solutions/uk-government"
+        },
+        {
+          "text": "Download now",
+          "url": "https://www.hackerone.com/report/future-of-ai"
+        },
+        {
+          "text": " Partners ",
+          "url": "https://www.hackerone.com/hackers/how-to-start-hacking#"
+        },
+        {
+          "text": "Partner Overview",
+          "url": "https://www.hackerone.com/partners"
+        },
+        {
+          "text": "Technology Alliance",
+          "url": "https://www.hackerone.com/partners/technology-alliance-program"
+        },
+        {
+          "text": "Hackerone and AWS",
+          "url": "https://www.hackerone.com/partners/aws"
+        },
+        {
+          "text": "Find  A Channel Partner",
+          "url": "https://www.hackerone.com/partners/find-a-partner"
+        },
+        {
+          "text": "Partner Portal",
+          "url": "https://www.hackerone-partners.com/"
+        },
+        {
+          "text": "Integration Partners",
+          "url": "https://www.hackerone.com/partners/integrations"
+        },
+        {
+          "text": " Researchers ",
+          "url": "https://www.hackerone.com/hackers/how-to-start-hacking#"
+        },
+        {
+          "text": "HackerOne for Hackers",
+          "url": "https://www.hackerone.com/hackers"
+        },
+        {
+          "text": "Learn to Hack",
+          "url": "https://www.hackerone.com/hackers/how-to-start-hacking"
+        },
+        {
+          "text": "Ambassador World Cup",
+          "url": "https://www.hackerone.com/hackers/ambassador-world-cup"
+        },
+        {
+          "text": "Opportunities",
+          "url": "https://hackerone.com/opportunities/all"
+        },
+        {
+          "text": "Leaderboard",
+          "url": "https://hackerone.com/leaderboard"
+        }
+      ]
+    },
+    {
+      "name": "04-contact",
+      "url": "https://www.hackerone.com/contact",
+      "title": "Speak with a security expert | HackerOne",
+      "buttons": [
+        "Submit"
+      ],
+      "links": [
+        {
+          "text": "Skip to main content",
+          "url": "https://www.hackerone.com/contact#main-content"
+        },
+        {
+          "text": "HackerOne",
+          "url": "https://www.hackerone.com/"
+        },
+        {
+          "text": "Privacy Policy",
+          "url": "https://www.hackerone.com/privacy"
+        },
+        {
+          "text": "here",
+          "url": "https://ma.hacker.one/SubscriptionManagement.html"
+        },
+        {
+          "text": "Contact us",
+          "url": "https://www.hackerone.com/contact#top"
+        },
+        {
+          "text": "Submit a vulnerability",
+          "url": "https://hackerone.com/directory/programs"
+        },
+        {
+          "text": "Learn more",
+          "url": "https://docs.hackerone.com/en/"
+        },
+        {
+          "text": "Contacted by a hacker?",
+          "url": "https://www.hackerone.com/contact/security-incident"
+        },
+        {
+          "text": "Leadership",
+          "url": "https://www.hackerone.com/company/leadership"
+        },
+        {
+          "text": "Careers",
+          "url": "https://www.hackerone.com/careers"
+        },
+        {
+          "text": "Partners",
+          "url": "https://www.hackerone.com/partners"
+        },
+        {
+          "text": "Newsroom",
+          "url": "https://www.hackerone.com/company/newsroom"
+        },
+        {
+          "text": "Contact Us",
+          "url": "https://www.hackerone.com/contact"
+        },
+        {
+          "text": "Application Security",
+          "url": "https://www.hackerone.com/knowledge-center/what-application-security-concepts-tools-best-practices"
+        },
+        {
+          "text": "Penetration Testing",
+          "url": "https://www.hackerone.com/knowledge-center/what-is-penetration-testing-as-a-service"
+        },
+        {
+          "text": "AI Red Teaming",
+          "url": "https://www.hackerone.com/product/ai-red-teaming"
+        },
+        {
+          "text": "Hacking",
+          "url": "https://www.hackerone.com/knowledge-center/what-hacking-black-hat-white-hat-blue-hat-and-more"
+        },
+        {
+          "text": "Cybersecurity Attacks",
+          "url": "https://www.hackerone.com/knowledge-center/16-types-cybersecurity-attacks-and-how-prevent-them"
+        },
+        {
+          "text": "CTEM",
+          "url": "https://www.hackerone.com/solutions/continuous-threat-exposure-management"
+        },
+        {
+          "text": "Blog",
+          "url": "https://www.hackerone.com/blog"
+        },
+        {
+          "text": "Documentation",
+          "url": "https://docs.hackerone.com/"
+        },
+        {
+          "text": "Leaderboard",
+          "url": "https://hackerone.com/leaderboard"
+        },
+        {
+          "text": "Partner Portal",
+          "url": "https://www.hackerone-partners.com/"
+        },
+        {
+          "text": "Resources",
+          "url": "https://www.hackerone.com/resources"
+        },
+        {
+          "text": "Facebook",
+          "url": "https://www.facebook.com/Hacker0x01"
+        },
+        {
+          "text": "X",
+          "url": "https://www.x.com/Hacker0x01"
+        },
+        {
+          "text": "Linkedin",
+          "url": "https://www.linkedin.com/company/hackerone"
+        },
+        {
+          "text": "Instagram",
+          "url": "https://www.instagram.com/hacker0x01"
+        },
+        {
+          "text": "Cookie Preferences",
+          "url": ""
+        },
+        {
+          "text": "Policies",
+          "url": "https://www.hackerone.com/policies"
+        },
+        {
+          "text": "Terms",
+          "url": "https://www.hackerone.com/terms"
+        },
+        {
+          "text": "Privacy",
+          "url": "https://www.hackerone.com/policies/privacy"
+        },
+        {
+          "text": "Security",
+          "url": "https://hackerone.com/security?type=team"
+        },
+        {
+          "text": "Trust",
+          "url": "https://www.hackerone.com/trust"
+        }
+      ]
+    }
+  ]
+}
