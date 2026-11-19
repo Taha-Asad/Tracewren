@@ -1,0 +1,47 @@
+stateDiagram-v2
+    %% =========================================================================
+    %% FIGURE 6.4: BOUNTY EVALUATION & SLA LIFECYCLE STATE MACHINE
+    %% BugBountyTrack — Milestone Week 6 Specification
+    %% Pure Minimalist Monochrome Styling on Black Canvas
+    %% =========================================================================
+
+    [*] --> SUBMITTED : Report Ingested via API
+
+    state SUBMITTED {
+        [*] --> EvaluatingMetrics
+        EvaluatingMetrics --> TiersComputed : CVSS 3.1 Base Score & Vector Validated
+        TiersComputed --> SetSLAClock : SLA Timer Initialized
+    }
+
+    state SetSLAClock {
+        CriticalSeverity : Critical Tier (9.0 - 10.0) -> SLA: 24 Hours
+        HighSeverity : High Tier (7.0 - 8.9) -> SLA: 72 Hours
+        MediumSeverity : Medium Tier (4.0 - 6.9) -> SLA: 14 Days
+        LowSeverity : Low Tier (0.1 - 3.9) -> SLA: 30 Days
+    }
+
+    SUBMITTED --> TRIAGED : Security Lead Validates Findings
+    SUBMITTED --> REJECTED : Fails Reproducibility / Out of Scope
+
+    state REJECTED {
+        [*] --> DuplicateReport : Prior Finding Exists
+        [*] --> OutOfScope : Asset Not in Target Policy
+        [*] --> InformativeOnly : Non-Exploitable Observation
+    }
+
+    TRIAGED --> IN_REMEDIATION : Patch Assigned to Engineering
+    IN_REMEDIATION --> SLA_BREACH : SLA Countdown Reaches 0 Hours
+    SLA_BREACH --> ESCALATED : Incident Alert to Workspace Owner
+    ESCALATED --> IN_REMEDIATION : Remediation Prioritized
+
+    IN_REMEDIATION --> VALIDATING : Fix Committed to Branch / Deployed to Staging
+    VALIDATING --> IN_REMEDIATION : Retest Failed (Vulnerability Still Present)
+    VALIDATING --> RESOLVED : Retest Passed (Vulnerability Closed)
+
+    state RESOLVED {
+        [*] --> BountyCalculation
+        BountyCalculation --> BountyApproved : Security Owner Approves Payout
+    }
+
+    RESOLVED --> BOUNTY_DISBURSED : Funds Released to Researcher
+    BOUNTY_DISBURSED --> [*] : Lifecycle Complete

@@ -1,0 +1,206 @@
+Skip to main content
+New research: Exposure Debt is the next challenge in cybersecurity 
+Read the HackerOne Security Research Report
+User account menu
+Login
+Leaderboard
+Contacted by a hacker?
+Main navigation
+Platform
+H1 Platform
+
+Eliminates exploitable risk with continuous discovery, validation, prioritization, and remediation at AI scale.
+
+Hai
+
+Agentic AI orchestrator runs continuously across every stage.
+
+H1 Continuous Testing
+
+Pentest-grade signal across your attack surface, continuously.
+
+H1 Agentic Pentest
+
+AI agents and human experts, scaling with your attack surface.
+
+H1 Bounty
+
+Elite researchers find your most critical vulnerabilities.
+
+H1 Bounty Challenge
+
+Time-bound offensive testing by the world's top security researchers.
+
+H1 Validation
+
+Eliminates noise and confirms exploitability in your environment.
+
+H1 Remediation
+
+Source code-informed fix plans, delivered straight to engineering.
+
+H1 Code
+
+AI code security with human expert validation built in.
+
+H1 Code Security Audit
+
+Agentic analysis reasons across your full codebase to catch what other tools miss.
+
+H1 AI Red Teaming
+
+Adversarial testing for your AI systems and models.
+
+H1 Response
+
+Always-on vulnerability disclosure, from report to remediated risk.
+
+Solutions
+Use Cases
+Adversarial Exposure Validation
+AI Security, Safety & Trust
+Application Security
+Cloud Security
+Continuous Security Testing
+Continuous Vulnerability Discovery
+Crowdsourced Security
+CTEM
+Vulnerability Management
+Web3
+Industries
+Automotive & Transportation
+Crypto & Blockchain
+Financial Services
+Public Sector
+Healthcare
+Retail & E-Commerce
+Hospitality & Entertainment
+US Federal
+UK Government
+Heading
+The Future of AI
+Sub Heading
+A Security Guide
+CTA Component
+Download now
+Partners
+Partner Overview
+Technology Alliance
+Hackerone and AWS
+Find A Channel Partner
+Partner Portal
+Integration Partners
+Researchers
+HackerOne for Hackers
+Learn to Hack
+Ambassador World Cup
+Opportunities
+Leaderboard
+Researcher Community
+Resources
+Heading
+Research Report
+Sub Heading
+Why Exposure Debt is the next cybersecurity challenge.
+CTA Component
+Download the Report
+Events
+Event Calendar
+Live Hacking Events
+Ambassador World Cup
+Learn
+Blog
+Resource Center
+Customer Stories
+Vulnerability Disclosure Policy Map
+Platform Documentation
+Company
+Company Overview
+Leadership
+Careers
+Security & Trust
+Public Policy
+Newsroom
+Community Edition
+Get Started
+How to start hacking
+Join the world's largest hacking community
+Start Hacking
+Image
+Image
+Get rewarded for hacking.
+
+Companies and organizations on our platform want to hear from you about security vulnerabilities they might have overlooked across their websites, APIs, mobile apps, hardware devices, and an increasingly diverse and vast array of attack surfaces. HackerOne community members have the opportunity to hack on some of the most challenging and rewarding engagements. Hackers have earned more than $100 million in rewards for their efforts.
+
+Image
+Learn How to Hack on Hacker101
+
+Hacker101 is a free class on web security. Whether you're a programmer with an interest in bug bounties or a seasoned security professional, Hacker101 has something to teach you. Learn to hack with our free video lessons, guides, and resources and put your skills into practice with Capture the Flag (CTF) levels inspired by real-world vulnerabilities. Join the Discord community and chat with thousands of other learners.
+
+Start learning
+Image
+Get your free Burp Suite Pro license.
+
+We’ve teamed up with Burp Suite to offer promising ethical hackers the full capabilities that Burp Suite Pro offers. When you reach at least a 500 reputation and maintain a positive signal, you are eligible for 3 months free of Burp Suite Professional, the premier offensive hacking solution.
+
+Learn more
+Image
+Collaborate with other hackers.
+
+Why hack alone when you can work as a team and earn more cash? Easily collaborate on reports to share bounties while learning and earning together.
+
+Find Programs to Collaborate On
+Image
+Live hacking events
+
+We host virtual and in-person live hacking events (LHEs) throughout the year. From destination hacking in cities around the world to unique online hacking experiences, LHEs are a must-experience perk for top hackers. Earn bonus rewards, new scopes, bounty multipliers, and custom swag, plus collaborate and network with other top hackers, security teams, and HackerOne staff.
+
+View events
+View real-time results and recent report submissions on Hacktivity
+Hacktivity Homepage
+View Leaderboard
+Hacker FAQ
+How do I get started?
+I have found a vulnerability, now what?
+When do I submit a security vulnerability?
+How do I write a good report?
+What tools can I use?
+What happens when I submit a report?
+How do I share back with the community?
+What is Hacktivity?
+Contacted by a hacker?
+Menu 1
+Company
+Leadership
+Careers
+Partners
+Newsroom
+Contact Us
+Menu 2
+Knowledge Center
+Application Security
+Penetration Testing
+AI Red Teaming
+Hacking
+Cybersecurity Attacks
+CTEM
+Menu 3
+Resources
+Blog
+Documentation
+Leaderboard
+Partner Portal
+Resources
+Facebook
+X
+Linkedin
+Instagram
+Menu Bottom
+Cookie Preferences
+Policies
+Terms
+Privacy
+Security
+Trust
+Right Reserved
+©2026 HackerOne All rights reserved.

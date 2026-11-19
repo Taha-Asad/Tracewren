@@ -1,3 +1,11 @@
+# Latest update · v6 public website and missing screens
+
+[Open the updated editable v6 design](BugBountyTrack-Professional-v6.figcraft) · [Preview every screen](professional-v6/index.html) · [Landing page](professional-v6/full/LandingFull.png) · [Completion and competitor review](professional-v6/README.md).
+
+The 7 November update adds 61 views/states for the public website, program discovery, onboarding, accounts, notifications, program management and mobile entry points. In FigCraft, start on **13 · V6 / Public website → Landing**. The original report and retest flows remain connected, and the previous v6 file is backed up.
+
+---
+
 # Latest revision · Professional v6
 
 [Open the editable v6 design](BugBountyTrack-Professional-v6.figcraft) · [Browse every screen](professional-v6/index.html) · [Coverage and verification](professional-v6/README.md) · [Selected concept and spacing](professional-v6/DESIGN_DIRECTION.md).

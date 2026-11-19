@@ -1,0 +1,82 @@
+flowchart TB
+    %% =========================================================================
+    %% FIGURE 6.2: END-TO-END VERTICAL SLICE ARCHITECTURAL DATA FLOW
+    %% BugBountyTrack — Milestone Week 6 Specification
+    %% Pure Minimalist Monochrome Styling on Black Canvas
+    %% =========================================================================
+
+    subgraph CLIENT["CLIENT PRESENTATION TIER (NEXT.JS 16 / REACT 19)"]
+        direction TB
+        UI_WIDGET["<b>CvssCalculatorWidget Component</b><br/>Reactive 8-metric matrix selectors<br/>Client-side instant preview calculation"]
+        UI_FORM["<b>Vulnerability Submission Form</b><br/>Title, Target Program, Asset Type<br/>SHA-256 Proof-of-Concept attachment"]
+        UI_STATE["<b>Client Tenancy State</b><br/>Active Tenant UUID & Session Context"]
+        UI_WIDGET --- UI_FORM
+        UI_FORM --- UI_STATE
+    end
+
+    subgraph TRANSPORT["SECURE TRANSPORT & INGRESS"]
+        direction TB
+        REQ["<b>HTTPS POST /reports/submit</b><br/>Headers: Authorization (Bearer Token), X-Workspace-Id<br/>Body: Validated JSON payload"]
+    end
+
+    subgraph CONTROLLER["API INGRESS & GUARDS TIER (NESTJS)"]
+        direction TB
+        AUTH_GUARD["<b>SessionAuthGuard & RolesGuard</b><br/>Verifies active session in database<br/>Validates tenant isolation context"]
+        VAL_PIPE["<b>NestJS ValidationPipe</b><br/>Executes SubmitReportDto rules<br/>UUIDv4, CVSS vector regex, SHA-256 hex"]
+        REP_CTRL["<b>ReportsController.submitReport()</b><br/>Routes validated DTO to service"]
+        AUTH_GUARD --- VAL_PIPE
+        VAL_PIPE --- REP_CTRL
+    end
+
+    subgraph DOMAIN["DOMAIN BUSINESS ENGINE (PURE TYPESCRIPT)"]
+        direction TB
+        CVSS_SERV["<b>CvssService</b><br/>Validates vector grammar & fetches program tier"]
+        CVSS_ENG["<b>CvssEngine.calculateScore()</b><br/>Computes ISS, Exploitability, Scope branch<br/>Applies FIRST.org Appendix A roundup"]
+        BOUNTY_ENG["<b>CvssEngine.estimateBounty()</b><br/>Maps score to qualitative tier & SLA<br/>Calculates minimum and maximum award"]
+        CVSS_SERV --- CVSS_ENG
+        CVSS_ENG --- BOUNTY_ENG
+    end
+
+    subgraph PERSISTENCE["DATA ACCESS & PERSISTENCE TIER"]
+        direction TB
+        REP_SERV["<b>ReportsService.submitReport()</b><br/>Enforces tenant match & program ownership<br/>Assembles report aggregate"]
+        PRISMA["<b>Prisma Client ORM</b><br/>Type-safe relational query builder"]
+        POSTGRES[("<b>Neon Serverless PostgreSQL</b><br/>reports, programs, tenants tables<br/>Foreign key integrity & tenant indexing")]
+        REP_SERV --- PRISMA
+        PRISMA --- POSTGRES
+    end
+
+    subgraph RESPONSE["SYNCHRONOUS CLIENT FEEDBACK"]
+        direction TB
+        RES_201["<b>201 Created Response</b><br/>Report ID, Computed CVSS Score (e.g. 9.8)<br/>Severity: CRITICAL | SLA Due: 24h<br/>Bounty Estimate: $5,000 - $10,000"]
+    end
+
+    CLIENT --- TRANSPORT
+    TRANSPORT --- CONTROLLER
+    REP_CTRL --- DOMAIN
+    DOMAIN --- REP_SERV
+    POSTGRES --- RESPONSE
+    RESPONSE --- CLIENT
+
+    %% Minimalist Monochrome Styling
+    style CLIENT fill:none,stroke:#ffffff,stroke-width:1.5px,stroke-dasharray: 4 4
+    style TRANSPORT fill:none,stroke:#ffffff,stroke-width:1.5px,stroke-dasharray: 4 4
+    style CONTROLLER fill:none,stroke:#ffffff,stroke-width:1.5px,stroke-dasharray: 4 4
+    style DOMAIN fill:none,stroke:#ffffff,stroke-width:1.5px,stroke-dasharray: 4 4
+    style PERSISTENCE fill:none,stroke:#ffffff,stroke-width:1.5px,stroke-dasharray: 4 4
+    style RESPONSE fill:none,stroke:#ffffff,stroke-width:1.5px,stroke-dasharray: 4 4
+
+    style UI_WIDGET fill:none,stroke:#ffffff,stroke-width:1px,color:#ffffff
+    style UI_FORM fill:none,stroke:#ffffff,stroke-width:1px,color:#ffffff
+    style UI_STATE fill:none,stroke:#ffffff,stroke-width:1px,color:#ffffff
+    style REQ fill:none,stroke:#ffffff,stroke-width:1.5px,color:#ffffff
+    style AUTH_GUARD fill:none,stroke:#ffffff,stroke-width:1px,color:#ffffff
+    style VAL_PIPE fill:none,stroke:#ffffff,stroke-width:1.5px,color:#ffffff
+    style REP_CTRL fill:none,stroke:#ffffff,stroke-width:1px,color:#ffffff
+    style CVSS_SERV fill:none,stroke:#ffffff,stroke-width:1px,color:#ffffff
+    style CVSS_ENG fill:none,stroke:#ffffff,stroke-width:2px,color:#ffffff
+    style BOUNTY_ENG fill:none,stroke:#ffffff,stroke-width:1.5px,color:#ffffff
+    style REP_SERV fill:none,stroke:#ffffff,stroke-width:1.5px,color:#ffffff
+    style PRISMA fill:none,stroke:#ffffff,stroke-width:1px,color:#ffffff
+    style POSTGRES fill:none,stroke:#ffffff,stroke-width:2px,color:#ffffff
+    style RES_201 fill:none,stroke:#ffffff,stroke-width:1.5px,color:#ffffff

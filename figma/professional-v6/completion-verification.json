@@ -1,0 +1,289 @@
+{
+  "passed": true,
+  "newViews": 61,
+  "totalViews": 581,
+  "navigationActions": 39,
+  "trace": [
+    {
+      "source": "Landing",
+      "action": "Find a program",
+      "destination": "ProgramDirectory",
+      "state": "TRIAGING",
+      "attempt": 1.0
+    },
+    {
+      "source": "ProgramDirectory",
+      "action": "Search programs",
+      "destination": "DirectoryFiltered",
+      "state": "TRIAGING",
+      "attempt": 1.0
+    },
+    {
+      "source": "DirectoryFiltered",
+      "action": "Review scope & policy",
+      "destination": "Program",
+      "state": "TRIAGING",
+      "attempt": 1.0
+    },
+    {
+      "source": "Program",
+      "action": "Submit a report",
+      "destination": "Access",
+      "state": "TRIAGING",
+      "attempt": 1.0
+    },
+    {
+      "source": "Access",
+      "action": "Use guest access",
+      "destination": "GuestAccess",
+      "state": "TRIAGING",
+      "attempt": 1.0
+    },
+    {
+      "source": "Landing",
+      "action": "Get started",
+      "destination": "GetStarted",
+      "state": "TRIAGING",
+      "attempt": 1.0
+    },
+    {
+      "source": "GetStarted",
+      "action": "Create a researcher account",
+      "destination": "Register",
+      "state": "TRIAGING",
+      "attempt": 1.0
+    },
+    {
+      "source": "Register",
+      "action": "Create account",
+      "destination": "VerifyEmail",
+      "state": "TRIAGING",
+      "attempt": 1.0
+    },
+    {
+      "source": "VerifyEmail",
+      "action": "Check verification status",
+      "destination": "EmailVerified",
+      "state": "TRIAGING",
+      "attempt": 1.0
+    },
+    {
+      "source": "EmailVerified",
+      "action": "Continue to researcher setup",
+      "destination": "ResearcherWelcome",
+      "state": "TRIAGING",
+      "attempt": 1.0
+    },
+    {
+      "source": "ResearcherWelcome",
+      "action": "Edit profile",
+      "destination": "AccountProfile",
+      "state": "TRIAGING",
+      "attempt": 1.0
+    },
+    {
+      "source": "AccountProfile",
+      "action": "Save profile",
+      "destination": "ProfileSaved",
+      "state": "TRIAGING",
+      "attempt": 1.0
+    },
+    {
+      "source": "ProfileSaved",
+      "action": "Security",
+      "destination": "AccountSecurity",
+      "state": "TRIAGING",
+      "attempt": 1.0
+    },
+    {
+      "source": "AccountSecurity",
+      "action": "Revoke session",
+      "destination": "RevokeSession",
+      "state": "TRIAGING",
+      "attempt": 1.0
+    },
+    {
+      "source": "RevokeSession",
+      "action": "Revoke session",
+      "destination": "SessionRevoked",
+      "state": "TRIAGING",
+      "attempt": 1.0
+    },
+    {
+      "source": "VerifyEmailExpired",
+      "action": "Resend verification email",
+      "destination": "VerifyEmail",
+      "state": "TRIAGING",
+      "attempt": 1.0
+    },
+    {
+      "source": "VerifyEmail",
+      "action": "Check verification status",
+      "destination": "EmailVerified",
+      "state": "TRIAGING",
+      "attempt": 1.0
+    },
+    {
+      "source": "Contact",
+      "action": "Send enquiry",
+      "destination": "ContactSent",
+      "state": "TRIAGING",
+      "attempt": 1.0
+    },
+    {
+      "source": "ContactSent",
+      "action": "Back to home",
+      "destination": "Landing",
+      "state": "TRIAGING",
+      "attempt": 1.0
+    },
+    {
+      "source": "ProgramManagement",
+      "action": "Create a program",
+      "destination": "CreateProgram",
+      "state": "TRIAGING",
+      "attempt": 1.0
+    },
+    {
+      "source": "CreateProgram",
+      "action": "Save draft",
+      "destination": "ProgramDraft",
+      "state": "TRIAGING",
+      "attempt": 1.0
+    },
+    {
+      "source": "ProgramDraft",
+      "action": "Back to programs",
+      "destination": "ProgramManagement",
+      "state": "TRIAGING",
+      "attempt": 1.0
+    },
+    {
+      "source": "ProgramManagement",
+      "action": "Manage scope",
+      "destination": "ManageScope",
+      "state": "TRIAGING",
+      "attempt": 1.0
+    },
+    {
+      "source": "ManageScope",
+      "action": "Save scope draft",
+      "destination": "ScopeSaved",
+      "state": "TRIAGING",
+      "attempt": 1.0
+    },
+    {
+      "source": "ScopeSaved",
+      "action": "Review & sign policy",
+      "destination": "PolicySettings",
+      "state": "TRIAGING",
+      "attempt": 1.0
+    },
+    {
+      "source": "MobileLanding",
+      "action": "Menu",
+      "destination": "WebsiteMenu",
+      "state": "TRIAGING",
+      "attempt": 1.0
+    },
+    {
+      "source": "WebsiteMenu",
+      "action": "Find a program",
+      "destination": "MobileDirectory",
+      "state": "TRIAGING",
+      "attempt": 1.0
+    },
+    {
+      "source": "MobileDirectory",
+      "action": "Review scope & policy",
+      "destination": "MobileProgram",
+      "state": "TRIAGING",
+      "attempt": 1.0
+    },
+    {
+      "source": "MobileAccount",
+      "action": "Profile settings",
+      "destination": "MobileProfile",
+      "state": "TRIAGING",
+      "attempt": 1.0
+    },
+    {
+      "source": "MobileProfile",
+      "action": "Save profile",
+      "destination": "MobileProfileSaved",
+      "state": "TRIAGING",
+      "attempt": 1.0
+    },
+    {
+      "source": "MobileProfileSaved",
+      "action": "Back to account",
+      "destination": "MobileAccount",
+      "state": "TRIAGING",
+      "attempt": 1.0
+    },
+    {
+      "source": "MobileAccount",
+      "action": "Notifications",
+      "destination": "MobileNotifications",
+      "state": "TRIAGING",
+      "attempt": 1.0
+    },
+    {
+      "source": "MobileNotifications",
+      "action": "Mark all read",
+      "destination": "MobileNotificationsRead",
+      "state": "TRIAGING",
+      "attempt": 1.0
+    },
+    {
+      "source": "CasePending",
+      "action": "SC",
+      "destination": "AccountMenu",
+      "state": "RETEST_PENDING",
+      "attempt": 1
+    },
+    {
+      "source": "AccountMenu",
+      "action": "Profile settings",
+      "destination": "DefenderProfile",
+      "state": "RETEST_PENDING",
+      "attempt": 1
+    },
+    {
+      "source": "OwnerOverview",
+      "action": "SC",
+      "destination": "OwnerAccountMenu",
+      "state": "TRIAGING",
+      "attempt": 1.0
+    },
+    {
+      "source": "OwnerAccountMenu",
+      "action": "Profile settings",
+      "destination": "OwnerProfile",
+      "state": "TRIAGING",
+      "attempt": 1.0
+    },
+    {
+      "source": "ResearcherPending",
+      "action": "AR",
+      "destination": "ResearchAccountMenu",
+      "state": "RETEST_PENDING",
+      "attempt": 1
+    },
+    {
+      "source": "ResearchAccountMenu",
+      "action": "Profile settings",
+      "destination": "AccountProfile",
+      "state": "RETEST_PENDING",
+      "attempt": 1
+    }
+  ],
+  "originalScreenIdsPreserved": true,
+  "previousV6BackupVerified": true,
+  "unexpectedBounds": 0,
+  "textContrastFailures": 0,
+  "missingDestinations": 0,
+  "scope": "Saved native AST navigation, state variables, actor context, geometry and text contrast. Prepared design fixtures; no backend execution.",
+  "artifact": "/run/media/thefoolishcrow/New Volume/Obsidian/TheFallenCrow/projects/Tracewren/figma/BugBountyTrack-Professional-v6.figcraft",
+  "sha256": "5b5a7ed11ba9ca893838984f35a8622e098950d717a19546739073dc5c1befc5"
+}

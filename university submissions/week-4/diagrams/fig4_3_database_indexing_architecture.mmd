@@ -1,0 +1,84 @@
+flowchart TB
+    %% =========================================================================
+    %% FIGURE 4.3: PHYSICAL POSTGRESQL INDEXING & SECURITY ACCESS ARCHITECTURE
+    %% =========================================================================
+
+    subgraph CLIENT_LAYER["<b>APPLICATION TIER QUERY DISPATCH</b>"]
+        direction LR
+        Q1["<b>Triage Queue Query</b><br/><code>WHERE org_id = :org AND status = 'TRIAGED'<br/>ORDER BY submitted_at DESC</code>"]
+        Q2["<b>New Report Intake</b><br/><code>WHERE org_id = :org AND status = 'NEW'</code>"]
+        Q3["<b>JSONB Security Settings</b><br/><code>WHERE settings @&gt; '{&quot;mfa&quot;: true}'</code>"]
+        Q4["<b>Tamper Audit Scan</b><br/><code>WHERE org_id = :org AND row_hash = :hash</code>"]
+    end
+
+    %% RLS Security Enforcement
+    subgraph RLS_GATE["<b>POSTGRESQL 16 KERNEL: ROW LEVEL SECURITY (RLS) FILTER GATE</b>"]
+        direction TB
+        RLS_POL["<b>FORCE ROW LEVEL SECURITY</b><br/>Unprivileged App Role: <code>bbt_app (NOSUPERUSER, NOBYPASSRLS)</code><br/>Policy: <code>USING (organization_id = current_setting('app.current_org_id')::uuid)</code>"]
+    end
+
+    Q1 --> RLS_POL
+    Q2 --> RLS_POL
+    Q3 --> RLS_POL
+    Q4 --> RLS_POL
+
+    %% Index Access Methods
+    subgraph INDEX_LAYER["<b>POSTGRESQL INDEX ACCESS ENGINE & PLANNER SELECTION</b>"]
+        direction LR
+
+        subgraph IDX_COMP["<b>Composite B-Tree Index</b>"]
+            direction TB
+            I1["<code>idx_reports_triage_queue</code><br/><b>Columns:</b> (organization_id, status, submitted_at DESC)<br/><b>Access:</b> Index Scan / Index Only Scan<br/><b>Benefit:</b> 0 heap filter, sorts eliminated"]
+        end
+
+        subgraph IDX_PART["<b>Partial B-Tree Index</b>"]
+            direction TB
+            I2["<code>idx_reports_pending_triage</code><br/><b>Columns:</b> (organization_id, submitted_at DESC)<br/><b>Filter:</b> <code>WHERE status = 'NEW'</code><br/><b>Benefit:</b> 95% smaller index footprint"]
+        end
+
+        subgraph IDX_GIN["<b>GIN Inverted Index</b>"]
+            direction TB
+            I3["<code>idx_org_settings_gin</code><br/><b>Column:</b> (security_settings_json)<br/><b>Opclass:</b> <code>jsonb_path_ops</code><br/><b>Benefit:</b> O(1) key/value path containment"]
+        end
+
+        subgraph IDX_AUD["<b>Composite Hash & B-Tree</b>"]
+            direction TB
+            I4["<code>idx_audit_chain_verification</code><br/><b>Columns:</b> (organization_id, created_at ASC)<br/><b>Include:</b> (row_hash, previous_chain_hash)<br/><b>Benefit:</b> High-speed forward linear verification"]
+        end
+    end
+
+    RLS_POL --> IDX_COMP
+    RLS_POL --> IDX_PART
+    RLS_POL --> IDX_GIN
+    RLS_POL --> IDX_AUD
+
+    %% Physical Heap & Buffer Cache
+    subgraph HEAP_STORAGE["<b>PHYSICAL HEAP STORAGE & PERSISTENCE TIER (NEON SERVERLESS PG 16)</b>"]
+        direction LR
+        HEAP_TAB["<b>Relation Heap Tables (8KB Pages)</b><br/><code>reports</code>, <code>organizations</code>, <code>users</code>, <code>audit_events</code>"]
+        BUFF_CACHE["<b>PostgreSQL Shared Buffers</b><br/>LRU Buffer Cache Pool<br/>Dirty Page Background Writer"]
+        WAL["<b>Write-Ahead Logging (WAL)</b><br/>Strict synchronous commit for Audit Ledger<br/>Point-in-Time Recovery (PITR)"]
+    end
+
+    IDX_COMP --> HEAP_TAB
+    IDX_PART --> HEAP_TAB
+    IDX_GIN --> HEAP_TAB
+    IDX_AUD --> HEAP_TAB
+    HEAP_TAB <--> BUFF_CACHE
+    HEAP_TAB --> WAL
+
+    %% Styling
+    style CLIENT_LAYER fill:#f8fafc,stroke:#94a3b8,stroke-width:1.5px
+    style RLS_GATE fill:#eff6ff,stroke:#2563eb,stroke-width:2px
+    style INDEX_LAYER fill:#f8fafc,stroke:#94a3b8,stroke-width:1.5px
+    style HEAP_STORAGE fill:#f1f5f9,stroke:#475569,stroke-width:1.5px
+
+    classDef query fill:#ffffff,stroke:#64748b,stroke-width:1.5px,color:#0f172a,font-size:12px;
+    classDef rls fill:#1e3a8a,stroke:#3b82f6,stroke-width:2px,color:#ffffff,font-size:12px;
+    classDef idx fill:#ffffff,stroke:#0d9488,stroke-width:2px,color:#0f172a,font-size:11px;
+    classDef storage fill:#0f172a,stroke:#334155,stroke-width:2px,color:#ffffff,font-size:12px;
+
+    class Q1,Q2,Q3,Q4 query;
+    class RLS_POL rls;
+    class I1,I2,I3,I4 idx;
+    class HEAP_TAB,BUFF_CACHE,WAL storage;

@@ -1,3 +1,32 @@
+# Professional v6 / public website and product completion
+
+[Editable FigCraft file](../BugBountyTrack-Professional-v6.figcraft) · [All screen previews](index.html) · [Complete landing page](full/LandingFull.png) · [Competitor review](COMPETITOR_REVIEW.md)
+
+The 7 November completion adds the public website and the product entry points missing from the report-focused edition. The design keeps v6's refined typography, neutral surfaces, forest actions and existing report workflows.
+
+**Open page 13 · V6 / Public website and select Landing** to start at the new public entry. The file opens on this frame. `LandingFull` is the complete long-form desktop layout; `Landing` is the scrollable desktop prototype. `MobileLanding` and `TabletLanding` cover 390px and 1024px widths.
+
+New pages:
+
+| Native page | Contents |
+| --- | --- |
+| 13 · Public website | Landing, platform, team/researcher introductions, trust, discovery, help, contact and review starts |
+| 14 · Accounts & notifications | Onboarding, profile, security, preferences, account menus and notifications with actor-specific contexts |
+| 15 · Program management | Program list, creation, saved draft, scope editing and saved scope draft |
+| 16 · Public & account mobile | Mobile website navigation, discovery, profile and notifications; tablet landing study |
+
+The completion adds **61 views/states**, bringing the catalogue to **581 views across 17 pages**. Counts include dialogs, responsive studies and state variations. The earlier 520 views and their screen IDs remain present. [The previous v6 file is backed up here](archive/2026-11-07-before-completion/BugBountyTrack-Professional-v6.figcraft).
+
+Use `CompletionIndex` for the new review starts, including expired email verification and a directory with no results. The original `Start` review screen also links to the landing page, additions index and mobile landing. The original submission → triage → failed retest → replacement fix → verified outcome journey remains available.
+
+Saved-file checks passed with **zero unexpected layout bounds, text-contrast failures or missing destinations**. Original report workflows passed 80 desktop/mobile actions and 1,037 context-preserving tab links. The completion passed 39 saved-file navigation actions and 28 real presenter actions.
+
+[Saved-file completion verification](completion-verification.json) checks the added journeys, actor context, notification routing, preference state, preserved screen IDs, layout, contrast and destinations. [Native presenter playback](runtime/completion/verification.json) records actual clicks and scrolling. The research and prototype limits are documented in [the competitor review](COMPETITOR_REVIEW.md).
+
+Inputs use prepared values. Email, contact submission, authentication, encryption, session revocation and domain verification are represented design outcomes. This task updates the design artifact and its authoring/review material.
+
+---
+
 # Professional v6 / product refinement
 
 [Editable FigCraft file](../BugBountyTrack-Professional-v6.figcraft) · [Search every screen](index.html) · [Reference-sized report](full/Concept1488.png) · [Current design direction](DESIGN_DIRECTION.md) · [Before and after](refinement-review.html)

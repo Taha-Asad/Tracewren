@@ -1,64 +1,58 @@
-# Operating System Files
-.DS_Store
-.DS_Store?
-._*
-.Spotlight-V100
-.Trashes
-ehthumbs.db
-Thumbs.db
-desktop.ini
-
-# Editor & IDE Directories
-.idea/
-.vscode/
-*.swp
-*.swo
-*~
-*.sublime-project
-*.sublime-workspace
-
-# Node & Package Managers
+# Dependencies
 node_modules/
+.pnp
+.pnp.js
+
+# Environment variables
+.env
+**/.env
+.env*.local
+.env.development
+.env.production
+.env.test
+
+# Build & Coverage outputs
+dist/
+build/
+.next/
+out/
+coverage/
+**/coverage/
+
+# TypeScript & Cache
+*.tsbuildinfo
+.turbo
+.cache
+
+# IDE & OS
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.idea/
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# Logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
-lerna-debug.log*
+.pnpm-debug.log*
 
-# Next.js Build Outputs
-.next/
-out/
-build/
-dist/
+# Session Journaling
+SESSION_LOG.md
+**/SESSION_LOG.md
 
-# Environment Variables & Local Secrets
-.env
-.env*.local
-!.env.example
-
-# Python Scripts, Design Authoring Tooling & Caches
+# Python Scripts & Cache
 *.py
-tools/
-**/design.json
-**/commands.json
-**/ledger.json
-*.log
+*.pyc
+*.pyo
+*.pyd
 __pycache__/
-*.py[cod]
-*$py.class
-*.egg-info/
 .pytest_cache/
-.coverage
-htmlcov/
+*.egg-info/
 .venv/
-env/
 venv/
-ENV/
-
-# Temporary & Scratch Files
-*.tmp
-*.temp
-*.bak
-*.scratch
-.scratch/
-.~lock.*

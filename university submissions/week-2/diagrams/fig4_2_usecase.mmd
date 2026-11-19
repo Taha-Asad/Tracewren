@@ -1,0 +1,59 @@
+flowchart LR
+    subgraph PrimaryActors["Primary Human Actors"]
+        direction TB
+        Hunter(["Actor: Ethical Researcher (Hunter / Guest)"])
+        Defender(["Actor: Triage Lead (ORG_DEFENDER)"])
+        Owner(["Actor: Tenant Owner (ORG_OWNER + MFA)"])
+        ReadOnly(["Actor: Auditor (ORG_READONLY)"])
+    end
+
+    subgraph SystemBoundary["BugBountyTrack System Boundary (UML Use Cases)"]
+        direction TB
+        UC1(["UC-01: Submit Encrypted Report (Hunter & Guest Branches)"])
+        UC1_Ext(["Presign & Upload Encrypted PoC to R2"])
+        UC2(["UC-02: Decrypt, Claim Triage & Score CVSS v3.1"])
+        UC3(["UC-03: Propose Fix, Confirm Deployment & Request Retest"])
+        UC4(["UC-04: Execute Attested Retest (Attempt-Bound)"])
+        UC4_Ext1(["Loopback to ACCEPTED on RETEST_FAILED"])
+        UC4_Ext2(["P2: Export Redacted Closure Certificate"])
+        UC5(["UC-05: Restore/Re-Wrap Keys & Rotate Guest Token"])
+        UC6(["UC-06: Onboard Tenant, Enroll MFA, Verify DNS & Sign Policy"])
+        UC7(["UC-07: Run Hourly HMAC Cron & Verify Audit Chain"])
+
+        UC1_Ext -. "«extend» (if PoC attached)" .-> UC1
+        UC4_Ext1 -. "«extend» (if patch bypassed)" .-> UC4
+        UC4_Ext2 -. "«extend» (optional P2 export)" .-> UC4
+    end
+
+    subgraph SecondaryActors["Secondary External Systems"]
+        direction TB
+        R2Cloud["Actor: Cloudflare R2 Storage"]
+        GitHubAPI["Actor: GitHub REST API v3 & Cron"]
+        NotifyGW["Actor: Email / Webhook Gateway"]
+    end
+
+    Hunter --> UC1
+    Hunter --> UC4
+    Hunter --> UC5
+
+    Defender --> UC2
+    Defender --> UC3
+    Defender --> UC4
+    Defender --> UC5
+    Defender --> UC7
+
+    Owner --> UC4
+    Owner --> UC5
+    Owner --> UC6
+    Owner --> UC7
+
+    ReadOnly --> UC7
+
+    UC1_Ext --> R2Cloud
+    UC1 --> NotifyGW
+    UC3 --> GitHubAPI
+    UC3 --> NotifyGW
+    UC4 --> NotifyGW
+    GitHubAPI --> UC7
+    UC7 --> R2Cloud
+    UC7 --> NotifyGW

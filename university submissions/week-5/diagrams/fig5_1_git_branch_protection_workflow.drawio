@@ -1,0 +1,71 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" version="21.0.0" type="device">
+  <diagram id="git_branch_protection" name="Git Branch Protection Workflow">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="950" background="#000000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title_1" value="&lt;h1 style=&quot;color:#ffffff;font-family:Helvetica;margin:0;font-weight:normal;&quot;&gt;BugBountyTrack — Git Branch Protection &amp; Continuous Integration Workflow&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="100" y="30" width="1200" height="40" as="geometry" />
+        </mxCell>
+        <!-- Developer Workstation -->
+        <mxCell id="box_dev" value="&lt;b&gt;Developer Workstation&lt;/b&gt;&lt;br/&gt;Branch: feat/core-auth-layer" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="550" y="100" width="300" height="60" as="geometry" />
+        </mxCell>
+        <!-- Local Pre-Push Hook -->
+        <mxCell id="box_hook" value="&lt;b&gt;Client-Side Pre-Push Hook&lt;/b&gt;&lt;br/&gt;.git/hooks/pre-push (Blocks direct push to main/develop)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="520" y="200" width="360" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e_dev_hook" value="" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;" edge="1" source="box_dev" target="box_hook" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Pull Request Opened -->
+        <mxCell id="box_pr" value="&lt;b&gt;Pull Request Opened&lt;/b&gt;&lt;br/&gt;feat/core-auth-layer into develop" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="550" y="310" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e_hook_pr" value="Push Allowed" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;labelBackgroundColor=#000000;" edge="1" source="box_hook" target="box_pr" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Automated CI Gates Container -->
+        <mxCell id="box_ci" value="&lt;b&gt;GitHub Actions CI Gates&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.5;strokeDashed=1;fontColor=#ffffff;align=center;verticalAlign=top;spacingTop=10;fontSize=13;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="300" y="420" width="800" height="130" as="geometry" />
+        </mxCell>
+        <mxCell id="ci_job1" value="&lt;b&gt;Job 1: AST Linting&lt;/b&gt;&lt;br/&gt;oxlint &amp;amp; tsc --noEmit" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.2;fontColor=#ffffff;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="330" y="465" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ci_job2" value="&lt;b&gt;Job 2: Vitest Suite&lt;/b&gt;&lt;br/&gt;94 Unit &amp;amp; Auth Tests" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.2;fontColor=#ffffff;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="590" y="465" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="ci_job3" value="&lt;b&gt;Job 3: Schema Gate&lt;/b&gt;&lt;br/&gt;Prisma Schema Validate" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.2;fontColor=#ffffff;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="850" y="465" width="220" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e_pr_ci" value="" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;" edge="1" source="box_pr" target="box_ci" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Peer Code Review -->
+        <mxCell id="box_review" value="&lt;b&gt;Peer Code Review Gate&lt;/b&gt;&lt;br/&gt;CODEOWNERS Approval Required | Stale Approvals Dismissed" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="500" y="600" width="400" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e_ci_review" value="All CI Checks Passed" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;labelBackgroundColor=#000000;" edge="1" source="box_ci" target="box_review" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Branch Target: develop -->
+        <mxCell id="box_dev_branch" value="&lt;b&gt;Target Branch: develop&lt;/b&gt;&lt;br/&gt;Squash &amp;amp; Merge | Linear History" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.8;fontColor=#ffffff;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="550" y="710" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e_review_dev" value="Approved" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;labelBackgroundColor=#000000;" edge="1" source="box_review" target="box_dev_branch" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Target Branch: main -->
+        <mxCell id="box_main_branch" value="&lt;b&gt;Production Branch: main&lt;/b&gt;&lt;br/&gt;Strict Protection Ruleset | GPG Signed Commits | Locked Against Direct Push" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=2.5;fontColor=#ffffff;fontSize=13;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="450" y="820" width="500" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e_dev_main" value="Release Candidate Pull Request" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;labelBackgroundColor=#000000;" edge="1" source="box_dev_branch" target="box_main_branch" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

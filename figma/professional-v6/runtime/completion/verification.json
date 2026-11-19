@@ -1,0 +1,195 @@
+{
+  "passed": true,
+  "actions": 28,
+  "trace": [
+    {
+      "source": "Landing",
+      "click": "Find a program",
+      "destination": "ProgramDirectory",
+      "scrolled": false
+    },
+    {
+      "source": "ProgramDirectory",
+      "click": "Search programs",
+      "destination": "DirectoryFiltered",
+      "scrolled": false
+    },
+    {
+      "source": "DirectoryFiltered",
+      "click": "Review scope & policy",
+      "destination": "Program",
+      "scrolled": false
+    },
+    {
+      "source": "Program",
+      "click": "Submit a report",
+      "destination": "Access",
+      "scrolled": false
+    },
+    {
+      "source": "Access",
+      "click": "Use guest access",
+      "destination": "GuestAccess",
+      "scrolled": false
+    },
+    {
+      "screenshot": "figma/professional-v6/runtime/completion/public-to-private-intake.png"
+    },
+    {
+      "source": "Landing",
+      "click": "Get started",
+      "destination": "GetStarted",
+      "scrolled": false
+    },
+    {
+      "source": "GetStarted",
+      "click": "Create a researcher account",
+      "destination": "Register",
+      "scrolled": false
+    },
+    {
+      "source": "Register",
+      "click": "Create account",
+      "destination": "VerifyEmail",
+      "scrolled": false
+    },
+    {
+      "source": "VerifyEmail",
+      "click": "Check verification status",
+      "destination": "EmailVerified",
+      "scrolled": false
+    },
+    {
+      "source": "EmailVerified",
+      "click": "Continue to researcher setup",
+      "destination": "ResearcherWelcome",
+      "scrolled": false
+    },
+    {
+      "source": "ResearcherWelcome",
+      "click": "Edit profile",
+      "destination": "AccountProfile",
+      "scrolled": false
+    },
+    {
+      "source": "AccountProfile",
+      "click": "Save profile",
+      "destination": "ProfileSaved",
+      "scrolled": false
+    },
+    {
+      "source": "ProfileSaved",
+      "click": "Security",
+      "destination": "AccountSecurity",
+      "scrolled": false
+    },
+    {
+      "source": "AccountSecurity",
+      "click": "Revoke session",
+      "destination": "RevokeSession",
+      "scrolled": false
+    },
+    {
+      "source": "RevokeSession",
+      "click": "Revoke session",
+      "destination": "SessionRevoked",
+      "scrolled": false
+    },
+    {
+      "screenshot": "figma/professional-v6/runtime/completion/account-security.png"
+    },
+    {
+      "source": "ProgramManagement",
+      "click": "Create a program",
+      "destination": "CreateProgram",
+      "scrolled": false
+    },
+    {
+      "source": "CreateProgram",
+      "click": "Save draft",
+      "destination": "ProgramDraft",
+      "scrolled": false
+    },
+    {
+      "source": "ProgramDraft",
+      "click": "Back to programs",
+      "destination": "ProgramManagement",
+      "scrolled": false
+    },
+    {
+      "source": "ProgramManagement",
+      "click": "Manage scope",
+      "destination": "ManageScope",
+      "scrolled": false
+    },
+    {
+      "source": "ManageScope",
+      "click": "Save scope draft",
+      "destination": "ScopeSaved",
+      "scrolled": false
+    },
+    {
+      "screenshot": "figma/professional-v6/runtime/completion/scope-draft.png"
+    },
+    {
+      "source": "MobileLanding",
+      "click": "Menu",
+      "destination": "WebsiteMenu",
+      "scrolled": false
+    },
+    {
+      "source": "WebsiteMenu",
+      "click": "Find a program",
+      "destination": "MobileDirectory",
+      "scrolled": false
+    },
+    {
+      "source": "MobileDirectory",
+      "click": "Review scope & policy",
+      "destination": "MobileProgram",
+      "scrolled": true
+    },
+    {
+      "screenshot": "figma/professional-v6/runtime/completion/mobile-program.png"
+    },
+    {
+      "source": "MobileAccount",
+      "click": "Profile settings",
+      "destination": "MobileProfile",
+      "scrolled": false
+    },
+    {
+      "source": "MobileProfile",
+      "click": "Save profile",
+      "destination": "MobileProfileSaved",
+      "scrolled": false
+    },
+    {
+      "source": "MobileProfileSaved",
+      "click": "Back to account",
+      "destination": "MobileAccount",
+      "scrolled": false
+    },
+    {
+      "source": "MobileAccount",
+      "click": "Notifications",
+      "destination": "MobileNotifications",
+      "scrolled": false
+    },
+    {
+      "source": "MobileNotifications",
+      "click": "Mark all read",
+      "destination": "MobileNotificationsRead",
+      "scrolled": false
+    },
+    {
+      "screenshot": "figma/professional-v6/runtime/completion/mobile-notifications.png"
+    },
+    {
+      "screenshot": "figma/professional-v6/runtime/completion/landing.png"
+    }
+  ],
+  "scope": "Real FigCraft presenter clicks and scrolling with prepared design fixtures.",
+  "artifact": "/run/media/thefoolishcrow/New Volume/Obsidian/TheFallenCrow/projects/Tracewren/figma/BugBountyTrack-Professional-v6.figcraft",
+  "sha256": "5b5a7ed11ba9ca893838984f35a8622e098950d717a19546739073dc5c1befc5"
+}

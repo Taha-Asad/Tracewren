@@ -1,0 +1,59 @@
+flowchart TB
+    %% =========================================================================
+    %% TIER 1: CLIENT PRESENTATION & CRYPTOGRAPHIC BOUNDARY
+    %% =========================================================================
+    subgraph T1["<b>TIER 1: CLIENT PRESENTATION & CRYPTOGRAPHIC BOUNDARY (BROWSER RUNTIME)</b>"]
+        direction LR
+        subgraph T1_ACTORS["<b>Authorized Users</b>"]
+            A1["<b>Security Researchers</b><br/>Ethical Hackers / Guests<br/><i>(Passphrases local only)</i>"]
+            A2["<b>Program Defenders</b><br/>Security Leads & Org Owners<br/><i>(TOTP Step-Up Authenticated)</i>"]
+        end
+        UI["<b>Presentation & UI Engine (Next.js 14)</b><br/>React 18+, Tailwind CSS<br/>Responsive (>= 320px)<br/>rehype-sanitize Strict AST Cleansing"]
+        CRYPTO["<b>Client Cryptographic Engine (OpenPGP.js v6)</b><br/>WebCrypto API & Wasm<br/>Curve25519 (X25519 / Ed25519)<br/>Protected IndexedDB Keystore<br/>(Argon2 S2K)"]
+
+        A1 --> UI
+        A2 --> UI
+        UI <--> CRYPTO
+    end
+
+    %% =========================================================================
+    %% TIER 2: PRESENTATION & GATEWAY / API SERVER TIER
+    %% =========================================================================
+    subgraph T2["<b>TIER 2: APPLICATION & API GATEWAY TIER (VERCEL SERVERLESS FLEET - NODE.JS 22 LTS)</b>"]
+        direction LR
+        GW["<b>Stateless API Gateway & Router</b><br/>Next.js 14+ App Router<br/>(/api/v1/*)<br/>RFC 9116 security.txt<br/>Turnstile Bot Token Verification"]
+        AUTH["<b>Auth & RBAC Middleware</b><br/>Argon2id Hash & CSPRNG Tokens<br/>__Host-bbt-session Cookie<br/>Token-Bucket Rate Limiter"]
+        SERVICES["<b>Core Domain Services</b><br/>Intake Class B/C Segregation<br/>FIRST.org CVSS v3.1 Engine (8.22)<br/>Remediation Commit Verification"]
+        EXT["<b>External Cloud Adapters</b><br/>GitHub REST API v3 Integration<br/>Resend Transactional Mail API<br/>HMAC-SHA256 Cron SLA Check"]
+
+        GW --> AUTH
+        AUTH --> SERVICES
+        SERVICES <--> EXT
+    end
+
+    %% =========================================================================
+    %% TIER 3: PERSISTENCE & STORAGE TIER
+    %% =========================================================================
+    subgraph T3["<b>TIER 3: PERSISTENCE & STORAGE TIER (MANAGED CLOUD DATA INFRASTRUCTURE)</b>"]
+        direction LR
+        DB["<b>Relational Database (Neon Serverless PostgreSQL 16)</b><br/>• PgBouncer TLS 1.3 Multiplexing (Port 6543)<br/>• Unprivileged bbt_app role (NOSUPERUSER NOBYPASSRLS)<br/>• FORCE ROW LEVEL SECURITY on all tenant tables<br/>• Hardened SECURITY DEFINER (pinned pg_catalog search_path)<br/>• Append-Only Dual Hash-Chained Audit Ledger (row_hash & report_chain_hash)"]
+        R2["<b>Object Storage (Cloudflare R2 Distributed Bucket)</b><br/>• S3-Compatible Object Store (SSE-R2 AES-256 at rest)<br/>• Client-Encrypted RFC 9580 SEIPDv2 Binary PoCs<br/>• Time-Limited Presigned S3 URLs (15-Minute Reservation Lease)<br/>• Direct Browser S3 PUT / GET (Zero Server Memory Proxying)<br/>• Zero Bandwidth Egress Fees (Academic & Commercial Cost Predictability)"]
+        DB ~~~ R2
+    end
+
+    %% Clean Tier-to-Tier Connections
+    T1 ==>|"<b>HTTPS / TLS 1.3: Class A Metadata & Armored Ciphertexts</b>"| T2
+    T2 ==>|"<b>TLS 1.3 Pooled TCP :6543 & S3 Presigned URL Minting</b>"| T3
+
+    %% Styling
+    classDef t1Style fill:#EFF6FF,stroke:#2563EB,stroke-width:2px,color:#1E3A8A;
+    classDef t2Style fill:#F5F3FF,stroke:#7C3AED,stroke-width:2px,color:#5B21B6;
+    classDef t3Style fill:#ECFDF5,stroke:#059669,stroke-width:2px,color:#065F46;
+    classDef cardStyle fill:#FFFFFF,stroke:#64748B,stroke-width:1.5px,color:#0F172A;
+    classDef extCard fill:#F8FAFC,stroke:#475569,stroke-width:1.5px,stroke-dasharray: 4 4,color:#1E293B;
+
+    class T1,T1_ACTORS t1Style;
+    class T2 t2Style;
+    class T3 t3Style;
+    class A1,A2,UI,CRYPTO,GW,AUTH,SERVICES,DB,R2 cardStyle;
+    class EXT extCard;

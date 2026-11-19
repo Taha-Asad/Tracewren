@@ -1,0 +1,15 @@
+commands.json
+design.json
+ledger.json
+*.log
+geometry.json
+verification.json
+export-review.json
+export-before.json
+
+reading-states.json
+reading-reflow.json
+hook-*-patch.json
+reading-ledger.json
+reading-verification.json
+stage-nav-patch.json

@@ -1,0 +1,86 @@
+flowchart TB
+    %% =========================================================================
+    %% FIGURE 6.1: FIRST.ORG CVSS 3.1 CALCULATION ENGINE PIPELINE
+    %% BugBountyTrack — Milestone Week 6 Specification
+    %% Pure Minimalist Monochrome Styling on Black Canvas
+    %% =========================================================================
+
+    subgraph INPUT["VECTOR INPUT & VALIDATION"]
+        direction TB
+        VEC["<b>Raw CVSS Vector String</b><br/>Format: CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:C/C:H/I:H/A:H"]
+        VAL["<b>Strict Regex Pattern Validation</b><br/>Grammar check against FIRST.org 8 metric groups"]
+        PARSER["<b>Vector Tokenizer & Metric Extractor</b><br/>Parse AV, AC, PR, UI, Scope, C, I, A"]
+        VEC --- VAL
+        VAL --- PARSER
+    end
+
+    subgraph METRICS["METRIC WEIGHT ASSIGNMENTS"]
+        direction LR
+        M_AV["<b>Attack Vector (AV)</b><br/>N: 0.85 | A: 0.62<br/>L: 0.55 | P: 0.20"]
+        M_AC["<b>Attack Complexity (AC)</b><br/>L: 0.77 | H: 0.44"]
+        M_PR["<b>Privileges Required (PR)</b><br/>Unchanged: N:0.85 L:0.62 H:0.27<br/>Changed: N:0.85 L:0.68 H:0.50"]
+        M_UI["<b>User Interaction (UI)</b><br/>N: 0.85 | R: 0.62"]
+        M_CIA["<b>Impact CIA Weights</b><br/>None: 0.0<br/>Low: 0.22<br/>High: 0.56"]
+    end
+
+    subgraph SUB_SCORES["MATHEMATICAL SUB-SCORE EVALUATION"]
+        direction TB
+        ISS["<b>Impact Sub-Score (ISS)</b><br/>ISS = 1.0 - [(1 - C) × (1 - I) × (1 - A)]"]
+        BRANCH_SCOPE{"<b>Scope (S) Evaluation</b>"}
+        IMP_U["<b>Unchanged Scope Impact</b><br/>Impact = 6.42 × ISS"]
+        IMP_C["<b>Changed Scope Impact</b><br/>Impact = 7.52 × (ISS - 0.029) - 3.25 × (ISS - 0.02)^15"]
+        EXP["<b>Exploitability Sub-Score</b><br/>Exploitability = 8.22 × AV × AC × PR × UI"]
+        
+        ISS --- BRANCH_SCOPE
+        BRANCH_SCOPE ---|Scope: Unchanged| IMP_U
+        BRANCH_SCOPE ---|Scope: Changed| IMP_C
+    end
+
+    subgraph AGGREGATION["SCORE AGGREGATION & FIRST.ORG ROUNDUP"]
+        direction TB
+        RAW_SUM["<b>Raw Score Formula</b><br/>Raw = min(Impact + Exploitability, 10.0)"]
+        ROUNDUP["<b>FIRST.org Appendix A Roundup</b><br/>roundup(val) = Math.ceil(round(val, 9) × 10) / 10"]
+        RAW_SUM --- ROUNDUP
+    end
+
+    subgraph OUTPUT["QUALITATIVE SEVERITY & BUSINESS DISPATCH"]
+        direction LR
+        SEV_CRIT["<b>Critical (9.0 - 10.0)</b><br/>Triage SLA: 24h<br/>Max Bounty Tier"]
+        SEV_HIGH["<b>High (7.0 - 8.9)</b><br/>Triage SLA: 72h<br/>High Bounty Tier"]
+        SEV_MED["<b>Medium (4.0 - 6.9)</b><br/>Triage SLA: 14d<br/>Medium Bounty Tier"]
+        SEV_LOW["<b>Low (0.1 - 3.9)</b><br/>Triage SLA: 30d<br/>Low Bounty Tier"]
+    end
+
+    PARSER --- METRICS
+    METRICS --- SUB_SCORES
+    IMP_U --- RAW_SUM
+    IMP_C --- RAW_SUM
+    EXP --- RAW_SUM
+    ROUNDUP --- OUTPUT
+
+    %% Minimalist Monochrome Styling
+    style INPUT fill:none,stroke:#ffffff,stroke-width:1.5px,stroke-dasharray: 4 4
+    style METRICS fill:none,stroke:#ffffff,stroke-width:1.5px,stroke-dasharray: 4 4
+    style SUB_SCORES fill:none,stroke:#ffffff,stroke-width:1.5px,stroke-dasharray: 4 4
+    style AGGREGATION fill:none,stroke:#ffffff,stroke-width:1.5px,stroke-dasharray: 4 4
+    style OUTPUT fill:none,stroke:#ffffff,stroke-width:1.5px,stroke-dasharray: 4 4
+
+    style VEC fill:none,stroke:#ffffff,stroke-width:1.5px,color:#ffffff
+    style VAL fill:none,stroke:#ffffff,stroke-width:1.5px,color:#ffffff
+    style PARSER fill:none,stroke:#ffffff,stroke-width:1.5px,color:#ffffff
+    style M_AV fill:none,stroke:#ffffff,stroke-width:1px,color:#ffffff
+    style M_AC fill:none,stroke:#ffffff,stroke-width:1px,color:#ffffff
+    style M_PR fill:none,stroke:#ffffff,stroke-width:1px,color:#ffffff
+    style M_UI fill:none,stroke:#ffffff,stroke-width:1px,color:#ffffff
+    style M_CIA fill:none,stroke:#ffffff,stroke-width:1px,color:#ffffff
+    style ISS fill:none,stroke:#ffffff,stroke-width:1.5px,color:#ffffff
+    style BRANCH_SCOPE fill:none,stroke:#ffffff,stroke-width:1.5px,color:#ffffff
+    style IMP_U fill:none,stroke:#ffffff,stroke-width:1.5px,color:#ffffff
+    style IMP_C fill:none,stroke:#ffffff,stroke-width:1.5px,color:#ffffff
+    style EXP fill:none,stroke:#ffffff,stroke-width:1.5px,color:#ffffff
+    style RAW_SUM fill:none,stroke:#ffffff,stroke-width:1.5px,color:#ffffff
+    style ROUNDUP fill:none,stroke:#ffffff,stroke-width:2px,color:#ffffff
+    style SEV_CRIT fill:none,stroke:#ffffff,stroke-width:1.5px,color:#ffffff
+    style SEV_HIGH fill:none,stroke:#ffffff,stroke-width:1.5px,color:#ffffff
+    style SEV_MED fill:none,stroke:#ffffff,stroke-width:1.5px,color:#ffffff
+    style SEV_LOW fill:none,stroke:#ffffff,stroke-width:1.5px,color:#ffffff

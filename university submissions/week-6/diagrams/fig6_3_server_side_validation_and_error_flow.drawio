@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" version="21.0.0" type="device">
+  <diagram id="fig6_3_server_side_validation_and_error_flow" name="Server-Side Validation &amp; Error Flow">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="850" background="#000000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title_3" value="&lt;h1 style=&quot;color:#ffffff;font-family:Helvetica;margin:0;font-weight:normal;&quot;&gt;BugBountyTrack — Server-Side Validation &amp;amp; Error Handling Flow&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="100" y="30" width="1200" height="40" as="geometry" />
+        </mxCell>
+        <!-- Entry Payload -->
+        <mxCell id="v_entry" value="&lt;b&gt;Client Request Ingestion&lt;/b&gt;&lt;br/&gt;POST /reports/submit with JSON Body" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="550" y="100" width="300" height="60" as="geometry" />
+        </mxCell>
+        <!-- Validation Pipe -->
+        <mxCell id="v_pipe" value="&lt;b&gt;Global NestJS ValidationPipe&lt;/b&gt;&lt;br/&gt;whitelist: true | forbidNonWhitelisted: true | transform: true" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="500" y="200" width="400" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e_v_entry_pipe" value="" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=1.5;" edge="1" source="v_entry" target="v_pipe" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Validation Gate -->
+        <mxCell id="v_gate" value="&lt;b&gt;DTO Schema Validation Check&lt;/b&gt;&lt;br/&gt;UUIDv4, Title Length, CVSS Regex, SHA-256 Hex" style="rhombus;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="520" y="300" width="360" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="e_v_pipe_gate" value="" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=1.5;" edge="1" source="v_pipe" target="v_gate" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Error 400 Box -->
+        <mxCell id="v_err400" value="&lt;b&gt;400 Bad Request Response&lt;/b&gt;&lt;br/&gt;Detailed RFC 7807 problem details array" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="150" y="320" width="280" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e_v_gate_err" value="Violations Present" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;labelBackgroundColor=#000000;" edge="1" source="v_gate" target="v_err400" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Domain Tenancy Verification -->
+        <mxCell id="v_tenant" value="&lt;b&gt;Domain Tenancy &amp;amp; Program Verification&lt;/b&gt;&lt;br/&gt;Confirms workspace owns target bounty program" style="rhombus;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="520" y="440" width="360" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="e_v_gate_ten" value="Validation Passed" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;labelBackgroundColor=#000000;" edge="1" source="v_gate" target="v_tenant" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Error 404 Box -->
+        <mxCell id="v_err404" value="&lt;b&gt;404 Not Found / 400 Domain Exception&lt;/b&gt;&lt;br/&gt;Target program not found or tenant mismatch" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="960" y="460" width="300" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e_v_ten_err" value="Tenant Mismatch" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;labelBackgroundColor=#000000;" edge="1" source="v_tenant" target="v_err404" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Prisma Filter -->
+        <mxCell id="v_prisma" value="&lt;b&gt;Prisma Client Exception Filter Layer&lt;/b&gt;&lt;br/&gt;Catches P2002 (409 Conflict), P2025 (404), P2003 (422)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="500" y="580" width="400" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e_v_ten_prisma" value="Verified" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;labelBackgroundColor=#000000;" edge="1" source="v_tenant" target="v_prisma" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Success State -->
+        <mxCell id="v_succ" value="&lt;b&gt;201 Created Response Output&lt;/b&gt;&lt;br/&gt;Zero leakage of database internals or stack traces" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=2;fontColor=#ffffff;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="500" y="680" width="400" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e_v_prisma_succ" value="Success" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;labelBackgroundColor=#000000;" edge="1" source="v_prisma" target="v_succ" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

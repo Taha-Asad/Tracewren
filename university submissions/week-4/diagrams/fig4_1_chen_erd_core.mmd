@@ -1,0 +1,189 @@
+flowchart TB
+    %% =========================================================================
+    %% FIGURE 4.1: CORE DOMAIN ENTITY-RELATIONSHIP MODEL (PETER CHEN NOTATION)
+    %% BugBountyTrack — Milestone Week 4 Specification
+    %% Pure Minimalist Monochrome Chen Notation on Black Canvas
+    %% =========================================================================
+
+    %% =========================================================================
+    %% TIER 1 (TOP): ORGANIZATION (PRIMARY TENANCY BOUNDARY)
+    %% =========================================================================
+    ORG["<b>ORGANIZATION</b>"]
+    
+    subgraph O_ATTRS[" "]
+        direction LR
+        o1(["<u>org_id (PK)</u>"])
+        o2(["slug (UK)"])
+        o3(["display_name"])
+        o4(["verified_domain"])
+        o5(["security_settings_json"])
+        o6(["created_at"])
+    end
+    o1 --- ORG
+    o2 --- ORG
+    o3 --- ORG
+    o4 --- ORG
+    o5 --- ORG
+    o6 --- ORG
+
+    %% Relationships from Organization
+    rel_sponsors{"sponsors<br/>(1:N)"}
+    rel_member{"has_member<br/>(1:N)"}
+
+    ORG --- rel_sponsors
+    ORG --- rel_member
+
+    %% =========================================================================
+    %% TIER 2 (MIDDLE): BOUNTY PROGRAM & USER IDENTITY
+    %% =========================================================================
+    subgraph MID_TIER[" "]
+        direction LR
+
+        %% BOUNTY_PROGRAM
+        subgraph P_BOX[" "]
+            direction TB
+            PROGRAM["<b>BOUNTY_PROGRAM</b>"]
+            subgraph P_ATTRS[" "]
+                direction LR
+                p1(["<u>program_id (PK)</u>"])
+                p2(["org_id (FK)"])
+                p3(["title"])
+                p4(["policy_rules"])
+                p5(["is_active"])
+                p6(["bounty_min_max"])
+            end
+            PROGRAM --- p1
+            PROGRAM --- p2
+            PROGRAM --- p3
+            PROGRAM --- p4
+            PROGRAM --- p5
+            PROGRAM --- p6
+        end
+
+        %% USER
+        subgraph U_BOX[" "]
+            direction TB
+            USER["<b>USER</b>"]
+            subgraph U_ATTRS[" "]
+                direction LR
+                u1(["<u>user_id (PK)</u>"])
+                u2(["email (UK)"])
+                u3(["password_hash"])
+                u4(["full_name"])
+                u5(["global_role"])
+                u6(["totp_secret_enc"])
+                u7(["is_active"])
+            end
+            USER --- u1
+            USER --- u2
+            USER --- u3
+            USER --- u4
+            USER --- u5
+            USER --- u6
+            USER --- u7
+        end
+    end
+
+    rel_sponsors --- PROGRAM
+    rel_member --- USER
+
+    %% =========================================================================
+    %% TIER 3 (BOTTOM): SCOPES, MEMBERSHIPS, CRYPTO KEYPAIRS
+    %% =========================================================================
+    rel_defines{"defines<br/>(1:N)"}
+    rel_enrolled{"enrolled_in<br/>(1:N)"}
+    rel_keys{"owns_keypair<br/>(1:N)"}
+
+    PROGRAM --- rel_defines
+    USER --- rel_enrolled
+    USER --- rel_keys
+
+    subgraph BOT_TIER[" "]
+        direction LR
+
+        subgraph S_BOX[" "]
+            direction TB
+            SCOPE["<b>PROGRAM_SCOPE</b>"]
+            subgraph S_ATTRS[" "]
+                direction LR
+                s1(["<u>scope_id (PK)</u>"])
+                s2(["program_id (FK)"])
+                s3(["target_type"])
+                s4(["target_identifier"])
+                s5(["instruction"])
+            end
+            SCOPE --- s1
+            SCOPE --- s2
+            SCOPE --- s3
+            SCOPE --- s4
+            SCOPE --- s5
+        end
+
+        subgraph M_BOX[" "]
+            direction TB
+            MEMBERSHIP["<b>USER_MEMBERSHIP</b>"]
+            subgraph M_ATTRS[" "]
+                direction LR
+                m1(["<u>membership_id (PK)</u>"])
+                m2(["org_id (FK)"])
+                m3(["user_id (FK)"])
+                m4(["tenant_role"])
+                m5(["joined_at"])
+            end
+            MEMBERSHIP --- m1
+            MEMBERSHIP --- m2
+            MEMBERSHIP --- m3
+            MEMBERSHIP --- m4
+            MEMBERSHIP --- m5
+        end
+
+        subgraph K_BOX[" "]
+            direction TB
+            KEYPAIR["<b>CRYPTO_KEYPAIR</b>"]
+            subgraph K_ATTRS[" "]
+                direction LR
+                k1(["<u>key_id (PK)</u>"])
+                k2(["user_id (FK)"])
+                k3(["public_key_armor"])
+                k4(["enc_private_bundle"])
+                k5(["fingerprint (UK)"])
+                k6(["is_primary"])
+            end
+            KEYPAIR --- k1
+            KEYPAIR --- k2
+            KEYPAIR --- k3
+            KEYPAIR --- k4
+            KEYPAIR --- k5
+            KEYPAIR --- k6
+        end
+    end
+
+    rel_defines --- SCOPE
+    rel_enrolled --- MEMBERSHIP
+    rel_keys --- KEYPAIR
+
+    %% Clean invisible styling for organizational groupings
+    style O_ATTRS fill:none,stroke:none
+    style MID_TIER fill:none,stroke:none
+    style BOT_TIER fill:none,stroke:none
+    style P_BOX fill:none,stroke:none
+    style U_BOX fill:none,stroke:none
+    style S_BOX fill:none,stroke:none
+    style M_BOX fill:none,stroke:none
+    style K_BOX fill:none,stroke:none
+    style P_ATTRS fill:none,stroke:none
+    style U_ATTRS fill:none,stroke:none
+    style S_ATTRS fill:none,stroke:none
+    style M_ATTRS fill:none,stroke:none
+    style K_ATTRS fill:none,stroke:none
+
+    %% Canonical Peter Chen Entity-Relationship Monochrome Styling on Black Canvas
+    classDef entity fill:#000000,stroke:#ffffff,stroke-width:1.8px,color:#ffffff,font-weight:bold;
+    classDef rel fill:#000000,stroke:#ffffff,stroke-width:1.5px,color:#ffffff,font-weight:normal;
+    classDef attr fill:#000000,stroke:#ffffff,stroke-width:1.2px,color:#ffffff,font-size:11px;
+
+    class ORG,USER,PROGRAM,SCOPE,MEMBERSHIP,KEYPAIR entity;
+    class rel_sponsors,rel_member,rel_defines,rel_enrolled,rel_keys rel;
+    class o1,o2,o3,o4,o5,o6,p1,p2,p3,p4,p5,p6,u1,u2,u3,u4,u5,u6,u7,s1,s2,s3,s4,s5,m1,m2,m3,m4,m5,k1,k2,k3,k4,k5,k6 attr;
+
+    linkStyle default stroke:#ffffff,stroke-width:1.2px;

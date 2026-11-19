@@ -1,0 +1,54 @@
+flowchart TB
+    %% =========================================================================
+    %% FIGURE 5.1: GIT BRANCH PROTECTION & CONTINUOUS INTEGRATION WORKFLOW
+    %% BugBountyTrack — Milestone Week 5 Specification
+    %% Pure Minimalist Monochrome Styling on Black Canvas
+    %% =========================================================================
+
+    subgraph LOCAL["LOCAL DEVELOPER WORKSPACE"]
+        direction TB
+        DEV["<b>Developer Workstation</b><br/>Branch: feat/core-auth-layer"]
+        HOOK["<b>Client-Side Hook</b><br/>.git/hooks/pre-push<br/>Blocks direct push to main"]
+        DEV --- HOOK
+    end
+
+    subgraph GITHUB["GITHUB REPOSITORY & BRANCH PROTECTIONS"]
+        direction TB
+        PR["<b>Pull Request Opened</b><br/>feat/core-auth-layer to develop"]
+        
+        subgraph CI["AUTOMATED GITHUB ACTIONS CI GATES"]
+            direction LR
+            JOB1["<b>Job 1: Hygiene & Lint</b><br/>AST Syntax & Type-Check"]
+            JOB2["<b>Job 2: Vitest Suite</b><br/>94 Unit & Auth Tests Passing"]
+            JOB3["<b>Job 3: Schema Validation</b><br/>Prisma Schema & Migrations"]
+        end
+
+        REVIEW["<b>Peer Code Review</b><br/>CODEOWNERS Approval Required<br/>Dismiss Stale Approvals"]
+        MERGE["<b>Merge Protection Gate</b><br/>Linear History Required<br/>Squash and Merge Enforced"]
+
+        PR --- CI
+        CI --- REVIEW
+        REVIEW --- MERGE
+    end
+
+    subgraph BRANCHES["TARGET PRODUCTION BRANCHES"]
+        direction LR
+        DEVELOP["<b>Branch: develop</b><br/>Staging & Continuous Integration"]
+        MAIN["<b>Branch: main</b><br/>Production-Locked & GPG-Signed"]
+    end
+
+    HOOK ---|Push Allowed| PR
+    MERGE --- DEVELOP
+    DEVELOP ---|Release Candidate PR| MAIN
+
+    %% Clean Monochrome Styling
+    style LOCAL fill:none,stroke:#ffffff,stroke-width:1.5px,stroke-dasharray: 4 4
+    style GITHUB fill:none,stroke:#ffffff,stroke-width:1.5px,stroke-dasharray: 4 4
+    style CI fill:none,stroke:#ffffff,stroke-width:1.2px
+    style BRANCHES fill:none,stroke:#ffffff,stroke-width:1.5px,stroke-dasharray: 4 4
+
+    classDef default fill:#000000,stroke:#ffffff,stroke-width:1.5px,color:#ffffff,font-size:12px;
+    classDef mainBranch fill:#000000,stroke:#ffffff,stroke-width:2.5px,color:#ffffff,font-weight:bold,font-size:13px;
+
+    class MAIN mainBranch;
+    linkStyle default stroke:#ffffff,stroke-width:1.2px;

@@ -1,0 +1,54 @@
+# DeployFlow AI Generated .dockerignore
+
+# Version control
+.git
+.gitignore
+
+# Dependencies (will be re-installed in Docker)
+node_modules
+__pycache__
+*.pyc
+.venv
+venv
+vendor
+
+# Build artifacts
+dist
+build
+out
+bin
+obj
+*.class
+target/debug
+
+# Environment files (security!)
+.env
+.env.local
+.env.*.local
+
+# IDE files
+.vscode
+.idea
+*.swp
+
+# Docker files (no need to copy themselves)
+Dockerfile*
+docker-compose*
+
+# DeployFlow files
+.deployflow
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs
+
+# Test files
+coverage
+.nyc_output
+*.test.ts
+*.spec.ts
+__tests__
