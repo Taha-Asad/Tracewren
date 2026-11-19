@@ -1,19 +1,10 @@
 # ═══════════════════════════════════════════════════════════
-# DeployFlow AI Generated GitHub Actions Workflow
-# Framework: unknown
-# Generated: 2026-11-16T19:02:24.403Z
+# Container Build & Security Scan Workflow
+# Builds and pushes the GHCR image, then runs Trivy SARIF scan.
+# Frontend deployment is handled separately via Vercel.
 # ═══════════════════════════════════════════════════════════
-#
-# HOW TO USE:
-# 1. Add these secrets to your GitHub repo (Settings → Secrets):
-#    - SSH_HOST: Your VPS IP address
-#    - SSH_USER: Your SSH username
-#    - SSH_PRIVATE_KEY: Your SSH private key
-#    - SSH_PORT: Your SSH port (usually 22)
-# 2. Push to 'main' branch to trigger deployment
-# ─────────────────────────────────────────────────────────────
 
-name: Build and Deploy
+name: Build and Security Scan
 
 permissions:
   contents: read
@@ -130,59 +121,3 @@ jobs:
         if: always() && hashFiles('trivy-results.sarif') != ''
         with:
           sarif_file: trivy-results.sarif
-
-  # ── JOB 4: Deploy ──────────────────────────────────────────────────
-  deploy:
-    name: Deploy to Production
-    runs-on: ubuntu-latest
-    needs: [build, scan]
-
-    # Only deploy on push to main (not PRs)
-    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
-
-    # This creates a GitHub "Environment" with deployment tracking
-    environment:
-      name: production
-      url: https://your-app.com
-
-    steps:
-      - name: Deploy via SSH
-        uses: appleboy/ssh-action@v1.0.0
-        with:
-          host: ${{ secrets.SSH_HOST }}
-          username: ${{ secrets.SSH_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          port: ${{ secrets.SSH_PORT || 22 }}
-          script: |
-            # Pull the latest image
-            docker pull ${{ needs.build.outputs.image-tag }}
-            
-            # Stop and remove old container
-            docker stop BugBountyTracker || true
-            docker rm BugBountyTracker || true
-            
-            # Start new container
-            docker run -d \
-              --name BugBountyTracker \
-              --restart unless-stopped \
-              -p 3000:3000 \
-              --memory=512m \
-              ${{ needs.build.outputs.image-tag }}
-            
-            # Wait for health check
-            sleep 10
-            docker ps | grep BugBountyTracker
-            
-            echo "Deployment complete!"
-
-      - name: Notify on success
-        if: success()
-        uses: actions/github-script@v7
-        with:
-          script: |
-            github.rest.issues.createComment({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              body: 'Deployed successfully!'
-            })
