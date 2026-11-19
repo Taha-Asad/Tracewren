@@ -1,0 +1,701 @@
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_DATABASE_URL")
+  schemas   = ["bbt_core"]
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+// ==========================================
+// 1. ENUMS
+// ==========================================
+
+enum MembershipRole {
+  ORG_OWNER
+  ORG_ADMIN
+  ORG_DEFENDER
+  ORG_READONLY
+
+  @@map("membership_role")
+  @@schema("bbt_core")
+}
+
+enum MembershipStatus {
+  ACTIVE
+  INACTIVE
+
+  @@map("membership_status")
+  @@schema("bbt_core")
+}
+
+enum ProgramDefenderRole {
+  LEAD_TRIAGER
+  TRIAGER
+  REVIEWER
+  REMEDIATOR
+
+  @@map("program_defender_role")
+  @@schema("bbt_core")
+}
+
+enum ProgramVisibility {
+  PUBLIC
+  INVITE_ONLY
+
+  @@map("program_visibility")
+  @@schema("bbt_core")
+}
+
+enum SubmissionSessionStatus {
+  OPEN
+  CONSUMED
+  EXPIRED
+
+  @@map("submission_session_status")
+  @@schema("bbt_core")
+}
+
+enum UploadReservationStatus {
+  RESERVED
+  BOUND
+  DELETING
+  DELETED
+  DELETE_FAILED
+
+  @@map("upload_reservation_status")
+  @@schema("bbt_core")
+}
+
+enum ReportState {
+  NEW
+  TRIAGING
+  NEED_MORE_INFO
+  ACCEPTED
+  FIX_PROPOSED
+  RETEST_PENDING
+  VERIFIED_RESEARCHER
+  VERIFIED_INTERNAL
+  CLOSED_UNVERIFIED_TIMEOUT
+  CLOSED_INCOMPLETE
+  RISK_ACCEPTED
+  REJECTED_INVALID
+  REJECTED_SPAM
+  DUPLICATE
+  WITHDRAWN
+
+  @@map("report_state")
+  @@schema("bbt_core")
+}
+
+enum OperationalLabel {
+  AUTHENTICATION_BYPASS
+  REMOTE_CODE_EXECUTION
+  PRIVILEGE_ESCALATION
+  DATA_EXFILTRATION
+  INJECTION_VULNERABILITY
+  DENIAL_OF_SERVICE
+  CONFIGURATION_INTEGRITY
+  UNSPECIFIED_SECURITY_DEFECT
+
+  @@map("operational_label")
+  @@schema("bbt_core")
+}
+
+enum RejectionCode {
+  OUT_OF_SCOPE
+  NON_REPRODUCIBLE
+  SPAM
+
+  @@map("rejection_code")
+  @@schema("bbt_core")
+}
+
+enum ActorType {
+  USER
+  GUEST
+  DEFENDER
+  HUNTER
+  SYSTEM
+  TIMEOUT
+
+  @@map("actor_type")
+  @@schema("bbt_core")
+}
+
+enum DiscussionLane {
+  RESEARCHER_ORG
+  REVIEWER_INTERNAL
+
+  @@map("discussion_lane")
+  @@schema("bbt_core")
+}
+
+enum RemediationStatus {
+  PROPOSED
+  DEPLOYED
+  SUPERSEDED
+  VERIFIED
+  FAILED
+
+  @@map("remediation_status")
+  @@schema("bbt_core")
+}
+
+enum RemediationEvidenceType {
+  CODE_COMMIT
+  CONFIG_INFRASTRUCTURE
+
+  @@map("remediation_evidence_type")
+  @@schema("bbt_core")
+}
+
+enum NotificationStatus {
+  PENDING
+  SENT
+  FAILED
+
+  @@map("notification_status")
+  @@schema("bbt_core")
+}
+
+// ==========================================
+// 2. CLUSTER & TENANT MODELS
+// ==========================================
+
+model ClusterStorageState {
+  singletonId                Int      @id @default(1) @map("singleton_id")
+  totalR2AllocatedBytes      BigInt   @default(0) @map("total_r2_allocated_bytes") // 9.5 GiB hard cluster allocation limit
+  emergencyDbBufferUsedBytes BigInt   @default(0) @map("emergency_db_buffer_used_bytes") // 20 MiB shared emergency DB buffer
+  updatedAt                  DateTime @default(now()) @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  @@map("cluster_storage_state")
+  @@schema("bbt_core")
+}
+
+model Organization {
+  id                    String    @id @default(uuid()) @db.Uuid
+  name                  String
+  slug                  String    @unique
+  domain                String?   @unique
+  domainVerified        Boolean   @default(false) @map("domain_verified")
+  planTier              String    @default("FREE_PILOT") @map("plan_tier")
+  maxPrograms           Int       @default(1) @map("max_programs")
+  maxSeats              Int       @default(5) @map("max_seats")
+  onboardingCompletedAt DateTime? @map("onboarding_completed_at") @db.Timestamptz(3)
+
+  // Storage Quota Accounting (FR-8.4, DEC-023)
+  storageQuotaBytes            BigInt @default(1073741824) @map("storage_quota_bytes") // 1.0 GiB tenant R2 cap
+  r2UsedBytes                  BigInt @default(0) @map("r2_used_bytes")
+  dbIntakeQuotaBytes           BigInt @default(20971520) @map("db_intake_quota_bytes") // 20 MiB logical intake
+  dbReserveQuotaBytes          BigInt @default(6291456) @map("db_reserve_quota_bytes") // 6 MiB security reserve
+  emergencyReserveGrantedBytes BigInt @default(0) @map("emergency_reserve_granted_bytes") // Max +2 MiB grant
+
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt DateTime @default(now()) @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  memberships        UserMembership[]
+  programs           Program[]
+  programDefenders   ProgramDefender[]
+  programInvitations ProgramInvitation[]
+  auditHead          OrganizationAuditHead?
+  submissionSessions SubmissionSession[]
+  uploadReservations UploadReservation[]
+  reports            Report[]
+  auditEvents        AuditEvent[]
+  notifications      NotificationOutbox[]
+
+  @@map("organizations")
+  @@schema("bbt_core")
+}
+
+model OrganizationAuditHead {
+  organizationId  String   @id @map("organization_id") @db.Uuid
+  lastTenantSeqNo BigInt   @default(0) @map("last_tenant_seq_no")
+  lastTenantHash  String   @default("0000000000000000000000000000000000000000000000000000000000000000") @map("last_tenant_hash")
+  updatedAt       DateTime @default(now()) @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+
+  @@map("organization_audit_heads")
+  @@schema("bbt_core")
+}
+
+// ==========================================
+// 3. USER, KEY & SESSION MODELS
+// ==========================================
+
+model User {
+  id               String   @id @default(uuid()) @db.Uuid
+  email            String   @unique
+  passwordHash     String?  @map("password_hash")
+  googleId         String?  @unique @map("google_id")
+  githubId         String?  @unique @map("github_id")
+  avatarUrl        String?  @map("avatar_url")
+  totpSecretCipher String?  @map("totp_secret_cipher") // Encrypted TOTP seed for step-up MFA
+  mfaEnabled       Boolean  @default(false) @map("mfa_enabled")
+  fullName         String?  @map("full_name")
+  createdAt        DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt        DateTime @default(now()) @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  memberships        UserMembership[]
+  sessions           Session[]
+  keys               UserKey[]
+  assignedPrograms   ProgramDefender[]
+  assignedReports    Report[]                @relation("AssignedReports")
+  submittedReports   Report[]                @relation("SubmittedReports")
+  cvssAssessments    CvssAssessmentHistory[]
+  discussionMessages DiscussionMessage[]
+  verifiedRetests    RetestEvidence[]
+  auditEvents        AuditEvent[]
+
+  @@map("users")
+  @@schema("bbt_core")
+}
+
+model UserKey {
+  id                        String    @id @default(uuid()) @db.Uuid
+  userId                    String    @map("user_id") @db.Uuid
+  keyType                   String    @default("PRIMARY_SIGNING") @map("key_type")
+  publicKeyArmor            String    @map("public_key_armor") // RFC 9580 v6 Curve25519 public key
+  encryptedPrivateKeyBackup String?   @map("encrypted_private_key_backup") // Argon2id S2K backup (.bbt-user-keys.json)
+  fingerprint               String    @unique // 64-char SHA-256 hex
+  isActive                  Boolean   @default(true) @map("is_active")
+  createdAt                 DateTime  @default(now()) @map("created_at") @db.Timestamptz(3)
+  revokedAt                 DateTime? @map("revoked_at") @db.Timestamptz(3)
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@map("user_keys")
+  @@schema("bbt_core")
+}
+
+model Session {
+  id            String    @id @default(uuid()) @db.Uuid
+  userId        String    @map("user_id") @db.Uuid
+  tokenHash     String    @unique @map("token_hash") // SHA-256 of CSPRNG raw session token
+  ipAddress     String?   @map("ip_address")
+  userAgent     String?   @map("user_agent")
+  mfaVerifiedAt DateTime? @map("mfa_verified_at") @db.Timestamptz(3) // 10-minute step-up cache
+  expiresAt     DateTime  @map("expires_at") @db.Timestamptz(3)
+  createdAt     DateTime  @default(now()) @map("created_at") @db.Timestamptz(3)
+
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
+
+  @@index([userId])
+  @@map("sessions")
+  @@schema("bbt_core")
+}
+
+model UserMembership {
+  organizationId String           @map("organization_id") @db.Uuid
+  userId         String           @map("user_id") @db.Uuid
+  role           MembershipRole
+  status         MembershipStatus @default(ACTIVE)
+  createdAt      DateTime         @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt      DateTime         @default(now()) @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Restrict)
+  user         User         @relation(fields: [userId], references: [id], onDelete: Restrict)
+
+  @@id([organizationId, userId])
+  @@index([userId])
+  @@map("user_memberships")
+  @@schema("bbt_core")
+}
+
+// ==========================================
+// 4. PROGRAM & INTAKE MODELS
+// ==========================================
+
+model Program {
+  id                  String            @id @default(uuid()) @db.Uuid
+  organizationId      String            @map("organization_id") @db.Uuid
+  name                String
+  slug                String            @unique
+  visibility          ProgramVisibility @default(PUBLIC)
+  recipientSetVersion Int               @default(1) @map("recipient_set_version")
+  recoveryPublicKey   String            @map("recovery_public_key") // Armored Curve25519 offline org recovery key
+  policyMarkdown      String            @map("policy_markdown") // Hosted Safe Harbor policy (FR-2.4)
+  createdAt           DateTime          @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt           DateTime          @default(now()) @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  organization       Organization        @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  defenders          ProgramDefender[]
+  invitations        ProgramInvitation[]
+  submissionSessions SubmissionSession[]
+  reports            Report[]
+
+  @@index([organizationId])
+  @@map("programs")
+  @@schema("bbt_core")
+}
+
+model ProgramInvitation {
+  id             String    @id @default(uuid()) @db.Uuid
+  organizationId String    @map("organization_id") @db.Uuid
+  programId      String    @map("program_id") @db.Uuid
+  tokenHash      String    @unique @map("token_hash") // SHA-256 of private invite token (FR-1.5b)
+  inviteeEmail   String    @map("invitee_email")
+  expiresAt      DateTime  @map("expires_at") @db.Timestamptz(3)
+  acceptedAt     DateTime? @map("accepted_at") @db.Timestamptz(3)
+  createdAt      DateTime  @default(now()) @map("created_at") @db.Timestamptz(3)
+
+  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  program      Program      @relation(fields: [programId], references: [id], onDelete: Cascade)
+
+  @@index([organizationId])
+  @@index([programId])
+  @@map("program_invitations")
+  @@schema("bbt_core")
+}
+
+model ProgramDefender {
+  id             String              @id @default(uuid()) @db.Uuid
+  organizationId String              @map("organization_id") @db.Uuid
+  programId      String              @map("program_id") @db.Uuid
+  userId         String              @map("user_id") @db.Uuid
+  role           ProgramDefenderRole @default(TRIAGER)
+  isActive       Boolean             @default(true) @map("is_active")
+  assignedAt     DateTime            @default(now()) @map("assigned_at") @db.Timestamptz(3)
+
+  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  program      Program      @relation(fields: [programId], references: [id], onDelete: Cascade)
+  user         User         @relation(fields: [userId], references: [id], onDelete: Restrict)
+
+  @@unique([programId, userId])
+  @@index([organizationId])
+  @@index([userId])
+  @@map("program_defenders")
+  @@schema("bbt_core")
+}
+
+model SubmissionSession {
+  id                  String                  @id @default(uuid()) @db.Uuid
+  organizationId      String                  @map("organization_id") @db.Uuid
+  programId           String                  @map("program_id") @db.Uuid
+  sessionToken        String                  @unique @map("session_token") // 30-minute Turnstile validated intake token
+  status              SubmissionSessionStatus @default(OPEN)
+  requestDigestSha256 String?                 @map("request_digest_sha256")
+  reportId            String?                 @map("report_id") @db.Uuid
+
+  // Encrypted retry cache: zero plaintext token exposure (FR-1.6b, DEC-020)
+  cachedResponseJson String?  @map("cached_response_json")
+  expiresAt          DateTime @map("expires_at") @db.Timestamptz(3)
+  createdAt          DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+
+  organization       Organization        @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  program            Program             @relation(fields: [programId], references: [id], onDelete: Cascade)
+  uploadReservations UploadReservation[]
+
+  @@index([organizationId])
+  @@index([programId])
+  @@map("submission_sessions")
+  @@schema("bbt_core")
+}
+
+model UploadReservation {
+  id                   String                  @id @default(uuid()) @map("reservation_id") @db.Uuid
+  submissionSessionId  String?                 @map("submission_session_id") @db.Uuid
+  organizationId       String                  @map("organization_id") @db.Uuid
+  reportId             String?                 @map("report_id") @db.Uuid
+  r2ObjectKey          String                  @unique @map("r2_object_key")
+  exactCiphertextBytes BigInt                  @map("exact_ciphertext_bytes")
+  ciphertextSha256     String                  @map("ciphertext_sha256")
+  status               UploadReservationStatus @default(RESERVED)
+  claimId              String?                 @map("claim_id") @db.Uuid // 2-min lease for 3-phase cron
+  claimExpiresAt       DateTime?               @map("claim_expires_at") @db.Timestamptz(3)
+  expiresAt            DateTime                @map("expires_at") @db.Timestamptz(3)
+  createdAt            DateTime                @default(now()) @map("created_at") @db.Timestamptz(3)
+
+  submissionSession SubmissionSession? @relation(fields: [submissionSessionId], references: [id], onDelete: SetNull)
+  organization      Organization       @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  report            Report?            @relation(fields: [reportId], references: [id], onDelete: Cascade)
+  attachment        Attachment?
+
+  @@index([organizationId])
+  @@index([status, claimExpiresAt])
+  @@map("upload_reservations")
+  @@schema("bbt_core")
+}
+
+model Attachment {
+  id                         String   @id @default(uuid()) @db.Uuid
+  reportId                   String   @map("report_id") @db.Uuid
+  reservationId              String?  @unique @map("reservation_id") @db.Uuid
+  r2ObjectKey                String   @unique @map("r2_object_key")
+  originalFilenameCiphertext String   @map("original_filename_ciphertext") // Class B
+  mimeType                   String   @default("application/octet-stream") @map("mime_type")
+  fileBytes                  BigInt   @map("file_bytes")
+  ciphertextSha256           String   @map("ciphertext_sha256")
+  encryptedFileKeyPacket     String   @map("encrypted_file_key_packet") // OpenPGP PKESK wrapping K_file
+  createdAt                  DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+
+  report      Report             @relation(fields: [reportId], references: [id], onDelete: Cascade)
+  reservation UploadReservation? @relation(fields: [reservationId], references: [id], onDelete: SetNull)
+
+  @@index([reportId])
+  @@map("attachments")
+  @@schema("bbt_core")
+}
+
+// ==========================================
+// 5. REPORT & LIFECYCLE MODELS
+// ==========================================
+
+model Report {
+  id             String @id @default(uuid()) @db.Uuid
+  organizationId String @map("organization_id") @db.Uuid
+  programId      String @map("program_id") @db.Uuid
+
+  // Dual-Lane Submitter Attribution (Branch A: Hunter vs. Branch B: Guest)
+  hunterId           String? @map("hunter_id") @db.Uuid
+  guestActorId       String? @unique @map("guest_actor_id") @db.Uuid // Durable anonymous UUIDv4
+  guestTokenHash     String? @unique @map("guest_token_hash") // SHA-256 of access_token
+  guestPublicKey     String? @map("guest_public_key") // Ephemeral Curve25519 public key
+  guestRecoveryHash  String? @map("guest_recovery_hash") // SHA-256 of recovery package
+  assignedDefenderId String? @map("assigned_defender_id") @db.Uuid
+
+  // Class A: Plaintext Operational Metadata
+  displayId              String?          @unique @map("display_id")
+  reporterLabel          String?          @map("reporter_label")
+  state                  ReportState      @default(NEW)
+  stateVersion           Int              @default(1) @map("state_version")
+  reportRecipientVersion Int              @default(1) @map("report_recipient_version")
+  operationalLabel       OperationalLabel @map("operational_label")
+  assetScope             String           @map("asset_scope")
+  cvssVector             String?          @map("cvss_vector")
+  cvssSuggested          Decimal?         @map("cvss_suggested") @db.Decimal(3, 1)
+  cvssScore              Decimal?         @map("cvss_score") @db.Decimal(3, 1)
+
+  // Class B: Multi-Recipient Encrypted Envelopes (Submitter + Defenders + Recovery)
+  titleCiphertext   String @map("title_ciphertext")
+  encryptedPayload  String @map("encrypted_payload")
+  payloadBodySha256 String @map("payload_body_sha256")
+
+  // Triage Decisions & Rejections
+  duplicateOfReportId       String?        @map("duplicate_of_report_id") @db.Uuid
+  rejectionCode             RejectionCode? @map("rejection_code")
+  rejectionReasonCiphertext String?        @map("rejection_reason_ciphertext") // Class B
+  riskAcceptedByUserId      String?        @map("risk_accepted_by_user_id") @db.Uuid
+  riskRationaleCiphertext   String?        @map("risk_rationale_ciphertext") // Class C
+  riskReviewDate            DateTime?      @map("risk_review_date") @db.Timestamptz(3)
+  remediationAttemptNo      Int            @default(0) @map("remediation_attempt_no")
+
+  // Concurrency, SLA & Capacity Pause
+  capacityDeadlinePaused Boolean   @default(false) @map("capacity_deadline_paused")
+  capacityPausedAt       DateTime? @map("capacity_paused_at") @db.Timestamptz(3)
+  slaTriageDue           DateTime? @map("sla_triage_due") @db.Timestamptz(3)
+  slaRemediationDue      DateTime? @map("sla_remediation_due") @db.Timestamptz(3)
+  infoTimeoutDue         DateTime? @map("info_timeout_due") @db.Timestamptz(3)
+  retestTimeoutDue       DateTime? @map("retest_timeout_due") @db.Timestamptz(3)
+  lastAuditSeqNo         BigInt    @default(1) @map("last_audit_seq_no")
+  lastReportChainHash    String?   @map("last_report_chain_hash")
+
+  createdAt DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt DateTime @default(now()) @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  organization       Organization            @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  program            Program                 @relation(fields: [programId], references: [id], onDelete: Restrict)
+  hunter             User?                   @relation("SubmittedReports", fields: [hunterId], references: [id], onDelete: SetNull)
+  assignedDefender   User?                   @relation("AssignedReports", fields: [assignedDefenderId], references: [id], onDelete: SetNull)
+  duplicateOf        Report?                 @relation("Duplicates", fields: [duplicateOfReportId], references: [id], onDelete: SetNull)
+  duplicateReports   Report[]                @relation("Duplicates")
+  recipients         ReportRecipient[]
+  guestNonces        GuestMutationNonce[]
+  uploadReservations UploadReservation[]
+  attachments        Attachment[]
+  cvssHistory        CvssAssessmentHistory[]
+  messages           DiscussionMessage[]
+  remediations       RemediationRecord[]
+  retests            RetestEvidence[]
+  auditEvents        AuditEvent[]
+  notifications      NotificationOutbox[]
+
+  @@index([organizationId, state])
+  @@index([programId])
+  @@map("reports")
+  @@schema("bbt_core")
+}
+
+model ReportRecipient {
+  id                String   @id @default(uuid()) @db.Uuid
+  reportId          String   @map("report_id") @db.Uuid
+  userId            String?  @map("user_id") @db.Uuid
+  keyFingerprint    String   @map("key_fingerprint")
+  recipientLane     String   @map("recipient_lane") // "CLASS_B" or "CLASS_C"
+  wrappedSessionKey String   @map("wrapped_session_key") // OpenPGP PKESK packet wrapping K_S
+  wrappedAt         DateTime @default(now()) @map("wrapped_at") @db.Timestamptz(3)
+
+  report Report @relation(fields: [reportId], references: [id], onDelete: Cascade)
+
+  @@index([reportId])
+  @@map("report_recipients")
+  @@schema("bbt_core")
+}
+
+model GuestMutationNonce {
+  reportId            String   @map("report_id") @db.Uuid
+  nonce               BigInt   @map("nonce")
+  actionType          String   @map("action_type") // e.g., "ROTATE_TOKEN", "RETEST_CONFIRM"
+  requestDigestSha256 String   @map("request_digest_sha256")
+  consumedAt          DateTime @default(now()) @map("consumed_at") @db.Timestamptz(3)
+
+  report Report @relation(fields: [reportId], references: [id], onDelete: Cascade)
+
+  @@id([reportId, nonce])
+  @@map("guest_mutation_nonces")
+  @@schema("bbt_core")
+}
+
+// ==========================================
+// 6. CVSS, DISCUSSION & REMEDIATION
+// ==========================================
+
+model CvssAssessmentHistory {
+  id                      String   @id @default(uuid()) @db.Uuid
+  reportId                String   @map("report_id") @db.Uuid
+  actorUserId             String   @map("actor_user_id") @db.Uuid
+  previousVector          String?  @map("previous_vector")
+  newVector               String   @map("new_vector")
+  newScore                Decimal  @map("new_score") @db.Decimal(3, 1)
+  explanationCiphertext   String   @map("explanation_ciphertext") // Class B
+  internalNotesCiphertext String?  @map("internal_notes_ciphertext") // Class C
+  seipdv2BodySha256       String   @map("seipdv2_body_sha256")
+  createdAt               DateTime @default(now()) @map("created_at") @db.Timestamptz(3)
+
+  report Report @relation(fields: [reportId], references: [id], onDelete: Cascade)
+  actor  User   @relation(fields: [actorUserId], references: [id], onDelete: Restrict)
+
+  @@index([reportId])
+  @@map("cvss_assessment_history")
+  @@schema("bbt_core")
+}
+
+model DiscussionMessage {
+  id                     String         @id @default(uuid()) @db.Uuid
+  reportId               String         @map("report_id") @db.Uuid
+  senderActorType        ActorType      @map("sender_actor_type")
+  senderUserId           String?        @map("sender_user_id") @db.Uuid
+  senderGuestActorId     String?        @map("sender_guest_actor_id") @db.Uuid
+  lane                   DiscussionLane
+  encryptedBody          String         @map("encrypted_body") // Class B or Class C
+  bodySha256             String         @map("body_sha256")
+  reportRecipientVersion Int            @default(1) @map("report_recipient_version")
+  createdAt              DateTime       @default(now()) @map("created_at") @db.Timestamptz(3)
+
+  report     Report @relation(fields: [reportId], references: [id], onDelete: Cascade)
+  senderUser User?  @relation(fields: [senderUserId], references: [id], onDelete: SetNull)
+
+  @@index([reportId, lane])
+  @@map("discussion_messages")
+  @@schema("bbt_core")
+}
+
+model RemediationRecord {
+  id                         String                  @id @default(uuid()) @db.Uuid
+  reportId                   String                  @map("report_id") @db.Uuid
+  attemptNo                  Int                     @map("attempt_no")
+  status                     RemediationStatus       @default(PROPOSED)
+  evidenceType               RemediationEvidenceType @map("evidence_type")
+  commitSha                  String?                 @map("commit_sha")
+  branchName                 String?                 @map("branch_name")
+  targetBranch               String?                 @map("target_branch")
+  verifiedBranchHeadSha      String?                 @map("verified_branch_head_sha")
+  githubSignatureVerified    Boolean?                @map("github_signature_verified")
+  configHash                 String?                 @map("config_hash")
+  configArtifactCiphertext   String?                 @map("config_artifact_ciphertext") // Class B <= 256 KiB
+  remediationNotesCiphertext String?                 @map("remediation_notes_ciphertext") // Class B
+  deploymentEnv              String?                 @map("deployment_env") // Staging, Pre-Production, Production
+  deployedVersion            String?                 @map("deployed_version")
+  deployedAt                 DateTime?               @map("deployed_at") @db.Timestamptz(3)
+  createdAt                  DateTime                @default(now()) @map("created_at") @db.Timestamptz(3)
+  updatedAt                  DateTime                @default(now()) @updatedAt @map("updated_at") @db.Timestamptz(3)
+
+  report  Report           @relation(fields: [reportId], references: [id], onDelete: Cascade)
+  retests RetestEvidence[]
+
+  @@unique([reportId, attemptNo])
+  @@index([reportId])
+  @@map("remediation_records")
+  @@schema("bbt_core")
+}
+
+model RetestEvidence {
+  id                          String    @id @default(uuid()) @db.Uuid
+  reportId                    String    @map("report_id") @db.Uuid
+  remediationRecordId         String    @map("remediation_record_id") @db.Uuid
+  attemptNo                   Int       @map("attempt_no")
+  verifierActorType           ActorType @map("verifier_actor_type")
+  verifierUserId              String?   @map("verifier_user_id") @db.Uuid
+  verifierGuestActorId        String?   @map("verifier_guest_actor_id") @db.Uuid
+  fixConfirmed                Boolean   @map("fix_confirmed")
+  verifierAuthoredFix         Boolean   @default(false) @map("verifier_authored_fix") // Conflict-of-interest flag
+  verificationNotesCiphertext String?   @map("verification_notes_ciphertext") // Class B
+  retestDate                  DateTime  @default(now()) @map("retest_date") @db.Timestamptz(3)
+
+  report            Report            @relation(fields: [reportId], references: [id], onDelete: Cascade)
+  remediationRecord RemediationRecord @relation(fields: [remediationRecordId], references: [id], onDelete: Restrict)
+  verifierUser      User?             @relation(fields: [verifierUserId], references: [id], onDelete: SetNull)
+
+  @@index([reportId])
+  @@index([remediationRecordId])
+  @@map("retest_evidence")
+  @@schema("bbt_core")
+}
+
+// ==========================================
+// 7. AUDIT LEDGER & OUTBOX
+// ==========================================
+
+model AuditEvent {
+  id                  String    @id @default(uuid()) @db.Uuid
+  organizationId      String    @map("organization_id") @db.Uuid
+  reportId            String?   @map("report_id") @db.Uuid
+  tenantSeqNo         BigInt    @map("tenant_seq_no")
+  reportSeqNo         BigInt?   @map("report_seq_no")
+  actorType           ActorType @map("actor_type")
+  actorUserId         String?   @map("actor_user_id") @db.Uuid
+  actorGuestActorId   String?   @map("actor_guest_actor_id") @db.Uuid
+  action              String
+  eventDigest         String    @map("event_digest") // 64-char SHA-256 hex
+  orgCommitment       String    @map("org_commitment") // 64-char SHA-256 hex
+  tenantRowHash       String    @map("tenant_row_hash") // 64-char SHA-256 hex
+  reportChainHash     String?   @map("report_chain_hash") // 64-char SHA-256 hex
+  checkpointKeyId     String?   @map("checkpoint_key_id")
+  checkpointSignature String?   @map("checkpoint_signature")
+  timestamp           DateTime  @default(now()) @db.Timestamptz(3)
+
+  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  report       Report?      @relation(fields: [reportId], references: [id], onDelete: SetNull)
+  actorUser    User?        @relation(fields: [actorUserId], references: [id], onDelete: SetNull)
+
+  @@index([organizationId, tenantSeqNo])
+  @@index([reportId, reportSeqNo])
+  @@map("audit_events")
+  @@schema("bbt_core")
+}
+
+model NotificationOutbox {
+  id             String             @id @default(uuid()) @db.Uuid
+  organizationId String             @map("organization_id") @db.Uuid
+  reportId       String?            @map("report_id") @db.Uuid
+  eventType      String             @map("event_type")
+  recipientEmail String             @map("recipient_email")
+  payloadJson    String             @map("payload_json") // Class A metadata ONLY; zero Class B/C bytes
+  status         NotificationStatus @default(PENDING)
+  retryCount     Int                @default(0) @map("retry_count")
+  lastError      String?            @map("last_error")
+  createdAt      DateTime           @default(now()) @map("created_at") @db.Timestamptz(3)
+  sentAt         DateTime?          @map("sent_at") @db.Timestamptz(3)
+
+  organization Organization @relation(fields: [organizationId], references: [id], onDelete: Cascade)
+  report       Report?      @relation(fields: [reportId], references: [id], onDelete: SetNull)
+
+  @@index([status, createdAt])
+  @@map("notification_outbox")
+  @@schema("bbt_core")
+}

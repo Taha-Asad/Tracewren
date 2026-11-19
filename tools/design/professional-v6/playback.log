@@ -1,0 +1,100 @@
+present Start
+Start / Start full journey → Program
+Program / Submit a report → Access
+Access / Use guest access → GuestAccess
+GuestAccess / Create local key & continue → ReportForm
+ReportForm / Review & encrypt → Review
+capture Review
+Review / Encrypt & submit → Receipt
+Receipt / Open my report → RecoveryGate
+RecoveryGate / Return to recovery confirmation → Receipt
+Receipt / Save recovery file → RecoveryFile
+RecoveryFile / Return to recovery confirmation → Receipt
+Receipt / I saved the recovery file securely. → Receipt
+Receipt / Open my report → ResearcherNew
+ResearcherNew / Demo: defender view → RoleDefenderNew
+RoleDefenderNew / Continue as defender → CaseLocked
+CaseLocked / Unlock on this device → Unlock
+Unlock / Unlock on this device → CaseNew
+CaseNew / Begin triage → BeginTriage
+BeginTriage / Begin triage → CaseTriage
+capture CaseTriage
+CaseTriage / Assess & accept → Assessment
+Assessment / Accept with this assessment → CaseAccepted
+CaseAccepted / Propose a fix → Fix1
+Fix1 / Check commit & branch → CommitChecked1
+CommitChecked1 / Record proposal → CaseProposed
+CaseProposed / Record deployment → Deploy1
+Deploy1 / Save deployment → CaseDeployed
+CaseDeployed / Request retest → Invite1
+Invite1 / Send retest invitation → CasePending
+CasePending / Demo: researcher view → RoleResearcher
+RoleResearcher / Continue as researcher → ResearcherPending
+capture ResearcherPending
+ResearcherPending / Retest deployment → RetestForm
+RetestForm / Still reproducible → FailedAttestation
+FailedAttestation / Sign failed retest → ResearcherFailed
+capture ResearcherFailed
+ResearcherFailed / Demo: defender view → RoleDefenderFailed
+RoleDefenderFailed / Continue as defender → CaseFailed
+CaseFailed / Propose attempt 2 → Fix2
+Fix2 / Check commit & branch → CommitChecked2
+CommitChecked2 / Record proposal → CaseProposed2
+CaseProposed2 / Record deployment → Deploy2
+Deploy2 / Save deployment → CaseDeployed2
+CaseDeployed2 / Request retest → Invite2
+Invite2 / Send retest invitation → CasePending2
+CasePending2 / Demo: researcher view → RoleResearcher2
+RoleResearcher2 / Continue as researcher → ResearcherPending2
+ResearcherPending2 / Retest deployment → RetestForm2
+RetestForm2 / Confirm fixed → ResearcherVerified2
+capture ResearcherVerified2
+ResearcherVerified2 / Overview → ResearcherVerified2__report
+ResearcherVerified2__report / Evidence → ResearcherVerified2__evidence
+ResearcherVerified2__evidence / Remediation → ResearcherVerified2
+capture ResearcherVerified2
+ResearcherVerified2 / My reports → ResearchDesk
+ResearchDesk / Open current report → ResearcherVerified2
+capture ResearcherVerified2
+capture completed-after-tab-roundtrip
+present MobileProgram
+MobileProgram / Submit a report → MobileGuest
+MobileGuest / Create key & continue → MobileReportForm
+MobileReportForm / Review before encrypting → MobileReview
+MobileReview / Encrypt & submit → MobileReceipt
+MobileReceipt / Open my report → MobileRecoveryGate
+MobileRecoveryGate / Return to receipt → MobileReceipt
+MobileReceipt / Save .bbt-recovery.json → MobileRecoveryFile
+MobileRecoveryFile / Return to receipt → MobileReceipt
+MobileReceipt / I saved the recovery file securely. → MobileReceipt
+MobileReceipt / Open my report → MobileNew
+present MobileActive
+MobileActive / Original → MobileOriginal
+MobileOriginal / Evidence → MobileEvidence
+MobileEvidence / Case → MobileActive
+MobileActive / Retest attempt 1 → MobileRetest1
+MobileRetest1 / Still reproducible → MobileFailure1
+MobileFailure1 / Sign failed retest → MobileFailed
+capture MobileFailed
+MobileFailed / Demo: switch to defender → MobileRoleDefender
+MobileRoleDefender / Continue as defender → MobileDefenderFailed
+MobileDefenderFailed / Propose attempt 2 → MobileFix2
+MobileFix2 / Check & record proposal → MobileDeploy2
+MobileDeploy2 / Save deployment → MobileInvite2
+MobileInvite2 / Send retest invitation → MobileDefenderPending2
+MobileDefenderPending2 / Demo: switch to researcher → MobileRoleResearcher2
+MobileRoleResearcher2 / Continue as researcher → MobileActive2
+capture MobileActive2
+MobileActive2 / Retest attempt 2 → MobileRetest2
+MobileRetest2 / Sign & confirm fixed → MobileComplete
+capture MobileComplete
+MobileComplete / Original → MobileComplete__report
+MobileComplete__report / Evidence → MobileComplete__evidence
+MobileComplete__evidence / Case → MobileComplete
+capture MobileComplete
+present Queue
+capture Queue
+present MobileOriginal
+capture MobileOriginal
+present CasePending
+GUI PLAYBACK PASSED 93

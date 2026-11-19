@@ -1,0 +1,54 @@
+flowchart TB
+    %% =========================================================================
+    %% FIGURE 5.3: DATABASE CONNECTION POOLING & POSTGRESQL LIFECYCLE
+    %% BugBountyTrack — Milestone Week 5 Specification
+    %% Pure Minimalist Monochrome Styling on Black Canvas
+    %% =========================================================================
+
+    subgraph CLIENT_TIER["APPLICATION RUNTIME CLIENTS"]
+        direction LR
+        API_WORKER["<b>NestJS API Cluster</b><br/>apps/api runtime instances<br/>Prisma Client ORM"]
+        MIG_WORKER["<b>Prisma Migration CLI</b><br/>DDL Schema Synchronizer<br/>Admin Deploy Scripts"]
+    end
+
+    subgraph INFRA_TIER["NEON SERVERLESS POSTGRESQL INFRASTRUCTURE"]
+        direction TB
+
+        subgraph POOL_GATEWAY["Connection Routing Gateway"]
+            direction LR
+            POOLER["<b>PgBouncer Connection Pooler</b><br/>DATABASE_URL (Port 5432)<br/>Transaction Mode Pooling"]
+            DIRECT["<b>Direct Compute Session</b><br/>DIRECT_DATABASE_URL<br/>Dedicated TCP Connection"]
+        end
+
+        subgraph PG_KERNEL["PostgreSQL 16 Enterprise Database Engine"]
+            direction TB
+            TLS["<b>Mandatory TLS 1.3 Encryption</b><br/>sslmode=require | connect_timeout=15s"]
+            
+            subgraph SCHEMAS["Multi-Tenant Isolation Architecture"]
+                direction LR
+                SCHEMA_CORE["<b>bbt_core Schema</b><br/>15 Relational Tables<br/>Normalized to 3NF"]
+                RLS_ENGINE["<b>Kernel Row-Level Security</b><br/>FORCE ROW LEVEL SECURITY<br/>Bound to bbt_app NOSUPERUSER"]
+            end
+
+            TLS --- SCHEMA_CORE
+            TLS --- RLS_ENGINE
+        end
+
+        POOL_GATEWAY --- PG_KERNEL
+    end
+
+    API_WORKER ===|Runtime Queries| POOLER
+    MIG_WORKER ===|DDL Migrations| DIRECT
+
+    %% Clean Monochrome Styling
+    style CLIENT_TIER fill:none,stroke:#ffffff,stroke-width:1.5px,stroke-dasharray: 4 4
+    style INFRA_TIER fill:none,stroke:#ffffff,stroke-width:1.5px,stroke-dasharray: 4 4
+    style POOL_GATEWAY fill:none,stroke:#ffffff,stroke-width:1.2px
+    style PG_KERNEL fill:none,stroke:#ffffff,stroke-width:1.2px
+    style SCHEMAS fill:none,stroke:#ffffff,stroke-width:1.2px
+
+    classDef default fill:#000000,stroke:#ffffff,stroke-width:1.5px,color:#ffffff,font-size:12px;
+    classDef highlight fill:#000000,stroke:#ffffff,stroke-width:2.2px,color:#ffffff,font-weight:bold,font-size:12px;
+
+    class POOLER,DIRECT,RLS_ENGINE highlight;
+    linkStyle default stroke:#ffffff,stroke-width:1.2px;

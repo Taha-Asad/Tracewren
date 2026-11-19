@@ -1,0 +1,76 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" version="21.0.0" type="device">
+  <diagram id="fig6_1_cvss_calculation_engine_pipeline" name="CVSS Calculation Engine Pipeline">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1400" pageHeight="900" background="#000000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title_1" value="&lt;h1 style=&quot;color:#ffffff;font-family:Helvetica;margin:0;font-weight:normal;&quot;&gt;BugBountyTrack — FIRST.org CVSS 3.1 Calculation Engine Pipeline&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="100" y="30" width="1200" height="40" as="geometry" />
+        </mxCell>
+        <!-- Vector Ingestion -->
+        <mxCell id="box_vec" value="&lt;b&gt;Raw Vector String Ingestion&lt;/b&gt;&lt;br/&gt;e.g., CVSS:3.1/AV:N/AC:L/PR:N/UI:N/S:U/C:H/I:H/A:H" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="500" y="100" width="400" height="60" as="geometry" />
+        </mxCell>
+        <!-- Regex Validation -->
+        <mxCell id="box_val" value="&lt;b&gt;Strict Grammar Validation Pipe&lt;/b&gt;&lt;br/&gt;Regex: ^CVSS:3\.1/AV:[NALP]/AC:[LH]/PR:[NLH]/UI:[NR]/S:[UC]/C:[NLH]/I:[NLH]/A:[NLH]$" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="450" y="200" width="500" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e_vec_val" value="" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=1.5;" edge="1" source="box_vec" target="box_val" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Metric Tokenizer -->
+        <mxCell id="box_tok" value="&lt;b&gt;Vector Tokenizer &amp;amp; Weight Lookup&lt;/b&gt;&lt;br/&gt;Maps metric keys to official FIRST.org floating-point constants" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="475" y="300" width="450" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e_val_tok" value="Valid Vector" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;labelBackgroundColor=#000000;" edge="1" source="box_val" target="box_tok" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Mathematical Sub-Scores Container -->
+        <mxCell id="box_math" value="&lt;b&gt;Mathematical Sub-Score Evaluation&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.5;strokeDashed=1;fontColor=#ffffff;align=center;verticalAlign=top;spacingTop=10;fontSize=13;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="250" y="400" width="900" height="150" as="geometry" />
+        </mxCell>
+        <mxCell id="math_iss" value="&lt;b&gt;1. Impact Sub-Score (ISS)&lt;/b&gt;&lt;br/&gt;ISS = 1 - [(1 - C) × (1 - I) × (1 - A)]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.2;fontColor=#ffffff;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="280" y="445" width="260" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="math_imp" value="&lt;b&gt;2. Scope-Dependent Impact&lt;/b&gt;&lt;br/&gt;Unchanged: 6.42 × ISS&lt;br/&gt;Changed: 7.52×(ISS-0.029) - 3.25×(ISS-0.02)^15" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.2;fontColor=#ffffff;fontSize=10;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="570" y="445" width="280" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="math_exp" value="&lt;b&gt;3. Exploitability Sub-Score&lt;/b&gt;&lt;br/&gt;8.22 × AV × AC × PR × UI" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.2;fontColor=#ffffff;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="880" y="445" width="240" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="e_tok_math" value="" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=1.5;" edge="1" source="box_tok" target="box_math" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Roundup Box -->
+        <mxCell id="box_roundup" value="&lt;b&gt;Score Aggregation &amp;amp; FIRST.org Appendix A Roundup&lt;/b&gt;&lt;br/&gt;roundup(val) = Math.ceil(round(val, 9) * 10) / 10 | Clamped [0.0, 10.0]" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=2;fontColor=#ffffff;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="450" y="590" width="500" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e_math_round" value="" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=1.5;" edge="1" source="box_math" target="box_roundup" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <!-- Qualitative & SLA Container -->
+        <mxCell id="box_sev" value="&lt;b&gt;Qualitative Classification &amp;amp; Dynamic SLA Dispatch&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;align=center;verticalAlign=top;spacingTop=10;fontSize=13;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="200" y="690" width="1000" height="120" as="geometry" />
+        </mxCell>
+        <mxCell id="sev_crit" value="&lt;b&gt;CRITICAL (9.0 - 10.0)&lt;/b&gt;&lt;br/&gt;Triage SLA: 24 Hours&lt;br/&gt;Top Bounty Bracket" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.2;fontColor=#ffffff;fontSize=10;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="220" y="735" width="220" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="sev_high" value="&lt;b&gt;HIGH (7.0 - 8.9)&lt;/b&gt;&lt;br/&gt;Triage SLA: 72 Hours&lt;br/&gt;High Bounty Bracket" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.2;fontColor=#ffffff;fontSize=10;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="465" y="735" width="220" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="sev_med" value="&lt;b&gt;MEDIUM (4.0 - 6.9)&lt;/b&gt;&lt;br/&gt;Triage SLA: 14 Days&lt;br/&gt;Medium Bounty Bracket" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.2;fontColor=#ffffff;fontSize=10;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="710" y="735" width="220" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="sev_low" value="&lt;b&gt;LOW (0.1 - 3.9)&lt;/b&gt;&lt;br/&gt;Triage SLA: 30 Days&lt;br/&gt;Base Bounty Bracket" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.2;fontColor=#ffffff;fontSize=10;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="955" y="735" width="220" height="55" as="geometry" />
+        </mxCell>
+        <mxCell id="e_round_sev" value="" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=1.5;" edge="1" source="box_roundup" target="box_sev" parent="1">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

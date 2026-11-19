@@ -1,0 +1,99 @@
+flowchart TB
+    %% =========================================================================
+    %% FIGURE 6.3: SERVER-SIDE VALIDATION PIPELINE & EXCEPTION HANDLING FLOW
+    %% BugBountyTrack — Milestone Week 6 Specification
+    %% Pure Minimalist Monochrome Styling on Black Canvas
+    %% =========================================================================
+
+    subgraph REQ_ENTRY["REQUEST INGESTION"]
+        direction TB
+        IN_PAYLOAD["<b>Incoming JSON Payload</b><br/>POST /reports/submit"]
+        IN_HEADERS["<b>Request Context Headers</b><br/>Authorization & X-Workspace-Id"]
+    end
+
+    subgraph PIPE["NESTJS GLOBAL VALIDATION PIPE"]
+        direction TB
+        VAL_CONFIG["<b>ValidationPipe Configuration</b><br/>whitelist: true | forbidNonWhitelisted: true<br/>transform: true | stopAtFirstError: false"]
+        
+        subgraph CHECKS["FIELD-LEVEL DTO CONSTRAINTS (SubmitReportDto)"]
+            direction TB
+            C_UUID["<b>Tenant & Program IDs</b><br/>@IsUUID('4') format verification"]
+            C_TEXT["<b>Title & Vulnerability Type</b><br/>@IsString(), @MinLength(5), @MaxLength(200)"]
+            C_VEC["<b>CVSS 3.1 Vector</b><br/>@Matches(/^CVSS:3\\.1\\/AV:...$/)"]
+            C_HASH["<b>Proof-of-Concept Hash</b><br/>@Matches(/^[a-f0-9]{64}$/) 64-char hex SHA-256"]
+            C_ENUM["<b>Operational Label</b><br/>@IsEnum(OperationalLabel)"]
+        end
+
+        VAL_CONFIG --- CHECKS
+    end
+
+    DECISION_VAL{"<b>Payload Valid?</b>"}
+    PIPE --- DECISION_VAL
+
+    subgraph ERROR_400["CLIENT ERROR RESPONSE (HTTP 400)"]
+        direction TB
+        ERR_BAD["<b>400 Bad Request Payload</b><br/>statusCode: 400<br/>error: 'Bad Request'<br/>message: Array of field-specific violations"]
+    end
+
+    DECISION_VAL ---|Validation Failed| ERROR_400
+
+    subgraph DOMAIN_EXEC["DOMAIN & PERSISTENCE EXECUTION"]
+        direction TB
+        EXEC_TENANT{"<b>Tenant & Program Verified?</b>"}
+        EXEC_LOGIC["<b>Prisma Client Database Operation</b><br/>prisma.report.create(...)"]
+        
+        DECISION_VAL ---|Validation Passed| EXEC_TENANT
+        EXEC_TENANT ---|Program Not Found or Mismatch| ERR_404["<b>404 / 400 Domain Exception</b><br/>'Target program does not exist in tenant'"]
+        EXEC_TENANT ---|Verified| EXEC_LOGIC
+    end
+
+    subgraph PRISMA_FILTER["PRISMA EXCEPTION FILTER LAYER"]
+        direction TB
+        ERR_CATCH{"<b>Prisma Error Code Catch</b>"}
+        P2002["<b>P2002: Unique Constraint</b><br/>Translate to 409 Conflict"]
+        P2025["<b>P2025: Record Not Found</b><br/>Translate to 404 Not Found"]
+        P2003["<b>P2003: Foreign Key Violation</b><br/>Translate to 422 Unprocessable"]
+        UNHANDLED["<b>Unhandled Exceptions</b><br/>Translate to 500 Internal Server Error<br/>Mask sensitive database internals"]
+
+        EXEC_LOGIC ---|Exception Thrown| ERR_CATCH
+        ERR_CATCH --- P2002
+        ERR_CATCH --- P2025
+        ERR_CATCH --- P2003
+        ERR_CATCH --- UNHANDLED
+    end
+
+    subgraph SUCCESS["SUCCESS RESPONSE"]
+        direction TB
+        RES_OK["<b>201 Created Response</b><br/>Report entity created and returned"]
+    end
+
+    EXEC_LOGIC ---|Success| SUCCESS
+
+    %% Minimalist Monochrome Styling
+    style REQ_ENTRY fill:none,stroke:#ffffff,stroke-width:1.5px,stroke-dasharray: 4 4
+    style PIPE fill:none,stroke:#ffffff,stroke-width:1.5px,stroke-dasharray: 4 4
+    style CHECKS fill:none,stroke:#ffffff,stroke-width:1px,stroke-dasharray: 2 2
+    style ERROR_400 fill:none,stroke:#ffffff,stroke-width:1.5px,stroke-dasharray: 4 4
+    style DOMAIN_EXEC fill:none,stroke:#ffffff,stroke-width:1.5px,stroke-dasharray: 4 4
+    style PRISMA_FILTER fill:none,stroke:#ffffff,stroke-width:1.5px,stroke-dasharray: 4 4
+    style SUCCESS fill:none,stroke:#ffffff,stroke-width:1.5px,stroke-dasharray: 4 4
+
+    style IN_PAYLOAD fill:none,stroke:#ffffff,stroke-width:1px,color:#ffffff
+    style IN_HEADERS fill:none,stroke:#ffffff,stroke-width:1px,color:#ffffff
+    style VAL_CONFIG fill:none,stroke:#ffffff,stroke-width:1.5px,color:#ffffff
+    style C_UUID fill:none,stroke:#ffffff,stroke-width:1px,color:#ffffff
+    style C_TEXT fill:none,stroke:#ffffff,stroke-width:1px,color:#ffffff
+    style C_VEC fill:none,stroke:#ffffff,stroke-width:1px,color:#ffffff
+    style C_HASH fill:none,stroke:#ffffff,stroke-width:1px,color:#ffffff
+    style C_ENUM fill:none,stroke:#ffffff,stroke-width:1px,color:#ffffff
+    style DECISION_VAL fill:none,stroke:#ffffff,stroke-width:1.5px,color:#ffffff
+    style ERR_BAD fill:none,stroke:#ffffff,stroke-width:1.5px,color:#ffffff
+    style EXEC_TENANT fill:none,stroke:#ffffff,stroke-width:1.5px,color:#ffffff
+    style ERR_404 fill:none,stroke:#ffffff,stroke-width:1.5px,color:#ffffff
+    style EXEC_LOGIC fill:none,stroke:#ffffff,stroke-width:1.5px,color:#ffffff
+    style ERR_CATCH fill:none,stroke:#ffffff,stroke-width:1.5px,color:#ffffff
+    style P2002 fill:none,stroke:#ffffff,stroke-width:1px,color:#ffffff
+    style P2025 fill:none,stroke:#ffffff,stroke-width:1px,color:#ffffff
+    style P2003 fill:none,stroke:#ffffff,stroke-width:1px,color:#ffffff
+    style UNHANDLED fill:none,stroke:#ffffff,stroke-width:1px,color:#ffffff
+    style RES_OK fill:none,stroke:#ffffff,stroke-width:2px,color:#ffffff

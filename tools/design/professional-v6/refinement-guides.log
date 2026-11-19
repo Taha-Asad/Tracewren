@@ -1,0 +1,14 @@
+{"command":"node.set","ok":true,"result":{"ok":true},"step":0}
+{"command":"node.set","ok":true,"result":{"ok":true},"step":1}
+{"command":"node.set","ok":true,"result":{"ok":true},"step":2}
+{"command":"node.set","ok":true,"result":{"ok":true},"step":3}
+{"command":"node.set","ok":true,"result":{"ok":true},"step":4}
+{"command":"node.set","ok":true,"result":{"ok":true},"step":5}
+{"command":"node.set","ok":true,"result":{"ok":true},"step":6}
+{"command":"node.set","ok":true,"result":{"ok":true},"step":7}
+{"command":"node.set","ok":true,"result":{"ok":true},"step":8}
+{"command":"node.set","ok":true,"result":{"ok":true},"step":9}
+{"command":"node.set","ok":true,"result":{"ok":true},"step":10}
+{"command":"node.set","ok":true,"result":{"ok":true},"step":11}
+{"command":"file.rename","ok":true,"result":{"ok":true},"step":12}
+wrote figma/BugBountyTrack-Professional-v6.figcraft

@@ -1,0 +1,1241 @@
+/* ==========================================================================
+   PRO-01 / WreckWright System Architecture — Global Decoupled CSS
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   1. Typography Imports
+   - Plus Jakarta Sans: High-craft, modern geometric sans for display & titles
+   - Inter: Dense, ultra-legible technical UI sans-serif for controls and data
+   - JetBrains Mono: Monospace for hashes, endpoints, status codes, and code
+   - Newsreader: High-craft editorial serif for report headlines & longform
+   -------------------------------------------------------------------------- */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;1,6..72,400&family=Plus+Jakarta+Sans:wght@500;600;700;800&display=swap');
+
+/* --------------------------------------------------------------------------
+   2. Decoupled Design Tokens (:root)
+   -------------------------------------------------------------------------- */
+:root {
+  /* Canvas & Structural Surfaces */
+  --canvas-bg: #FCFAF6;             /* Warm linen parchment background */
+  --sidebar-bg: #EAEAE4;            /* Soft sage-tinted neutral sidebar */
+  --sidebar-active-bg: #DCE2DC;     /* Muted olive active navigation pill */
+  --sidebar-active-text: #181C19;   /* High-contrast active nav label */
+  --surface-card: #F4F3EE;          /* Refined tactile grayish/linen tint - eliminates sterile stark white */
+  --surface-subtle: #EBE9E2;        /* Warm light elevated panel */
+  --surface-hover: #E5E2D8;         /* Subtle warm tone on hover */
+  --surface-active: #DDD9CE;        /* Slightly deeper for active/pressed */
+  --surface-banner: #EAF0E8;        /* Soft sage alert banner surface */
+  --surface-banner-text: #2A4532;   /* Deep sage alert banner text */
+  --surface-banner-icon: #436A4E;   /* Forest green alert icon */
+
+  /* Glassmorphism Tokens */
+  --glass-bg: rgba(252, 250, 246, 0.82);
+  --glass-border: rgba(229, 226, 218, 0.75);
+  --glass-shadow: 0 4px 24px -2px rgba(24, 28, 25, 0.05), 0 2px 6px -1px rgba(24, 28, 25, 0.03);
+
+  /* Primary Brand Action (Cypress Forest Green) */
+  --color-primary: #0B2E22;
+  --color-primary-hover: #134836;
+  --color-primary-active: #072118;
+  --color-primary-contrast: #FFFFFF;
+
+  /* Typography Colors (Near-Black Ink) */
+  --text-primary: #181C19;          /* Deep ink for headlines and primary text */
+  --text-secondary: #454B47;        /* Readable dark neutral for body copy (8.5:1 contrast) */
+  --text-muted: #525A56;            /* High-contrast accessible muted text (6.8:1 contrast) */
+
+  /* Modular Typographic Scale (1.25x Major Third Ratio anchored at 16px = 1rem) */
+  --type-h1: clamp(2.441rem, 4.2vw, 3.052rem);   /* ~39px - 49px (3.05x body) */
+  --type-h2: clamp(1.85rem, 3vw, 2.441rem);      /* ~30px - 39px (2.44x body) */
+  --type-h3: clamp(1.25rem, 1.8vw, 1.563rem);    /* 20px - 25px (1.56x body) */
+  --type-lead: clamp(1.05rem, 1.25vw, 1.15rem);  /* 17px - 18.4px */
+  --type-body: 1rem;                             /* 16px base body */
+  --type-caption: 0.875rem;                      /* 14px secondary / card copy */
+  --mantine-color-dimmed: #525A56;  /* Override Mantine's failing 3.19:1 gray to pass WCAG AA */
+  --text-disabled: #78827D;         /* Disabled control labels */
+
+  /* Dual-Tone Headline Accent Tokens (Light) */
+  --heading-accent: #16654C;        /* Rich juniper/forest emerald (6.76:1 contrast) */
+  --heading-accent-gradient: linear-gradient(135deg, #104A37 0%, #1A7456 100%);
+
+  /* Structural Dividers & Borders */
+  --border-subtle: #DDD8CD;         /* Crisp tactile border for grayish card */
+  --border-contrast: #CCC6B6;       /* Slightly stronger border for inputs/tables */
+  --border-focus: #0B2E22;          /* High-visibility active focus ring */
+
+  /* Semantic State Badges */
+  --badge-pending-bg: #FDF3ED;
+  --badge-pending-border: #E8B9A5;
+  --badge-pending-text: #A83220;    /* 6.32:1 high contrast against #FDF3ED */
+
+  --badge-success-bg: #EBF5EF;
+  --badge-success-border: #B3DCBE;
+  --badge-success-text: #175C34;    /* 6.80:1 high contrast against #EBF5EF */
+
+  /* CVSS Severity Tones */
+  --cvss-critical: #991B1B;
+  --cvss-high: #BA3D2A;             /* Terracotta / Rust for 8.x High */
+  --cvss-medium: #C06C2D;           /* Warm Amber / Caramel for 6.x Medium */
+  --cvss-low: #2D6A4F;              /* Muted Forest Green for Low */
+
+  /* Typography Stack */
+  --font-display: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-serif: 'Newsreader', Georgia, Cambria, 'Times New Roman', serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', SFMono-Regular, monospace;
+
+  /* Radii (Smooth, High-Craft Geometry) */
+  --radius-xs: 4px;
+  --radius-sm: 6px;
+  --radius-md: 10px;
+  --radius-lg: 14px;
+  --radius-pill: 9999px;
+
+  /* Shadows */
+  --shadow-sm: 0 1px 2px rgba(24, 28, 25, 0.04);
+  --shadow-card: 0 1px 3px rgba(24, 28, 25, 0.05), 0 1px 2px rgba(24, 28, 25, 0.03);
+  --shadow-elevated: 0 8px 30px rgba(24, 28, 25, 0.07);
+
+  /* Alternating Section Background Tokens (Light) */
+  --section-alt-bg: #F4EFE6;         /* Warm linen/sand visual differentiator */
+  --section-alt-border: #E8E3D8;     /* Subtle section boundary border */
+
+  /* Card Icon Tokens (Light) */
+  --card-icon-color: #0B2E22;        /* High-contrast cypress green */
+  --card-icon-bg: rgba(11, 46, 34, 0.07);
+  --card-icon-border: rgba(11, 46, 34, 0.12);
+
+  /* Interactive Accent Links (Light - High-contrast cypress green) */
+  --link-accent: #0B2E22;
+  --link-accent-hover: #16654C;
+
+  /* Standardized Card Padding & Geometry (Copied directly from Section 2 Stats Card) */
+  --card-standard-padding: clamp(12px, 2.5vw, 16px) clamp(10px, 2.5vw, 16px) 12px clamp(10px, 2.5vw, 16px);
+  --card-standard-radius: 12px;
+
+  /* Touch / Click Accessibility Invariant */
+  --target-min-height: 44px;
+
+  /* Responsive Spatial Grid (Max width 1600px) */
+  --sidebar-width: 260px;
+  --topbar-height: 100px;
+  --container-max-width: 1600px;
+  --content-padding-x: 2rem;
+  --content-padding-y: 1.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   3. Base Document Reset & Mechanics
+   -------------------------------------------------------------------------- */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100%;
+  background-color: var(--canvas-bg);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  font-size: 15px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* --------------------------------------------------------------------------
+   4. High-Craft Display Headlines & Titles
+   -------------------------------------------------------------------------- */
+h1, h2, h3, h4, .font-display {
+  font-family: var(--font-display);
+  color: var(--text-primary);
+  font-weight: 700;
+  letter-spacing: -0.028em;
+  margin-top: 0;
+}
+
+h1, .headline-display {
+  font-size: clamp(2.35rem, 5vw, 3.8rem);
+  line-height: 1.12;
+  font-weight: 800;
+}
+
+.hero-headline-accent {
+  color: var(--heading-accent, #16654C);
+  transition: color 250ms ease;
+}
+
+@supports (-webkit-background-clip: text) or (background-clip: text) {
+  .hero-headline-accent {
+    background-image: var(--heading-accent-gradient);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4b. Evidence Banner Responsive Dividers
+   -------------------------------------------------------------------------- */
+.banner-divider-col {
+  border-left: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+  padding-top: 1.25rem;
+  padding-left: 0;
+}
+
+@media (min-width: 768px) {
+  .banner-divider-col {
+    border-top: none;
+    border-left: 1px solid rgba(255, 255, 255, 0.14);
+    padding-top: 0;
+    padding-left: 1.75rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4c. Checkpoint Section Responsive Metadata Grid (1-by-1 below 435px)
+   -------------------------------------------------------------------------- */
+.checkpoint-metadata-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  width: 100%;
+}
+
+@media (max-width: 435px) {
+  .checkpoint-metadata-grid {
+    grid-template-columns: 1fr !important;
+    gap: 10px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   4c-2. Standard Card Padding (Exact match to Section 2 Stats Card)
+   -------------------------------------------------------------------------- */
+.standard-card-padding {
+  padding: clamp(12px, 2.5vw, 16px) clamp(10px, 2.5vw, 16px) 12px clamp(10px, 2.5vw, 16px) !important;
+  border-radius: 12px !important;
+  background-color: var(--surface-card) !important;
+  border: 1px solid var(--border-subtle) !important;
+  transition: background-color 200ms ease, border-color 200ms ease, transform 200ms cubic-bezier(0.16, 1, 0.3, 1), box-shadow 200ms ease;
+}
+
+[data-mantine-color-scheme="dark"] .standard-card-padding {
+  background-color: var(--surface-card) !important;
+  border-color: var(--border-subtle) !important;
+  box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(52, 211, 153, 0.08);
+}
+
+/* --------------------------------------------------------------------------
+   4d. Landing Page Card Elevation & Interaction Rules (Seamless, Zero Jump)
+   -------------------------------------------------------------------------- */
+.mantine-Card-root,
+.mantine-Paper-root,
+.standard-card-padding {
+  box-shadow: 0 4px 16px -2px rgba(11, 46, 34, 0.08), 0 2px 6px -1px rgba(18, 24, 27, 0.05);
+}
+
+[data-mantine-color-scheme="dark"] .mantine-Card-root,
+[data-mantine-color-scheme="dark"] .mantine-Paper-root {
+  box-shadow: 0 8px 24px -4px rgba(0, 0, 0, 0.45), 0 0 0 1px rgba(255, 255, 255, 0.06);
+}
+
+/* Global Chip / Badge Spacing Standard (12px text, 8px top/bottom, 12px sides) */
+.mantine-Badge-root {
+  font-size: 12px !important;
+  padding: 8px 12px !important;
+  height: auto !important;
+  min-height: unset !important;
+  line-height: 1.2 !important;
+}
+
+.landing-interactive-card {
+  transition: box-shadow 200ms cubic-bezier(0.16, 1, 0.3, 1), border-color 200ms ease, background-color 200ms ease;
+}
+
+.landing-interactive-card:hover {
+  border-color: var(--border-contrast);
+  box-shadow: 0 12px 28px -6px rgba(11, 46, 34, 0.14), 0 4px 12px -2px rgba(24, 28, 25, 0.06);
+}
+
+[data-mantine-color-scheme="dark"] .landing-interactive-card:hover {
+  border-color: rgba(52, 211, 153, 0.4) !important;
+  box-shadow: 0 12px 32px -4px rgba(0, 0, 0, 0.6), 0 0 12px rgba(52, 211, 153, 0.15) !important;
+}
+
+/* Accessible Status Badges */
+.status-badge-active {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1;
+  color: var(--badge-success-text, #175C34);
+}
+
+.status-badge-active span {
+  color: inherit;
+}
+
+:root[data-mantine-color-scheme="dark"] .status-badge-active,
+[data-mantine-color-scheme="dark"] .status-badge-active {
+  color: #86EFAC !important;
+}
+
+/* Checkpoint Retest Pending & Telemetry Styling (Light & Dark Mode) */
+.retest-pending-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 8px;
+  border-radius: 6px;
+  font-size: 0.72rem;
+  font-weight: 600;
+  line-height: 1;
+  background-color: #E0F2FE;
+  border: 1px solid #BAE6FD;
+  color: #0369A1;
+  font-family: var(--font-mono);
+}
+
+:root[data-mantine-color-scheme="dark"] .retest-pending-chip,
+[data-mantine-color-scheme="dark"] .retest-pending-chip {
+  background-color: rgba(14, 165, 233, 0.16) !important;
+  border-color: rgba(14, 165, 233, 0.35) !important;
+  color: #38BDF8 !important;
+}
+
+.checkpoint-telemetry-box {
+  background-color: #F8FAFC;
+  border-radius: 8px;
+  border: 1px solid #E2E8F0;
+  padding: 9px 12px;
+}
+
+:root[data-mantine-color-scheme="dark"] .checkpoint-telemetry-box,
+[data-mantine-color-scheme="dark"] .checkpoint-telemetry-box {
+  background-color: var(--surface-subtle) !important;
+  border-color: var(--border-subtle) !important;
+}
+
+.status-pass-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 2px 7px;
+  border-radius: 4px;
+  font-size: 0.66rem;
+  font-weight: 700;
+  font-family: var(--font-mono);
+  background-color: #DCFCE7;
+  color: #166534;
+  line-height: 1;
+  text-transform: lowercase;
+}
+
+:root[data-mantine-color-scheme="dark"] .status-pass-chip,
+[data-mantine-color-scheme="dark"] .status-pass-chip {
+  background-color: rgba(16, 185, 129, 0.2) !important;
+  color: #86EFAC !important;
+}
+
+h2 {
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  line-height: 1.2;
+}
+
+h3 {
+  font-size: 1.25rem;
+  line-height: 1.35;
+}
+
+p {
+  color: var(--text-secondary);
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+/* --------------------------------------------------------------------------
+   5. Technical Code, Payloads & Telemetry
+   -------------------------------------------------------------------------- */
+code, pre, kbd, samp {
+  font-family: var(--font-mono);
+  font-size: 0.88em;
+}
+
+pre {
+  background-color: var(--surface-subtle);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-sm);
+  padding: 1rem;
+  overflow-x: auto;
+  color: var(--text-primary);
+}
+
+/* --------------------------------------------------------------------------
+   6. Semantic Utility Badges & Banners
+   -------------------------------------------------------------------------- */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.25rem 0.75rem;
+  border-radius: var(--radius-pill);
+  font-size: 0.8rem;
+  font-weight: 600;
+  line-height: 1.2;
+  border: 1px solid transparent;
+}
+
+.badge-pending {
+  background-color: var(--badge-pending-bg);
+  border-color: var(--badge-pending-border);
+  color: var(--badge-pending-text);
+}
+
+.badge-success {
+  background-color: var(--badge-success-bg);
+  border-color: var(--badge-success-border);
+  color: var(--badge-success-text);
+}
+
+/* --------------------------------------------------------------------------
+   7. Smooth Interactive Button Classes
+   -------------------------------------------------------------------------- */
+.btn-smooth {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  font-weight: 600;
+  line-height: 1;
+  min-height: var(--target-min-height);
+  padding: 0 1.25rem;
+  border-radius: var(--radius-md);
+  border: 1px solid transparent;
+  cursor: pointer;
+  text-decoration: none;
+  white-space: nowrap;
+  user-select: none;
+  transition: all 180ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.btn-smooth:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+/* Primary Button */
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-primary-contrast);
+  box-shadow: 0 2px 6px rgba(11, 46, 34, 0.16);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  box-shadow: 0 6px 18px rgba(11, 46, 34, 0.24);
+}
+
+.btn-primary:active {
+  background-color: var(--color-primary-active);
+  box-shadow: 0 1px 3px rgba(11, 46, 34, 0.2);
+}
+
+/* Secondary / Outline Button */
+.btn-secondary {
+  background-color: var(--surface-card);
+  color: var(--text-primary);
+  border: 1px solid var(--border-contrast);
+  box-shadow: 0 1px 2px rgba(24, 28, 25, 0.04);
+}
+
+.btn-secondary:hover {
+  background-color: var(--surface-subtle);
+  border-color: var(--text-primary);
+  color: var(--color-primary);
+  box-shadow: 0 4px 12px rgba(24, 28, 25, 0.08);
+}
+
+.btn-secondary:active {
+  background-color: var(--surface-hover);
+}
+
+/* Subtle / Ghost Button */
+.btn-ghost {
+  background-color: transparent;
+  color: var(--text-secondary);
+}
+
+.btn-ghost:hover {
+  background-color: var(--surface-hover);
+  color: var(--text-primary);
+}
+
+.btn-ghost:active {
+  background-color: var(--surface-active);
+}
+
+/* Video Watch Pill Button in Section 6 */
+.btn-video-watch {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  color: #93C5FD;
+  background-color: rgba(59, 130, 246, 0.12);
+  border: 1px solid rgba(59, 130, 246, 0.25);
+  border-radius: 8px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  height: 32px;
+  padding: 0 12px;
+  cursor: pointer;
+  transition: background-color 160ms ease, border-color 160ms ease, color 160ms ease;
+  user-select: none;
+}
+
+.btn-video-watch:hover {
+  background-color: rgba(59, 130, 246, 0.24);
+  border-color: #60A5FA;
+  color: #BFDBFE;
+}
+
+.btn-video-watch:active {
+  background-color: rgba(59, 130, 246, 0.3);
+}
+
+/* Interactive Navigation Link */
+.link-accent {
+  font-family: var(--font-sans);
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--link-accent);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 150ms ease, transform 150ms ease, opacity 150ms ease;
+}
+
+.link-accent:hover {
+  color: var(--link-accent-hover);
+  transform: translateX(2px);
+  opacity: 0.9;
+}
+
+[data-mantine-color-scheme="dark"] .link-accent {
+  color: #34D399 !important;
+}
+
+[data-mantine-color-scheme="dark"] .link-accent:hover {
+  color: #6EE7B7 !important;
+}
+
+/* --------------------------------------------------------------------------
+   7b. Custom Accordion & FAQ Styling (World-Class Interactive Engineering)
+   -------------------------------------------------------------------------- */
+.custom-faq-item {
+  background-color: var(--surface-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: 12px;
+  margin-bottom: 12px;
+  transition: border-color 200ms ease, box-shadow 200ms ease, transform 200ms cubic-bezier(0.16, 1, 0.3, 1), background-color 200ms ease;
+  overflow: hidden;
+  box-shadow: 0 1px 3px rgba(24, 28, 25, 0.04);
+  position: relative;
+}
+
+.custom-faq-item:hover {
+  border-color: var(--border-contrast);
+}
+
+.custom-faq-item.is-open {
+  border-color: var(--color-primary);
+  border-left: 3.5px solid var(--color-primary);
+  box-shadow: 0 8px 24px -4px rgba(11, 46, 34, 0.08);
+}
+
+[data-mantine-color-scheme="dark"] .custom-faq-item {
+  background-color: var(--surface-card);
+  border-color: var(--border-subtle);
+  box-shadow: 0 4px 16px -2px rgba(0, 0, 0, 0.35);
+}
+
+[data-mantine-color-scheme="dark"] .custom-faq-item:hover {
+  border-color: rgba(52, 211, 153, 0.3);
+}
+
+[data-mantine-color-scheme="dark"] .custom-faq-item.is-open {
+  border-color: rgba(52, 211, 153, 0.45);
+  border-left: 3.5px solid #34D399;
+  box-shadow: 0 8px 28px -4px rgba(0, 0, 0, 0.55), 0 0 14px rgba(52, 211, 153, 0.12);
+}
+
+.custom-faq-trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: clamp(14px, 2.5vw, 18px) clamp(16px, 2.5vw, 22px);
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  text-align: left;
+  outline: none;
+  font-family: inherit;
+  transition: background-color 160ms ease;
+}
+
+.custom-faq-trigger:hover {
+  background-color: var(--surface-hover);
+}
+
+.custom-faq-trigger:focus-visible {
+  outline: 2px solid var(--heading-accent);
+  outline-offset: -2px;
+}
+
+.custom-faq-chevron {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--surface-subtle);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-secondary);
+  flex-shrink: 0;
+  transition: transform 260ms cubic-bezier(0.16, 1, 0.3, 1), background-color 200ms ease, border-color 200ms ease, color 200ms ease;
+}
+
+.custom-faq-item.is-open .custom-faq-chevron {
+  transform: rotate(180deg);
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: #FFFFFF;
+}
+
+[data-mantine-color-scheme="dark"] .custom-faq-item.is-open .custom-faq-chevron {
+  background-color: rgba(52, 211, 153, 0.22);
+  border-color: rgba(52, 211, 153, 0.45);
+  color: #34D399;
+  box-shadow: 0 0 10px rgba(52, 211, 153, 0.2);
+}
+
+.custom-faq-body {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 300ms cubic-bezier(0.22, 1, 0.36, 1), opacity 220ms ease;
+  opacity: 0;
+  overflow: hidden;
+  will-change: grid-template-rows, opacity;
+}
+
+.custom-faq-body.is-open {
+  grid-template-rows: 1fr;
+  opacity: 1;
+}
+
+.custom-faq-content {
+  overflow: hidden;
+  min-height: 0;
+}
+
+.custom-faq-inner {
+  padding: 14px clamp(16px, 2.5vw, 22px) clamp(16px, 2.5vw, 20px) clamp(16px, 2.5vw, 22px);
+  border-top: 1px solid var(--border-subtle);
+}
+
+.mantine-Accordion-chevron {
+  color: var(--card-icon-color);
+  transition: transform 200ms ease;
+}
+
+/* --------------------------------------------------------------------------
+   7c. Instant SSR Theme Toggle Icons
+   -------------------------------------------------------------------------- */
+svg.theme-toggle-icon-sun {
+  display: none !important;
+}
+
+svg.theme-toggle-icon-moon {
+  display: block !important;
+}
+
+:root[data-mantine-color-scheme="dark"] svg.theme-toggle-icon-sun,
+[data-mantine-color-scheme="dark"] svg.theme-toggle-icon-sun {
+  display: block !important;
+}
+
+:root[data-mantine-color-scheme="dark"] svg.theme-toggle-icon-moon,
+[data-mantine-color-scheme="dark"] svg.theme-toggle-icon-moon {
+  display: none !important;
+}
+
+/* --------------------------------------------------------------------------
+   7c-2. Image Complete-Load Reveal & Shimmer Skeleton
+   -------------------------------------------------------------------------- */
+.image-loading-container {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--surface-subtle);
+}
+
+.image-reveal {
+  opacity: 1;
+  transition: opacity 320ms cubic-bezier(0.16, 1, 0.3, 1);
+  will-change: opacity;
+}
+
+.image-reveal.is-loaded {
+  opacity: 1;
+}
+
+@keyframes skeleton-shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.skeleton-shimmer-effect {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 255, 255, 0.09) 50%, transparent 100%);
+  animation: skeleton-shimmer 1.8s infinite ease-in-out;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* --------------------------------------------------------------------------
+   7d. Footer Navigation Links
+   -------------------------------------------------------------------------- */
+.footer-link {
+  font-family: var(--font-sans);
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: color 150ms ease, transform 150ms ease;
+  display: inline-block;
+  line-height: 1.5;
+}
+
+.footer-link:hover {
+  color: var(--text-primary);
+  transform: translateX(2px);
+}
+
+:root[data-mantine-color-scheme="dark"] .footer-link:hover,
+[data-mantine-color-scheme="dark"] .footer-link:hover {
+  color: var(--heading-accent);
+}
+.cta-gradient-banner {
+  background: radial-gradient(circle at 15% 20%, rgba(52, 211, 153, 0.22) 0%, transparent 45%),
+              radial-gradient(circle at 85% 85%, rgba(16, 79, 59, 0.38) 0%, transparent 50%),
+              linear-gradient(135deg, #07261B 0%, #0B3527 50%, #0E4432 100%);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.18), 0 20px 48px -12px rgba(7, 38, 27, 0.45);
+  padding: clamp(28px, 5vw, 56px) clamp(20px, 4vw, 48px);
+  position: relative;
+  overflow: hidden;
+  color: #FFFFFF;
+}
+
+/* Interactive File Download Row (.txt file attachment items) */
+.interactive-file-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 10px;
+  border-radius: 6px;
+  background-color: var(--surface-subtle);
+  border: 1px solid var(--border-subtle);
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 160ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.interactive-file-row:hover {
+  background-color: var(--surface-hover);
+  border-color: var(--border-contrast);
+}
+
+.interactive-file-row:active {
+  background-color: var(--surface-active);
+}
+
+.interactive-file-row .download-icon-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 4px;
+  background-color: var(--card-icon-bg);
+  color: var(--card-icon-color);
+  border: 1px solid var(--card-icon-border);
+  flex-shrink: 0;
+  transition: all 160ms ease;
+}
+
+.interactive-file-row:hover .download-icon-pill {
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  border-color: var(--color-primary);
+}
+
+/* Nav Item Link with Active/Hover States */
+.nav-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem 0.85rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  text-decoration: none;
+  transition: all 160ms cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+
+.nav-link:hover {
+  color: var(--text-primary);
+  background-color: rgba(24, 28, 25, 0.05);
+}
+
+.nav-link:active {
+  transform: scale(0.98);
+}
+
+.nav-link.active {
+  color: var(--text-primary);
+  font-weight: 600;
+  background-color: var(--sidebar-active-bg);
+}
+
+.badge-success {
+  background-color: var(--badge-success-bg);
+  border-color: var(--badge-success-border);
+  color: var(--badge-success-text);
+}
+
+.alert-banner {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background-color: var(--surface-banner);
+  border: 1px solid rgba(42, 69, 50, 0.15);
+  border-radius: var(--radius-sm);
+  color: var(--surface-banner-text);
+  font-size: 0.92rem;
+}
+
+/* --------------------------------------------------------------------------
+   7. Decoupled Responsive Layout Shell
+   -------------------------------------------------------------------------- */
+.app-shell {
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Sidebar */
+.app-sidebar {
+  width: var(--sidebar-width);
+  background-color: var(--sidebar-bg);
+  border-right: 1px solid var(--border-subtle);
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  padding: 1.25rem 1rem;
+}
+
+/* Main Viewport Container */
+.app-main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  background-color: var(--canvas-bg);
+}
+
+/* Topbar Header */
+.app-topbar {
+  height: var(--topbar-height);
+  border-bottom: 1px solid var(--border-subtle);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--content-padding-x);
+  background-color: var(--canvas-bg);
+}
+
+/* Content Container */
+.app-container {
+  width: 100%;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  padding: var(--content-padding-y) var(--content-padding-x);
+}
+
+/* Two-Column Responsive Grid (Report Main + Inspector Rail) */
+.report-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 340px;
+  gap: 2rem;
+  align-items: start;
+}
+
+.report-main-col {
+  min-width: 0;
+}
+
+.report-rail-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* --------------------------------------------------------------------------
+   8. Responsive Breakpoints
+   -------------------------------------------------------------------------- */
+/* Tablet & Laptop (below 1100px) */
+@media (max-width: 1100px) {
+  :root {
+    --content-padding-x: 1.25rem;
+    --sidebar-width: 200px;
+  }
+
+  .report-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .report-rail-col {
+    order: 2; /* Rail drops gracefully below main content */
+  }
+}
+
+/* Mobile Devices (below 768px) */
+@media (max-width: 768px) {
+  :root {
+    --content-padding-x: 1rem;
+    --content-padding-y: 1rem;
+  }
+
+  .app-shell {
+    flex-direction: column;
+  }
+
+  .app-sidebar {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid var(--border-subtle);
+    padding: 0.75rem 1rem;
+  }
+
+  h1, .headline-display {
+    font-size: 1.75rem;
+    line-height: 1.2;
+  }
+
+  .app-topbar {
+    padding: 0 1rem;
+    height: auto;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   9. Mantine 9 Component Overrides & Bindings
+   -------------------------------------------------------------------------- */
+.mantine-Paper-root {
+  background-color: var(--surface-card);
+  border-color: var(--border-subtle);
+}
+
+.mantine-Button-root {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  border-radius: var(--radius-sm);
+  min-height: var(--target-min-height);
+  transition: background-color 140ms ease, border-color 140ms ease;
+}
+
+.mantine-Button-root[data-variant="filled"] {
+  background-color: var(--color-primary);
+  color: var(--color-primary-contrast);
+}
+
+.mantine-Button-root[data-variant="filled"]:hover {
+  background-color: var(--color-primary-hover);
+}
+
+.mantine-TextInput-input,
+.mantine-PasswordInput-input {
+  background-color: var(--surface-card);
+  border-color: var(--border-subtle);
+  color: var(--text-primary);
+  border-radius: var(--radius-sm);
+  min-height: var(--target-min-height);
+}
+
+.mantine-TextInput-input:focus,
+.mantine-PasswordInput-input:focus {
+  border-color: var(--border-focus);
+}
+
+:root,
+:root[data-mantine-color-scheme="light"],
+[data-mantine-color-scheme="light"] {
+  --mantine-color-dimmed: #454B47 !important;
+  --text-muted: #454B47 !important;
+}
+
+/* --------------------------------------------------------------------------
+   10. Dark Mode Theme Tokens (Dynamic data-mantine-color-scheme="dark")
+   -------------------------------------------------------------------------- */
+:root[data-mantine-color-scheme="dark"],
+[data-mantine-color-scheme="dark"] {
+  --canvas-bg: #0D1214;
+  --sidebar-bg: #111719;
+  --sidebar-active-bg: #1B292E;
+  --sidebar-active-text: #F0F4F2;
+  --header-dark-bg: #12181A;
+  --surface-card: #152024;          /* Rich emerald-charcoal slate tint - eliminates flat dull black */
+  --surface-subtle: #19272C;        /* Elevated dark panel */
+  --surface-hover: #1E2F35;         /* Elevated subtle dark slate on hover (NEVER WHITE!) */
+  --surface-active: #24373F;        /* Slightly deeper for active/pressed */
+  --surface-banner: #14241B;
+  --surface-banner-text: #86EFAC;
+  --surface-banner-icon: #34D399;
+
+  --text-primary: #F0F4F2;
+  --text-secondary: #CBD5D0;
+  --text-muted: #CBD5D0 !important;
+  --mantine-color-dimmed: #CBD5D0 !important;
+  --text-disabled: #8E9C97;
+
+  /* Dual-Tone Headline Accent Tokens (Dark) */
+  --heading-accent: #34D399;        /* Radiant mint/emerald (10.0:1 contrast) */
+  --heading-accent-gradient: linear-gradient(135deg, #4ADE80 0%, #2DD4BF 100%);
+
+  --border-subtle: #24353C;         /* Defined card border with emerald hue */
+  --border-contrast: #324750;
+  --border-focus: #34D399;
+
+  --badge-pending-bg: rgba(186, 61, 42, 0.18);
+  --badge-pending-border: rgba(186, 61, 42, 0.4);
+  --badge-pending-text: #FCA5A5;
+
+  --badge-success-bg: rgba(30, 110, 62, 0.2);
+  --badge-success-border: rgba(30, 110, 62, 0.45);
+  --badge-success-text: #86EFAC;
+
+  --color-primary: #104F3B;
+  --color-primary-hover: #166A50;
+  --color-primary-active: #0A3729;
+
+  /* Alternating Section Background Tokens (Dark) */
+  --section-alt-bg: #12181B;         /* Elevated dark slate differentiator */
+  --section-alt-border: #1B2427;     /* Subtle section boundary border */
+
+  /* Card Icon Tokens (Dark - Radiant & Ultra-Visible) */
+  --card-icon-color: #34D399;        /* Radiant luminous emerald/mint (10.5:1 contrast) */
+  --card-icon-bg: rgba(52, 211, 153, 0.12);
+  --card-icon-border: rgba(52, 211, 153, 0.28);
+
+  /* Interactive Accent Links (Dark - Radiant mint with 10.0:1 contrast) */
+  --link-accent: #34D399;
+  --link-accent-hover: #6EE7B7;
+}
+
+/* Button & Interactive Element Dark Mode Overrides */
+:root[data-mantine-color-scheme="dark"] .btn-primary,
+[data-mantine-color-scheme="dark"] .btn-primary {
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  border: 1px solid rgba(52, 211, 153, 0.28);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.4);
+}
+
+:root[data-mantine-color-scheme="dark"] .btn-primary:hover,
+[data-mantine-color-scheme="dark"] .btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  border-color: var(--heading-accent);
+  box-shadow: 0 4px 16px rgba(16, 79, 59, 0.45), 0 0 10px rgba(52, 211, 153, 0.2);
+}
+
+:root[data-mantine-color-scheme="dark"] .btn-primary:active,
+[data-mantine-color-scheme="dark"] .btn-primary:active {
+  background-color: var(--color-primary-active);
+}
+
+:root[data-mantine-color-scheme="dark"] .btn-secondary,
+[data-mantine-color-scheme="dark"] .btn-secondary {
+  background-color: var(--surface-card);
+  color: var(--text-primary);
+  border: 1px solid var(--border-contrast);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+:root[data-mantine-color-scheme="dark"] .btn-secondary:hover,
+[data-mantine-color-scheme="dark"] .btn-secondary:hover {
+  background-color: var(--surface-subtle) !important;
+  border-color: var(--heading-accent) !important;
+  color: var(--heading-accent) !important;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.45);
+}
+
+:root[data-mantine-color-scheme="dark"] .btn-secondary:active,
+[data-mantine-color-scheme="dark"] .btn-secondary:active {
+  background-color: var(--surface-hover);
+}
+
+/* Interactive File Download Row (.txt files) in Dark Mode - NEVER WHITE */
+:root[data-mantine-color-scheme="dark"] .interactive-file-row,
+[data-mantine-color-scheme="dark"] .interactive-file-row {
+  background-color: var(--surface-subtle);
+  border-color: var(--border-subtle);
+}
+
+:root[data-mantine-color-scheme="dark"] .interactive-file-row:hover,
+[data-mantine-color-scheme="dark"] .interactive-file-row:hover {
+  background-color: var(--surface-hover) !important; /* Elevated dark slate #1A2529 - NEVER WHITE! */
+  border-color: rgba(52, 211, 153, 0.4) !important;
+}
+
+:root[data-mantine-color-scheme="dark"] .interactive-file-row:hover .download-icon-pill,
+[data-mantine-color-scheme="dark"] .interactive-file-row:hover .download-icon-pill {
+  background-color: var(--heading-accent);
+  color: #072118;
+  border-color: var(--heading-accent);
+}
+
+/* Landing Interactive Card Hover in Dark Mode */
+:root[data-mantine-color-scheme="dark"] .landing-interactive-card:hover,
+[data-mantine-color-scheme="dark"] .landing-interactive-card:hover {
+  border-color: var(--heading-accent) !important;
+  box-shadow: 0 10px 28px -4px rgba(0, 0, 0, 0.5), 0 2px 8px rgba(52, 211, 153, 0.08);
+}
+
+/* --------------------------------------------------------------------------
+   11. View Transitions Circular Ripple Theme Toggle
+   -------------------------------------------------------------------------- */
+::view-transition-old(root),
+::view-transition-new(root) {
+  animation: none;
+  mix-blend-mode: normal;
+}
+
+::view-transition-image-pair(root) {
+  isolation: isolate;
+}
+
+::view-transition-old(root) {
+  z-index: 1;
+}
+
+::view-transition-new(root) {
+  z-index: 99999;
+}
+
+/* --------------------------------------------------------------------------
+   12. Accessible Focus & Reduced Motion
+   -------------------------------------------------------------------------- */
+:focus-visible {
+  outline: 2px solid var(--border-focus);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   13. Responsive Auth Form Utilities
+   -------------------------------------------------------------------------- */
+.auth-segmented-full {
+  display: none;
+}
+.auth-segmented-short {
+  display: inline;
+}
+@media (min-width: 520px) {
+  .auth-segmented-full {
+    display: inline;
+  }
+  .auth-segmented-short {
+    display: none;
+  }
+}
+
+.auth-oauth-full {
+  display: none;
+}
+.auth-oauth-short {
+  display: inline;
+}
+@media (min-width: 540px) {
+  .auth-oauth-full {
+    display: inline;
+  }
+  .auth-oauth-short {
+    display: none;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   14. Auth 2-Column Split Layout Responsive Rules
+   -------------------------------------------------------------------------- */
+@media (min-width: 1024px) {
+  .auth-split-grid {
+    grid-template-columns: minmax(420px, 1fr) minmax(500px, 1.2fr) !important;
+  }
+  .auth-visual-column {
+    display: flex !important;
+  }
+  .auth-form-column {
+    max-height: 100vh !important;
+    overflow-y: auto !important;
+  }
+  .auth-mobile-logo {
+    display: none !important;
+  }
+  .auth-mobile-footer {
+    display: none !important;
+  }
+}
+
+@media (max-width: 1023px) {
+  .auth-split-grid {
+    grid-template-columns: 1fr !important;
+  }
+  .auth-visual-column {
+    display: none !important;
+  }
+  .auth-mobile-logo {
+    display: block !important;
+  }
+  .auth-mobile-footer {
+    display: block !important;
+  }
+}

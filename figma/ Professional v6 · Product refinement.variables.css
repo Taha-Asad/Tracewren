@@ -1,0 +1,81 @@
+/* Fieldwork / Primitives · Mode 1 */
+:root {
+  --ink-paper: #FFFFFF;
+  --ink-sheet: #FFFFFF;
+  --ink-sidebar: #F6F7F8;
+  --ink-wash: #F4F6F8;
+  --ink-ink: #24292F;
+  --ink-muted: #57606A;
+  --ink-line: #D8DEE4;
+  --ink-olive: #667085;
+  --ink-olivetint: #E8EEEB;
+  --ink-forest: #2B5147;
+  --ink-raised: #376357;
+  --ink-inverse: #FFFFFF;
+  --ink-dim: #E1ECE7;
+  --ink-accent: #2B5147;
+  --ink-accenttint: #EDF3F0;
+  --ink-onaccent: #FFFFFF;
+  --ink-red: #A82B27;
+  --ink-redtint: #FFF2F0;
+  --ink-amber: #8F4B0F;
+  --ink-ambertint: #FFF6E5;
+  --ink-green: #285B47;
+  --ink-greentint: #ECF4EF;
+  --ink-blue: #315D78;
+  --ink-bluetint: #EDF3F8;
+  --ink-clear: rgba(0, 0, 0, 0.00);
+}
+/* Fieldwork / Semantic · Mode 1 */
+:root {
+  --surface-paper: var(--ink-paper);
+  --surface-sheet: var(--ink-sheet);
+  --surface-sidebar: var(--ink-sidebar);
+  --surface-wash: var(--ink-wash);
+  --surface-ink: var(--ink-ink);
+  --surface-muted: var(--ink-muted);
+  --surface-line: var(--ink-line);
+  --surface-olive: var(--ink-olive);
+  --surface-olivetint: var(--ink-olivetint);
+  --surface-forest: var(--ink-forest);
+  --surface-raised: var(--ink-raised);
+  --surface-inverse: var(--ink-inverse);
+  --surface-dim: var(--ink-dim);
+  --surface-accent: var(--ink-accent);
+  --surface-accenttint: var(--ink-accenttint);
+  --surface-onaccent: var(--ink-onaccent);
+  --surface-red: var(--ink-red);
+  --surface-redtint: var(--ink-redtint);
+  --surface-amber: var(--ink-amber);
+  --surface-ambertint: var(--ink-ambertint);
+  --surface-green: var(--ink-green);
+  --surface-greentint: var(--ink-greentint);
+  --surface-blue: var(--ink-blue);
+  --surface-bluetint: var(--ink-bluetint);
+  --surface-clear: var(--ink-clear);
+}
+/* Fieldwork / Prototype · Mode 1 */
+:root {
+  --casedefender: "CaseTriage";
+  --caseresearcher: "ResearcherTriage";
+  --casestate: "TRIAGING";
+  --caselabel: "Triaging";
+  --caseseverity: "6.5 Medium";
+  --activeattempt: 1;
+  --reportunlocked: false;
+  --recoverydownloaded: false;
+  --recoverysaved: false;
+  --configchosen: false;
+  --internalauthored: false;
+  --mfaverified: false;
+  --reducedmotion: false;
+  --internalauthoredchosen: false;
+  --internaldisclosure: "Verifier authored the fix: Yes";
+  --casedeploymentlabel: "Attempt 1 / Production v0.8.4";
+  --mobilesavedlabel: "Saved-file confirmation is required.";
+  --cancelledlabel: "Attempt 1 / superseded";
+  --exportassethidden: true;
+  --exportcommithidden: true;
+  --exportassetlabel: "Asset scope / redacted";
+  --exportcommitlabel: "Commit & branch / redacted";
+}

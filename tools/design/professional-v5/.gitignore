@@ -1,0 +1,7 @@
+commands.json
+build-and-export.json
+ledger.json
+design.json
+*.log
+verification.json
+geometry.json

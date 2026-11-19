@@ -1,8 +1,11 @@
 {
-  "$schema": "../PROJECT_SCHEMA.md",
-  "projectId": "bugbountytrack",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "projectId": "PRO-01",
   "portalId": "PTUT-PRJ-089",
-  "portalTitle": "BugBountyTrack – Private Bug Bounty & Vulnerability Disclosure Platform",
+  "portalTitle": "Private Bug Bounty & Vulnerability Disclosure Platform",
+  "displayName": "PRO-01",
+  "brandName": "PRO-01",
+  "tagline": "Confidential vulnerability disclosure and evidence-based remediation workspace",
   "studentAuthor": "Taha Asadullah",
   "rollNo": "24-ST-013",
   "session": "2024-2028",
@@ -10,31 +13,27 @@
   "section": "SET-B",
   "officialEmail": "24-st-013@students.ptut.edu.pk",
   "supervisor": "Sir Umar Hayat",
-  "name": "BugBountyTrack — Multi-Tenant Vulnerability Disclosure Platform with Cryptographic Payload Isolation and Evidence-Based Remediation Traceability",
   "category": "9. CYBERSECURITY, PRIVACY & LEGALTECH",
-  "claimedDate": "2026-10-02",
   "type": "university-fyp",
   "status": "active",
   "paths": {
-    "root": "projects/BugBountyTrack",
-    "requirements": "projects/BugBountyTrack/requirements",
-    "architecture": "projects/BugBountyTrack/architecture",
-    "decisions": "projects/BugBountyTrack/decisions",
-    "tasks": "projects/BugBountyTrack/tasks",
-    "evidence": "projects/BugBountyTrack/evidence",
-    "learning": "projects/BugBountyTrack/learning",
-    "sourceCode": "projects/BugBountyTrack/src"
+    "root": ".",
+    "apps": "apps",
+    "packages": "packages",
+    "requirements": "requirements",
+    "architecture": "architecture",
+    "decisions": "decisions",
+    "evidence": "evidence"
   },
   "stack": {
     "primaryLanguage": "TypeScript",
-    "secondaryLanguages": ["Rust"],
-    "backend": ["Node.js", "Next.js"],
-    "frontend": ["Next.js", "Tailwind CSS"],
-    "database": ["PostgreSQL"],
+    "backend": ["Node.js", "NestJS"],
+    "frontend": ["Next.js", "Mantine 9"],
+    "database": ["PostgreSQL", "Neon"],
     "orm": ["Prisma"],
-    "cryptography": ["OpenPGP.js"],
+    "cryptography": ["OpenPGP.js", "Curve25519"],
     "standards": ["RFC-9116", "CVSS-3.1"]
   },
   "activePhase": "Phase 2: System Architecture & Core Implementation",
-  "activeMilestone": "SRS Revision 2.8 Frozen as Implementation Baseline"
+  "activeMilestone": "Clean decoupled monorepo baseline"
 }

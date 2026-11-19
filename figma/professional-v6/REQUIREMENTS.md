@@ -25,3 +25,22 @@ Each desktop case base has role- and attempt-specific evidence, remediation, con
 The approved concept changes the canonical report fixture to 6.5 Medium defender / 8.1 High researcher. Unrelated queue records keep their own source severity. The concept image and generated report diagrams are never presented as raw attachment evidence. Evidence inspectors identify excerpts and absent original bytes honestly.
 
 Source: [SRS](../../requirements/SRS.md), [v5 coverage](../professional-v5/REQUIREMENTS.md), and the [approved concept](../concept/Authorization%20boundary%20finding,%20retest%20pending.png).
+
+
+## Public and product completion / 7 November 2026
+
+The competitor-inspired completion extends the product entry layer rather than replacing SRS workflows. See [the competitor review](COMPETITOR_REVIEW.md) for source links, evidence limits and exclusions.
+
+| Added journey | Principal views |
+| --- | --- |
+| Public introduction | Landing, LandingFull, PlatformOverview, ForTeams, ForResearchers, TrustCenter |
+| Program discovery | ProgramDirectory, DirectoryFiltered, DirectoryEmpty → existing Program/Policy → existing Access/intake |
+| Support and recovery routing | HelpCenter, RecoveryGuide, Contact, ContactSent → existing recovery dialogs |
+| Account onboarding | GetStarted → existing Register → VerifyEmail, VerifyEmailExpired, EmailVerified, ResearcherWelcome |
+| Researcher account | AccountProfile/ProfileSaved, AccountSecurity, ChangePassword/PasswordChanged, RevokeSession/SessionRevoked |
+| Organization account | DefenderProfile/ProfileSaved, OwnerProfile/ProfileSaved, role-specific Security and Preferences/PreferencesSaved |
+| Notifications | NotificationCenter/NotificationsRead, ResearchNotifications/ResearchNotificationsRead, NotificationSettings/NotificationSettingsSaved |
+| Program management | ProgramManagement, CreateProgram, ProgramDraft, ManageScope/ScopeSaved → existing activation and policy setup |
+| Narrow entry points | MobileLanding, MobileDirectory, MobileAccount, MobileProfile, MobileNotifications and saved/read variants |
+
+All original screen IDs are preserved. The directory contains the existing Northstar public program; the Mobile disclosure example is an unpublished draft. Commercial bounty payments, public report publication, leaderboards, paid-plan billing and managed testing remain outside this completion because they are not specified as operating project features.

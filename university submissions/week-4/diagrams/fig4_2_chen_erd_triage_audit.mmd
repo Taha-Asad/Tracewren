@@ -1,0 +1,186 @@
+flowchart TB
+    %% =========================================================================
+    %% FIGURE 4.2: TRIAGE, REMEDIATION & AUDIT SUBSYSTEM (PETER CHEN NOTATION)
+    %% BugBountyTrack — Milestone Week 4 Specification
+    %% Pure Minimalist Monochrome Chen Notation on Black Canvas
+    %% =========================================================================
+
+    %% =========================================================================
+    %% TIER 1: CENTRAL VULNERABILITY REPORT ENTITY
+    %% =========================================================================
+    REPORT["<b>REPORTS</b>"]
+
+    subgraph R_ATTRS[" "]
+        direction LR
+        r1(["<u>report_id (PK)</u>"])
+        r2(["tracking_uuid (UK)"])
+        r3(["org_id (FK)"])
+        r4(["enc_title"])
+        r5(["enc_payload"])
+        r6(["cvss_score"])
+        r7(["status"])
+    end
+    r1 --- REPORT
+    r2 --- REPORT
+    r3 --- REPORT
+    r4 --- REPORT
+    r5 --- REPORT
+    r6 --- REPORT
+    r7 --- REPORT
+
+    %% =========================================================================
+    %% TIER 2: INTAKE & COLLABORATION SUBSYSTEM (RIGHT ENCLAVE)
+    %% =========================================================================
+    subgraph TIER2[" "]
+        direction LR
+
+        subgraph ATT_BOX[" "]
+            direction TB
+            ATTACHMENT["<b>ATTACHMENTS</b>"]
+            subgraph A_ATTRS[" "]
+                direction LR
+                a1(["<u>attach_id (PK)</u>"])
+                a2(["storage_key (UK)"])
+                a3(["file_name_enc"])
+                a4(["sha256_hash"])
+            end
+            ATTACHMENT --- a1
+            ATTACHMENT --- a2
+            ATTACHMENT --- a3
+            ATTACHMENT --- a4
+        end
+
+        subgraph REC_BOX[" "]
+            direction TB
+            RECIPIENT["<b>REPORT_RECIPIENTS</b>"]
+            subgraph REC_ATTRS[" "]
+                direction LR
+                rc1(["<u>recipient_id (PK)</u>"])
+                rc2(["user_id (FK)"])
+                rc3(["enc_wrapped_key"])
+            end
+            RECIPIENT --- rc1
+            RECIPIENT --- rc2
+            RECIPIENT --- rc3
+        end
+
+        subgraph COM_BOX[" "]
+            direction TB
+            COMMENT["<b>TRIAGE_COMMENTS</b>"]
+            subgraph C_ATTRS[" "]
+                direction LR
+                c1(["<u>comment_id (PK)</u>"])
+                c2(["author_id (FK)"])
+                c3(["is_internal"])
+                c4(["comment_cipher"])
+            end
+            COMMENT --- c1
+            COMMENT --- c2
+            COMMENT --- c3
+            COMMENT --- c4
+        end
+    end
+
+    rel_attach{"includes<br/>(1:N)"}
+    rel_recip{"encrypted_for<br/>(1:N)"}
+    rel_comm{"discusses<br/>(1:N)"}
+
+    REPORT --- rel_attach --- ATTACHMENT
+    REPORT --- rel_recip --- RECIPIENT
+    REPORT --- rel_comm --- COMMENT
+
+    %% =========================================================================
+    %% TIER 3: REMEDIATION, AUDIT & SLA SUBSYSTEM (LEFT ENCLAVE)
+    %% =========================================================================
+    subgraph TIER3[" "]
+        direction LR
+
+        subgraph REM_BOX[" "]
+            direction TB
+            REMEDIATION["<b>REMEDIATION_RECORDS</b>"]
+            subgraph REM_ATTRS[" "]
+                direction LR
+                rm1(["<u>remediation_id (PK)</u>"])
+                rm2(["github_repo"])
+                rm3(["commit_sha"])
+                rm4(["ancestry_verified"])
+            end
+            REMEDIATION --- rm1
+            REMEDIATION --- rm2
+            REMEDIATION --- rm3
+            REMEDIATION --- rm4
+        end
+
+        subgraph AUD_BOX[" "]
+            direction TB
+            AUDIT["<b>AUDIT_EVENTS</b>"]
+            subgraph AUD_ATTRS[" "]
+                direction LR
+                ad1(["<u>event_id (PK)</u>"])
+                ad2(["action_type"])
+                ad3(["row_hash"])
+                ad4(["prev_chain_hash"])
+            end
+            AUDIT --- ad1
+            AUDIT --- ad2
+            AUDIT --- ad3
+            AUDIT --- ad4
+        end
+
+        subgraph SLA_BOX[" "]
+            direction TB
+            SLA["<b>SLA_TRACKING</b>"]
+            subgraph SLA_ATTRS[" "]
+                direction LR
+                sl1(["<u>sla_id (PK)</u>"])
+                sl2(["target_time"])
+                sl3(["actual_time"])
+                sl4(["is_breached"])
+            end
+            SLA --- sl1
+            SLA --- sl2
+            SLA --- sl3
+            SLA --- sl4
+        end
+    end
+
+    rel_remed{"verified_by<br/>(1:1)"}
+    rel_audit{"logged_in<br/>(1:N)"}
+    rel_sla{"tracks_sla<br/>(1:1)"}
+
+    REPORT --- rel_remed --- REMEDIATION
+    REPORT --- rel_audit --- AUDIT
+    REPORT --- rel_sla --- SLA
+
+    %% Layout constraints
+    ATTACHMENT ~~~ REMEDIATION
+    RECIPIENT ~~~ AUDIT
+    COMMENT ~~~ SLA
+
+    %% Clean invisible styling for organizational groupings
+    style R_ATTRS fill:none,stroke:none
+    style TIER2 fill:none,stroke:none
+    style TIER3 fill:none,stroke:none
+    style ATT_BOX fill:none,stroke:none
+    style REC_BOX fill:none,stroke:none
+    style COM_BOX fill:none,stroke:none
+    style REM_BOX fill:none,stroke:none
+    style AUD_BOX fill:none,stroke:none
+    style SLA_BOX fill:none,stroke:none
+    style A_ATTRS fill:none,stroke:none
+    style REC_ATTRS fill:none,stroke:none
+    style C_ATTRS fill:none,stroke:none
+    style REM_ATTRS fill:none,stroke:none
+    style AUD_ATTRS fill:none,stroke:none
+    style SLA_ATTRS fill:none,stroke:none
+
+    %% Canonical Peter Chen Entity-Relationship Monochrome Styling on Black Canvas
+    classDef entity fill:#000000,stroke:#ffffff,stroke-width:1.8px,color:#ffffff,font-weight:bold;
+    classDef rel fill:#000000,stroke:#ffffff,stroke-width:1.5px,color:#ffffff,font-weight:normal;
+    classDef attr fill:#000000,stroke:#ffffff,stroke-width:1.2px,color:#ffffff,font-size:11px;
+
+    class REPORT,ATTACHMENT,RECIPIENT,COMMENT,REMEDIATION,AUDIT,SLA entity;
+    class rel_attach,rel_recip,rel_comm,rel_remed,rel_audit,rel_sla rel;
+    class r1,r2,r3,r4,r5,r6,r7,a1,a2,a3,a4,rc1,rc2,rc3,c1,c2,c3,c4,rm1,rm2,rm3,rm4,ad1,ad2,ad3,ad4,sl1,sl2,sl3,sl4 attr;
+
+    linkStyle default stroke:#ffffff,stroke-width:1.2px;

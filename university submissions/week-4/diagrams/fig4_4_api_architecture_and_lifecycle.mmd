@@ -1,0 +1,88 @@
+flowchart TB
+    %% =========================================================================
+    %% FIGURE 4.4: REST & GRAPHQL API ARCHITECTURE & REQUEST-RESPONSE LIFECYCLE
+    %% =========================================================================
+
+    subgraph CLIENTS["<b>INCOMING CLIENT TRAFFIC</b>"]
+        direction LR
+        C1["<b>Security Researcher (Guest)</b><br/><code>POST /api/v1/reports</code><br/>Encrypted Payload + Turnstile Token"]
+        C2["<b>Program Defender (Authenticated)</b><br/><code>GET /api/v1/reports</code><br/>Session Cookie + Role Token"]
+        C3["<b>GraphQL Analytics Workbench</b><br/><code>POST /api/graphql</code><br/>Complex Multi-Entity Queries"]
+    end
+
+    %% Edge Security Perimeter
+    subgraph EDGE["<b>CLOUDFLARE ANYCAST EDGE PERIMETER</b>"]
+        direction LR
+        WAF["<b>Cloudflare WAF &amp; Rate Limiter</b><br/>Global Anycast DDoS Mitigation<br/>Token Bucket Rate Limiting (100 req/min)"]
+        TURNSTILE["<b>Turnstile Secret Verifier</b><br/>Cryptographic Captcha Validation<br/>Mitigates automated intake spam"]
+    end
+
+    C1 --> WAF
+    C2 --> WAF
+    C3 --> WAF
+    WAF --> TURNSTILE
+
+    %% Next.js API Server Gateway
+    subgraph GATEWAY["<b>API SERVERLESS GATEWAY (NEXT.JS 14 APP ROUTER - NODE.JS 22)</b>"]
+        direction TB
+
+        subgraph ROUTING["<b>Stateless Dispatch &amp; Protocols</b>"]
+            direction LR
+            REST_ROUTER["<b>REST API Gateway</b><br/><code>/api/v1/*</code><br/>OpenAPI 3.1 Specification<br/>Zod DTO Validation"]
+            GQL_ROUTER["<b>GraphQL Router</b><br/><code>/api/graphql</code><br/>GraphQL Yoga / Apollo Client<br/>Query Complexity Guard"]
+        end
+
+        subgraph SECURITY_MIDDLEWARE["<b>Security &amp; Authorization Pipeline</b>"]
+            direction LR
+            AUTH_GUARD["<b>Authentication &amp; RBAC</b><br/>Session Cookie Validation<br/>Role Claims: <code>ORG_ADMIN</code>, <code>TRIAGER</code>"]
+            TENANT_EXTRACT["<b>Tenant Context Extractor</b><br/>Maps tenant slug to verified <code>organization_id</code>"]
+            ERROR_FILTER["<b>RFC 7807 Problem Filter</b><br/>Standardized JSON Error Envelopes<br/>Suppresses database internal traces"]
+        end
+
+        ROUTING --> SECURITY_MIDDLEWARE
+    end
+
+    TURNSTILE --> REST_ROUTER
+    TURNSTILE --> GQL_ROUTER
+
+    %% Persistence & Verification Boundary
+    subgraph BACKEND_ENGINES["<b>PERSISTENCE, CRYPTOGRAPHY &amp; EXTERNAL VERIFIERS</b>"]
+        direction LR
+
+        subgraph PG_RLS["<b>Neon PostgreSQL 16 (PgBouncer)</b>"]
+            direction TB
+            RLS_EXEC["<b>Session Context Injection</b><br/><code>SET LOCAL app.current_org_id = :org_id;</code><br/><code>SET LOCAL ROLE bbt_app;</code><br/>Automated Tenant Row Filtering"]
+        end
+
+        subgraph STORAGE_R2["<b>Cloudflare R2 Object Storage</b>"]
+            direction TB
+            PRESIGN["<b>Presigned S3 API Gateway</b><br/>Direct encrypted binary PUT/GET<br/>15-Minute lease token verification"]
+        end
+
+        subgraph GITHUB_SYNC["<b>Evidence Verification Engine</b>"]
+            direction TB
+            GH_REST["<b>GitHub REST API v3 Client</b><br/>Commit Ancestry Comparator<br/><code>GET /repos/{owner}/{repo}/compare/...</code>"]
+        end
+    end
+
+    SECURITY_MIDDLEWARE --> RLS_EXEC
+    SECURITY_MIDDLEWARE --> PRESIGN
+    SECURITY_MIDDLEWARE --> GH_REST
+
+    %% Styling
+    style CLIENTS fill:#f8fafc,stroke:#94a3b8,stroke-width:1.5px
+    style EDGE fill:#fff7ed,stroke:#ea580c,stroke-width:2px
+    style GATEWAY fill:#eff6ff,stroke:#2563eb,stroke-width:2px
+    style BACKEND_ENGINES fill:#f8fafc,stroke:#475569,stroke-width:1.5px
+    style ROUTING fill:none,stroke:none
+    style SECURITY_MIDDLEWARE fill:none,stroke:none
+
+    classDef client fill:#ffffff,stroke:#64748b,stroke-width:1.5px,color:#0f172a,font-size:12px;
+    classDef edge fill:#7c2d12,stroke:#ea580c,stroke-width:2px,color:#ffffff,font-size:12px;
+    classDef gw fill:#ffffff,stroke:#2563eb,stroke-width:1.5px,color:#0f172a,font-size:12px;
+    classDef backend fill:#0f172a,stroke:#334155,stroke-width:2px,color:#ffffff,font-size:12px;
+
+    class C1,C2,C3 client;
+    class WAF,TURNSTILE edge;
+    class REST_ROUTER,GQL_ROUTER,AUTH_GUARD,TENANT_EXTRACT,ERROR_FILTER gw;
+    class RLS_EXEC,PRESIGN,GH_REST backend;

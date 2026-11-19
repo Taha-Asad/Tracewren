@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<mxfile host="app.diagrams.net" version="21.0.0" type="device">
+  <diagram id="db_connection_pooling" name="Database Connection Architecture &amp; Neon Pooling">
+    <mxGraphModel dx="1400" dy="900" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1450" pageHeight="750" background="#000000" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+
+        <mxCell id="title_3" value="&lt;h1 style=&quot;color:#ffffff;font-family:Helvetica;margin:0;font-weight:normal;&quot;&gt;BugBountyTrack — Database Connection Architecture &amp;amp; Neon Pooling Lifecycle&lt;/h1&gt;" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry x="100" y="30" width="1300" height="40" as="geometry" />
+        </mxCell>
+        <!-- Clients -->
+        <mxCell id="c_api" value="&lt;b&gt;NestJS API Runtime Instances&lt;/b&gt;&lt;br/&gt;Prisma Client ORM (apps/api)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="250" y="110" width="350" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="c_mig" value="&lt;b&gt;Prisma CLI Migration Engine&lt;/b&gt;&lt;br/&gt;Direct DDL Execution &amp;amp; Introspection" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="850" y="110" width="350" height="60" as="geometry" />
+        </mxCell>
+        <!-- Routing Gateway -->
+        <mxCell id="box_pooler" value="&lt;b&gt;PgBouncer Connection Pooler (Port 5432)&lt;/b&gt;&lt;br/&gt;DATABASE_URL: Transaction Mode | connect_timeout=15s" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.8;fontColor=#ffffff;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="200" y="240" width="450" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="box_direct" value="&lt;b&gt;Dedicated Compute Direct Session&lt;/b&gt;&lt;br/&gt;DIRECT_DATABASE_URL: Unpooled TCP Session" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.8;fontColor=#ffffff;fontSize=12;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="800" y="240" width="450" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="e_c_pool" value="Runtime Queries" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;labelBackgroundColor=#000000;" edge="1" source="c_api" target="box_pooler" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_c_dir" value="DDL Migrations" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=1.5;fontColor=#ffffff;labelBackgroundColor=#000000;" edge="1" source="c_mig" target="box_direct" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <!-- Neon Engine -->
+        <mxCell id="box_engine" value="&lt;b&gt;Neon PostgreSQL 16 Enterprise Database Engine (ep-billowing-frost)&lt;/b&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.5;strokeDashed=1;fontColor=#ffffff;align=center;verticalAlign=top;spacingTop=10;fontSize=13;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="150" y="380" width="1150" height="280" as="geometry" />
+        </mxCell>
+        <mxCell id="db_tls" value="&lt;b&gt;Mandatory TLS 1.3 Transport Encryption&lt;/b&gt;&lt;br/&gt;sslmode=require | Root CA Verification" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.2;fontColor=#ffffff;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="200" y="430" width="1050" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="db_schema" value="&lt;b&gt;Schema: bbt_core (3NF Relational Model)&lt;/b&gt;&lt;br/&gt;15 Tables: organizations, users, user_memberships, bounty_programs, reports, sessions, audit_events..." style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.2;fontColor=#ffffff;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="200" y="490" width="1050" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="db_rls" value="&lt;b&gt;Kernel Row-Level Security (RLS) Isolation Engine&lt;/b&gt;&lt;br/&gt;Enforced via bbt_app role (NOSUPERUSER, NOBYPASSRLS) | org_id Tenant Partitioning" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=#ffffff;strokeWidth=1.8;fontColor=#ffffff;fontSize=11;fontFamily=Helvetica;" vertex="1" parent="1">
+          <mxGeometry x="200" y="570" width="1050" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="e_pool_eng" value="" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=1.5;" edge="1" source="box_pooler" target="box_engine" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+        <mxCell id="e_dir_eng" value="" style="endArrow=classic;html=1;strokeColor=#ffffff;strokeWidth=1.5;" edge="1" source="box_direct" target="box_engine" parent="1"><mxGeometry relative="1" as="geometry" /></mxCell>
+
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

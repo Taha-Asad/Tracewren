@@ -1,0 +1,62 @@
+flowchart TB
+    %% =========================================================================
+    %% FIGURE 5.2: MONOREPO DIRECTORY SCAFFOLDING ARCHITECTURE
+    %% BugBountyTrack — Milestone Week 5 Specification
+    %% Pure Minimalist Monochrome Styling on Black Canvas
+    %% =========================================================================
+
+    ROOT["<b>BugBountyTrack Monorepo Root (PRO-01)</b><br/>package.json | npm workspaces | .github/ | SESSION_LOG.md"]
+
+    subgraph APPS["APPLICATIONS DIRECTORY (apps/)"]
+        direction LR
+
+        subgraph API_APP["apps/api (Backend Runtime)"]
+            direction TB
+            API_MAIN["<b>NestJS Core Application</b><br/>main.ts | app.module.ts"]
+            API_AUTH["<b>Auth Module (src/auth/)</b><br/>auth.controller.ts | auth.service.ts<br/>guards/ | decorators/ | dto/"]
+            API_DB["<b>Database Module (src/database/)</b><br/>prisma.service.ts | prisma-exception.filter.ts"]
+            API_PRISMA["<b>Prisma Schema & Migrations</b><br/>prisma/schema.prisma | migrations/"]
+            API_TEST["<b>Vitest Automated Suites</b><br/>94 Unit & Integration Tests"]
+
+            API_MAIN --- API_AUTH
+            API_MAIN --- API_DB
+            API_DB --- API_PRISMA
+            API_AUTH --- API_TEST
+        end
+
+        subgraph WEB_APP["apps/web (Frontend Portal)"]
+            direction TB
+            WEB_ROUTER["<b>Next.js 15 App Router</b><br/>src/app/layout.tsx | src/app/page.tsx"]
+            WEB_ROUTES["<b>Feature Route Handlers</b><br/>/auth | /login | /onboarding | /workspace"]
+            WEB_UI["<b>UI Primitives & Design Tokens</b><br/>src/components/ | Tailwind CSS"]
+            WEB_LIB["<b>Client-Side Crypto & State</b><br/>src/lib/ | WebCrypto Engine"]
+
+            WEB_ROUTER --- WEB_ROUTES
+            WEB_ROUTER --- WEB_UI
+            WEB_ROUTES --- WEB_LIB
+        end
+    end
+
+    subgraph SHARED["SHARED PACKAGES & CONFIGURATION (packages/)"]
+        direction LR
+        PKG_CONFIG["<b>@bbt/tsconfig</b><br/>Strict TypeScript Rules"]
+        PKG_LINT["<b>@bbt/eslint-config</b><br/>Code Quality & Security"]
+        PKG_CONTRACTS["<b>@bbt/api-contracts</b><br/>DTO & Schema Parity"]
+    end
+
+    ROOT --- APPS
+    ROOT --- SHARED
+    SHARED -.-> API_APP
+    SHARED -.-> WEB_APP
+
+    %% Clean Monochrome Styling
+    style APPS fill:none,stroke:#ffffff,stroke-width:1.5px,stroke-dasharray: 4 4
+    style API_APP fill:none,stroke:#ffffff,stroke-width:1.2px
+    style WEB_APP fill:none,stroke:#ffffff,stroke-width:1.2px
+    style SHARED fill:none,stroke:#ffffff,stroke-width:1.5px,stroke-dasharray: 4 4
+
+    classDef default fill:#000000,stroke:#ffffff,stroke-width:1.5px,color:#ffffff,font-size:12px;
+    classDef rootBox fill:#000000,stroke:#ffffff,stroke-width:2.5px,color:#ffffff,font-weight:bold,font-size:13px;
+
+    class ROOT rootBox;
+    linkStyle default stroke:#ffffff,stroke-width:1.2px;
