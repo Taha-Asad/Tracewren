@@ -8,5 +8,10 @@ export default defineConfig({
     globals: true,
     root: './',
     include: ['**/*.spec.ts'],
+    coverage: {
+      provider: 'v8',
+      include: ['src/auth/**/*.ts'],
+      exclude: ['**/*.spec.ts', 'src/auth/**/*.dto.ts'],
+    },
   },
 });
