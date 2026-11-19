@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title><%= subject %></title>
+</head>
+<body style="margin: 0; padding: 0; background-color: #f4f7f5; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; color: #112d34;">
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background-color: #f4f7f5; padding: 32px 16px;">
+    <tr>
+      <td align="center">
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="max-width: 600px; background-color: #ffffff; border: 1px solid #d8e2dc; border-radius: 10px; overflow: hidden;">
+          <!-- Header -->
+          <tr>
+            <td style="background-color: #0b2e22; padding: 24px 28px;">
+              <p style="margin: 0; font-size: 11px; font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; color: #a8e6cf;">
+                BugBountyTrack · Zero-Knowledge Triage
+              </p>
+              <h1 style="margin: 8px 0 0 0; font-size: 20px; font-weight: 700; color: #ffffff;">
+                <%= directAccepted ? 'Workspace Access Granted' : 'Security Triage Invitation' %>
+              </h1>
+            </td>
+          </tr>
+
+          <!-- Body -->
+          <tr>
+            <td style="padding: 28px;">
+              <p style="margin: 0 0 16px 0; font-size: 15px; line-height: 1.6; color: #112d34;">
+                Hello,
+              </p>
+
+              <% if (directAccepted) { %>
+                <p style="margin: 0 0 18px 0; font-size: 15px; line-height: 1.6; color: #112d34;">
+                  You have been directly added to the triage team for
+                  <strong><%= programName %></strong> as a
+                  <strong><%= role %></strong> by <strong><%= inviter %></strong>.
+                  Your workspace clearance is active immediately.
+                </p>
+              <% } else { %>
+                <p style="margin: 0 0 18px 0; font-size: 15px; line-height: 1.6; color: #112d34;">
+                  <strong><%= inviter %></strong> (<%= inviterEmail %>) has invited you to join the
+                  security triage team for <strong><%= programName %></strong> as a
+                  <strong><%= role %></strong>.
+                </p>
+              <% } %>
+
+              <!-- Scope Summary Card -->
+              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background-color: #f7faf8; border: 1px solid #d8e2dc; border-radius: 8px; margin-bottom: 24px;">
+                <tr>
+                  <td style="padding: 16px;">
+                    <p style="margin: 0 0 6px 0; font-size: 12px; color: #526a63;">
+                      <strong>Program Scope:</strong> <%= programName %>
+                    </p>
+                    <p style="margin: 0 0 6px 0; font-size: 12px; color: #526a63;">
+                      <strong>Assigned Role:</strong> <%= role %>
+                    </p>
+                    <p style="margin: 0; font-size: 12px; color: #526a63;">
+                      <strong>Dispatched By:</strong> <%= inviter %> (<%= inviterEmail %>)
+                    </p>
+                  </td>
+                </tr>
+              </table>
+
+              <!-- Primary CTA -->
+              <table role="presentation" cellspacing="0" cellpadding="0" style="margin: 0 0 24px 0;">
+                <tr>
+                  <td style="border-radius: 6px; background-color: #16654c;">
+                    <a href="<%= effectiveActionUrl %>"
+                       style="display: inline-block; padding: 12px 24px; font-size: 14px; font-weight: 600; color: #ffffff; text-decoration: none; border-radius: 6px;">
+                      <%= buttonLabel %>
+                    </a>
+                  </td>
+                </tr>
+              </table>
+
+              <p style="margin: 0 0 8px 0; font-size: 12px; color: #526a63;">
+                If the button above does not work, copy and paste this URL into your browser:
+              </p>
+              <p style="margin: 0; font-size: 12px; word-break: break-all; color: #16654c;">
+                <%= effectiveActionUrl %>
+              </p>
+            </td>
+          </tr>
+
+          <!-- Footer -->
+          <tr>
+            <td style="background-color: #f7faf8; border-top: 1px solid #d8e2dc; padding: 16px 28px;">
+              <p style="margin: 0 0 4px 0; font-size: 11px; color: #64748b;">
+                Outbox Reference: <code><%= outboxId %></code> · Dispatched: <%= sentAt %>
+              </p>
+              <p style="margin: 0; font-size: 11px; color: #64748b;">
+                This invitation expires in 7 days. Do not forward this link.
+              </p>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+</html>
