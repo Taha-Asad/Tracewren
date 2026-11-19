@@ -18,6 +18,7 @@ name: Build and Deploy
 permissions:
   contents: read
   packages: write
+  security-events: write
 
 # When to run this workflow
 on:
@@ -64,9 +65,9 @@ jobs:
     # Only build on pushes to main (not PRs)
     if: github.event_name == 'push'
 
-    # Output the image tag so the deploy job can use it
+    # Output a single canonical image tag so scan/deploy jobs receive one reference
     outputs:
-      image-tag: ${{ steps.meta.outputs.tags }}
+      image-tag: ${{ fromJSON(steps.meta.outputs.json).tags[0] }}
 
     steps:
       - name: Checkout code
@@ -109,6 +110,13 @@ jobs:
     needs: build
 
     steps:
+      - name: Login to GitHub Container Registry
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Scan image with Trivy
         uses: aquasecurity/trivy-action@master
         with:
@@ -118,8 +126,8 @@ jobs:
           severity: CRITICAL,HIGH
 
       - name: Upload scan results
-        uses: github/codeql-action/upload-sarif@v3
-        if: always()
+        uses: github/codeql-action/upload-sarif@v4
+        if: always() && hashFiles('trivy-results.sarif') != ''
         with:
           sarif_file: trivy-results.sarif
 
