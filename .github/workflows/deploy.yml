@@ -15,6 +15,10 @@
 
 name: Build and Deploy
 
+permissions:
+  contents: read
+  packages: write
+
 # When to run this workflow
 on:
   push:
