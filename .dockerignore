@@ -23,8 +23,28 @@ target/debug
 
 # Environment files (security!)
 .env
+**/.env
 .env.local
 .env.*.local
+
+# Non-runtime docs & design assets
+.next
+**/.next
+architecture
+assets
+decisions
+evidence
+figma
+learning
+requirements
+Resources
+tasks
+tools
+"university submissions"
+*.docx
+*.pdf
+*.pptx
+*.xlsx
 
 # IDE files
 .vscode
